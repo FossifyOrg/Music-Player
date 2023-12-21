@@ -94,6 +94,6 @@
     <string name="faq_1_text">Ви можете натиснути на текст поточної або загальної тривалості відтворення поруч із ковзним елементом відтворення, це перемістить програвання композиції або назад, або вперед.</string>
     <!--
         Haven't found some strings? There's more at
-        https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
+        https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
     -->
 </resources>

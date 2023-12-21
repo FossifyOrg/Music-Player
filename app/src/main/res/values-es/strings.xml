@@ -92,6 +92,6 @@
     <string name="faq_1_text">Puedes hacer clic en los textos de duración actual o máxima, cerca de la barra de búsqueda, para avanzar o retroceder la canción.</string>
     <!--
         Haven't found some strings? There's more at
-        https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
+        https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
     -->
 </resources>

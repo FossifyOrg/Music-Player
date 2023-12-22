@@ -94,6 +94,6 @@
     <string name="faq_1_text">Możesz nacisnąć tekst bieżącego lub całkowitego czasu trwania w pobliżu paska przewijania — przewinie to utwór do tyłu lub do przodu.</string>
     <!--
         Haven't found some strings? There's more at
-        https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
+        https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
     -->
 </resources>

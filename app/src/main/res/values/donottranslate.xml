@@ -1,17 +1,3 @@
 <resources>
-    <string name="package_name">com.simplemobiletools.musicplayer</string>
-
-    <!-- Release notes -->
-    <string name="release_59">Allow customizing the bottom navigation bar color</string>
-    <string name="release_37">
-        Allow skipping backward/forward by pressing the current/max song progress\n
-        Allow replacing song title with filename, if title is not available
-    </string>
-    <string name="release_28">Added playlists and the ability to include files/folders</string>
-    <string name="release_27">Allow picking colors by hex codes</string>
-    <string name="release_25">
-        Added more color customization options\n
-        Your settings have been cleared, please reset them
-    </string>
-
+    <string name="package_name">org.fossify.musicplayer</string>
 </resources>

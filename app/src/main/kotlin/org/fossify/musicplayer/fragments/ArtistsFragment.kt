@@ -11,6 +11,7 @@ import org.fossify.commons.extensions.beVisibleIf
 import org.fossify.commons.extensions.hideKeyboard
 import org.fossify.commons.helpers.ensureBackgroundThread
 import org.fossify.musicplayer.R
+import org.fossify.musicplayer.activities.AlbumsActivity
 import org.fossify.musicplayer.activities.SimpleActivity
 import org.fossify.musicplayer.adapters.ArtistsAdapter
 import org.fossify.musicplayer.databinding.FragmentArtistsBinding
@@ -53,7 +54,7 @@ class ArtistsFragment(context: Context, attributeSet: AttributeSet) : MyViewPage
             if (adapter == null) {
                 ArtistsAdapter(activity, artists, binding.artistsList) {
                     activity.hideKeyboard()
-                    Intent(activity, org.fossify.musicplayer.activities.AlbumsActivity::class.java).apply {
+                    Intent(activity, AlbumsActivity::class.java).apply {
                         putExtra(ARTIST, Gson().toJson(it as Artist))
                         activity.startActivity(this)
                     }

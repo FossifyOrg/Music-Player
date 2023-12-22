@@ -16,7 +16,7 @@ const val PLAYLIST = "playlist"
 const val FOLDER = "folder"
 const val GENRE = "genre"
 
-const val PATH = "com.fossify.musicplayer.action."
+const val PATH = "org.fossify.musicplayer.action."
 val artworkUri = Uri.parse("content://media/external/audio/albumart")
 
 const val PREVIOUS = PATH + "PREVIOUS"

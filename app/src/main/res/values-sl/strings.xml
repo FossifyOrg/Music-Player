@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Enostaven predvajalnik glasbe</string>
     <string name="app_launcher_name">Predvajalnik glasbe</string>
     <string name="playlist_empty">Seznam predvajanja prazen</string>
     <string name="rename_song">Preimenuj pesem</string>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Једноставан музички плејер</string>
     <string name="app_launcher_name">Музички плејер</string>
     <string name="playlist_empty">Ваша листа за репродукцију је празна</string>
     <string name="rename_song">Преименуј песму</string>

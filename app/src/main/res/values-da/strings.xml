@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Simpel Musikafspiller</string>
     <string name="app_launcher_name">Musikafspiller</string>
     <string name="playlist_empty">Din afspilningsliste er tom</string>
     <string name="rename_song">Omdøb sang</string>

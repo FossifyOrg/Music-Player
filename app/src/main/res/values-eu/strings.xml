@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Musika erreproduzitzaile sinplea</string>
     <string name="app_launcher_name">Musika erreproduzitzailea</string>
     <string name="playlist_empty">Zure erreprodukzio zerrenda hutsik dago</string>
     <string name="rename_song">Abestia berrizendatu</string>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Simple Music Player</string>
     <string name="app_launcher_name">Reproductor de música</string>
     <string name="playlist_empty">La llista de reproducció està buida</string>
     <string name="rename_song">Canvia el nom de la cançó</string>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">심플 뮤직 플레이어</string>
     <string name="app_launcher_name">뮤직 플레이어</string>
     <string name="playlist_empty">재생목록이 비어 있습니다.</string>
     <string name="rename_song">음악파일명 변경</string>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Simpla Muzikludilo</string>
     <string name="app_launcher_name">Muzikludilo</string>
     <string name="playlist_empty">Your playlist is empty</string>
     <string name="rename_song">Rename song</string>

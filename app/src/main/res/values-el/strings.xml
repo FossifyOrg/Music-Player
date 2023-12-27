@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Απλός Music Player</string>
     <string name="app_launcher_name">Music Player</string>
     <string name="playlist_empty">Η λίστα αναπ/γής σας είναι κενή</string>
     <string name="rename_song">Μετονομασία τραγουδιού</string>

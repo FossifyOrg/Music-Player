@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">سادہ سنگیت</string>
     <string name="app_launcher_name">سنگیت</string>
     <string name="playlist_empty">تہادے پلےلسٹ وچ کوئی نہیں اے</string>
     <string name="rename_song">ناں بدلو</string>

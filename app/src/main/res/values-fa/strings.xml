@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">پخش کننده موسیقی</string>
     <string name="app_launcher_name">پخش کننده موسیقی</string>
     <string name="playlist_empty">لیست پخش شما خالی است</string>
     <string name="rename_song">تغییر نام آهنگ</string>

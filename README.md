@@ -1,4 +1,4 @@
-# Simple Music Player
+# Fossify Music Player
 
 <img alt="Logo" src="graphics/icon.webp" width="120" />
 

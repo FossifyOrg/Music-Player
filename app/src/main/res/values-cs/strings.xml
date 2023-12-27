@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Jednoduchý hudební přehrávač</string>
     <string name="app_launcher_name">Hudební přehrávač</string>
     <string name="playlist_empty">Váš seznam skladeb je prázdný</string>
     <string name="rename_song">Přejmenovat skladbu</string>

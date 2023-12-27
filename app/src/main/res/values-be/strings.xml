@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Simple Music Player</string>
     <string name="app_launcher_name">Музычны прайгравальнік</string>
     <string name="playlist_empty">Спіс прайгравання пусты</string>
     <string name="rename_song">Перайменаваць кампазіцыю</string>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">مشغل موسيقى بسيط</string>
     <string name="app_launcher_name">مشغل الموسيقى</string>
     <string name="playlist_empty">قائمة التشغيل فارغة</string>
     <string name="rename_song">إعادة تسمية الأغنية</string>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">ലളിതമായ മ്യൂസിക് പ്ലെയർ</string>
     <string name="app_launcher_name">മ്യൂസിക് പ്ലെയർ</string>
     <string name="playlist_empty">നിങ്ങളുടെ പ്ലേലിസ്റ്റ് ശൂന്യമാണ്</string>
     <string name="rename_song_empty">എല്ലാ ഫീൽഡുകളും പൂരിപ്പിക്കുക</string>

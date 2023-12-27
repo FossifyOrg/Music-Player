@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Simple Music Player</string>
     <string name="app_launcher_name">Musik</string>
     <string name="playlist_empty">Daftar putar anda kosong</string>
     <string name="rename_song">Ubah nama lagu</string>

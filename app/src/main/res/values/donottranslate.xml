@@ -1,3 +1,4 @@
 <resources>
     <string name="package_name">org.fossify.musicplayer</string>
+    <string name="app_name">Fossify Music Player</string>
 </resources>

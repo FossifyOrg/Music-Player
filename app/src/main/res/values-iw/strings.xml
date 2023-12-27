@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">נגן מוזיקה פשוט</string>
     <string name="app_launcher_name">נגן מוזיקה</string>
     <string name="playlist_empty">רשימת ההשמעה שלך ריקה</string>
     <string name="rename_song">שנה את שם השיר</string>

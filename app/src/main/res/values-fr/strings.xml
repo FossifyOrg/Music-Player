@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Lecteur de musique simple</string>
     <string name="app_launcher_name">Lecteur de musique</string>
     <string name="playlist_empty">Votre liste de lecture est vide</string>
     <string name="rename_song">Renommer la chanson</string>

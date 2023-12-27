@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Jednostavan player glazbe</string>
     <string name="app_launcher_name">Player glazbe</string>
     <string name="playlist_empty">Tvoj popis pjesama je prazan</string>
     <string name="rename_song">Preimenuj pjesmu</string>

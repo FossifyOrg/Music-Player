@@ -45,14 +45,6 @@
     <string name="artists">കലാകാരന്മാർ</string>
     <string name="folders">ഫോൾഡറുകൾ</string>
     <string name="albums">ആൽബങ്ങൾ</string>
-    <plurals name="albums_plural">
-        <item quantity="one">%d Album</item>
-        <item quantity="other">%d Albums</item>
-    </plurals>
-    <plurals name="tracks_plural">
-        <item quantity="one">%d Track</item>
-        <item quantity="other">%d Tracks</item>
-    </plurals>
     <string name="next_track">അടുത്തത്:</string>
     <string name="remove_from_queue">വരിയിൽ നിന്ന് നീക്കം ചെയ്യുക</string>
     <string name="create_playlist_from_queue">വരിയിൽ നിന്ന് പ്ലേലിസ്റ്റ് സൃഷ്ടിക്കുക</string>

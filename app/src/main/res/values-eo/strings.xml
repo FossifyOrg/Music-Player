@@ -21,5 +21,4 @@
         <item quantity="one">%d kanto</item>
         <item quantity="other">%d kantoj</item>
     </plurals>
-    <string name="faq_1_title">How can I fast-forward songs\?</string>
     </resources>

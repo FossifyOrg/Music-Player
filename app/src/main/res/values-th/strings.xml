@@ -6,5 +6,4 @@
     <plurals name="tracks_plural">
         <item quantity="other">%d Track</item>
     </plurals>
-    <string name="faq_1_title">How can I fast-forward songs\?</string>
     </resources>

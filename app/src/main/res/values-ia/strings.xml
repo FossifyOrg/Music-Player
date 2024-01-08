@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="volume">Volumine</string>
+    <string name="repeat_playlist">Repeter toto</string>
+    <string name="app_launcher_name">Reproductor de musica</string>
+    <string name="repeat_song">Repeter le canto actual</string>
+    <string name="stop_playback_after_current_song">Stoppar le reproduction depost le canto actual</string>
+    <string name="rename_song">Renominar canto</string>
+    <string name="playlist_empty">Tu lista de reproduction es vacue</string>
+</resources>

@@ -16,7 +16,6 @@
     <string name="volume">Гучнасць</string>
     <string name="playback_speed">Хуткасць прайгравання</string>
     <string name="loading_files">Загрузка файлаў…</string>
-    <!-- Playlists -->
     <string name="add_file_to_playlist">Дадаць файл у спіс прайгравання</string>
     <string name="add_folder_to_playlist">Дадаць папку ў спіс прайгравання</string>
     <string name="manage_playlists">Кіраванне спісамі прайгравання</string>
@@ -49,7 +48,6 @@
     <string name="export_playlist">Экспартаваць спіс прайгравання</string>
     <string name="import_playlist">Імпартаваць спіс прайгравання</string>
     <string name="filename_without_m3u">Назва файла (без .m3u)</string>
-    <!-- Sorting -->
     <string name="track_count">Колькасць кампазіцый</string>
     <string name="album_count">Колькасць альбомаў</string>
     <string name="artist_name">Імя выканаўцы</string>
@@ -57,10 +55,8 @@
     <string name="track_number">Нумар дарожкі</string>
     <string name="use_for_this_playlist">Выкарыстоўвайць толькі для гэтага плэйліста</string>
     <string name="use_for_this_album">Выкарыстоўвайць толькі для гэтага альбома</string>
-    <!-- Artists -->
     <string name="artists">Выканаўцы</string>
     <string name="folders">Папкі</string>
-    <string name="genres">Genres</string>
     <string name="albums">Альбомы</string>
     <plurals name="albums_plural">
         <item quantity="one">%d альбом</item>
@@ -75,24 +71,15 @@
         <item quantity="many">%d кампазіцый</item>
         <item quantity="other">%d кампазіцый</item>
     </plurals>
-    <!-- Queue -->
     <string name="next_track">Наступная:</string>
     <string name="track_queue">Чарга кампазіцый</string>
     <string name="add_to_queue">Дадаць у чаргу</string>
-    <string name="play_next">Play next</string>
     <string name="remove_from_queue">Выдаліць з чаргі</string>
     <string name="create_playlist_from_queue">Стварыць спіс праігравання з чаргі</string>
-    <!-- Settings -->
     <string name="equalizer">Эквалайзер</string>
     <string name="swap_prev_next">Абмяняць прызначэнне кнопак навушнікаў \"Папярэдні\"/\"Наступны\"</string>
     <string name="exclude_folder_description">Выключэнне папкі прадухіліць адлюстраванне ўсіх аўдыяфайлаў у ёй. Файлы, дададзеныя ў спісы прайгравання ўручную, не будуць закрануты.</string>
     <string name="gapless_playback">Прайграванне без паўз</string>
-    <string name="rescan_media">Rescan media</string>
-    <!-- FAQ -->
     <string name="faq_1_title">Як змяніць пазіцыю прайгравання кампазіцыі\?</string>
     <string name="faq_1_text">Вы можаце націснуць на тэкст бягучай альбо максімальнай працягласці побач з паўзунком. Гэта перамясціць прайграванне кампазіцыі назад альбо наперад.</string>
-    <!--
-        Haven't found some strings? There's more at
-        https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
-    -->
 </resources>

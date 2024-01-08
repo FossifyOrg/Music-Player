@@ -16,7 +16,6 @@
     <string name="volume">Glasnoća</string>
     <string name="playback_speed">Brzina reprodukcije</string>
     <string name="loading_files">Učitavanje datoteka …</string>
-    <!-- Playlists -->
     <string name="add_file_to_playlist">Dodaj datoteku u popis pjesama</string>
     <string name="add_folder_to_playlist">Dodaj mapu u popis pjesama</string>
     <string name="manage_playlists">Upravljaj popisom pjesama</string>
@@ -49,7 +48,6 @@
     <string name="export_playlist">Izvezi popis pjesama</string>
     <string name="import_playlist">Uvezi popis pjesama</string>
     <string name="filename_without_m3u">Ime datoteke (bez .m3u)</string>
-    <!-- Sorting -->
     <string name="track_count">Broj pjesme</string>
     <string name="album_count">Broj albuma</string>
     <string name="artist_name">Ime izvođača</string>
@@ -57,10 +55,8 @@
     <string name="track_number">Broj pjesme</string>
     <string name="use_for_this_playlist">Koristi samo za ovu playlistu</string>
     <string name="use_for_this_album">Koristi samo za ovaj album</string>
-    <!-- Artists -->
     <string name="artists">Izvođači</string>
     <string name="folders">Mape</string>
-    <string name="genres">Genres</string>
     <string name="albums">Albumi</string>
     <plurals name="albums_plural">
         <item quantity="one">%d album</item>
@@ -73,24 +69,15 @@
         <item quantity="few">%d pjesme</item>
         <item quantity="other">%d pjesmi</item>
     </plurals>
-    <!-- Queue -->
     <string name="next_track">Sljedeća:</string>
     <string name="track_queue">Red pjesama</string>
     <string name="add_to_queue">Dodaj u red</string>
-    <string name="play_next">Play next</string>
     <string name="remove_from_queue">Ukloni iz reda</string>
     <string name="create_playlist_from_queue">Stvori popis pjesama iz reda</string>
-    <!-- Settings -->
     <string name="equalizer">Ekvilizator</string>
     <string name="swap_prev_next">Zamijeni gumbe prethodne/sljedeća slušalice</string>
     <string name="exclude_folder_description">Isključivanje mape spriječit će prikazivanje svih audio datoteka u njoj. To neće utjecati na datoteke koje su ručno dodane na popise za reprodukciju.</string>
     <string name="gapless_playback">Reprodukcija bez prekida</string>
-    <string name="rescan_media">Rescan media</string>
-    <!-- FAQ -->
     <string name="faq_1_title">Kako mogu premotati pjesme\?</string>
     <string name="faq_1_text">Možeš pritisnuti tekst aktualnog ili krajnjeg trajanja pjesme u blizini trake za pretraživanje. Time ćeš premotati pjesmu unatrag ili naprijed.</string>
-    <!--
-        Haven't found some strings? There's more at
-        https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
-    -->
 </resources>

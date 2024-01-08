@@ -16,7 +16,6 @@
     <string name="volume">音量</string>
     <string name="playback_speed">播放速度</string>
     <string name="loading_files">加载文件中…</string>
-    <!-- Playlists -->
     <string name="add_file_to_playlist">添加文件至播放列表</string>
     <string name="add_folder_to_playlist">添加文件夹至播放列表</string>
     <string name="manage_playlists">管理播放列表</string>
@@ -49,7 +48,6 @@
     <string name="export_playlist">导出播放列表</string>
     <string name="import_playlist">导入播放列表</string>
     <string name="filename_without_m3u">文件名 (不带 .m3u)</string>
-    <!-- Sorting -->
     <string name="track_count">曲目数</string>
     <string name="album_count">专辑数</string>
     <string name="artist_name">艺术家名称</string>
@@ -57,7 +55,6 @@
     <string name="track_number">曲目编号</string>
     <string name="use_for_this_playlist">仅用于此播放列表</string>
     <string name="use_for_this_album">仅用于此专辑</string>
-    <!-- Artists -->
     <string name="artists">艺术家</string>
     <string name="folders">文件夹</string>
     <string name="genres">流派</string>
@@ -69,24 +66,17 @@
     <plurals name="tracks_plural">
         <item quantity="other">%d 首歌</item>
     </plurals>
-    <!-- Queue -->
     <string name="next_track">下一首:</string>
     <string name="track_queue">歌曲队列</string>
     <string name="add_to_queue">添加到队列</string>
     <string name="play_next">播放下一首</string>
     <string name="remove_from_queue">从队列中删除</string>
     <string name="create_playlist_from_queue">从队列创建播放列表</string>
-    <!-- Settings -->
     <string name="equalizer">均衡器</string>
     <string name="swap_prev_next">交换耳机上的上一首/下一首按钮</string>
     <string name="exclude_folder_description">排除一个文件夹将阻止显示其中所有的音频文件。手动添加到播放列表的文件不会受到影响。</string>
     <string name="gapless_playback">无缝播放</string>
     <string name="rescan_media">重新扫描媒体</string>
-    <!-- FAQ -->
     <string name="faq_1_title">我如何快进歌曲？</string>
     <string name="faq_1_text">您可以单击搜索栏附近的当前或最大持续时间文本，这将向后或向前移动歌曲。</string>
-    <!--
-        Haven't found some strings? There's more at
-        https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
-    -->
 </resources>

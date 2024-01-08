@@ -16,7 +16,6 @@
     <string name="volume">音量</string>
     <string name="playback_speed">再生速度</string>
     <string name="loading_files">ファイルを読込中…</string>
-    <!-- Playlists -->
     <string name="add_file_to_playlist">プレイリストにファイルを追加</string>
     <string name="add_folder_to_playlist">プレイリストにフォルダを追加</string>
     <string name="manage_playlists">プレイリストを管理</string>
@@ -49,7 +48,6 @@
     <string name="export_playlist">プレイリストのエクスポート</string>
     <string name="import_playlist">プレイリストのインポート</string>
     <string name="filename_without_m3u">ファイル名 (.m3uを除く)</string>
-    <!-- Sorting -->
     <string name="track_count">トラック数</string>
     <string name="album_count">アルバム数</string>
     <string name="artist_name">アーティスト名</string>
@@ -57,10 +55,8 @@
     <string name="track_number">トラック番号</string>
     <string name="use_for_this_playlist">このプレイリストのみに適用</string>
     <string name="use_for_this_album">このアルバムのみに適用</string>
-    <!-- Artists -->
     <string name="artists">アーティスト</string>
     <string name="folders">フォルダ</string>
-    <string name="genres">Genres</string>
     <string name="albums">アルバム</string>
     <plurals name="albums_plural">
         <item quantity="other">%d 件のアルバム</item>
@@ -69,24 +65,14 @@
     <plurals name="tracks_plural">
         <item quantity="other">%d 件のトラック</item>
     </plurals>
-    <!-- Queue -->
     <string name="next_track">次:</string>
     <string name="track_queue">再生キュー</string>
     <string name="add_to_queue">キューに追加</string>
-    <string name="play_next">Play next</string>
     <string name="remove_from_queue">キューから削除</string>
     <string name="create_playlist_from_queue">キューからプレイリストを作成</string>
-    <!-- Settings -->
     <string name="equalizer">イコライザー</string>
     <string name="swap_prev_next">ヘッドフォンの 前へ/次へ ボタンを入れ替える</string>
     <string name="exclude_folder_description">フォルダを除外すると、フォルダ内のすべてのオーディオファイルが表示されなくなります。プレイリストに手動で追加したファイルは影響を受けません。</string>
-    <string name="gapless_playback">Gapless playback</string>
-    <string name="rescan_media">Rescan media</string>
-    <!-- FAQ -->
     <string name="faq_1_title">曲を早送りするにはどうすればよいですか？</string>
     <string name="faq_1_text">シークバーの近くにある [曲の長さ] を示すテキストをタップすると、曲の早送りをすることができます（ [現在の再生位置] を示すテキストをタップすると、曲の早戻しをすることができます）。</string>
-    <!--
-        Haven't found some strings? There's more at
-        https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
-    -->
 </resources>

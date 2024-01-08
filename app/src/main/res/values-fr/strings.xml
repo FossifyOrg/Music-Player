@@ -13,10 +13,8 @@
     <string name="disable_shuffle">Désactiver la lecture aléatoire</string>
     <string name="shuffle_enabled">Lecture aléatoire activée</string>
     <string name="shuffle_disabled">Lecture aléatoire désactivée</string>
-    <string name="volume">Volume</string>
     <string name="playback_speed">Vitesse de lecture</string>
     <string name="loading_files">Chargement des fichiers…</string>
-    <!-- Playlists -->
     <string name="add_file_to_playlist">Ajouter un fichier à la liste de lecture</string>
     <string name="add_folder_to_playlist">Ajouter un dossier à la liste de lecture</string>
     <string name="manage_playlists">Gérer les listes de lecture</string>
@@ -49,7 +47,6 @@
     <string name="export_playlist">Exporter la liste de lecture</string>
     <string name="import_playlist">Importer une liste de lecture</string>
     <string name="filename_without_m3u">Nom du fichier (without .m3u)</string>
-    <!-- Sorting -->
     <string name="track_count">Nombre de pistes</string>
     <string name="album_count">Nombre d\'albums</string>
     <string name="artist_name">Nom de l\'artiste</string>
@@ -57,11 +54,8 @@
     <string name="track_number">Numéro de piste</string>
     <string name="use_for_this_playlist">Utiliser uniquement pour cette liste de lecture</string>
     <string name="use_for_this_album">Utiliser uniquement pour cet album</string>
-    <!-- Artists -->
     <string name="artists">Artistes</string>
     <string name="folders">Dossiers</string>
-    <string name="genres">Genres</string>
-    <string name="albums">Albums</string>
     <plurals name="albums_plural">
         <item quantity="one">%d album</item>
         <item quantity="many">%d albums</item>
@@ -73,24 +67,17 @@
         <item quantity="many">%d pistes</item>
         <item quantity="other">%d pistes</item>
     </plurals>
-    <!-- Queue -->
     <string name="next_track">Suivant :</string>
     <string name="track_queue">File des pistes</string>
     <string name="add_to_queue">Ajouter à la file</string>
     <string name="play_next">Écouter ensuite</string>
     <string name="remove_from_queue">Supprimer de la file</string>
     <string name="create_playlist_from_queue">Créer une liste de lecture depuis la file</string>
-    <!-- Settings -->
     <string name="equalizer">Égaliseur</string>
     <string name="swap_prev_next">Remplacer les boutons des écouteurs précédents/suivants</string>
     <string name="exclude_folder_description">L\'exclusion d\'un dossier empêchera l\'affichage de tous les fichiers audio qu\'il contient. Les fichiers ajoutés manuellement aux listes de lecture ne seront pas affectés.</string>
     <string name="gapless_playback">Lecture sans décalage</string>
     <string name="rescan_media">Rescanner le média</string>
-    <!-- FAQ -->
     <string name="faq_1_title">Comment puis-je faire avancer rapidement les chansons \?</string>
     <string name="faq_1_text">Vous pouvez cliquer sur le texte de la durée actuelle ou de la durée maximale près de la barre de recherche, ce qui fera avancer ou reculer la chanson.</string>
-    <!--
-        Haven't found some strings? There's more at
-        https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
-    -->
 </resources>

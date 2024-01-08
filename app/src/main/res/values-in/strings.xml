@@ -13,10 +13,8 @@
     <string name="disable_shuffle">Nonaktifkan acak</string>
     <string name="shuffle_enabled">Acak diaktifkan</string>
     <string name="shuffle_disabled">Acak dinonaktifkan</string>
-    <string name="volume">Volume</string>
     <string name="playback_speed">Kecepatan playback</string>
     <string name="loading_files">Memuat file…</string>
-    <!-- Playlists -->
     <string name="add_file_to_playlist">Tambah berkas ke daftar putar</string>
     <string name="add_folder_to_playlist">Tambah folder ke daftar putar</string>
     <string name="manage_playlists">Kelola daftar putar</string>
@@ -44,23 +42,16 @@
     <string name="title_is_not_available">Jika judul tidak tersedia</string>
     <string name="show_album_cover">Tampilkan kover album pada layar utama</string>
     <string name="all_tracks">Semua trek</string>
-    <string name="add_to_playlist">Add to playlist</string>
     <string name="create_playlist_label">Anda dapat membuat sebuah daftar putar baru dengan memilih artis, album atau trek yang diinginkan dengan menggunakan Menu -&gt; Tambahkan ke daftar putar.</string>
-    <string name="export_playlist">Export playlist</string>
-    <string name="import_playlist">Import playlist</string>
     <string name="filename_without_m3u">Nama berkas (tanpa .m3u)</string>
-    <!-- Sorting -->
     <string name="track_count">Hitungan Trek</string>
     <string name="album_count">Hitungan Album</string>
-    <string name="artist_name">Artist Name</string>
     <string name="year">Tahun</string>
     <string name="track_number">Nomor trek</string>
     <string name="use_for_this_playlist">Gunakan untuk daftar putar ini saja</string>
     <string name="use_for_this_album">Gunakan untuk album ini saja</string>
-    <!-- Artists -->
     <string name="artists">Artis</string>
     <string name="folders">Folder</string>
-    <string name="genres">Genres</string>
     <string name="albums">Album</string>
     <plurals name="albums_plural">
         <item quantity="other">%d Album</item>
@@ -69,24 +60,13 @@
     <plurals name="tracks_plural">
         <item quantity="other">%d Trek</item>
     </plurals>
-    <!-- Queue -->
-    <string name="next_track">Next:</string>
     <string name="track_queue">Antrean trek</string>
     <string name="add_to_queue">Tambahkan ke antrean</string>
-    <string name="play_next">Play next</string>
     <string name="remove_from_queue">Hapus dari antrean</string>
     <string name="create_playlist_from_queue">Buat daftar putar dari antrean</string>
-    <!-- Settings -->
     <string name="equalizer">Ekualiser</string>
     <string name="swap_prev_next">Tukar tombol pemilih lagu sebelumnya/berikutnya pada headphone</string>
     <string name="exclude_folder_description">Tidak menyertakan folder akan mencegah penampilan semua berkas audio yang di dalamnya. Berkas yang ditambahkan secara manual ke daftar putar tidak berpengaruh.</string>
-    <string name="gapless_playback">Gapless playback</string>
-    <string name="rescan_media">Rescan media</string>
-    <!-- FAQ -->
     <string name="faq_1_title">Bagaimana saya memajukan lagu\?</string>
     <string name="faq_1_text">Anda bisa klik teks durasi di dekat bilah laju, tindakan tersebut akan memajukan atau memundurkan lagu.</string>
-    <!--
-        Haven't found some strings? There's more at
-        https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
-    -->
 </resources>

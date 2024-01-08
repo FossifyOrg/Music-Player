@@ -13,10 +13,8 @@
     <string name="disable_shuffle">Desativar modo aleatório</string>
     <string name="shuffle_enabled">Modo aleatório ativado</string>
     <string name="shuffle_disabled">Modo aleatório desativado</string>
-    <string name="volume">Volume</string>
     <string name="playback_speed">Velocidade de reprodução</string>
     <string name="loading_files">A carregar ficheiros…</string>
-    <!-- Playlists -->
     <string name="add_file_to_playlist">Adicionar ficheiro à lista de reprodução</string>
     <string name="add_folder_to_playlist">Adicionar pasta à lista de reprodução</string>
     <string name="manage_playlists">Gerir listas de reprodução</string>
@@ -49,7 +47,6 @@
     <string name="export_playlist">Exportar lista de reprodução</string>
     <string name="import_playlist">Importar lista de reprodução</string>
     <string name="filename_without_m3u">Nome do ficheiro (sem .m3u)</string>
-    <!-- Sorting -->
     <string name="track_count">Número de faixas</string>
     <string name="album_count">Número de álbuns</string>
     <string name="artist_name">Nome do artista</string>
@@ -57,7 +54,6 @@
     <string name="track_number">Número da faixa</string>
     <string name="use_for_this_playlist">Utilizar apenas para esta lista de reprodução</string>
     <string name="use_for_this_album">Utilizar apenas para este álbum</string>
-    <!-- Artists -->
     <string name="artists">Artistas</string>
     <string name="folders">Pastas</string>
     <string name="genres">Géneros</string>
@@ -73,24 +69,17 @@
         <item quantity="many">%d faixas</item>
         <item quantity="other">%d faixas</item>
     </plurals>
-    <!-- Queue -->
     <string name="next_track">Seguinte:</string>
     <string name="track_queue">Fila de reprodução</string>
     <string name="add_to_queue">Adiiconar à fila de reprodução</string>
     <string name="play_next">Reproduzir seguinte</string>
     <string name="remove_from_queue">Remover da fila de reprodução</string>
     <string name="create_playlist_from_queue">Criar lista de reprodução a partir da fila</string>
-    <!-- Settings -->
     <string name="equalizer">Equalizador</string>
     <string name="swap_prev_next">Trocar de faixa com os botões do auricular</string>
     <string name="exclude_folder_description">Se excluir uma pasta, não conseguirá ver os ficheiros lá existentes. Os ficheiros adicionados manualmente a uma lista de reprodução não serão afetados.</string>
     <string name="gapless_playback">Reprodução sem pausas</string>
     <string name="rescan_media">Reanalisar dados</string>
-    <!-- FAQ -->
     <string name="faq_1_title">Posso avançar/recuar rapidamente uma faixa\?</string>
     <string name="faq_1_text">Toque nos textos de duração máxima/atual junto à barra de progresso para avançar ou recuar na posição da faixa.</string>
-    <!--
-        Não encontrou todas as cadeias a traduzir? Existem mais algumas em:
-        https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
-    -->
 </resources>

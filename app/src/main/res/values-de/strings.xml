@@ -16,7 +16,6 @@
     <string name="volume">Lautstärke</string>
     <string name="playback_speed">Wiedergabegeschwindigkeit</string>
     <string name="loading_files">Dateien werden geladen …</string>
-    <!-- Playlists -->
     <string name="add_file_to_playlist">Datei zu Wiedergabeliste hinzufügen</string>
     <string name="add_folder_to_playlist">Ordner zu Wiedergabeliste hinzufügen</string>
     <string name="manage_playlists">Wiedergabelisten verwalten</string>
@@ -49,7 +48,6 @@
     <string name="export_playlist">Wiedergabeliste exportieren</string>
     <string name="import_playlist">Wiedergabeliste importieren</string>
     <string name="filename_without_m3u">Dateiname (ohne .m3u)</string>
-    <!-- Sorting -->
     <string name="track_count">Titelanzahl</string>
     <string name="album_count">Albenanzahl</string>
     <string name="artist_name">Künstlername</string>
@@ -57,10 +55,8 @@
     <string name="track_number">Titelnummer</string>
     <string name="use_for_this_playlist">Nur für diese Wiedergabeliste verwenden</string>
     <string name="use_for_this_album">Nur für dieses Album verwenden</string>
-    <!-- Artists -->
     <string name="artists">Künstler</string>
     <string name="folders">Ordner</string>
-    <string name="genres">Genres</string>
     <string name="albums">Alben</string>
     <plurals name="albums_plural">
         <item quantity="one">%d Album</item>
@@ -71,24 +67,16 @@
         <item quantity="one">%d Titel</item>
         <item quantity="other">%d Titel</item>
     </plurals>
-    <!-- Queue -->
     <string name="next_track">Als nächstes:</string>
     <string name="track_queue">Warteschlange</string>
     <string name="add_to_queue">In die Warteschlange</string>
     <string name="play_next">Als nächstes spielen</string>
     <string name="remove_from_queue">Aus Warteschlange entfernen</string>
     <string name="create_playlist_from_queue">Wiedergabeliste aus Warteschlange erstellen</string>
-    <!-- Settings -->
-    <string name="equalizer">Equalizer</string>
     <string name="swap_prev_next">Vertausche die Kopfhörerknöpfe Vorheriger/Nächster Titel</string>
     <string name="exclude_folder_description">Das Ausschließen eines Ordner verhindert die Anzeige aller darin enthaltenen Audiodateien. Dateien, die manuell zu Wiedergabelisten hinzugefügt wurden, sind davon nicht betroffen.</string>
     <string name="gapless_playback">Lückenlose Wiedergabe</string>
     <string name="rescan_media">Medien erneut einlesen</string>
-    <!-- FAQ -->
     <string name="faq_1_title">Wie kann ich Lieder vor- oder zurückspulen\?</string>
     <string name="faq_1_text">Du kannst während der Wiedergabe schnell vor- oder zurückspulen, indem du neben der Fortschrittsanzeige entweder die Gesamtdauer oder die aktuelle Dauer des Liedes antippst. Alternativ kannst du auch den Schieber der Fortschrittsanzeige direkt zur gewünschten Stelle ziehen.</string>
-    <!--
-        Haven't found some strings? There's more at
-        https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
-    -->
 </resources>

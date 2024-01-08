@@ -16,7 +16,6 @@
     <string name="volume">Гучність</string>
     <string name="playback_speed">Швидкість відтворення</string>
     <string name="loading_files">Завантаження файлів…</string>
-    <!-- Playlists -->
     <string name="add_file_to_playlist">Додати файл до списку відтворення</string>
     <string name="add_folder_to_playlist">Додати теку до списку відтворення</string>
     <string name="manage_playlists">Керувати списками відтворення</string>
@@ -49,7 +48,6 @@
     <string name="export_playlist">Експортувати список відтворення</string>
     <string name="import_playlist">Імпортувати список відтворення</string>
     <string name="filename_without_m3u">Ім\'я файлу (без .m3u)</string>
-    <!-- Sorting -->
     <string name="track_count">Кількість композицій</string>
     <string name="album_count">Кількість альбомів</string>
     <string name="artist_name">Ім\'я виконавця</string>
@@ -57,7 +55,6 @@
     <string name="track_number">Номер треку</string>
     <string name="use_for_this_playlist">Використовувати лише для цього списку відтворення</string>
     <string name="use_for_this_album">Використовувати лише для цього альбому</string>
-    <!-- Artists -->
     <string name="artists">Виконавці</string>
     <string name="folders">Теки</string>
     <string name="genres">Жанри</string>
@@ -75,24 +72,17 @@
         <item quantity="many">%d Композицій</item>
         <item quantity="other">%d Композицій</item>
     </plurals>
-    <!-- Queue -->
     <string name="next_track">Наступна:</string>
     <string name="track_queue">Черга композицій</string>
     <string name="add_to_queue">Додати до черги</string>
     <string name="play_next">Відтворити наступним</string>
     <string name="remove_from_queue">Вилучити з черги</string>
     <string name="create_playlist_from_queue">Створити плейліст із черги</string>
-    <!-- Settings -->
     <string name="equalizer">Еквалайзер</string>
     <string name="swap_prev_next">Змінити призначення кнопок навушників Попередній/Наступний</string>
     <string name="exclude_folder_description">Виключення папки перешкоджатиме відображенню всіх аудіофайлів у ній. Файли, додані до списків відтворення вручну, не постраждають.</string>
     <string name="gapless_playback">Відтворення без пауз</string>
     <string name="rescan_media">Пересканувати медіа</string>
-    <!-- FAQ -->
     <string name="faq_1_title">Як я можу змінити позицію відтворення композиції\?</string>
     <string name="faq_1_text">Ви можете натиснути на текст поточної або загальної тривалості відтворення поруч із ковзним елементом відтворення, це перемістить програвання композиції або назад, або вперед.</string>
-    <!--
-        Haven't found some strings? There's more at
-        https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
-    -->
 </resources>

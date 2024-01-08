@@ -13,10 +13,8 @@
     <string name="disable_shuffle">Disabilita riproduzione casuale</string>
     <string name="shuffle_enabled">Riproduzione casuale abilitata</string>
     <string name="shuffle_disabled">Riproduzione casuale disabilitata</string>
-    <string name="volume">Volume</string>
     <string name="playback_speed">Velocità di riproduzione</string>
     <string name="loading_files">Caricamento dei file…</string>
-    <!-- Playlists -->
     <string name="add_file_to_playlist">Aggiungi file alla scaletta</string>
     <string name="add_folder_to_playlist">Aggiungi cartella alla scaletta</string>
     <string name="manage_playlists">Gestisci scalette</string>
@@ -49,7 +47,6 @@
     <string name="export_playlist">Esporta la playlist</string>
     <string name="import_playlist">Importa una playlist</string>
     <string name="filename_without_m3u">Nome file (senza .m3u)</string>
-    <!-- Sorting -->
     <string name="track_count">Conteggio per tracce</string>
     <string name="album_count">Conteggio per album</string>
     <string name="artist_name">Nome dell\'artista</string>
@@ -57,7 +54,6 @@
     <string name="track_number">Numero di traccia</string>
     <string name="use_for_this_playlist">Usa solo per questa playlist</string>
     <string name="use_for_this_album">Usa solo per questo album</string>
-    <!-- Artists -->
     <string name="artists">Artisti</string>
     <string name="folders">Cartelle</string>
     <string name="genres">Generi</string>
@@ -73,24 +69,17 @@
         <item quantity="many">%d tracce</item>
         <item quantity="other">%d tracce</item>
     </plurals>
-    <!-- Queue -->
     <string name="next_track">Successivo:</string>
     <string name="track_queue">Coda tracce</string>
     <string name="add_to_queue">Aggiungi alla coda</string>
     <string name="play_next">Ascolta dopo</string>
     <string name="remove_from_queue">Rimuovi dalla coda</string>
     <string name="create_playlist_from_queue">Crea una scaletta dalla coda</string>
-    <!-- Settings -->
     <string name="equalizer">Equalizzatore</string>
     <string name="swap_prev_next">Inverti i pulsanti successivo/precedente delle cuffiette</string>
     <string name="exclude_folder_description">L\'esclusione di una cartella impedisce la visualizzazione di tutti i file audio al suo interno. I file aggiunti manualmente alle playlist non saranno interessati.</string>
     <string name="gapless_playback">Riproduzione senza intervallo</string>
     <string name="rescan_media">Riscansiona il media</string>
-    <!-- FAQ -->
     <string name="faq_1_title">Come posso avanzare rapidamente nei brani\?</string>
     <string name="faq_1_text">Si può premere rapidamente sui testi accanto alla barra di avanzamento, questi faranno spostare il brano in avanti o all\'indietro.</string>
-    <!--
-        Haven't found some strings? There's more at
-        https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
-    -->
 </resources>

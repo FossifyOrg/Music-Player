@@ -16,7 +16,6 @@
     <string name="volume">Hangerő</string>
     <string name="playback_speed">Lejátszási sebesség</string>
     <string name="loading_files">Fájlok betöltése…</string>
-    <!-- Playlists -->
     <string name="add_file_to_playlist">Fájl hozzáadása a lejátszási listához</string>
     <string name="add_folder_to_playlist">Mappa hozzáadása a lejátszási listához</string>
     <string name="manage_playlists">Lejátszási listák kezelése</string>
@@ -49,7 +48,6 @@
     <string name="export_playlist">Lejátszási lista exportálása</string>
     <string name="import_playlist">Lejátszási lista importálása</string>
     <string name="filename_without_m3u">Fájlnév (.m3u nélkül)</string>
-    <!-- Sorting -->
     <string name="track_count">Számok száma</string>
     <string name="album_count">Albumok száma</string>
     <string name="artist_name">Előadó neve</string>
@@ -57,7 +55,6 @@
     <string name="track_number">Szám sorszáma</string>
     <string name="use_for_this_playlist">Használat csak ehhez a lejátszási listához</string>
     <string name="use_for_this_album">Használat csak ehhez az albumhoz</string>
-    <!-- Artists -->
     <string name="artists">Előadók</string>
     <string name="folders">Mappák</string>
     <string name="genres">Műfajok</string>
@@ -71,24 +68,17 @@
         <item quantity="one">%d szám</item>
         <item quantity="other">%d szám</item>
     </plurals>
-    <!-- Queue -->
     <string name="next_track">Következő:</string>
     <string name="track_queue">Várólista</string>
     <string name="add_to_queue">Hozzáadás a várólistához</string>
     <string name="play_next">Következő lejátszása</string>
     <string name="remove_from_queue">Eltávolítás a várólistából</string>
     <string name="create_playlist_from_queue">Lejátszási lista készítése a várólistából</string>
-    <!-- Settings -->
     <string name="equalizer">Hangszínszabályzó</string>
     <string name="swap_prev_next">Fejhallgató számváltó gombjainak felcserélése</string>
     <string name="exclude_folder_description">A mappa kihagyása megakadályozza a benne lévő összes hangfájl megjelenítését. A lejátszási listákhoz kézileg hozzáadott fájlokat ez nem érinti.</string>
     <string name="gapless_playback">Hézagmentes lejátszás</string>
     <string name="rescan_media">Média újraolvasása</string>
-    <!-- FAQ -->
     <string name="faq_1_title">Hogy tudom a számot előre tekerni\?</string>
     <string name="faq_1_text">A keresősáv melletti jelenlegi vagy maximális hossz szövegekre kattintva tud előre és hátra tekerni.</string>
-    <!--
-        Haven't found some strings? There's more at
-        https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
-    -->
 </resources>

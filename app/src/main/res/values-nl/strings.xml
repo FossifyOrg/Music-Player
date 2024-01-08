@@ -13,10 +13,8 @@
     <string name="disable_shuffle">Shuffle uitschakelen</string>
     <string name="shuffle_enabled">Shuffle ingeschakeld</string>
     <string name="shuffle_disabled">Shuffle uitgeschakeld</string>
-    <string name="volume">Volume</string>
     <string name="playback_speed">Afspeelsnelheid</string>
     <string name="loading_files">Bestanden laden…</string>
-    <!-- Playlists -->
     <string name="add_file_to_playlist">Bestand toevoegen aan afspeellijst</string>
     <string name="add_folder_to_playlist">Map toevoegen aan afspeellijst</string>
     <string name="manage_playlists">Afspeellijsten beheren</string>
@@ -49,7 +47,6 @@
     <string name="export_playlist">Afspeellijst exporteren</string>
     <string name="import_playlist">Afspeellijst importeren</string>
     <string name="filename_without_m3u">Bestandsnaam (zonder .m3u)</string>
-    <!-- Sorting -->
     <string name="track_count">Aantal nummers</string>
     <string name="album_count">Aantal albums</string>
     <string name="artist_name">Artiest</string>
@@ -57,11 +54,8 @@
     <string name="track_number">Nummer</string>
     <string name="use_for_this_playlist">Alleen voor deze afspeellijst</string>
     <string name="use_for_this_album">Alleen voor dit album</string>
-    <!-- Artists -->
     <string name="artists">Artiesten</string>
     <string name="folders">Mappen</string>
-    <string name="genres">Genres</string>
-    <string name="albums">Albums</string>
     <plurals name="albums_plural">
         <item quantity="one">%d album</item>
         <item quantity="other">%d albums</item>
@@ -71,24 +65,16 @@
         <item quantity="one">%d nummer</item>
         <item quantity="other">%d nummers</item>
     </plurals>
-    <!-- Queue -->
     <string name="next_track">Volgende:</string>
     <string name="track_queue">Wachtrij</string>
     <string name="add_to_queue">Aan wachtrij toevoegen</string>
     <string name="play_next">Hierna afspelen</string>
     <string name="remove_from_queue">Uit wachtrij verwijderen</string>
     <string name="create_playlist_from_queue">Wachtrij opslaan als afspeellijst</string>
-    <!-- Settings -->
-    <string name="equalizer">Equalizer</string>
     <string name="swap_prev_next">Knoppen Vorige/Volgende op koptelefoon omdraaien</string>
     <string name="exclude_folder_description">Het uitsluiten van een map zorgt ervoor dat alle geluidsbestanden in deze map worden genegeerd. Dit heeft geen gevolgen voor bestanden die handmatig zijn toegevoegd aan afspeellijsten.</string>
     <string name="gapless_playback">Gapless afspelen</string>
     <string name="rescan_media">Media doorzoeken</string>
-    <!-- FAQ -->
     <string name="faq_1_title">Hoe kan ik een nummer vooruitspoelen\?</string>
     <string name="faq_1_text">Klik op de tijdsindicatoren voor de voortgang of de looptijd om resp. terug of vooruit te spoelen.</string>
-    <!--
-        Haven't found some strings? There's more at
-        https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
-    -->
 </resources>

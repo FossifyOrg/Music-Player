@@ -16,7 +16,6 @@
     <string name="volume">Ljodstyrk</string>
     <string name="playback_speed">Avspelingssnøggleiken</string>
     <string name="loading_files">Leitar fram filer …</string>
-    <!-- Playlists -->
     <string name="add_file_to_playlist">Legg til ei fil i spelelista</string>
     <string name="add_folder_to_playlist">Legg til ei mappe i spelelista</string>
     <string name="manage_playlists">Handsam spelelister</string>
@@ -28,7 +27,6 @@
     <string name="remove_playlist_description">Berre dei valde spelelistene vert sletta. Filene/låtene i dei vert ikkje sletta.</string>
     <string name="remove_playlist_description_placeholder">Berre «%s»-spelelista vert sletta. Filene/låtene vert ikkje sletta.</string>
     <string name="remove_from_playlist">Tak bort ifrå spelelista</string>
-    <string name="remove_from_playlist_description">This will only remove the items from playlist \"%s\". The actual files will not be deleted.</string>
     <string name="delete_the_files_too">Slett filene au</string>
     <string name="open_playlist">Opne spelelista</string>
     <string name="all_songs_cannot_be_deleted">Kan ikkje slette «Alle låter»-spelelista</string>
@@ -49,7 +47,6 @@
     <string name="export_playlist">Før ut spelelista</string>
     <string name="import_playlist">Før inn ei speleliste</string>
     <string name="filename_without_m3u">Filnamn (utan .m3u)</string>
-    <!-- Sorting -->
     <string name="track_count">Mengd låter</string>
     <string name="album_count">Mengd album</string>
     <string name="artist_name">Artistnamn</string>
@@ -57,10 +54,8 @@
     <string name="track_number">Låtnummer</string>
     <string name="use_for_this_playlist">Berre i denne spelelista</string>
     <string name="use_for_this_album">Berre i dette albumet</string>
-    <!-- Artists -->
     <string name="artists">Artistar</string>
     <string name="folders">Mapper</string>
-    <string name="genres">Genres</string>
     <string name="albums">Album</string>
     <plurals name="albums_plural">
         <item quantity="one">%d album</item>
@@ -71,24 +66,14 @@
         <item quantity="one">%d låt</item>
         <item quantity="other">%d låter</item>
     </plurals>
-    <!-- Queue -->
     <string name="next_track">Neste:</string>
     <string name="track_queue">Kø</string>
     <string name="add_to_queue">Legg til i køen</string>
-    <string name="play_next">Play next</string>
     <string name="remove_from_queue">Tak bort ifrå køen</string>
     <string name="create_playlist_from_queue">Lag ei speleliste med køen</string>
-    <!-- Settings -->
     <string name="equalizer">Tonejamnar</string>
     <string name="swap_prev_next">Byt om på høyretelefonknappane for førre/neste</string>
     <string name="exclude_folder_description">Steng ut ei mappa for å hindre hennar ljodfiler ifrå å verta viste. Filer lagde til i spelelister for hand, vert ikkje påverka.</string>
-    <string name="gapless_playback">Gapless playback</string>
-    <string name="rescan_media">Rescan media</string>
-    <!-- FAQ -->
     <string name="faq_1_title">Brigde av snøggleiken til låter</string>
     <string name="faq_1_text">Trykk på noverande tid eller fulltid under framgangslina for å hoppe framover eller bakover i låta.</string>
-    <!--
-        Haven't found some strings? There's more at
-        https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
-    -->
 </resources>

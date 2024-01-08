@@ -16,7 +16,6 @@
     <string name="volume">Głośność</string>
     <string name="playback_speed">Prędkość odtwarzania</string>
     <string name="loading_files">Ładowanie plików…</string>
-    <!-- Playlists -->
     <string name="add_file_to_playlist">Dodaj plik do playlisty</string>
     <string name="add_folder_to_playlist">Dodaj folder do playlisty</string>
     <string name="manage_playlists">Zarządzaj playlistą</string>
@@ -49,7 +48,6 @@
     <string name="export_playlist">Eksportuj playlistę</string>
     <string name="import_playlist">Importuj playlistę</string>
     <string name="filename_without_m3u">Nazwa pliku (bez .m3u)</string>
-    <!-- Sorting -->
     <string name="track_count">Liczba utworów</string>
     <string name="album_count">Liczba albumów</string>
     <string name="artist_name">Nazwa artysty</string>
@@ -57,7 +55,6 @@
     <string name="track_number">Numer utworu</string>
     <string name="use_for_this_playlist">Tylko w tej playliście</string>
     <string name="use_for_this_album">Tylko w tym albumie</string>
-    <!-- Artists -->
     <string name="artists">Artyści</string>
     <string name="folders">Foldery</string>
     <string name="genres">Gatunki</string>
@@ -75,24 +72,17 @@
         <item quantity="many">%d utworów</item>
         <item quantity="other">%d utworów</item>
     </plurals>
-    <!-- Queue -->
     <string name="next_track">Następny:</string>
     <string name="track_queue">Kolejka utworów</string>
     <string name="add_to_queue">Dodaj do kolejki</string>
     <string name="play_next">Odtwórz następny</string>
     <string name="remove_from_queue">Usuń z kolejki</string>
     <string name="create_playlist_from_queue">Utwórz playlistę z kolejki</string>
-    <!-- Settings -->
     <string name="equalizer">Korektor</string>
     <string name="swap_prev_next">Zamień przyciski słuchawek poprzedni/następny</string>
     <string name="exclude_folder_description">Wykluczenie folderu uniemożliwi wyświetlanie wszystkich znajdujących się w nim plików audio. Nie wpłynie to na pliki ręcznie dodane do playlist.</string>
     <string name="gapless_playback">Odtwarzanie bez przerw</string>
     <string name="rescan_media">Przeskanuj ponownie multimedia</string>
-    <!-- FAQ -->
     <string name="faq_1_title">Jak mogę przewijać utwory do przodu\?</string>
     <string name="faq_1_text">Możesz nacisnąć tekst bieżącego lub całkowitego czasu trwania w pobliżu paska przewijania — przewinie to utwór do tyłu lub do przodu.</string>
-    <!--
-        Haven't found some strings? There's more at
-        https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
-    -->
 </resources>

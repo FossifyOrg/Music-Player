@@ -5,18 +5,13 @@
     <string name="rename_song">تغییر نام آهنگ</string>
     <string name="rename_song_error">هنگام تغییر نام خطایی روی داد</string>
     <string name="rename_song_empty">لطفا همه موارد را پر کنید</string>
-    <string name="repeat_off">Repeat off</string>
     <string name="repeat_song">تکرار آهنگ فعلی</string>
     <string name="repeat_playlist">Repeat playlist</string>
-    <string name="stop_playback_after_current_song">Stop playback after current song</string>
     <string name="enable_shuffle">فعال کردن پخش تصادفی</string>
     <string name="disable_shuffle">غیر فعال کردن پخش تصادفی</string>
     <string name="shuffle_enabled">پخش تصادفی فعال شد</string>
     <string name="shuffle_disabled">پخش تصادفی غیر فعال شد</string>
     <string name="volume">حجم صدا</string>
-    <string name="playback_speed">Playback speed</string>
-    <string name="loading_files">Loading files…</string>
-    <!-- Playlists -->
     <string name="add_file_to_playlist">افزودن فایل به لیست علاقه مندی ها</string>
     <string name="add_folder_to_playlist">افزودن فولدر به لیست علاقه مندی ها</string>
     <string name="manage_playlists">مدیریت لیست پخش</string>
@@ -38,7 +33,6 @@
     <string name="create_playlist_from_folder">ایجاد لیست پخش جدید از پوشه</string>
     <string name="folder_contains_no_audio">پوشه انتخاب شده حاوی هیچ فایل صوتی نیست</string>
     <string name="delete_current_song">حذف آهنگ فعلی</string>
-    <string name="delete_song_warning">WARNING: This will delete the selected files themselves from the device, all playlists included.</string>
     <string name="remove_current_song">حذف آهنگ فعلی از لیست پخش</string>
     <string name="show_filename">نمایش نام فایل به عنوان عنوان آهنگ</string>
     <string name="title_is_not_available">اگر عنوان در دسترس نیست</string>
@@ -46,21 +40,11 @@
     <string name="all_tracks">همه آهنگ ها</string>
     <string name="add_to_playlist">افزودن به لیست پخش</string>
     <string name="create_playlist_label">با انتخاب هنرمندان ، آلبوم ها یا آهنگ های موردنظر و استفاده از منو -&gt; افزودن به لیست پخش ، می توانید یک لیست پخش جدید ایجاد کنید.</string>
-    <string name="export_playlist">Export playlist</string>
-    <string name="import_playlist">Import playlist</string>
-    <string name="filename_without_m3u">Filename (without .m3u)</string>
-    <!-- Sorting -->
     <string name="track_count">تعداد آهنگ</string>
     <string name="album_count">تعداد آلبوم ها</string>
     <string name="artist_name">نام خواننده</string>
     <string name="year">سال</string>
-    <string name="track_number">Track number</string>
-    <string name="use_for_this_playlist">Use for this playlist only</string>
-    <string name="use_for_this_album">Use for this album only</string>
-    <!-- Artists -->
     <string name="artists">هنرمندان</string>
-    <string name="folders">Folders</string>
-    <string name="genres">Genres</string>
     <string name="albums">آلبوم ها</string>
     <plurals name="albums_plural">
         <item quantity="one">%d آلبوم</item>
@@ -71,24 +55,13 @@
         <item quantity="one">%d آهنگ</item>
         <item quantity="other">%d آهنگ</item>
     </plurals>
-    <!-- Queue -->
     <string name="next_track">بعدی:</string>
     <string name="track_queue">صف آهنگ</string>
     <string name="add_to_queue">افزودن به صف</string>
-    <string name="play_next">Play next</string>
     <string name="remove_from_queue">حذف از صف</string>
     <string name="create_playlist_from_queue">ایجاد لیست پخش از صف</string>
-    <!-- Settings -->
     <string name="equalizer">اکولایزر</string>
     <string name="swap_prev_next">تغییر دکمه های قبلی و بعدی هدفون</string>
-    <string name="exclude_folder_description">Excluding a folder will prevent the displaying of all audio files within. Files manually added to playlists will not be affected.</string>
-    <string name="gapless_playback">Gapless playback</string>
-    <string name="rescan_media">Rescan media</string>
-    <!-- FAQ -->
     <string name="faq_1_title">چطور می توانم آهنگ ها را سریع ارسال کنم؟</string>
     <string name="faq_1_text">می توانید بر روی متون فعلی یا حداکثر مدت زمان نزدیک نوار جستجو کلیک کنید ، که آهنگ را به عقب یا جلو منتقل می کند.</string>
-    <!--
-       Haven't found some strings? There's more at
-       https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
-   -->
 </resources>

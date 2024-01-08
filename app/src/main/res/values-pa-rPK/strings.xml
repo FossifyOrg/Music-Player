@@ -16,7 +16,6 @@
     <string name="volume">آواز</string>
     <string name="playback_speed">گیت دی گتی</string>
     <string name="loading_files">فائلاں لوڈ کریاں جا رِہیاں ہن…</string>
-    <!-- Playlists -->
     <string name="add_file_to_playlist">پلےلِسٹ وچ فائل پایو</string>
     <string name="add_folder_to_playlist">پلےلِسٹ وچ فولڈر پایو</string>
     <string name="manage_playlists">پلےلِسٹاں پربند کرو</string>
@@ -38,7 +37,6 @@
     <string name="create_playlist_from_folder">فولڈر توں نویں پلےلِسٹ بݨاؤ</string>
     <string name="folder_contains_no_audio">ایس چݨی فولڈر وچ کوئی آڈیو دیاں فائلاں نہیں اے</string>
     <string name="delete_current_song">موجودہ گیت مٹاؤ</string>
-    <string name="delete_song_warning">WARNING: This will delete the selected files themselves from the device, all playlists included.</string>
     <string name="remove_current_song">پلےلِسٹ وچ موجودہ گیت ہٹاؤ</string>
     <string name="show_filename">گیت دے سرلیکھ لئی فائل دق ناں ویکھو</string>
     <string name="title_is_not_available">جے سرلیکھ اُپلبدھ نہیں اے</string>
@@ -49,18 +47,12 @@
     <string name="export_playlist">پلےلِسٹ ایکسپورٹ کرو</string>
     <string name="import_playlist">پلےلِسٹ ایمپورٹ کرو</string>
     <string name="filename_without_m3u">فائل دا ناں (`.m3u` نہیں ورتو)</string>
-    <!-- Sorting -->
     <string name="track_count">ٹریکاں دی گتی</string>
     <string name="album_count">البماں دی گتی</string>
     <string name="artist_name">آرٹسٹ دا ناں</string>
     <string name="year">سال</string>
-    <string name="track_number">Track number</string>
-    <string name="use_for_this_playlist">Use for this playlist only</string>
-    <string name="use_for_this_album">Use for this album only</string>
-    <!-- Artists -->
     <string name="artists">آرٹسٹ</string>
     <string name="folders">فولڈر</string>
-    <string name="genres">Genres</string>
     <string name="albums">البم</string>
     <plurals name="albums_plural">
         <item quantity="one">%d البم</item>
@@ -71,20 +63,12 @@
         <item quantity="one">%d ٹریک</item>
         <item quantity="other">%d ٹریک</item>
     </plurals>
-    <!-- Queue -->
     <string name="next_track">اگے:</string>
     <string name="track_queue">ٹریک کتار</string>
     <string name="add_to_queue">کتار وچ پایو</string>
-    <string name="play_next">Play next</string>
     <string name="remove_from_queue">کتار وچ ہٹاؤ</string>
     <string name="create_playlist_from_queue">کتار نال پلےلِسٹ بݨاؤ</string>
-    <!-- Settings -->
     <string name="equalizer">برابری کرن والا</string>
     <string name="swap_prev_next">ہیڈفون دے پچھلے بٹن تے اگے بٹن سویپ کرو</string>
-    <string name="exclude_folder_description">Excluding a folder will prevent the displaying of all audio files within. Files manually added to playlists will not be affected.</string>
-    <string name="gapless_playback">Gapless playback</string>
-    <string name="rescan_media">Rescan media</string>
-    <!-- FAQ -->
     <string name="faq_1_title">میں گیتاں نوں کیویں تیزی نال اگے ودھا سکدا ہاں؟</string>
-    <string name="faq_1_text">You can click on the current or max duration texts near the seekbar, that will move the song either backward, or forward.</string>
-</resources>
+    </resources>

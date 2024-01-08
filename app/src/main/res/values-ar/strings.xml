@@ -16,7 +16,6 @@
     <string name="volume">مستوى الصوت</string>
     <string name="playback_speed">سرعة التشغيل</string>
     <string name="loading_files">يجري تحميل الملفات…</string>
-    <!-- Playlists -->
     <string name="add_file_to_playlist">أضف الملف إلى قائمة تشغيل</string>
     <string name="add_folder_to_playlist">أضف المجلد إلى قائمة تشغيل</string>
     <string name="manage_playlists">إدارة قوائم التشغيل</string>
@@ -49,7 +48,6 @@
     <string name="export_playlist">صدِّر قائمةَ تشغيل</string>
     <string name="import_playlist">اِستورد قائمةَ تشغيل</string>
     <string name="filename_without_m3u">اسم الملف (بدون m3u.)</string>
-    <!-- Sorting -->
     <string name="track_count">عدد المقاطع</string>
     <string name="album_count">عدد الألبومات</string>
     <string name="artist_name">اسم الفنان</string>
@@ -57,7 +55,6 @@
     <string name="track_number">رقم المقطع</string>
     <string name="use_for_this_playlist">استخدم لقائمة التشغيل هذه فقط</string>
     <string name="use_for_this_album">استخدم للألبوم هذا فقط</string>
-    <!-- Artists -->
     <string name="artists">الفنانين</string>
     <string name="folders">المجلدات</string>
     <string name="genres">الأنواع</string>
@@ -79,24 +76,17 @@
         <item quantity="many">%d مقطع</item>
         <item quantity="other">%d مقطع</item>
     </plurals>
-    <!-- Queue -->
     <string name="next_track">التالي:</string>
     <string name="track_queue">لائحة الاستماع</string>
     <string name="add_to_queue">أضِف إلى لائحة الاستماع</string>
     <string name="play_next">تشغيل التالي</string>
     <string name="remove_from_queue">أزِل من لائحة الاستماع</string>
     <string name="create_playlist_from_queue">أنشِئ قائمةَ تشغيل من لائحة الاستماع</string>
-    <!-- Settings -->
     <string name="equalizer">المعادل(Equalizer)</string>
     <string name="swap_prev_next">تبديل أزرار السابق/التالي لسماعة الرأس</string>
     <string name="exclude_folder_description">إذا استبعدت مجلدا، فسيقوم ذلك على منع عرض جميع الملفات الصوتية فيه. لن تتأثر الملفات المضافة يدويا إلى قوائم التشغيل.</string>
     <string name="gapless_playback">تشغيل بدون فجوات</string>
     <string name="rescan_media">إعادة فحص الوسائط</string>
-    <!-- FAQ -->
     <string name="faq_1_title">كيف يمكنني التقدم أو الرجوع في الأغاني؟</string>
     <string name="faq_1_text">يمكنك النقر على نص المدة الحالية أو المدة القصوى بالقرب من شريط البحث، سيمكنك هذا من التقدم أو التراجع في الأغنية.</string>
-    <!--
-        Haven't found some strings? There's more at
-        https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
-    -->
 </resources>

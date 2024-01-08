@@ -16,7 +16,6 @@
     <string name="volume">Volumen</string>
     <string name="playback_speed">Velocidad de reproducción</string>
     <string name="loading_files">Cargando archivos…</string>
-    <!-- Playlists -->
     <string name="add_file_to_playlist">Añadir archivo a lista de reproducción</string>
     <string name="add_folder_to_playlist">Añadir carpeta a lista de reproducción</string>
     <string name="manage_playlists">Administrar listas de reproducción</string>
@@ -49,7 +48,6 @@
     <string name="export_playlist">Exportar la lista de reproducción</string>
     <string name="import_playlist">Importar la lista de reproducción</string>
     <string name="filename_without_m3u">Nombre del archivo (sin .m3u)</string>
-    <!-- Sorting -->
     <string name="track_count">Número de pistas</string>
     <string name="album_count">Recuento de álbumes</string>
     <string name="artist_name">Nombre de artista</string>
@@ -57,7 +55,6 @@
     <string name="track_number">Número de la pista</string>
     <string name="use_for_this_playlist">Utilizar sólo para esta lista de reproducción</string>
     <string name="use_for_this_album">Utilizar sólo para este álbum</string>
-    <!-- Artists -->
     <string name="artists">Artistas</string>
     <string name="folders">Carpetas</string>
     <string name="genres">Géneros</string>
@@ -73,24 +70,17 @@
         <item quantity="many">%d Canciones</item>
         <item quantity="other">%d Canciones</item>
     </plurals>
-    <!-- Queue -->
     <string name="next_track">Siguiente:</string>
     <string name="track_queue">Cola de canciones</string>
     <string name="add_to_queue">Añadir a la cola</string>
     <string name="play_next">Reproducir la siguiente</string>
     <string name="remove_from_queue">Quitar de la cola</string>
     <string name="create_playlist_from_queue">Crear lista de reproducción de la cola</string>
-    <!-- Settings -->
     <string name="equalizer">Ecualizador</string>
     <string name="swap_prev_next">Intercambiar botones de anterior/siguiente de los audífonos</string>
     <string name="exclude_folder_description">Excluir una carpeta impedirá que se muestren todos los archivos de audio que contiene. Los archivos agregados manualmente a las listas de reproducción no se verán afectados.</string>
     <string name="gapless_playback">Reproducción continua</string>
     <string name="rescan_media">Volver a escanear los medios</string>
-    <!-- FAQ -->
     <string name="faq_1_title">¿Cómo puedo avanzar en las canciones\?</string>
     <string name="faq_1_text">Puedes hacer clic en los textos de duración actual o máxima, cerca de la barra de búsqueda, para avanzar o retroceder la canción.</string>
-    <!--
-        Haven't found some strings? There's more at
-        https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
-    -->
 </resources>

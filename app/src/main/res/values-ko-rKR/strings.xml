@@ -5,7 +5,6 @@
     <string name="rename_song">음악파일명 변경</string>
     <string name="rename_song_error">이름변경 중 오류발생</string>
     <string name="rename_song_empty">모든 항목 정보를 입력하세요.</string>
-    <string name="repeat_off">Repeat off</string>
     <string name="repeat_song">현재 노래 반복</string>
     <string name="repeat_playlist">모두 반복합니다</string>
     <string name="stop_playback_after_current_song">현재 노래 재생 후 재생을 중지합니다</string>
@@ -16,7 +15,6 @@
     <string name="volume">볼륨</string>
     <string name="playback_speed">재생 속도</string>
     <string name="loading_files">파일 로드 중…</string>
-    <!-- Playlists -->
     <string name="add_file_to_playlist">재생목록에 파일 추가</string>
     <string name="add_folder_to_playlist">재생목록에 폴더 추가</string>
     <string name="manage_playlists">재생목록 관리</string>
@@ -38,7 +36,6 @@
     <string name="create_playlist_from_folder">폴더를 선택하여 새로운 재생목록 생성</string>
     <string name="folder_contains_no_audio">선택된 폴더에는 오디오파일이 없습니다.</string>
     <string name="delete_current_song">현재 노래를 삭제합니다</string>
-    <string name="delete_song_warning">WARNING: This will delete the selected files themselves from the device, all playlists included.</string>
     <string name="remove_current_song">재생 목록에서 현재 노래를 제거합니다</string>
     <string name="show_filename">파일 이름을 노래 제목으로 표시</string>
     <string name="title_is_not_available">제목을 사용할 수 없는 경우</string>
@@ -49,44 +46,15 @@
     <string name="export_playlist">재생 목록을 내보냅니다</string>
     <string name="import_playlist">재생 목록을 가져옵니다</string>
     <string name="filename_without_m3u">파일 이름(.m3u 제외)</string>
-    <!-- Sorting -->
     <string name="track_count">트랙 수</string>
     <string name="album_count">앨범 수</string>
     <string name="artist_name">아티스트 이름</string>
-    <string name="year">Year</string>
-    <string name="track_number">Track number</string>
-    <string name="use_for_this_playlist">Use for this playlist only</string>
-    <string name="use_for_this_album">Use for this album only</string>
-    <!-- Artists -->
-    <string name="artists">Artists</string>
-    <string name="folders">Folders</string>
-    <string name="genres">Genres</string>
-    <string name="albums">Albums</string>
     <plurals name="albums_plural">
         <item quantity="other">%d Album</item>
     </plurals>
-    <string name="tracks">Tracks</string>
     <plurals name="tracks_plural">
         <item quantity="other">%d Track</item>
     </plurals>
-    <!-- Queue -->
-    <string name="next_track">Next:</string>
-    <string name="track_queue">Track queue</string>
-    <string name="add_to_queue">Add to queue</string>
-    <string name="play_next">Play next</string>
-    <string name="remove_from_queue">Remove from queue</string>
-    <string name="create_playlist_from_queue">Create playlist from queue</string>
-    <!-- Settings -->
     <string name="equalizer">이퀄라이저</string>
-    <string name="swap_prev_next">Swap previous/next headphone buttons</string>
-    <string name="exclude_folder_description">Excluding a folder will prevent the displaying of all audio files within. Files manually added to playlists will not be affected.</string>
-    <string name="gapless_playback">Gapless playback</string>
-    <string name="rescan_media">Rescan media</string>
-    <!-- FAQ -->
     <string name="faq_1_title">How can I fast-forward songs\?</string>
-    <string name="faq_1_text">You can click on the current or max duration texts near the seekbar, that will move the song either backward, or forward.</string>
-    <!--
-        Haven't found some strings? There's more at
-        https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
-    -->
-</resources>
+    </resources>

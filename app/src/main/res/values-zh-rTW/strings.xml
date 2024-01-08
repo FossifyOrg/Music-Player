@@ -16,7 +16,6 @@
     <string name="volume">音量</string>
     <string name="playback_speed">播放速度</string>
     <string name="loading_files">正在載入檔案……</string>
-    <!-- Playlists -->
     <string name="add_file_to_playlist">將檔案加到播放清單</string>
     <string name="add_folder_to_playlist">將資料夾加到播放清單</string>
     <string name="manage_playlists">管理播放清單</string>
@@ -38,7 +37,6 @@
     <string name="create_playlist_from_folder">從資料夾建立新的播放清單</string>
     <string name="folder_contains_no_audio">所選的資料夾中沒有音訊檔案</string>
     <string name="delete_current_song">刪除目前歌曲</string>
-    <string name="delete_song_warning">WARNING: This will delete the selected files themselves from the device, all playlists included.</string>
     <string name="remove_current_song">從播放清單移除目前歌曲</string>
     <string name="show_filename">顯示檔案名稱作為歌名</string>
     <string name="title_is_not_available">如果標題不可用</string>
@@ -48,19 +46,12 @@
     <string name="create_playlist_label">選取想要的演出者、專輯、或曲目，再按選單 -&gt;「加到播放清單」即可䢖立播放清單。</string>
     <string name="export_playlist">匯出播放清單</string>
     <string name="import_playlist">匯入播放清單</string>
-    <string name="filename_without_m3u">Filename (without .m3u)</string>
-    <!-- Sorting -->
     <string name="track_count">曲目數</string>
     <string name="album_count">專輯數</string>
     <string name="artist_name">演出者名</string>
     <string name="year">年份</string>
-    <string name="track_number">Track number</string>
-    <string name="use_for_this_playlist">Use for this playlist only</string>
-    <string name="use_for_this_album">Use for this album only</string>
-    <!-- Artists -->
     <string name="artists">演出者</string>
     <string name="folders">資料夾</string>
-    <string name="genres">Genres</string>
     <string name="albums">專輯</string>
     <plurals name="albums_plural">
         <item quantity="other">%d 張專輯</item>
@@ -69,24 +60,13 @@
     <plurals name="tracks_plural">
         <item quantity="other">%d 首曲目</item>
     </plurals>
-    <!-- Queue -->
     <string name="next_track">下一首：</string>
     <string name="track_queue">曲目隊列</string>
     <string name="add_to_queue">加到隊列</string>
-    <string name="play_next">Play next</string>
     <string name="remove_from_queue">從隊列中移除</string>
     <string name="create_playlist_from_queue">自隊列建立播放清單</string>
-    <!-- Settings -->
     <string name="equalizer">等化器</string>
     <string name="swap_prev_next">交換耳機按鈕的 上一首/下一首</string>
-    <string name="exclude_folder_description">Excluding a folder will prevent the displaying of all audio files within. Files manually added to playlists will not be affected.</string>
-    <string name="gapless_playback">Gapless playback</string>
-    <string name="rescan_media">Rescan media</string>
-    <!-- FAQ -->
     <string name="faq_1_title">要怎麼快轉歌曲？</string>
     <string name="faq_1_text">點一下進度條旁邊的目前或總時長文字，歌曲就會倒帶或快轉。</string>
-    <!--
-        Haven't found some strings? There's more at
-        https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
-    -->
 </resources>

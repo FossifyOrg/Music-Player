@@ -16,7 +16,6 @@
     <string name="volume">Hlasitosť</string>
     <string name="playback_speed">Rýchlosť prehrávania</string>
     <string name="loading_files">Načítanie súborov…</string>
-    <!-- Playlists -->
     <string name="add_file_to_playlist">Pridať súbor do playlistu</string>
     <string name="add_folder_to_playlist">Pridať priečinok do playlistu</string>
     <string name="manage_playlists">Spravovať playlisty</string>
@@ -49,7 +48,6 @@
     <string name="export_playlist">Exportovať playlist</string>
     <string name="import_playlist">Importovať playlist</string>
     <string name="filename_without_m3u">Názov súboru (bez .m3u)</string>
-    <!-- Sorting -->
     <string name="track_count">Počet skladieb</string>
     <string name="album_count">Počet albumov</string>
     <string name="artist_name">Meno interpreta</string>
@@ -57,7 +55,6 @@
     <string name="track_number">Číslo skladby</string>
     <string name="use_for_this_playlist">Použiť iba pre tento playlist</string>
     <string name="use_for_this_album">Použiť iba pre tento album</string>
-    <!-- Artists -->
     <string name="artists">Interpreti</string>
     <string name="folders">Priečinky</string>
     <string name="genres">Žánre</string>
@@ -73,24 +70,17 @@
         <item quantity="few">%d skladby</item>
         <item quantity="other">%d skladieb</item>
     </plurals>
-    <!-- Queue -->
     <string name="next_track">Nasleduje:</string>
     <string name="track_queue">Poradie skladieb</string>
     <string name="add_to_queue">Pridať do poradia skladieb</string>
     <string name="play_next">Hrať ako ďalšiu</string>
     <string name="remove_from_queue">Odstrániť z poradia skladieb</string>
     <string name="create_playlist_from_queue">Vytvoriť playlist z poradia</string>
-    <!-- Settings -->
     <string name="equalizer">Ekvalizér</string>
     <string name="swap_prev_next">Vymeniť slúchadlové tlačidlá pre ďalšiu/predošlú skladbu</string>
     <string name="exclude_folder_description">Vylúčenie priečinka spôsobí ukrytie daných audio súborov. Súbory ručne pridané do playlistov nebudú ovplyvnené.</string>
     <string name="gapless_playback">Prehrávanie bez medzier</string>
     <string name="rescan_media">Preskenovať médiá</string>
-    <!-- FAQ -->
     <string name="faq_1_title">Ako viem posunúť skladbu vpred\?</string>
     <string name="faq_1_text">Môžete kliknúť na texty súčasnej, alebo maximálnej dĺžky skladby, ktoré sú vedľa indikátora súčasného progresu. To posunie skladbu buď vpred, alebo vzad.</string>
-    <!--
-        Haven't found some strings? There's more at
-        https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
-    -->
 </resources>

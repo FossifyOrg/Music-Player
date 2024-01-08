@@ -16,7 +16,6 @@
     <string name="volume">Hlasitost</string>
     <string name="playback_speed">Rychlost přehrávání</string>
     <string name="loading_files">Načítaní souborů…</string>
-    <!-- Playlists -->
     <string name="add_file_to_playlist">Přidat soubor do seznamu skladeb</string>
     <string name="add_folder_to_playlist">Přidat složku do seznamu skladeb</string>
     <string name="manage_playlists">Spravovat seznamy skladeb</string>
@@ -49,7 +48,6 @@
     <string name="export_playlist">Exportovat seznam skladeb</string>
     <string name="import_playlist">Importovat seznam skladeb</string>
     <string name="filename_without_m3u">Název souboru (bez .m3u)</string>
-    <!-- Sorting -->
     <string name="track_count">Počet skladeb</string>
     <string name="album_count">Počet alb</string>
     <string name="artist_name">Jméno umělce</string>
@@ -57,10 +55,8 @@
     <string name="track_number">Číslo stopy</string>
     <string name="use_for_this_playlist">Použít pouze pro tento seznam skladeb</string>
     <string name="use_for_this_album">Použít pouze pro toto album</string>
-    <!-- Artists -->
     <string name="artists">Umělci</string>
     <string name="folders">Složky</string>
-    <string name="genres">Genres</string>
     <string name="albums">Alba</string>
     <plurals name="albums_plural">
         <item quantity="one">%d Album</item>
@@ -73,24 +69,15 @@
         <item quantity="few">%d Skladby</item>
         <item quantity="other">%d Skladeb</item>
     </plurals>
-    <!-- Queue -->
     <string name="next_track">Další:</string>
     <string name="track_queue">Fronta skladeb</string>
     <string name="add_to_queue">Přidat do fronty</string>
-    <string name="play_next">Play next</string>
     <string name="remove_from_queue">Odstranit z fronty</string>
     <string name="create_playlist_from_queue">Vytvořit seznam skladeb z fronty</string>
-    <!-- Settings -->
     <string name="equalizer">Ekvalizér</string>
     <string name="swap_prev_next">Zaměnit tlačítka sluchátek pro předchozí/následující skladbu</string>
     <string name="exclude_folder_description">Vyloučením složky zabráníte zobrazení všech zvukových souborů v ní. Soubory ručně přidané do seznamů skladeb nebudou ovlivněny.</string>
     <string name="gapless_playback">Přehrávání bez mezer</string>
-    <string name="rescan_media">Rescan media</string>
-    <!-- FAQ -->
     <string name="faq_1_title">Jak mohu rychle posunout skladbu vpřed\?</string>
     <string name="faq_1_text">Můžete klepnout na texty aktuální nebo celkové délky skladby, které jsou vedle indikátoru průběhu přehrávání. To posune skladbu vpřed nebo vzad.</string>
-    <!--
-        Haven't found some strings? There's more at
-        https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
-    -->
 </resources>

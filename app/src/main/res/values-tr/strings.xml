@@ -16,7 +16,6 @@
     <string name="volume">Ses seviyesi</string>
     <string name="playback_speed">Oynatma hızı</string>
     <string name="loading_files">Dosyalar yükleniyor…</string>
-    <!-- Playlists -->
     <string name="add_file_to_playlist">Çalma listesine dosya ekle</string>
     <string name="add_folder_to_playlist">Çalma listesine klasör ekle</string>
     <string name="manage_playlists">Çalma listelerini yönet</string>
@@ -49,7 +48,6 @@
     <string name="export_playlist">Çalma listesini dışa aktar</string>
     <string name="import_playlist">Çalma listesini içe aktar</string>
     <string name="filename_without_m3u">Dosya adı (.m3u olmadan)</string>
-    <!-- Sorting -->
     <string name="track_count">Parça Sayısı</string>
     <string name="album_count">Albüm Sayısı</string>
     <string name="artist_name">Sanatçı Adı</string>
@@ -57,7 +55,6 @@
     <string name="track_number">Parça numarası</string>
     <string name="use_for_this_playlist">Yalnızca bu çalma listesi için kullan</string>
     <string name="use_for_this_album">Yalnızca bu albüm için kullan</string>
-    <!-- Artists -->
     <string name="artists">Sanatçılar</string>
     <string name="folders">Klasörler</string>
     <string name="genres">Türler</string>
@@ -71,24 +68,17 @@
         <item quantity="one">%d Parça</item>
         <item quantity="other">%d Parça</item>
     </plurals>
-    <!-- Queue -->
     <string name="next_track">Sonraki:</string>
     <string name="track_queue">Parça kuyruğu</string>
     <string name="add_to_queue">Kuyruğa ekle</string>
     <string name="play_next">Sonrakini çal</string>
     <string name="remove_from_queue">Kuyruktan kaldır</string>
     <string name="create_playlist_from_queue">Kuyruktan çalma listesi oluştur</string>
-    <!-- Settings -->
     <string name="equalizer">Ekolayzır</string>
     <string name="swap_prev_next">Önceki/sonraki kulaklık düğmelerini değiştir</string>
     <string name="exclude_folder_description">Bir klasörün hariç tutulması, içindeki tüm ses dosyalarının görüntülenmesini engelleyecektir. Çalma listelerine elle eklenen dosyalar etkilenmeyecektir.</string>
     <string name="gapless_playback">Aralıksız oynatım</string>
     <string name="rescan_media">Medyayı yeniden tara</string>
-    <!-- FAQ -->
     <string name="faq_1_title">Şarkıları nasıl hızlıca ileri sarabilirim\?</string>
     <string name="faq_1_text">Arama çubuğunun yanındaki geçerli veya maksimum süre metinlerini tıklayabilir, şarkıyı geriye ya da ileriye sarabilirsiniz.</string>
-    <!--
-        Haven't found some strings? There's more at
-        https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
-    -->
 </resources>

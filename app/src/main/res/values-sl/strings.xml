@@ -16,7 +16,6 @@
     <string name="volume">Glasnost</string>
     <string name="playback_speed">Hitrost predvajanja</string>
     <string name="loading_files">Nalaganje datotek…</string>
-    <!-- Playlists -->
     <string name="add_file_to_playlist">Dodajte datoteke na seznam predvajanja</string>
     <string name="add_folder_to_playlist">Dodajte mape na seznam predvajanja</string>
     <string name="manage_playlists">Upravljajte seznam predvajanja</string>
@@ -49,7 +48,6 @@
     <string name="export_playlist">Izvozite seznam predvajanja</string>
     <string name="import_playlist">Uvozite seznam predvajanja</string>
     <string name="filename_without_m3u">Ime datoteke (brez .m3u)</string>
-    <!-- Sorting -->
     <string name="track_count">Število sledi</string>
     <string name="album_count">Število albumov</string>
     <string name="artist_name">Ime izvajalca</string>
@@ -57,10 +55,8 @@
     <string name="track_number">Številka skladbe</string>
     <string name="use_for_this_playlist">Uporabi samo za ta predvajalni seznam</string>
     <string name="use_for_this_album">Uporabi samo za ta album</string>
-    <!-- Artists -->
     <string name="artists">Umetniki</string>
     <string name="folders">Mape</string>
-    <string name="genres">Genres</string>
     <string name="albums">Albumi</string>
     <plurals name="albums_plural">
         <item quantity="one">%d Album</item>
@@ -75,20 +71,14 @@
         <item quantity="few">%d Melodij</item>
         <item quantity="other">%d Melodije</item>
     </plurals>
-    <!-- Queue -->
     <string name="next_track">Naslednji:</string>
     <string name="track_queue">Vrstni red melodij</string>
     <string name="add_to_queue">Dodajte v vrsto</string>
-    <string name="play_next">Play next</string>
     <string name="remove_from_queue">Odstranite iz vrste</string>
     <string name="create_playlist_from_queue">Ustvarite seznam predvajanja iz vrste</string>
-    <!-- Settings -->
     <string name="equalizer">Izenačevalnik</string>
     <string name="swap_prev_next">Zamenjava prejšnjih/naslednjih gumbov za slušalke</string>
     <string name="exclude_folder_description">Če izvzamete mapo, boste preprečili prikazovanje vseh zvočnih datotek v njej. To ne bo vplivalo na ročno dodane datoteke v sezname predvajanja.</string>
-    <string name="gapless_playback">Gapless playback</string>
-    <string name="rescan_media">Rescan media</string>
-    <!-- FAQ -->
     <string name="faq_1_title">Kako lahko pesmi prestavim naprej\?</string>
     <string name="faq_1_text">Kliknete na besedilo trenutnega ali največjega trajanja v bližini iskalne vrstice, kar bo premaknilo skladbo nazaj ali naprej.</string>
 </resources>

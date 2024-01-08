@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_launcher_name">Music Player</string>
     <string name="playlist_empty">Η λίστα αναπ/γής σας είναι κενή</string>
     <string name="rename_song">Μετονομασία τραγουδιού</string>
     <string name="rename_song_error">Παρουσιάστηκε σφάλμα κατά τη μετονομασία</string>
@@ -16,7 +15,6 @@
     <string name="volume">Ένταση</string>
     <string name="playback_speed">Ταχύτητα Αναπ/γής</string>
     <string name="loading_files">Φόρτωση αρχείων…</string>
-    <!-- Playlists -->
     <string name="add_file_to_playlist">Προσθήκη αρχείου στη λίστα</string>
     <string name="add_folder_to_playlist">Προσθήκη φακέλου στη λίστα</string>
     <string name="manage_playlists">Διαχείριση λιστών</string>
@@ -49,7 +47,6 @@
     <string name="export_playlist">Εξαγωγή λίστας</string>
     <string name="import_playlist">Εισαγωγή λίστας</string>
     <string name="filename_without_m3u">Όνομα αρχείου (χωρίς .m3u)</string>
-    <!-- Sorting -->
     <string name="track_count">Αριθμός τραγουδιών</string>
     <string name="album_count">Αριθμός άλμπουμ</string>
     <string name="artist_name">Όνομα καλλιτέχνη</string>
@@ -57,7 +54,6 @@
     <string name="track_number">Αριθμός τραγουδιού</string>
     <string name="use_for_this_playlist">Χρήση μόνο για αυτή τη λίστα</string>
     <string name="use_for_this_album">Χρήση μόνο για αυτό το άλμπουμ</string>
-    <!-- Artists -->
     <string name="artists">Καλλιτέχνες</string>
     <string name="folders">Φάκελοι</string>
     <string name="genres">Κατηγορίες</string>
@@ -71,24 +67,17 @@
         <item quantity="one">%d Τραγούδι</item>
         <item quantity="other">%d Τραγούδια</item>
     </plurals>
-    <!-- Queue -->
     <string name="next_track">Επόμενο:</string>
     <string name="track_queue">Τραγούδια σε αναμονή</string>
     <string name="add_to_queue">Προσθήκη στην αναμονή</string>
     <string name="play_next">Αναπαρ/γή επόμενου</string>
     <string name="remove_from_queue">Κατάργηση από την αναμονή</string>
     <string name="create_playlist_from_queue">Δημιουργία λίστας από την ουρά</string>
-    <!-- Settings -->
     <string name="equalizer">Ισοσταθμιστής</string>
     <string name="swap_prev_next">Εναλλαγή κουμπιών ακουστικών Πίσω/Εμπρός</string>
     <string name="exclude_folder_description">Η Εξαίρεση ενός φακέλου θα αποτρέψει την εμφάνιση όλων των αρχείων ήχου εντός του φακέλου. Τα αρχεία που προστίθενται χειροκίνητα σε λίστες αναπαραγωγής δεν θα επηρεαστούν.</string>
     <string name="gapless_playback">Αναπαραγωγή χωρίς κενά</string>
     <string name="rescan_media">Επανασάρωση πολυμέσων</string>
-    <!-- FAQ -->
     <string name="faq_1_title">Πώς μπορώ να προωθήσω γρήγορα τα τραγούδια;</string>
     <string name="faq_1_text">Μπορείτε να κάνετε κλικ στο τρέχον ή μέγιστης διάρκειας κείμενο κοντά στη γραμμή προόδου, το οποίο θα μετακινήσει το τραγούδι πίσω ή εμπρός.</string>
-    <!--
-        Haven't found some strings? There's more at
-        https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
-    -->
 </resources>

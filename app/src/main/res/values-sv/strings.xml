@@ -16,7 +16,6 @@
     <string name="volume">Volym</string>
     <string name="playback_speed">Uppspelningshastighet</string>
     <string name="loading_files">Läser in filer…</string>
-    <!-- Playlists -->
     <string name="add_file_to_playlist">Lägg till fil i spellista</string>
     <string name="add_folder_to_playlist">Lägg till mapp i spellista</string>
     <string name="manage_playlists">Hantera spellistor</string>
@@ -49,7 +48,6 @@
     <string name="export_playlist">Exportera spellista</string>
     <string name="import_playlist">Importera spellista</string>
     <string name="filename_without_m3u">Filnamn (utan .m3u)</string>
-    <!-- Sorting -->
     <string name="track_count">Antal spår</string>
     <string name="album_count">Antal album</string>
     <string name="artist_name">Artistnamn</string>
@@ -57,7 +55,6 @@
     <string name="track_number">Låtnummer</string>
     <string name="use_for_this_playlist">Använd bara för den här spellistan</string>
     <string name="use_for_this_album">Använd bara för det här albumet</string>
-    <!-- Artists -->
     <string name="artists">Artister</string>
     <string name="folders">Mappar</string>
     <string name="genres">Genrer</string>
@@ -71,24 +68,17 @@
         <item quantity="one">%d låt</item>
         <item quantity="other">%d låtar</item>
     </plurals>
-    <!-- Queue -->
     <string name="next_track">Nästa:</string>
     <string name="track_queue">Spårkö</string>
     <string name="add_to_queue">Lägg till i kö</string>
     <string name="play_next">Spela härnäst</string>
     <string name="remove_from_queue">Ta bort från kö</string>
     <string name="create_playlist_from_queue">Skapa spellista från kö</string>
-    <!-- Settings -->
     <string name="equalizer">Frekvenskorrigerare</string>
     <string name="swap_prev_next">Växla hörlurars föregående- och nästaknappar</string>
     <string name="exclude_folder_description">När du utesluter en mapp hindrar det alla ljudfiler i mappen från att visas. Filer som har lagts till i spellistor manuellt påverkas inte.</string>
     <string name="gapless_playback">Uppspelning utan avbrott</string>
     <string name="rescan_media">Skanna media igen</string>
-    <!-- FAQ -->
     <string name="faq_1_title">Hur kan jag snabbspola låtar\?</string>
     <string name="faq_1_text">Du kan klicka på låtens nuvarande tid eller längd nära sökfältet, vilket kommer att spola låten antingen bakåt eller framåt.</string>
-    <!--
-        Haven't found some strings? There's more at
-        https://github.com/FossifyOrg/Commons/tree/master/commons/src/main/res
-    -->
 </resources>

@@ -1,0 +1,5 @@
+* Añadidas algunas mejoras relacionadas con la fiabilidad de las notificaciones
+ * Permitir detener la música y descartar la notificación pulsando X
+ * Uso del tema Material You por defecto en Android 12+.
+ * Aumentada la versión mínima requerida de Android OS a 6
+ * Se han añadido algunas mejoras en la interfaz de usuario, la traducción y la estabilidad

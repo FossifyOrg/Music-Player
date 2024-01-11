@@ -1,0 +1,2 @@
+* Se ha añadido la reproducción sin pausas.
+ * Se han añadido algunas mejoras de estabilidad, traducción e interfaz de usuario

@@ -1,0 +1,1 @@
+Hudební přehrávač s přizpůsobitelným widgetem, časovačem a úsporou baterie

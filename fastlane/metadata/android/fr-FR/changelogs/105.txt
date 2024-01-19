@@ -1,0 +1,6 @@
+* Permet d'exclure les dossiers non désirés
+ * Permettre de réorganiser les pistes de la liste de lecture
+ Permettre de réorganiser les pistes de la liste de lecture * Permettre le tri spécifique des listes de lecture et des dossiers
+ * Possibilité de supprimer les fichiers eux-mêmes dans la vue de la file d'attente
+ * Ajout d'une recherche dans la liste d'attente
+ * Autres améliorations de la stabilité, de la traduction et de l'interface utilisateur

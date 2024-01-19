@@ -1,0 +1,2 @@
+* Ajout d'une lecture sans interruption
+ * Amélioration de la stabilité, de la traduction et de l'interface utilisateur

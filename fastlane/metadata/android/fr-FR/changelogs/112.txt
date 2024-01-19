@@ -1,0 +1,1 @@
+* Améliorations de la stabilité, de la traduction et de l'interface utilisateur

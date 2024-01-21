@@ -1,0 +1,4 @@
+* Réécriture complète du code pour la gestion de la lecture 
+ * Ajout d'un onglet Genres
+ * Autoriser le partage de chansons
+ * Amélioration de la stabilité, de la traduction et de l'interface utilisateur

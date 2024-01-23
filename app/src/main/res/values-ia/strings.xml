@@ -7,4 +7,25 @@
     <string name="stop_playback_after_current_song">Stoppar le reproduction depost le canto actual</string>
     <string name="rename_song">Renominar canto</string>
     <string name="playlist_empty">Tu lista de reproduction es vacue</string>
+    <string name="playback_speed">Velocitate de reproduction</string>
+    <string name="add_file_to_playlist">Adder un file al lista de reproduction</string>
+    <string name="add_folder_to_playlist">Adder un dossier al lista de reproduction</string>
+    <string name="manage_playlists">Gerer le listas de reproduction</string>
+    <string name="playlists">Listas de reproduction</string>
+    <string name="create_new_playlist">Crear un nove lista de reproduction</string>
+    <string name="rename_playlist">Renominar le lista de reproduction</string>
+    <string name="playlist_name_exists">Un lista de reproduction con ille nomine jam existe</string>
+    <string name="remove_playlist">Deler le lista de reproduction</string>
+    <string name="remove_playlist_description">Isto solmente removera le listas de reproduction seligite, non le files actual.</string>
+    <string name="remove_playlist_description_placeholder">Isto solmente delera le lista de reproduction \"%s\". Le files actual non essera delite.</string>
+    <string name="remove_from_playlist">Remover ab le lista de reproduction</string>
+    <string name="delete_the_files_too">Tamben deler le files</string>
+    <string name="open_playlist">Aperir lista de reproduction</string>
+    <string name="all_songs_cannot_be_deleted">Le lista de reproduction \"Tote le cantos\" non pote esser delite</string>
+    <string name="empty_playlist">Le lista de reproduction actual es vacue</string>
+    <string name="all_songs">Tote le cantos</string>
+    <string name="delete_current_song">Deler le canto actual</string>
+    <string name="title_is_not_available">Si le titulo non es disponibile</string>
+    <string name="all_tracks">Tote le tracias</string>
+    <string name="add_to_playlist">Adder al lista de reproduction</string>
 </resources>

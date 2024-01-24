@@ -63,7 +63,7 @@ body:
     attributes:
       label: How did you install the app?
       options:
-        - *No response*
+        - No response
         - F-Droid / IzzyOnDroid
         - Google Play Store
         - GitHub releases

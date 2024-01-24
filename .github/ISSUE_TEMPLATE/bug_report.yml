@@ -69,8 +69,6 @@ body:
         - GitHub releases
         - Built from source
         - Third-party website
-    validations:
-      required: true
 
   - type: textarea
     id: steps-to-reproduce

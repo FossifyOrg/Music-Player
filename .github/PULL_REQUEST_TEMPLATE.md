@@ -25,4 +25,4 @@
 - 
 
 #### Acknowledgement
-- [ ] I read the [contribution guidelines](https://github.com/FossifyOrg/Music-Player/CONTRIBUTING.md).
+- [ ] I read the [contribution guidelines](https://github.com/FossifyOrg/Music-Player/blob/master/CONTRIBUTING.md).

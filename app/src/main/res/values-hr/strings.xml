@@ -37,7 +37,7 @@
     <string name="create_playlist_from_folder">Izradi novi popis pjesama iz mape</string>
     <string name="folder_contains_no_audio">Odabrana mapa ne sadrži audio datoteke</string>
     <string name="delete_current_song">Izbriši aktualnu pjesmu</string>
-    <string name="delete_song_warning">UPOZORENJE: Ovo će izbrisati odabrane datoteke s uređaja, uključujući sve playliste.</string>
+    <string name="delete_song_warning">UPOZORENJE: Ovo će izbrisati odabrane datoteke s uređaja, uključujući sve popise pjesama.</string>
     <string name="remove_current_song">Ukloni aktualnu pjesmu iz popisa pjesama</string>
     <string name="show_filename">Prikaži ime datoteke kao naslov pjesme</string>
     <string name="title_is_not_available">Ako naslov nije dostupan</string>
@@ -53,7 +53,7 @@
     <string name="artist_name">Ime izvođača</string>
     <string name="year">Godina</string>
     <string name="track_number">Broj pjesme</string>
-    <string name="use_for_this_playlist">Koristi samo za ovu playlistu</string>
+    <string name="use_for_this_playlist">Koristi samo za ovaj popis pjesama</string>
     <string name="use_for_this_album">Koristi samo za ovaj album</string>
     <string name="artists">Izvođači</string>
     <string name="folders">Mape</string>
@@ -80,4 +80,7 @@
     <string name="gapless_playback">Reprodukcija bez prekida</string>
     <string name="faq_1_title">Kako mogu premotati pjesme\?</string>
     <string name="faq_1_text">Možeš pritisnuti tekst aktualnog ili krajnjeg trajanja pjesme u blizini trake za pretraživanje. Time ćeš premotati pjesmu unatrag ili naprijed.</string>
+    <string name="genres">Žanri</string>
+    <string name="play_next">Sviraj sljedeću</string>
+    <string name="rescan_media">Ponovo pregledaj medije</string>
 </resources>

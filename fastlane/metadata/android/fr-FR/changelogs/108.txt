@@ -1,0 +1,2 @@
+* Ajout de la nouvelle barre de recherche dans le menu supérieur
+ * Ajout de quelques améliorations au niveau de la stabilité, de la traduction et de l'interface utilisateur

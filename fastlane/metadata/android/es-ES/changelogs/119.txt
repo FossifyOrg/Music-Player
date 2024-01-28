@@ -1,0 +1,4 @@
+* Reescritura completa de la gestión de la reproducción.
+ * Añadida la pestaña Géneros
+ * Permitir compartir canciones
+ * Se han añadido algunas mejoras de estabilidad, traducción e interfaz de usuario

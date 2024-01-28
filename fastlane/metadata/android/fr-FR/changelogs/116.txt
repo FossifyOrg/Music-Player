@@ -1,0 +1,5 @@
+* Réécriture complète du code pour la gestion de la lecture 
+ * Ajout d'un onglet Genres
+ * Autoriser le partage de chansons
+ * Ajout de la prise en charge d'Android Auto
+ * Amélioration de la stabilité, de la traduction et de l'interface utilisateur

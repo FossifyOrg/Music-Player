@@ -1,0 +1,5 @@
+* Permettre la mise en file d'attente des pistes en tant qu'élément suivant de la file d'attente
+ * Amélioration de la recherche de fichiers et des performances
+ * Possibilité de déclencher un nouveau balayage des dossiers
+ * Ajout d'un tri par date d'ajout
+ * Amélioration de la stabilité, de la traduction et de l'interface utilisateur

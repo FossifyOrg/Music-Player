@@ -1,0 +1,6 @@
+* Permitir la exclusión de carpetas no deseadas
+ * Permitir reordenar las pistas de las listas de reproducción
+ * Permitir la ordenación específica de listas de reproducción y carpetas
+ * Permitir la eliminación de los propios archivos de la vista de cola
+ * Añadida la búsqueda en la lista de colas
+ * Añadidas otras mejoras de estabilidad, traducción y UX

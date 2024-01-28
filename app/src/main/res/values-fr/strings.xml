@@ -80,4 +80,7 @@
     <string name="rescan_media">Rescanner le média</string>
     <string name="faq_1_title">Comment puis-je faire avancer rapidement les chansons \?</string>
     <string name="faq_1_text">Vous pouvez cliquer sur le texte de la durée actuelle ou de la durée maximale près de la barre de recherche, ce qui fera avancer ou reculer la chanson.</string>
+    <string name="volume">Volume</string>
+    <string name="genres">Genres</string>
+    <string name="albums">Albums</string>
 </resources>

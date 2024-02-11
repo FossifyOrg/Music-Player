@@ -2,67 +2,59 @@
 
 <img alt="Logo" src="graphics/icon.webp" width="120" />
 
-🎧 Listen to your music with No Ads 🎧  
-We know very well how important your time is. That is the reason we don't put Ads in our app. Ads are annoying, and people hate ads. Simple like that.
+Introducing Fossify Music Player – your gateway to uninterrupted musical enjoyment. Say goodbye to intrusive ads and hello to a seamless music experience
+designed to accompany you wherever you go.
 
-Simple Music Player is focused on one thing, enjoy your music without any distraction. Use our app while you are relaxed at home, working, or maybe while you
-are driving in your car.
+**🚫 AD-FREE LISTENING:**  
+We understand the value of your time and the sanctity of your music experience. That's why Fossify Music Player is completely ad-free. No distractions, just
+pure musical bliss. Whether you're at home, on the go, or exploring the great outdoors, enjoy your music without interruptions.
 
-The best part about it is FREE to install.
+**📶 OFFLINE ACCESS:**  
+Take your music with you wherever you go, even to mars. Fossify Music Player operates offline, ensuring you can enjoy your favorite tracks anytime, anywhere,
+without needing an internet connection.
 
-You can bring your music everywhere: walking on the streets, hiking on the mountain, even to the moon. This MP3 Player is offline, which means you don't need
-the internet to use it.
+**🚀 LIGHTNING-FAST AND EFFICIENT:**  
+Worried about draining your battery while indulging in your favorite tunes? Despite its rich features, Fossify Music Player maintains a small app size, ensuring
+quick and hassle-free download and installation. Experience swift navigation and seamless performance while indulging in your favorite melodies.
 
-Moreover, Simple Music Player has a unique battery-saving feature. Due to our new technology, you will not have to worry anymore about running out of battery
-during the day. Play your music without a hitch with this smart music player.
+**🎚️ POWERFUL EQUALIZER:**  
+Elevate your listening experience with our powerful equalizer, offering a range of presets to suit every genre and audio preference. Adjust the music effects
+based on your mood, genre, or even your audio setup for an immersive sound experience.
 
-👉 What are you waiting for to download it and enjoy your music without Ads?
+**🌙 SLEEP TIMER FOR RELAXING NIGHTS:**  
+Soothe your nights with the Sleep Timer feature. Choose your favorite tunes and let them gently fade away as you drift off to sleep. Enjoy a peaceful night's
+rest without worrying about the music playing on.
 
-Control your music from the status bar, widget, or hardware buttons on your headphones. It has never been so easy to handle.
+**📜 PLAYLIST MANAGEMENT:**  
+Create and manage your playlists effortlessly. Organize your music library, customize track labels, and even edit song information to your liking. Shuffle,
+repeat, skip, and forward your tracks with ease.
 
-In addition, you can customize the widget. Change the text and background colors for easy access and control.
+**🔒 PRIVACY ASSURED:**  
+Your privacy is our top priority. Fossify Music Player does not collect or share any user information with third parties. Enjoy peace of mind knowing that your
+musical journey remains private and secure.
 
-Listen to your favorite mp3, other audio songs, or podcasts with this free beautiful music player. Put your style on the app customizing the interface colors.
+**🌈 MODERN DESIGN & USER-FRIENDLY INTERFACE:**  
+Enjoy a clean, modern design with a user-friendly interface. The app features a material design and a dark theme option, providing a visually appealing and
+comfortable user experience.
 
-You can program which track/music you want to fall asleep with through the sleep timer feature. Maybe jazz, chill, zen, even nature sounds, select which one
-suits you the best from your music. And, enjoy your dreams!
+**🎨 CUSTOMIZABLE INTERFACE:**  
+Personalize your music experience with customizable widgets and interface colors. Control your music effortlessly from the status bar, widget, or headphone
+buttons, all tailored to your preferences.
 
-Raise the level of quality of sound with our equalizer. This audio player gives you the chance to change the music effects according to the type of music you
-listen to (Classic, Pop, Rock, Dance, Techno, Latino, Flat, etc.). Even according to the speakers you have (Headphone, Stereo, Surround and many more). Now, you
-will have the power of the sounds in your ears.
+**🌐 OPEN-SOURCE TRANSPARENCY:**  
+Your privacy is a top priority. Fossify Music Player operates completely offline, completely free of ads and does not request unnecessary permissions. Moreover,
+it is fully open-source, providing you with peace of mind, as you have access to the source code for security and privacy audits.
 
-Simple Music Player gives you also the chance to make your music list inside the app. Create and manage your playlist as you desire. You can take your songs
-from your phone and SD card. Furthermore, you can add folders easily.
+Experience music the way it's meant to be – uninterrupted, personalized, and immersive. Download Fossify Music Player now and embark on a musical journey like
+never before.
 
-This player supports the shuffle, repeating a particular song, skipping, and forwarding. Mix the music like a professional DJ.
+Explore more Fossify apps: https://www.fossify.org
+Open-Source Code: https://www.github.com/FossifyOrg
+Join the community on Reddit: https://www.reddit.com/r/Fossify
+Connect on Telegram: https://t.me/Fossify
 
-Don't you like how the song is labeled? Edit it as you prefer, modify the name of the songs, artists, groups, etc.
-
-Features  
-⭐️ Nice and beautiful interface  
-⭐️ Color customization  
-⭐️ Battery Saver  
-⭐️ Sleep timer  
-⭐️ Powerful Equalizer with a handful of presets  
-⭐️ Playback widget  
-⭐️ Playlist management  
-⭐️ Multi-language  
-⭐️ File properties management  
-⭐️ Songs label management  
-⭐️ Privacy  
-⭐️ Sharing music
-
-👉 We take the privacy of our users very seriously. We don't share any information with others.
-
-Install Simple Music Player NOW❗️
-
-🎧 Enjoy the music with no Ads 🎧
-
-Check out the full suite of apps here:
-https://github.com/FossifyOrg
-
-<div style="display:flex;">
-<img alt="App image" src="fastlane/metadata/android/en-US/images/phoneScreenshots/1_en-US.jpeg" width="30%">
-<img alt="App image" src="fastlane/metadata/android/en-US/images/phoneScreenshots/2_en-US.jpeg" width="30%">
-<img alt="App image" src="fastlane/metadata/android/en-US/images/phoneScreenshots/3_en-US.jpeg" width="30%">
+<div align="center">
+<img alt="App image" src="fastlane/metadata/android/en-US/images/phoneScreenshots/1_en-US.png" width="30%">
+<img alt="App image" src="fastlane/metadata/android/en-US/images/phoneScreenshots/2_en-US.png" width="30%">
+<img alt="App image" src="fastlane/metadata/android/en-US/images/phoneScreenshots/3_en-US.png" width="30%">
 </div>

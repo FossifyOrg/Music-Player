@@ -24,7 +24,7 @@ android {
         versionName = project.libs.versions.app.version.versionName.get()
         versionCode = project.libs.versions.app.version.versionCode.get().toInt()
         vectorDrawables.useSupportLibrary = true
-        setProperty("archivesBaseName", "gallery-$versionCode")
+        setProperty("archivesBaseName", "music-player-$versionCode")
         ksp {
             arg("room.schemaLocation", "$projectDir/schemas")
         }

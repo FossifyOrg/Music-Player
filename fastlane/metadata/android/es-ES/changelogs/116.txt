@@ -1,5 +1,0 @@
-* Reescritura completa de la gestión de la reproducción.
- * Añadida la pestaña Géneros
- * Permitir compartir canciones
- * Añadido soporte para Android Auto
- * Se han añadido algunas mejoras de estabilidad, traducción e interfaz de usuario

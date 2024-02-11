@@ -1,1 +1,1 @@
-Clean music player with a customizable widget, sleep timer, battery saver
+Open-source and Ad-free Music Player with customizable widget & sleep timer

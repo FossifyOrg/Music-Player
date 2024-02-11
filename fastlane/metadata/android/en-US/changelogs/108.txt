@@ -1,2 +1,0 @@
- * Added the new search bar at the top menu
- * Added some stability, translation and UI improvements

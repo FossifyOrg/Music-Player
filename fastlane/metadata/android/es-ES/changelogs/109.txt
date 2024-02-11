@@ -1,1 +1,0 @@
-* Se ha corregido un error del menú de búsqueda en algunos dispositivos

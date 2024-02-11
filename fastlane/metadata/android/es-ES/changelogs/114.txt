@@ -1,5 +1,0 @@
-* Permitir que las pistas de cola como el siguiente elemento de la cola
- * Mejora de la obtención de archivos y del rendimiento
- * Permitir la activación de la reexploración de carpetas
- * Ordenación por fecha añadida
- * Se han añadido algunas mejoras de estabilidad, traducción e interfaz de usuario

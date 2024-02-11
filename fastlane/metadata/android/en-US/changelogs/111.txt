@@ -1,2 +1,0 @@
- * Added gapless playback
- * Added some stability, translation and UI improvements

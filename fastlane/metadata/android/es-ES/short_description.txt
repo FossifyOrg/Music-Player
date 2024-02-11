@@ -1,1 +1,0 @@
-Reproductor de música con widget, temporizador de apagado y ahorro de batería

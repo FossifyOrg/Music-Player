@@ -1,2 +1,0 @@
-* Ajout d'un bouton "Get Simple Phone" dans la section "About".
- * Amélioration de la traduction et de l'interface utilisateur

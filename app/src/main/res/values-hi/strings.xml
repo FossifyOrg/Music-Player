@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="create_playlist_from_folder">फ़ोल्डर से नई प्लेलिस्ट बनाएं</string>
-    <string name="delete_song_warning">चेतावनी: यह डिवाइस से चयनित फ़ाइलों को हटा देगा, जिसमें सभी प्लेलिस्ट भी शामिल हैं।</string>
-    <string name="show_filename">गीत शीर्षक के रूप में फ़ाइल नाम दिखाएँ</string>
+    <string name="create_playlist_from_folder">फोल्डर से नई प्लेलिस्ट बनाएं</string>
+    <string name="delete_song_warning">चेतावनी: यह डिवाइस से चयनित फाइलों को हटा देगा, जिसमें सभी प्लेलिस्ट भी शामिल हैं।</string>
+    <string name="show_filename">गीत शीर्षक के रूप में फाइल नाम दिखाएँ</string>
     <string name="title_is_not_available">यदि शीर्षक उपलब्ध नहीं है</string>
     <string name="add_to_playlist">प्लेलिस्ट में जोड़ें</string>
     <string name="create_playlist_label">आप वांछित कलाकारों, एल्बम या ट्रैक का चयन करके और मेनू -&gt; प्लेलिस्ट में जोड़ें का उपयोग करके एक नई प्लेलिस्ट बना सकते हैं।</string>
@@ -12,7 +12,7 @@
     <string name="track_number">ट्रैक संख्या</string>
     <string name="use_for_this_playlist">केवल इस प्लेलिस्ट के लिए उपयोग करें</string>
     <string name="year">वर्ष</string>
-    <string name="exclude_folder_description">किसी फ़ोल्डर को बाहर करने से उसमें मौजूद सभी ऑडियो फ़ाइलों का प्रदर्शन रुक जाएगा। प्लेलिस्ट में मैन्युअल रूप से जोड़ी गई फ़ाइलें प्रभावित नहीं होंगी।</string>
+    <string name="exclude_folder_description">किसी फोल्डर को बाहर करने से उसमें मौजूद सभी ऑडियो फाइलों का प्रदर्शन रुक जाएगा। प्लेलिस्ट में मैन्युअल रूप से जोड़ी गई फाइलें प्रभावित नहीं होंगी।</string>
     <string name="faq_1_text">आप सीकबार के पास वर्तमान या अधिकतम अवधि के टेक्स्ट पर क्लिक कर सकते हैं, जो गाने को या तो पीछे या आगे ले जाएगा।</string>
     <string name="app_launcher_name">म्यूजिक प्लेयर</string>
     <string name="playlist_empty">आपकी प्लेलिस्ट खाली है</string>
@@ -21,7 +21,7 @@
     <string name="rename_song_empty">कृपया सभी स्थानों को भरें</string>
     <string name="repeat_off">दोहराएँ बंद</string>
     <string name="repeat_song">वर्तमान गीत दोहराएँ</string>
-    <string name="folder_contains_no_audio">चयनित फ़ोल्डर में कोई ऑडियो फ़ाइलें नहीं हैं</string>
+    <string name="folder_contains_no_audio">चयनित फोल्डर में कोई ऑडियो फाइलें नहीं हैं</string>
     <string name="delete_current_song">वर्तमान गीत हटाएँ</string>
     <string name="remove_current_song">वर्तमान गीत को प्लेलिस्ट से हटा दें</string>
     <string name="show_album_cover">मुख्य स्क्रीन पर एल्बम कवर दिखाएँ</string>
@@ -30,7 +30,7 @@
     <string name="import_playlist">प्लेलिस्ट आयात करें</string>
     <string name="filename_without_m3u">फ़ाइल नाम (.m3u के बिना)</string>
     <string name="use_for_this_album">केवल इस एल्बम के लिए उपयोग करें</string>
-    <string name="folders">फ़ोल्डर</string>
+    <string name="folders">फोल्डर</string>
     <string name="genres">शैलियां</string>
     <string name="albums">एलबम</string>
     <plurals name="albums_plural">
@@ -60,20 +60,20 @@
     <string name="shuffle_enabled">फेरबदल सक्षम</string>
     <string name="shuffle_disabled">फेरबदल अक्षम</string>
     <string name="playback_speed">प्लेबैक गति</string>
-    <string name="loading_files">फ़ाइलें लोड हो रही हैं…</string>
-    <string name="add_file_to_playlist">प्लेलिस्ट में फ़ाइल जोड़ें</string>
-    <string name="add_folder_to_playlist">प्लेलिस्ट में फ़ोल्डर जोड़ें</string>
+    <string name="loading_files">फाइलें लोड हो रही हैं…</string>
+    <string name="add_file_to_playlist">प्लेलिस्ट में फाइल जोड़ें</string>
+    <string name="add_folder_to_playlist">प्लेलिस्ट में फोल्डर जोड़ें</string>
     <string name="manage_playlists">प्लेलिस्ट प्रबंधित करें</string>
     <string name="playlists">प्लेलिस्ट</string>
     <string name="create_new_playlist">नई प्लेलिस्ट बनाएं</string>
     <string name="rename_playlist">प्लेलिस्ट का नाम बदलें</string>
     <string name="remove_playlist">प्लेलिस्ट हटाएँ</string>
     <string name="playlist_name_exists">इस नाम की एक प्लेलिस्ट पहले से मौजूद है</string>
-    <string name="remove_playlist_description">यह केवल चयनित प्लेलिस्ट को हटा देगा. वास्तविक फ़ाइलें हटाई नहीं जाएंगी।</string>
-    <string name="remove_playlist_description_placeholder">यह केवल प्लेलिस्ट \"%s\" को हटाएगा। वास्तविक फ़ाइलें हटाई नहीं जाएंगी।</string>
+    <string name="remove_playlist_description">यह केवल चयनित प्लेलिस्ट को हटा देगा. वास्तविक फाइलें हटाई नहीं जाएंगी।</string>
+    <string name="remove_playlist_description_placeholder">यह केवल प्लेलिस्ट \"%s\" को हटाएगा। वास्तविक फाइलें हटाई नहीं जाएंगी।</string>
     <string name="remove_from_playlist">प्लेलिस्ट से हटाएँ</string>
-    <string name="remove_from_playlist_description">यह केवल प्लेलिस्ट \"%s\" से आइटम हटाएगा। वास्तविक फ़ाइलें हटाई नहीं जाएंगी।</string>
-    <string name="delete_the_files_too">फ़ाइलें भी हटाएँ</string>
+    <string name="remove_from_playlist_description">यह केवल प्लेलिस्ट \"%s\" से आइटम हटाएगा। वास्तविक फाइलें हटाई नहीं जाएंगी।</string>
+    <string name="delete_the_files_too">फाइलें भी हटाएँ</string>
     <string name="open_playlist">प्लेलिस्ट खोलें</string>
     <string name="all_songs_cannot_be_deleted">\"सभी गाने\" प्लेलिस्ट को हटाया नहीं जा सकता</string>
     <string name="empty_playlist">वर्तमान प्लेलिस्ट खाली है</string>

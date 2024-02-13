@@ -67,4 +67,5 @@
     <string name="swap_prev_next">Ombyt forrige/næste hovedtelefonknapper</string>
     <string name="faq_1_title">Hvordan kan jeg spole frem i sange\?</string>
     <string name="faq_1_text">Du kan klikke på de to tidsangivelser (aktuel spilletid og total varighed af nummeret) nær søgefeltet, der bevæger sangen enten bagud eller fremad.</string>
+    <string name="volume">Lydstyrke</string>
 </resources>

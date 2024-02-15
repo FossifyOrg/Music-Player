@@ -10,7 +10,7 @@ class Config(context: Context) : BaseConfig(context) {
     }
 
     var isShuffleEnabled: Boolean
-        get() = prefs.getBoolean(SHUFFLE, true)
+        get() = prefs.getBoolean(SHUFFLE, false)
         set(shuffle) = prefs.edit().putBoolean(SHUFFLE, shuffle).apply()
 
     var playbackSetting: PlaybackSetting

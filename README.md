@@ -2,7 +2,7 @@
 
 <img alt="Logo" src="graphics/icon.webp" width="120" />
 
-<a href="https://apt.izzysoft.de/fdroid/index/apk/org.fossify.musicplayer"><img src="https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroid.png" alt="Get it on IzzyOnDroid" height=80/></a>
+<a href="https://f-droid.org/packages/org.fossify.musicplayer/"><img src="https://fdroid.gitlab.io/artwork/badge/get-it-on-en.svg" alt="Get it on F-Droid" height=80/></a> <a href="https://apt.izzysoft.de/fdroid/index/apk/org.fossify.musicplayer"><img src="https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroid.png" alt="Get it on IzzyOnDroid" height=80/></a>
 
 Introducing Fossify Music Player – your gateway to uninterrupted musical enjoyment. Say goodbye to intrusive ads and hello to a seamless music experience
 designed to accompany you wherever you go.

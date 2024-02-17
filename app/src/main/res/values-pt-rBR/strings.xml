@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_launcher_name">Player de música</string>
+    <string name="app_launcher_name">Player de Música Fossify</string>
     <string name="playlist_empty">Sua lista de reprodução está vazia</string>
     <string name="rename_song">Renomear música</string>
     <string name="rename_song_error">Ocorreu um erro ao renomear</string>
@@ -41,7 +41,7 @@
     <string name="title_is_not_available">Se o título não estiver disponível</string>
     <string name="show_album_cover">Mostrar a capa do álbum na tela principal</string>
     <string name="all_tracks">Todas as faixas</string>
-    <string name="create_playlist_label">Você pode criar uma nova playlist selecionando os artistas, álbuns ou faixas desejados e usando Menu -&gt; Adicionar à playlist.</string>
+    <string name="create_playlist_label">Você pode criar uma nova lista de reprodução selecionando os artistas, álbuns ou faixas desejados e usando Menu -&gt; Adicionar para lista de reprodução.</string>
     <string name="filename_without_m3u">Nome do arquivo (sem .m3u)</string>
     <string name="track_count">Número de faixas</string>
     <string name="album_count">Número de álbuns</string>
@@ -75,4 +75,8 @@
     <string name="rescan_media">Verificar mídia novamente</string>
     <string name="faq_1_title">Como posso avançar músicas\?</string>
     <string name="faq_1_text">Você pode clicar nos textos de duração atual ou máxima perto da barra de progresso, que moverá a música para trás ou para frente.</string>
+    <string name="add_to_playlist">Adicionar para lista de reprodução</string>
+    <string name="import_playlist">Importar lista de reprodução</string>
+    <string name="export_playlist">Exportar lista de reprodução</string>
+    <string name="next_track">Seguinte:</string>
 </resources>

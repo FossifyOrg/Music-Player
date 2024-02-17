@@ -15,17 +15,17 @@
     <string name="shuffle_disabled">Reprodução aleatória desativada</string>
     <string name="playback_speed">Velocidade de reprodução</string>
     <string name="loading_files">Carregando arquivos…</string>
-    <string name="add_file_to_playlist">Adicionar arquivo à playlist</string>
-    <string name="add_folder_to_playlist">Adicionar pasta à playlist</string>
-    <string name="manage_playlists">Gerenciar playlists</string>
-    <string name="create_new_playlist">Criar nova playlist</string>
-    <string name="rename_playlist">Renomear playlist</string>
-    <string name="playlist_name_exists">Já existe uma playlist com esse nome</string>
-    <string name="remove_playlist">Remover playlist</string>
-    <string name="remove_playlist_description">Somente as playlists selecionadas serão removidas. Os arquivos não serão excluídos.</string>
-    <string name="remove_playlist_description_placeholder">Somente a playlist \"%s\" será removida. Os arquivos não serão excluídos.</string>
-    <string name="remove_from_playlist">Remover da playlist</string>
-    <string name="remove_from_playlist_description">Somente os itens da playlist \"%s\" serão removidos. Os arquivos não serão excluídos.</string>
+    <string name="add_file_to_playlist">Adicionar arquivo para lista de reprodução</string>
+    <string name="add_folder_to_playlist">Adicionar pasta para lista de reprodução</string>
+    <string name="manage_playlists">Gerenciar listas de reprodução</string>
+    <string name="create_new_playlist">Criar nova lista de reprodução</string>
+    <string name="rename_playlist">Renomear lista de reprodução</string>
+    <string name="playlist_name_exists">Já existe uma lista de reprodução com esse nome</string>
+    <string name="remove_playlist">Remover lista de reprodução</string>
+    <string name="remove_playlist_description">Somente as listas de reprodução selecionadas serão removidas. Os arquivos não serão excluídos.</string>
+    <string name="remove_playlist_description_placeholder">Somente a lista de reprodução \"%s\" será removida. Os arquivos não serão excluídos.</string>
+    <string name="remove_from_playlist">Remover da lista de reprodução</string>
+    <string name="remove_from_playlist_description">Somente os itens da lista de reprodução \"%s\" serão removidos. Os arquivos não serão excluídos.</string>
     <string name="delete_the_files_too">Apagar os arquivos também</string>
     <string name="open_playlist">Abrir playlist</string>
     <string name="all_songs_cannot_be_deleted">A playlist \"Todas as músicas\" não pode ser apagada</string>
@@ -65,10 +65,10 @@
         <item quantity="other">%d Faixas</item>
     </plurals>
     <string name="track_queue">Fila de reprodução</string>
-    <string name="add_to_queue">Adiiconar à fila de reprodução</string>
-    <string name="play_next">Reproduzir próxima</string>
+    <string name="add_to_queue">Adicionar para fila de reprodução</string>
+    <string name="play_next">Reproduzir seguinte</string>
     <string name="remove_from_queue">Remover da fila de reprodução</string>
-    <string name="create_playlist_from_queue">Criar playlist a partir da fila de reprodução</string>
+    <string name="create_playlist_from_queue">Criar lista de reprodução a partir da fila de reprodução</string>
     <string name="equalizer">Equalizador</string>
     <string name="swap_prev_next">Trocar os botões anterior/próximo do fone de ouvido</string>
     <string name="exclude_folder_description">A exclusão de uma pasta impedirá a exibição de todos os arquivos de áudio dentro dela. Os arquivos adicionados manualmente às listas de reprodução não serão afetados.</string>
@@ -79,4 +79,5 @@
     <string name="import_playlist">Importar lista de reprodução</string>
     <string name="export_playlist">Exportar lista de reprodução</string>
     <string name="next_track">Seguinte:</string>
+    <string name="playlists">Listas de reprodução</string>
 </resources>

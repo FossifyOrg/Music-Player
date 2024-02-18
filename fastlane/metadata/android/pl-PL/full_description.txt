@@ -28,7 +28,7 @@ Ciesz się czystym, nowoczesnym wyglądem i przyjaznym dla użytkownika interfej
 Spersonalizuj swoje doświadczenie muzyczne dzięki konfigurowalnym widżetom i kolorom interfejsu. Steruj swoją muzyką bez wysiłku za pomocą paska stanu, widżetu lub przycisków na słuchawkach – wszystko dostosowane do Twoich preferencji.
 
 🌐 OTWARTOŹRÓDŁOWA TRANSPARENTNOŚĆ:
-Twoja prywatność jest najwyższym priorytetem. Fossify Messenger działa bez konieczności połączenia z Internetem, gwarantując bezpieczeństwo i stabilność wiadomości. Nasza aplikacja jest całkowicie wolna od reklam i nie wymaga niepotrzebnych uprawnień. Co więcej, jest w pełni otwartoźródłowa, zapewniając Ci spokój ducha, ponieważ masz dostęp do kodu źródłowego na potrzeby kontroli bezpieczeństwa i prywatności.
+Twoja prywatność jest najwyższym priorytetem. Fossify Music Player działa w całości offline, jest całkowicie bez reklam i nie wymaga niepotrzebnych uprawnień. Co więcej, jest w pełni otwartoźródłowy, zapewniając Ci spokój ducha, ponieważ masz dostęp do kodu źródłowego na potrzeby kontroli bezpieczeństwa i prywatności.
 
 Doświadcz muzyki takiej, jaka powinna być – bez przerw, spersonalizowana i wciągająca. Pobierz Fossify Music Player teraz i wyrusz w muzyczną podróż jak nigdy dotąd.
 

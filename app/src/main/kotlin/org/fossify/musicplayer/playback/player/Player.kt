@@ -32,10 +32,10 @@ private const val PLAYER_THREAD = "PlayerThread"
  * All player operations are handled on a separate handler thread to avoid slowing down the main thread.
  * See https://developer.android.com/guide/topics/media/exoplayer/hello-world#a-note-on-threading for more info.
  */
-internal fun PlaybackService.initializeSessionAndPlayer(handleAudioFocus: Boolean, handleAudioBecomingNoisy: Boolean, skipSilence: Boolean) {
+internal fun PlaybackService.initializeSessionAndPlayer(handleAudioFocus: Boolean, handleAudioBecomingNoisy: Boolean) {
     playerThread = HandlerThread(PLAYER_THREAD).also { it.start() }
     playerHandler = Handler(playerThread.looper)
-    player = initializePlayer(handleAudioFocus, handleAudioBecomingNoisy, skipSilence)
+    player = initializePlayer(handleAudioFocus, handleAudioBecomingNoisy)
     playerListener = getPlayerListener()
     mediaSession = MediaLibraryService.MediaLibrarySession.Builder(this, player, getMediaSessionCallback())
         .setSessionActivity(getSessionActivityIntent())
@@ -51,7 +51,7 @@ internal fun PlaybackService.initializeSessionAndPlayer(handleAudioFocus: Boolea
     }
 }
 
-private fun PlaybackService.initializePlayer(handleAudioFocus: Boolean, handleAudioBecomingNoisy: Boolean, skipSilence: Boolean): SimpleMusicPlayer {
+private fun PlaybackService.initializePlayer(handleAudioFocus: Boolean, handleAudioBecomingNoisy: Boolean): SimpleMusicPlayer {
     val renderersFactory = AudioOnlyRenderersFactory(context = this)
     return SimpleMusicPlayer(
         ExoPlayer.Builder(this, renderersFactory)
@@ -63,11 +63,6 @@ private fun PlaybackService.initializePlayer(handleAudioFocus: Boolean, handleAu
                     .setContentType(C.AUDIO_CONTENT_TYPE_MUSIC)
                     .build(),
                 handleAudioFocus
-            )
-            .setSkipSilenceEnabled(
-                // TODO: Enable when https://github.com/androidx/media/issues/712 is resolved.
-                //  See https://github.com/SimpleMobileTools/Simple-Music-Player/issues/604
-                false //skipSilence
             )
             .setSeekBackIncrementMs(SEEK_INTERVAL_MS)
             .setSeekForwardIncrementMs(SEEK_INTERVAL_MS)

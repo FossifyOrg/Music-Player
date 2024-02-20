@@ -47,10 +47,9 @@ class SettingsActivity : SimpleControllerActivity() {
         setupManageShownTabs()
         setupSwapPrevNext()
         setupReplaceTitle()
-        setupGaplessPlayback()
         updateTextColors(binding.settingsNestedScrollview)
 
-        arrayOf(binding.settingsColorCustomizationSectionLabel, binding.settingsGeneralSettingsLabel, binding.settingsPlaybackSectionLabel).forEach {
+        arrayOf(binding.settingsColorCustomizationSectionLabel, binding.settingsGeneralSettingsLabel).forEach {
             it.setTextColor(getProperPrimaryColor())
         }
     }
@@ -147,17 +146,6 @@ class SettingsActivity : SimpleControllerActivity() {
         binding.settingsManageExcludedFoldersHolder.beVisibleIf(isQPlus())
         binding.settingsManageExcludedFoldersHolder.setOnClickListener {
             startActivity(Intent(this, ExcludedFoldersActivity::class.java))
-        }
-    }
-
-    private fun setupGaplessPlayback() = binding.apply {
-        settingsGaplessPlayback.isChecked = config.gaplessPlayback
-        settingsGaplessPlaybackHolder.setOnClickListener {
-            settingsGaplessPlayback.toggle()
-            config.gaplessPlayback = settingsGaplessPlayback.isChecked
-            withPlayer {
-                sendCommand(CustomCommands.TOGGLE_SKIP_SILENCE)
-            }
         }
     }
 }

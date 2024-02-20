@@ -138,8 +138,4 @@ class Config(context: Context) : BaseConfig(context) {
         currExcludedFolders.remove(path)
         excludedFolders = currExcludedFolders
     }
-
-    var gaplessPlayback: Boolean
-        get() = prefs.getBoolean(GAPLESS_PLAYBACK, false)
-        set(gaplessPlayback) = prefs.edit().putBoolean(GAPLESS_PLAYBACK, gaplessPlayback).apply()
 }

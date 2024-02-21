@@ -56,7 +56,6 @@
     <string name="faq_1_title">Làm cách nào tôi có thể tua nhanh bài hát?</string>
     <string name="shuffle_disabled">Đã tắt tính năng trộn bài</string>
     <string name="use_for_this_album">Chỉ sử dụng cho album này</string>
-    <string name="gapless_playback">Phát lại liên tục</string>
     <string name="faq_1_text">Bạn có thể nhấp vào văn bản thời lượng hiện tại hoặc thời lượng tối đa gần thanh tìm kiếm, thao tác này sẽ di chuyển bài hát lùi hoặc tiến.</string>
     <string name="all_songs_cannot_be_deleted">Không thể xóa danh sách phát \"Tất cả bài hát\"</string>
     <string name="empty_playlist">Danh sách phát hiện tại trống</string>

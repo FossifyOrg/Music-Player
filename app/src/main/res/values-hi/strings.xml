@@ -50,7 +50,6 @@
     <string name="create_playlist_from_queue">कतार से प्लेलिस्ट बनाएं</string>
     <string name="equalizer">तुल्यकारक</string>
     <string name="swap_prev_next">पिछले/अगले हेडफ़ोन बटन को बदलें</string>
-    <string name="gapless_playback">गैपलेस प्लेबैक</string>
     <string name="rescan_media">मीडिया पुनः स्कैन करें</string>
     <string name="faq_1_title">मैं गानों को तेजी से आगे कैसे बढ़ा सकता हूँ?</string>
     <string name="volume">आवाज़</string>

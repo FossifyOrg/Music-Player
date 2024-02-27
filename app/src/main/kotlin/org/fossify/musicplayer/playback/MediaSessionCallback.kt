@@ -11,7 +11,6 @@ import com.google.common.util.concurrent.ListenableFuture
 import com.google.common.util.concurrent.MoreExecutors
 import com.google.common.util.concurrent.SettableFuture
 import org.fossify.musicplayer.extensions.addRemainingMediaItems
-import org.fossify.musicplayer.extensions.config
 import org.fossify.musicplayer.helpers.EXTRA_NEXT_MEDIA_ID
 import org.fossify.musicplayer.helpers.EXTRA_SHUFFLE_INDICES
 import org.fossify.musicplayer.playback.player.updatePlaybackState
@@ -71,7 +70,6 @@ internal fun PlaybackService.getMediaSessionCallback() = object : MediaLibrarySe
             CustomCommands.CLOSE_PLAYER -> stopService()
             CustomCommands.RELOAD_CONTENT -> reloadContent()
             CustomCommands.TOGGLE_SLEEP_TIMER -> toggleSleepTimer()
-            CustomCommands.TOGGLE_SKIP_SILENCE -> player.setSkipSilence(config.gaplessPlayback)
             CustomCommands.SET_SHUFFLE_ORDER -> setShuffleOrder(args)
             CustomCommands.SET_NEXT_ITEM -> setNextItem(args)
         }

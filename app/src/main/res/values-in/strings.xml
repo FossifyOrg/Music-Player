@@ -76,7 +76,6 @@
     <string name="artist_name">Nama Artis</string>
     <string name="next_track">Berikutnya:</string>
     <string name="play_next">Putar berikutnya</string>
-    <string name="gapless_playback">Playback tanpa jeda</string>
     <string name="add_to_playlist">Tambahkan ke daftar putar</string>
     <string name="export_playlist">Ekspor daftar putar</string>
 </resources>

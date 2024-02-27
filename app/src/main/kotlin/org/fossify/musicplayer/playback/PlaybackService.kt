@@ -13,7 +13,6 @@ import androidx.media3.session.MediaSession
 import androidx.media3.session.MediaSessionService
 import org.fossify.commons.extensions.hasPermission
 import org.fossify.commons.extensions.showErrorToast
-import org.fossify.musicplayer.extensions.config
 import org.fossify.musicplayer.extensions.isReallyPlaying
 import org.fossify.musicplayer.extensions.nextMediaItem
 import org.fossify.musicplayer.helpers.NotificationHelper
@@ -36,7 +35,7 @@ class PlaybackService : MediaLibraryService(), MediaSessionService.Listener {
     override fun onCreate() {
         super.onCreate()
         setListener(this)
-        initializeSessionAndPlayer(handleAudioFocus = true, handleAudioBecomingNoisy = true, skipSilence = config.gaplessPlayback)
+        initializeSessionAndPlayer(handleAudioFocus = true, handleAudioBecomingNoisy = true)
         initializeLibrary()
     }
 

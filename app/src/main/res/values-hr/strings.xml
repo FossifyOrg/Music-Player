@@ -77,7 +77,6 @@
     <string name="equalizer">Ekvilizator</string>
     <string name="swap_prev_next">Zamijeni gumbe prethodne/sljedeća slušalice</string>
     <string name="exclude_folder_description">Isključivanje mape spriječit će prikazivanje svih audio datoteka u njoj. To neće utjecati na datoteke koje su ručno dodane na popise za reprodukciju.</string>
-    <string name="gapless_playback">Reprodukcija bez prekida</string>
     <string name="faq_1_title">Kako mogu brzo premotati pjesme prema naprijed?</string>
     <string name="faq_1_text">Pritisni tekstove trenutnog ili maksimalnog trajanja u blizini klizača za prematanje pjesme prema natrag ili prema naprijed.</string>
     <string name="genres">Žanri</string>

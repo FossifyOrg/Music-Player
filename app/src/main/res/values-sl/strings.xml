@@ -8,9 +8,9 @@
     <string name="repeat_off">Ponavljanje je izklopljeno</string>
     <string name="repeat_song">Ponavljanje trenutne skladbe</string>
     <string name="repeat_playlist">Ponavljanje vseh skladb</string>
-    <string name="stop_playback_after_current_song">Ustavite predvajanje po trenutni skladbi</string>
-    <string name="enable_shuffle">Omogočite naključno predvajanje</string>
-    <string name="disable_shuffle">Onemogočite naključno predvajanje</string>
+    <string name="stop_playback_after_current_song">Ustavitev predvajanja po trenutni skladbi</string>
+    <string name="enable_shuffle">Omogoči naključno predvajanje</string>
+    <string name="disable_shuffle">Onemogoči naključno predvajanje</string>
     <string name="shuffle_enabled">Omogočite naključno predvajanje</string>
     <string name="shuffle_disabled">Onemogočite naključno predvajanje</string>
     <string name="volume">Glasnost</string>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_launcher_name">Predvajalnik glasbe</string>
-    <string name="playlist_empty">Seznam predvajanja prazen</string>
+    <string name="playlist_empty">Seznam predvajanja je prazen</string>
     <string name="rename_song">Preimenuj pesem</string>
     <string name="rename_song_error">Med preimenovanjem prišlo do napake</string>
     <string name="rename_song_empty">Izpolnite vsa polja</string>
-    <string name="repeat_off">Ponovite izklop</string>
-    <string name="repeat_song">Ponovitev trenutne skladbe</string>
+    <string name="repeat_off">Ponavljanje je izklopljeno</string>
+    <string name="repeat_song">Ponavljanje trenutne skladbe</string>
     <string name="repeat_playlist">Ponovite vse</string>
     <string name="stop_playback_after_current_song">Ustavite predvajanje po trenutni skladbi</string>
     <string name="enable_shuffle">Omogočite naključno predvajanje</string>
@@ -82,4 +82,6 @@
     <string name="faq_1_title">Kako lahko pesmi prestavim naprej\?</string>
     <string name="faq_1_text">Kliknete na besedilo trenutnega ali največjega trajanja v bližini iskalne vrstice, kar bo premaknilo skladbo nazaj ali naprej.</string>
     <string name="genres">Žanri</string>
+    <string name="rescan_media">Ponovno iskanje medijev</string>
+    <string name="play_next">Predvajaj naslednje</string>
 </resources>

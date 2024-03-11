@@ -1,0 +1,1 @@
+Nyílt forráskódú és reklámmentes zenelejátszó, testreszabható modullal

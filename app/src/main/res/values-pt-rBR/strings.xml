@@ -81,4 +81,5 @@
     <string name="next_track">Seguinte:</string>
     <string name="playlists">Listas de reprodução</string>
     <string name="volume">Volume</string>
+    <string name="artist_name">Nome do(a) artista</string>
 </resources>

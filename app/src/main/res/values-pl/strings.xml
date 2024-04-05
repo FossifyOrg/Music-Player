@@ -72,6 +72,7 @@
         <item quantity="many">%d utworów</item>
         <item quantity="other">%d utworów</item>
     </plurals>
+    <string name="track_on_disk">%1$d.%2$s</string>
     <string name="next_track">Następny:</string>
     <string name="track_queue">Kolejka utworów</string>
     <string name="add_to_queue">Dodaj do kolejki</string>

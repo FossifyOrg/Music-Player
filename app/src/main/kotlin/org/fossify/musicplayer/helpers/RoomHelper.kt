@@ -47,6 +47,7 @@ class RoomHelper(val context: Context) {
         if (isRPlus()) {
             projection.add(Audio.Media.GENRE)
             projection.add(Audio.Media.GENRE_ID)
+            projection.add(Audio.Media.DISC_NUMBER)
         }
 
         val pathsMap = HashSet<String>()
@@ -83,18 +84,21 @@ class RoomHelper(val context: Context) {
 
                 val genre: String
                 val genreId: Long
+                val discNumber: Int?
                 if (isRPlus()) {
                     genre = cursor.getStringValue(Audio.Media.GENRE)
                     genreId = cursor.getLongValue(Audio.Media.GENRE_ID)
+                    discNumber = cursor.getStringValue(Audio.Media.DISC_NUMBER)?.toIntOrNull()
                 } else {
                     genre = ""
                     genreId = 0
+                    discNumber = null
                 }
 
                 val song = Track(
                     id = 0, mediaStoreId = mediaStoreId, title = title, artist = artist, path = path, duration = duration, album = album, genre = genre,
-                    coverArt = coverArt, playListId = playlistId, trackId = 0, folderName = folderName, albumId = albumId, artistId = artistId,
-                    genreId = genreId, year = year, dateAdded = dateAdded, orderInPlaylist = 0
+                    coverArt = coverArt, playListId = playlistId, trackId = 0, discNumber = discNumber, folderName = folderName, albumId = albumId,
+                    artistId = artistId, genreId = genreId, year = year, dateAdded = dateAdded, orderInPlaylist = 0
                 )
                 song.title = song.getProperTitle(showFilename)
                 songs.add(song)
@@ -114,8 +118,8 @@ class RoomHelper(val context: Context) {
 
             val song = Track(
                 id = 0, mediaStoreId = 0, title = title, artist = artist, path = it, duration = context.getDuration(it) ?: 0, album = "",
-                genre = "", coverArt = "", playListId = playlistId, trackId = 0, folderName = "", albumId = 0, artistId = 0, genreId = 0,
-                year = 0, dateAdded = dateAdded, orderInPlaylist = 0
+                genre = "", coverArt = "", playListId = playlistId, trackId = 0, discNumber = null, folderName = "", albumId = 0, artistId = 0,
+                genreId = 0, year = 0, dateAdded = dateAdded, orderInPlaylist = 0
             )
             song.title = song.getProperTitle(showFilename)
             songs.add(song)

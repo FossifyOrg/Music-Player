@@ -67,7 +67,9 @@ class SimpleMusicPlayer(private val exoPlayer: ExoPlayer) : ForwardingPlayer(exo
 
     override fun seekToPrevious() {
         play()
-        if (!maybeForcePrevious()) {
+        if (currentPosition > 5000) {
+            seekTo(0)
+        } else if (!maybeForcePrevious()) {
             seekToPreviousCount += 1
             seekWithDelay()
         }

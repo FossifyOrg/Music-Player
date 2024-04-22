@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_launcher_name">簡易音樂播放器</string>
+    <string name="app_launcher_name">音樂播放器</string>
     <string name="playlist_empty">您的播放清單是空的</string>
     <string name="rename_song">重新命名歌曲</string>
     <string name="rename_song_error">重新命名時發生錯誤</string>

@@ -15,6 +15,7 @@ import android.view.GestureDetector
 import android.view.MotionEvent
 import android.view.View
 import android.widget.SeekBar
+import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.os.postDelayed
 import androidx.core.view.GestureDetectorCompat
@@ -162,6 +163,7 @@ class TrackActivity : SimpleControllerActivity(), PlaybackSpeedListener {
         activityTrackProgressMax.setOnClickListener { seekForward() }
         activityTrackPlaybackSetting.setOnClickListener { togglePlaybackSetting() }
         activityTrackSpeedClickArea.setOnClickListener { showPlaybackSpeedPicker() }
+        infoButtuon.setOnClickListener{showInfoSongs()}
         setupShuffleButton()
         setupPlaybackSettingButton()
         setupSeekbar()
@@ -170,7 +172,21 @@ class TrackActivity : SimpleControllerActivity(), PlaybackSpeedListener {
             it.applyColorFilter(getProperTextColor())
         }
     }
+    private fun showInfoSongs() {
+        val currentTrack = PlaybackService.currentMediaItem?.toTrack()
 
+        if (currentTrack != null) {
+            val title = currentTrack.title
+            val artist = currentTrack.artist
+            val album = currentTrack.album
+            val duration = currentTrack.duration.getFormattedDuration() // Format the duration
+
+            val message = "Titre : $title\nArtiste : $artist\nAlbum : $album\nDurée : $duration"
+            Toast.makeText(this, message, Toast.LENGTH_LONG).show()
+        } else {
+            Toast.makeText(this, "Aucune piste en cours de lecture", Toast.LENGTH_SHORT).show()
+        }
+    }
     private fun setupNextTrackInfo(item: MediaItem?) {
         val track = item?.toTrack()
         if (track == null) {

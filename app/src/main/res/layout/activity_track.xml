@@ -73,6 +73,19 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/activity_track_progressbar" />
 
+        <ImageView
+            android:id="@+id/infoButtuon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitEnd"
+            android:src="@drawable/ic_playback_speed_vector"
+            app:layout_constraintBottom_toBottomOf="@+id/activity_track_speed"
+            app:layout_constraintEnd_toStartOf="@+id/activity_track_speed"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activity_track_progressbar"
+            app:srcCompat="@drawable/ic_article_vector" />
+
         <org.fossify.commons.views.MyTextView
             android:id="@+id/activity_track_speed"
             android:layout_width="wrap_content"

@@ -127,7 +127,7 @@ class AudioHelper(private val context: Context) {
     fun getAlbumTracks(albumId: Long): ArrayList<Track> {
         val tracks = context.tracksDAO.getTracksFromAlbum(albumId)
             .applyProperFilenames(config.showFilename)
-        tracks.sortWith(compareBy({ it.trackId }, { it.title.lowercase() }))
+        tracks.sortWith(compareBy({ it.discNumber }, { it.trackId }, { it.title.lowercase() }))
         return tracks
     }
 

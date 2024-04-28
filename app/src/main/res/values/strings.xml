@@ -71,6 +71,8 @@
         <item quantity="one">%d Track</item>
         <item quantity="other">%d Tracks</item>
     </plurals>
+    <!-- %1 is disc number, %2 is track number -->
+    <string name="track_on_disk">%1$d.%2$s</string>
     <!-- Queue -->
     <string name="next_track">Next:</string>
     <string name="track_queue">Track queue</string>

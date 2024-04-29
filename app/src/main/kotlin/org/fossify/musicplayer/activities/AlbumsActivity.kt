@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import org.fossify.commons.dialogs.PermissionRequiredDialog
 import org.fossify.commons.extensions.*
 import org.fossify.commons.helpers.NavigationIcon
 import org.fossify.commons.helpers.ensureBackgroundThread

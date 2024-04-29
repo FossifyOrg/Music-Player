@@ -4,9 +4,7 @@ import android.content.Intent
 import androidx.annotation.CallSuper
 import androidx.media3.common.MediaItem
 import androidx.media3.common.Player
-import org.fossify.commons.dialogs.PermissionRequiredDialog
 import org.fossify.commons.extensions.hideKeyboard
-import org.fossify.commons.extensions.openNotificationSettings
 import org.fossify.musicplayer.extensions.isReallyPlaying
 import org.fossify.musicplayer.views.CurrentTrackBar
 

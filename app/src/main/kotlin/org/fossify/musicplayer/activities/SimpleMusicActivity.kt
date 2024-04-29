@@ -26,14 +26,8 @@ abstract class SimpleMusicActivity : SimpleControllerActivity(), Player.Listener
         trackBarView?.initialize(togglePlayback = ::togglePlayback)
         trackBarView?.setOnClickListener {
             hideKeyboard()
-            handleNotificationPermission { granted ->
-                if (granted) {
-                    Intent(this, TrackActivity::class.java).apply {
-                        startActivity(this)
-                    }
-                } else {
-                    PermissionRequiredDialog(this, org.fossify.commons.R.string.allow_notifications_music_player, { openNotificationSettings() })
-                }
+            Intent(this, TrackActivity::class.java).apply {
+                startActivity(this)
             }
         }
     }

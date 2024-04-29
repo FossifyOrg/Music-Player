@@ -59,18 +59,8 @@ class AlbumsActivity : SimpleMusicActivity() {
                             startActivity(this)
                         }
                     } else {
-                        handleNotificationPermission { granted ->
-                            if (granted) {
-                                val startIndex = albumTracks.indexOf(it as Track)
-                                prepareAndPlay(albumTracks, startIndex)
-                            } else {
-                                PermissionRequiredDialog(
-                                    this,
-                                    org.fossify.commons.R.string.allow_notifications_music_player,
-                                    { openNotificationSettings() }
-                                )
-                            }
-                        }
+                        val startIndex = albumTracks.indexOf(it as Track)
+                        prepareAndPlay(albumTracks, startIndex)
                     }
                 }.apply {
                     binding.albumsList.adapter = this

@@ -46,20 +46,8 @@ class TracksFragment(context: Context, attributeSet: AttributeSet) : MyViewPager
                 if (adapter == null) {
                     TracksAdapter(activity = activity, recyclerView = binding.tracksList, sourceType = TracksAdapter.TYPE_TRACKS, items = tracks) {
                         activity.hideKeyboard()
-                        activity.handleNotificationPermission { granted ->
-                            if (granted) {
-                                val startIndex = tracks.indexOf(it as Track)
-                                prepareAndPlay(tracks, startIndex)
-                            } else {
-                                if (context is Activity) {
-                                    PermissionRequiredDialog(
-                                        activity,
-                                        org.fossify.commons.R.string.allow_notifications_music_player,
-                                        { activity.openNotificationSettings() }
-                                    )
-                                }
-                            }
-                        }
+                        val startIndex = tracks.indexOf(it as Track)
+                        prepareAndPlay(tracks, startIndex)
                     }.apply {
                         binding.tracksList.adapter = this
                     }

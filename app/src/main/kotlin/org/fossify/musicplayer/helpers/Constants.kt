@@ -73,6 +73,7 @@ const val SHOW_FILENAME_ALWAYS = 3
 
 const val TAB_PLAYLISTS = 1
 const val TAB_FOLDERS = 2
+const val TAB_ALBUM_ARTISTS = 6
 const val TAB_ARTISTS = 4
 const val TAB_ALBUMS = 8
 const val TAB_TRACKS = 16
@@ -84,7 +85,7 @@ const val FLAG_IS_CURRENT = 2
 
 // show Folders tab only on Android Q+, BUCKET_DISPLAY_NAME hasn't been available before that
 val allTabsMask = if (isQPlus()) {
-    TAB_PLAYLISTS or TAB_FOLDERS or TAB_ARTISTS or TAB_ALBUMS or TAB_TRACKS
+    TAB_PLAYLISTS or TAB_FOLDERS or TAB_ALBUM_ARTISTS or TAB_ARTISTS or TAB_ALBUMS or TAB_TRACKS
 } else {
     TAB_PLAYLISTS or TAB_ARTISTS or TAB_ALBUMS or TAB_TRACKS
 }
@@ -94,6 +95,7 @@ val tabsList: ArrayList<Int>
         arrayListOf(
             TAB_PLAYLISTS,
             TAB_FOLDERS,
+            TAB_ALBUM_ARTISTS,
             TAB_ARTISTS,
             TAB_ALBUMS,
             TAB_TRACKS,
@@ -125,6 +127,7 @@ const val PLAYLIST_TRACKS_SORTING = "playlist_tracks_sorting"
 const val FOLDER_SORTING = "folder_sorting"
 const val ARTIST_SORTING = "artist_sorting"
 const val ALBUM_SORTING = "album_sorting"
+const val ALBUM_ARTISTS_SORTING = "album_sorting"
 const val TRACK_SORTING = "track_sorting"
 const val GENRE_SORTING = "genre_sorting"
 

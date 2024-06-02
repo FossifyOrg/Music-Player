@@ -30,6 +30,14 @@
             android:text="@string/folders" />
 
         <org.fossify.commons.views.MyAppCompatCheckbox
+            android:id="@+id/manage_visible_tabs_album_artists"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/activity_margin"
+            android:paddingBottom="@dimen/activity_margin"
+            android:text="@string/album_artists" />
+
+        <org.fossify.commons.views.MyAppCompatCheckbox
             android:id="@+id/manage_visible_tabs_artists"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

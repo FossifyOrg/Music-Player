@@ -124,6 +124,12 @@ class AudioHelper(private val context: Context) {
         return albums
     }
 
+    // TODO : impelment getAllAlbumArtists()
+    /*
+    fun getAllAlbumArtists(): ArrayList<AlbumArtists> {
+        return null
+    }
+    */
     fun getAlbumTracks(albumId: Long): ArrayList<Track> {
         val tracks = context.tracksDAO.getTracksFromAlbum(albumId)
             .applyProperFilenames(config.showFilename)

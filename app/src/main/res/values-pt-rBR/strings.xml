@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_launcher_name">Player de Música Fossify</string>
+    <string name="app_launcher_name">Reprodutor de Música</string>
     <string name="playlist_empty">Sua lista de reprodução está vazia</string>
     <string name="rename_song">Renomear música</string>
     <string name="rename_song_error">Ocorreu um erro ao renomear</string>
@@ -81,4 +81,5 @@
     <string name="next_track">Seguinte:</string>
     <string name="playlists">Listas de reprodução</string>
     <string name="volume">Volume</string>
+    <string name="artist_name">Nome do(a) artista</string>
 </resources>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_launcher_name">Musik</string>
+    <string name="app_launcher_name">Pemutar Musik</string>
     <string name="playlist_empty">Daftar putar anda kosong</string>
     <string name="rename_song">Ubah nama lagu</string>
     <string name="rename_song_error">Terjadi kesalahan saat mengubah nama</string>
@@ -15,7 +15,7 @@
     <string name="shuffle_disabled">Acak dinonaktifkan</string>
     <string name="playback_speed">Kecepatan playback</string>
     <string name="loading_files">Memuat file…</string>
-    <string name="add_file_to_playlist">Tambah berkas ke daftar putar</string>
+    <string name="add_file_to_playlist">Tambah file ke daftar putar</string>
     <string name="add_folder_to_playlist">Tambah folder ke daftar putar</string>
     <string name="manage_playlists">Kelola daftar putar</string>
     <string name="playlists">Daftar putar</string>
@@ -23,27 +23,27 @@
     <string name="rename_playlist">Ubah nama daftar putar</string>
     <string name="playlist_name_exists">Daftar putar dengan nama sama sudah ada</string>
     <string name="remove_playlist">Buang daftar putar</string>
-    <string name="remove_playlist_description">Ini hanya akan membuang daftar putar yang dipilih, bukan berkas musik yang disimpan di perangkat anda.</string>
-    <string name="remove_playlist_description_placeholder">Ini hanya akan membuang daftar putar \"%s\", bukan berkas musik yang disimpan di perangkat anda.</string>
+    <string name="remove_playlist_description">Melakukan ini hanya akan menghapus daftar putar yang dipilih, bukan file musik yang disimpan di perangkat anda.</string>
+    <string name="remove_playlist_description_placeholder">Melakukan ini hanya akan menghapus daftar putar \"%s\", bukan file musik yang disimpan di perangkat anda.</string>
     <string name="remove_from_playlist">Buang dari daftar putar</string>
-    <string name="remove_from_playlist_description">Ini hanya akan membuang item dari daftar putar \"%s\", berkas aslinya tidak akan dihapus.</string>
-    <string name="delete_the_files_too">Hapus juga berkas yang disimpan di perangkat anda</string>
+    <string name="remove_from_playlist_description">Melakukan ini hanya akan membuang item dari daftar putar \"%s\", file aslinya tidak akan dihapus.</string>
+    <string name="delete_the_files_too">Hapus juga file yang disimpan pada perangkat anda</string>
     <string name="open_playlist">Buka daftar putar</string>
     <string name="all_songs_cannot_be_deleted">Daftar putar \'Semua lagu\' tidak bisa dihapus</string>
     <string name="empty_playlist">Daftar putar ini kosong</string>
     <string name="fetching_songs">Memuat lagu…</string>
     <string name="all_songs">Semua lagu</string>
     <string name="create_playlist_from_folder">Buat daftar putar baru dari folder</string>
-    <string name="folder_contains_no_audio">Folder yang dipilih tidak berisi berkas audio</string>
+    <string name="folder_contains_no_audio">Folder yang dipilih tidak berisi file audio</string>
     <string name="delete_current_song">Hapus lagu ini</string>
-    <string name="delete_song_warning">PERINGATAN: Ini akan menghapus berkas yang dipilih dari perangkat, termasuk semua daftar putar.</string>
+    <string name="delete_song_warning">PERINGATAN: Melakukan ini akan menghapus file yang dipilih dari perangkat Anda, termasuk semua daftar putar.</string>
     <string name="remove_current_song">Hapus lagu ini dari daftar putar</string>
-    <string name="show_filename">Tampilkan nama berkas sebagai judul lagu</string>
+    <string name="show_filename">Tampilkan nama file sebagai judul lagu</string>
     <string name="title_is_not_available">Jika judul tidak tersedia</string>
     <string name="show_album_cover">Tampilkan kover album pada layar utama</string>
     <string name="all_tracks">Semua trek</string>
     <string name="create_playlist_label">Anda dapat membuat sebuah daftar putar baru dengan memilih artis, album atau trek yang diinginkan dengan menggunakan Menu -&gt; Tambahkan ke daftar putar.</string>
-    <string name="filename_without_m3u">Nama berkas (tanpa .m3u)</string>
+    <string name="filename_without_m3u">Nama file (tanpa .m3u)</string>
     <string name="track_count">Hitungan Trek</string>
     <string name="album_count">Hitungan Album</string>
     <string name="year">Tahun</string>
@@ -66,7 +66,7 @@
     <string name="create_playlist_from_queue">Buat daftar putar dari antrean</string>
     <string name="equalizer">Ekualiser</string>
     <string name="swap_prev_next">Tukar tombol pemilih lagu sebelumnya/berikutnya pada headphone</string>
-    <string name="exclude_folder_description">Tidak menyertakan folder akan mencegah penampilan semua berkas audio yang di dalamnya. Berkas yang ditambahkan secara manual ke daftar putar tidak berpengaruh.</string>
+    <string name="exclude_folder_description">Tidak menyertakan folder akan mengakibatkan semua file audio ada yang di dalamnya tidak muncul. File yang ditambahkan secara manual ke daftar putar tidak akan terpengaruh.</string>
     <string name="faq_1_title">Bagaimana saya memajukan lagu\?</string>
     <string name="faq_1_text">Anda bisa klik teks durasi di dekat bilah laju, tindakan tersebut akan memajukan atau memundurkan lagu.</string>
     <string name="volume">Volume</string>

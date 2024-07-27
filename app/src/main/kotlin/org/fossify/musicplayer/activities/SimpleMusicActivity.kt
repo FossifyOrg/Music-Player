@@ -4,9 +4,7 @@ import android.content.Intent
 import androidx.annotation.CallSuper
 import androidx.media3.common.MediaItem
 import androidx.media3.common.Player
-import org.fossify.commons.dialogs.PermissionRequiredDialog
 import org.fossify.commons.extensions.hideKeyboard
-import org.fossify.commons.extensions.openNotificationSettings
 import org.fossify.musicplayer.extensions.isReallyPlaying
 import org.fossify.musicplayer.views.CurrentTrackBar
 
@@ -26,14 +24,8 @@ abstract class SimpleMusicActivity : SimpleControllerActivity(), Player.Listener
         trackBarView?.initialize(togglePlayback = ::togglePlayback)
         trackBarView?.setOnClickListener {
             hideKeyboard()
-            handleNotificationPermission { granted ->
-                if (granted) {
-                    Intent(this, TrackActivity::class.java).apply {
-                        startActivity(this)
-                    }
-                } else {
-                    PermissionRequiredDialog(this, org.fossify.commons.R.string.allow_notifications_music_player, { openNotificationSettings() })
-                }
+            Intent(this, TrackActivity::class.java).apply {
+                startActivity(this)
             }
         }
     }

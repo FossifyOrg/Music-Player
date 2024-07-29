@@ -45,6 +45,7 @@ class ViewPagerAdapter(val activity: SimpleActivity) : PagerAdapter() {
         return when (tab) {
             TAB_PLAYLISTS -> FragmentPlaylistsBinding.inflate(layoutInflater, container, false).root
             TAB_FOLDERS -> FragmentFoldersBinding.inflate(layoutInflater, container, false).root
+            TAB_ALBUM_ARTISTS -> FragmentAlbumArtistsBinding.inflate(layoutInflater, container, false).root
             TAB_ARTISTS -> FragmentArtistsBinding.inflate(layoutInflater, container, false).root
             TAB_ALBUMS -> FragmentAlbumsBinding.inflate(layoutInflater, container, false).root
             TAB_TRACKS -> FragmentTracksBinding.inflate(layoutInflater, container, false).root

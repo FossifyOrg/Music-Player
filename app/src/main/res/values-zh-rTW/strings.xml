@@ -69,4 +69,13 @@
     <string name="swap_prev_next">交換耳機按鈕的 上一首/下一首</string>
     <string name="faq_1_title">要怎麼快轉歌曲？</string>
     <string name="faq_1_text">點一下進度條旁邊的目前或總時長文字，歌曲就會倒帶或快轉。</string>
+    <string name="delete_song_warning">警告：這將會從裝置刪除檔案本身，包含所有播放清單。</string>
+    <string name="track_number">軌道編號</string>
+    <string name="use_for_this_playlist">僅用於此播放清單</string>
+    <string name="rescan_media">重新掃描媒體</string>
+    <string name="use_for_this_album">僅用於此專輯</string>
+    <string name="filename_without_m3u">檔案名稱（不含 .m3u）</string>
+    <string name="genres">曲風</string>
+    <string name="play_next">播放下一首</string>
+    <string name="exclude_folder_description">排除資料夾將會防止顯示其中的所有音訊檔案。不會影響手動新增至播放清單的檔案。</string>
 </resources>

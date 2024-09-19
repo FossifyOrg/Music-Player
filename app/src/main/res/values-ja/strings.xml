@@ -77,5 +77,5 @@
     <string name="faq_1_text">シークバーの近くにある [曲の長さ] を示すテキストをタップすると、曲の早送りをすることができます（ [現在の再生位置] を示すテキストをタップすると、曲の早戻しをすることができます）。</string>
     <string name="genres">ジャンル</string>
     <string name="rescan_media">メディアを再スキャン</string>
-    <string name="play_next">次に再生</string>
+    <string name="play_next">次を再生</string>
 </resources>

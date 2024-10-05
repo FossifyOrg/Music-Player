@@ -19,6 +19,7 @@ class ManageVisibleTabsDialog(val activity: BaseSimpleActivity, val callback: (r
         tabs.apply {
             put(TAB_PLAYLISTS, binding.manageVisibleTabsPlaylists)
             put(TAB_FOLDERS, binding.manageVisibleTabsFolders)
+            put(TAB_ALBUM_ARTISTS, binding.manageVisibleTabsAlbumArtists)
             put(TAB_ARTISTS, binding.manageVisibleTabsArtists)
             put(TAB_ALBUMS, binding.manageVisibleTabsAlbums)
             put(TAB_TRACKS, binding.manageVisibleTabsTracks)
@@ -34,6 +35,8 @@ class ManageVisibleTabsDialog(val activity: BaseSimpleActivity, val callback: (r
         for ((key, value) in tabs) {
             value.isChecked = showTabs and key != 0
         }
+
+        binding.manageVisibleTabsAlbums.isChecked = false
 
         activity.getAlertDialogBuilder()
             .setPositiveButton(org.fossify.commons.R.string.ok) { _, _ -> dialogConfirmed() }

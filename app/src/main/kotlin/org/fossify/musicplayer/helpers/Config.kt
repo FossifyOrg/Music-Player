@@ -81,6 +81,11 @@ class Config(context: Context) : BaseConfig(context) {
         get() = prefs.getInt(ALBUM_SORTING, PLAYER_SORT_BY_TITLE)
         set(albumSorting) = prefs.edit().putInt(ALBUM_SORTING, albumSorting).apply()
 
+    // TODO : impelment albumArtistsSorting
+    var albumArtistsSorting: Int
+        get() = prefs.getInt(ALBUM_ARTISTS_SORTING, PLAYER_SORT_BY_TITLE)
+        set(albumArtistsSorting) = prefs.edit().putInt(ALBUM_ARTISTS_SORTING, albumArtistsSorting).apply()
+
     var trackSorting: Int
         get() = prefs.getInt(TRACK_SORTING, PLAYER_SORT_BY_TITLE)
         set(trackSorting) = prefs.edit().putInt(TRACK_SORTING, trackSorting).apply()

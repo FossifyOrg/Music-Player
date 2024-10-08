@@ -74,4 +74,9 @@
     <string name="swap_prev_next">Inversaţi butoanele anterior/următor pentru căști</string>
     <string name="faq_1_title">Cum pot să avansez rapid melodiile\?</string>
     <string name="faq_1_text">Puteți face clic pe textele de durată curentă sau maximă de lângă bara de căutare, care vor muta melodia fie înapoi, fie înainte.</string>
+    <string name="track_number">Nr. piesă</string>
+    <string name="use_for_this_album">Utilizați numai pentru acest album</string>
+    <string name="use_for_this_playlist">Utilizați numai pentru acest playlist</string>
+    <string name="play_next">Redă următoarea</string>
+    <string name="genres">Genuri</string>
 </resources>

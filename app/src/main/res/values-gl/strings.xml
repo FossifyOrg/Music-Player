@@ -13,7 +13,7 @@
     <string name="disable_shuffle">Desactiva Modo aleatorio</string>
     <string name="shuffle_enabled">Activouse a función aleatoria</string>
     <string name="shuffle_disabled">Desactivouse a función aleatoria</string>
-    <string name="playback_speed">Velocidade da reprodución</string>
+    <string name="playback_speed">Velocidade de reprodución</string>
     <string name="loading_files">Cargando ficheiros…</string>
     <string name="add_file_to_playlist">Engadir ficheiro á lista de reprodución</string>
     <string name="add_folder_to_playlist">Engadir cartafol á lista de reprodución</string>

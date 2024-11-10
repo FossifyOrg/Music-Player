@@ -13,7 +13,7 @@
     <string name="disable_shuffle">Nonaktifkan acak</string>
     <string name="shuffle_enabled">Acak diaktifkan</string>
     <string name="shuffle_disabled">Acak dinonaktifkan</string>
-    <string name="playback_speed">Kecepatan playback</string>
+    <string name="playback_speed">Kecepatan pemutaran</string>
     <string name="loading_files">Memuat file…</string>
     <string name="add_file_to_playlist">Tambah file ke daftar putar</string>
     <string name="add_folder_to_playlist">Tambah folder ke daftar putar</string>

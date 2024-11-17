@@ -14,7 +14,7 @@
     <string name="shuffle_enabled">Nahastea gaituta</string>
     <string name="shuffle_disabled">Nahastea ezgaituta</string>
     <string name="volume">Bolumena</string>
-    <string name="playback_speed">Erreprodukzio abiadura</string>
+    <string name="playback_speed">Jotzeko abiadura</string>
     <string name="loading_files">Fitxategiak kargatzen…</string>
     <string name="add_file_to_playlist">Gehitu fitxategia erreprodukzio zerrendari</string>
     <string name="add_folder_to_playlist">Gehitu karpeta erreprodukzio zerrendari</string>

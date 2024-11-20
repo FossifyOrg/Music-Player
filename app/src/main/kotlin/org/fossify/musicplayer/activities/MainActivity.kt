@@ -189,21 +189,19 @@ class MainActivity : SimpleMusicActivity() {
             binding.loadingProgressBar.show()
         }
 
-        handleNotificationPermission { granted ->
-            mediaScanner.scan(progress = showProgress && granted) { complete ->
-                runOnUiThread {
-                    getAllFragments().forEach {
-                        it.setupFragment(this)
-                    }
+        mediaScanner.scan(progress = showProgress) { complete ->
+            runOnUiThread {
+                getAllFragments().forEach {
+                    it.setupFragment(this)
+                }
 
-                    if (complete) {
-                        binding.loadingProgressBar.hide()
-                        withPlayer {
-                            if (currentMediaItem == null) {
-                                maybePreparePlayer()
-                            } else {
-                                sendCommand(CustomCommands.RELOAD_CONTENT)
-                            }
+                if (complete) {
+                    binding.loadingProgressBar.hide()
+                    withPlayer {
+                        if (currentMediaItem == null) {
+                            maybePreparePlayer()
+                        } else {
+                            sendCommand(CustomCommands.RELOAD_CONTENT)
                         }
                     }
                 }

@@ -372,14 +372,8 @@ class TracksActivity : SimpleMusicActivity() {
             else -> getTracksAdapter()?.items
         } ?: ArrayList()
 
-        handleNotificationPermission { granted ->
-            if (granted) {
-                val startIndex = tracks.indexOf(track)
-                prepareAndPlay(tracks, startIndex)
-            } else {
-                PermissionRequiredDialog(this, org.fossify.commons.R.string.allow_notifications_music_player, { openNotificationSettings() })
-            }
-        }
+        val startIndex = tracks.indexOf(track)
+        prepareAndPlay(tracks, startIndex)
     }
 
     private fun tryExportPlaylist() {

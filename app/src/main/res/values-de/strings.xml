@@ -22,7 +22,7 @@
     <string name="playlists">Wiedergabelisten</string>
     <string name="create_new_playlist">Wiedergabeliste erstellen</string>
     <string name="rename_playlist">Wiedergabeliste umbenennen</string>
-    <string name="playlist_name_exists">Es gibt bereits eine Wiedergabeliste mit diesem Namen</string>
+    <string name="playlist_name_exists">Eine Wiedergabeliste mit diesem Namen existiert bereits</string>
     <string name="remove_playlist">Wiedergabeliste löschen</string>
     <string name="remove_playlist_description">Gelöscht wird nur die ausgewählte Wiedergabeliste, die eigentlichen Dateien werden nicht gelöscht.</string>
     <string name="remove_playlist_description_placeholder">Gelöscht wird nur die Wiedergabeliste \"%s\", die eigentlichen Dateien werden nicht gelöscht.</string>

@@ -49,7 +49,7 @@
     <string name="filename_without_m3u">Bestandsnaam (zonder .m3u)</string>
     <string name="track_count">Aantal nummers</string>
     <string name="album_count">Aantal albums</string>
-    <string name="artist_name">Artiest</string>
+    <string name="artist_name">Naam artiest</string>
     <string name="year">Jaar</string>
     <string name="track_number">Nummer</string>
     <string name="use_for_this_playlist">Alleen voor deze afspeellijst</string>

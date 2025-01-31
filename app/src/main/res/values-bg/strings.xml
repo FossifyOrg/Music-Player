@@ -27,11 +27,11 @@
     <string name="remove_playlist_description">Това ще премахне само избраните плейлисти. Реалните файлове няма да бъдат изтрити.</string>
     <string name="remove_playlist_description_placeholder">Това ще премахне само плейлист \"%s\". Реалните файлове няма да бъдат изтрити.</string>
     <string name="remove_from_playlist">Премахване от плейлист</string>
-    <string name="remove_from_playlist_description">Това ще премахне само елементите от плейлиста „%s“. Реалните файлове няма да бъдат изтрити.</string>
+    <string name="remove_from_playlist_description">Това ще премахне само елементите от списъка „%s“. Файловете няма да бъдат изтрити.</string>
     <string name="delete_the_files_too">Изтриване на файловете също</string>
     <string name="open_playlist">Отваряне на плейлист</string>
-    <string name="all_songs_cannot_be_deleted">Плейлистът „Всички песни“ не може да бъде изтрит</string>
-    <string name="empty_playlist">Текущият плейлист е празен</string>
+    <string name="all_songs_cannot_be_deleted">Списъкът „Всички песни“ не може да бъде изтрит</string>
+    <string name="empty_playlist">Текущият списък е празен</string>
     <string name="fetching_songs">Извличат се песни…</string>
     <string name="all_songs">Всички песни</string>
     <string name="create_playlist_from_folder">Създаване на нов плейлист от папка</string>

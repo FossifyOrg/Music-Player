@@ -25,12 +25,12 @@
     <string name="playlist_name_exists">具有该名字的播放列表已存在</string>
     <string name="remove_playlist">移除播放列表</string>
     <string name="remove_playlist_description">这将仅移除选定的播放列表，并非实际文件。</string>
-    <string name="remove_playlist_description_placeholder">这将仅移除播放列表 \"%s\"，并非实际文件。</string>
+    <string name="remove_playlist_description_placeholder">这将仅移除播放列表“%s”，并非实际文件。</string>
     <string name="remove_from_playlist">从播放列表移除</string>
-    <string name="remove_from_playlist_description">这将仅从播放列表 \"%s\" 移除条目，实际文件并未删除。</string>
+    <string name="remove_from_playlist_description">这将仅从播放列表“%s”移除曲目，实际文件并未删除。</string>
     <string name="delete_the_files_too">一并删除文件</string>
     <string name="open_playlist">打开播放列表</string>
-    <string name="all_songs_cannot_be_deleted">\'全部歌曲\' 播放列表无法被删除</string>
+    <string name="all_songs_cannot_be_deleted">无法删除“全部歌曲”播放列表</string>
     <string name="empty_playlist">当前播放列表为空</string>
     <string name="fetching_songs">获取歌曲中…</string>
     <string name="all_songs">全部歌曲</string>
@@ -66,7 +66,7 @@
     <plurals name="tracks_plural">
         <item quantity="other">%d 首歌</item>
     </plurals>
-    <string name="next_track">下一首:</string>
+    <string name="next_track">下一首：</string>
     <string name="track_queue">歌曲队列</string>
     <string name="add_to_queue">添加到队列</string>
     <string name="play_next">播放下一首</string>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="rename_song_error">Baddalidda magaca cillad ayey keentay</string>
+    <string name="repeat_off">Ceshashada jooji</string>
+    <string name="title_is_not_available">Hadduusan cinwaan jirin</string>
+    <string name="add_file_to_playlist">Codkan ku dar taxda</string>
+    <string name="playlists">Taxaha</string>
+    <string name="rename_song">Magaca kabaddal</string>
+    <string name="repeat_song">Kucesho codka socda</string>
+    <string name="enable_shuffle">Jacbur samee</string>
+    <string name="disable_shuffle">Jacbur jooji</string>
+    <string name="shuffle_enabled">Jacburkaa la daaray</string>
+    <string name="shuffle_disabled">Jacburkaa la joojiyay</string>
+    <string name="volume">Codka</string>
+    <string name="playback_speed">Xawaaraha dhagaysiga</string>
+    <string name="loading_files">Rarid baa socota…</string>
+    <string name="add_folder_to_playlist">Gal ku dar taxda</string>
+    <string name="manage_playlists">Habee taxaha</string>
+    <string name="create_new_playlist">Alkun tax cusub</string>
+    <string name="rename_playlist">Magac ka baddal taxda</string>
+    <string name="playlist_name_exists">Tax magacaa wadata baa jirta</string>
+    <string name="remove_playlist">Taxda tirtir</string>
+    <string name="remove_playlist_description">Falkan wuxuu tirtiri taxaha un. Codadka laftooda lama tirtiri doono.</string>
+    <string name="remove_from_playlist">Ka saar taxda</string>
+    <string name="remove_from_playlist_description">Falkan wuxuu walxaha ka tirtiri taxda \"%s\". Codadka laftooda lama tirtiri doono.</string>
+    <string name="delete_the_files_too">Codadka laftoodana tirtir</string>
+    <string name="open_playlist">Tax fur</string>
+    <string name="fetching_songs">Goobidda codadkaa socota…</string>
+    <string name="all_songs">Codadkoo dhan</string>
+    <string name="all_songs_cannot_be_deleted">Taxda \"Codadkoo dhan\" lama tirtiri karo</string>
+    <string name="create_playlist_from_folder">Alkun tax cusuboo ku salaysan gal</string>
+    <string name="folder_contains_no_audio">Galkaad dooratay kuma jiro wax cod ah</string>
+    <string name="delete_current_song">Tirtir codka haatan shidan</string>
+    <string name="remove_current_song">Codka haatan shidan ka saar taxda</string>
+    <string name="show_filename">Magaca codka cinwaan ka dhig</string>
+    <string name="show_album_cover">Sawirka codka kusoo bandhig shaashadda</string>
+    <string name="all_tracks">Codadka dhammaan</string>
+    <string name="add_to_playlist">Taxda ku dar</string>
+    <string name="playlist_empty">Tax maran</string>
+    <string name="rename_song_empty">Fadlan buuxi goobaha</string>
+    <string name="stop_playback_after_current_song">Jooji dhagaysiga codka socda kadib</string>
+    <string name="repeat_playlist">Kucesho dhammaan</string>
+    <string name="remove_playlist_description_placeholder">Falkan wuxuu tirtiri taxda \"%s\". Codadka laftooda lama tirtiri doono.</string>
+    <string name="empty_playlist">Taxdu way maran tahay</string>
+    <string name="delete_song_warning">DIGNIIN: Falkan wuxuu codadka la doortay ka tirtiri qalabkaaga, maca taxaha la socda.</string>
+</resources>

@@ -76,4 +76,12 @@
     <string name="swap_prev_next">החלף את לחצני האוזניות הקודמות/הבאות</string>
     <string name="faq_1_title">איך אני יכול להריץ שירים קדימה\?</string>
     <string name="faq_1_text">אתה יכול ללחוץ על הטקסטים הנוכחיים או המשך המקסימלי ליד סרגל החיפוש, שיעביר את השיר אחורה או קדימה.</string>
+    <string name="delete_song_warning">אזהרה: פעולה זו תמחק את הקבצים שנבחרו מהמכשיר, כולל כל רשימות ההשמעה.</string>
+    <string name="track_number">מספר רצועה</string>
+    <string name="use_for_this_playlist">השתמש עבור רשימת השמעה זו בלבד</string>
+    <string name="use_for_this_album">השתמש עבור אלבום זה בלבד</string>
+    <string name="genres">ז\'אנרים</string>
+    <string name="exclude_folder_description">אי הכללת תיקיה תמנע את הצגת כל קבצי האודיו שבתוכה. קבצים שנוספו ידנית לרשימות השמעה לא יושפעו.</string>
+    <string name="play_next">הפעל הבא</string>
+    <string name="rescan_media">סרוק מחדש את המדיה</string>
 </resources>

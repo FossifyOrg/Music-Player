@@ -24,9 +24,9 @@
     <string name="playlist_name_exists">Une liste de lecture portant ce nom existe déjà</string>
     <string name="remove_playlist">Retirer la liste de lecture</string>
     <string name="remove_playlist_description">Ceci ne supprimera que les listes de lecture sélectionnées, et non les fichiers réels.</string>
-    <string name="remove_playlist_description_placeholder">Ceci ne supprimera que la liste « %s » et non les fichiers réels.</string>
+    <string name="remove_playlist_description_placeholder">Ceci ne supprimera que la playlist « %s » et non les fichiers réels.</string>
     <string name="remove_from_playlist">Retirer de la liste de lecture</string>
-    <string name="remove_from_playlist_description">Ceci retirera seulement les éléments de la liste « %s », les fichiers réels ne seront pas supprimés.</string>
+    <string name="remove_from_playlist_description">Ceci retirera seulement les éléments de la playlist « %s ». Les fichiers réels ne seront pas supprimés.</string>
     <string name="delete_the_files_too">Supprimer les fichiers aussi</string>
     <string name="open_playlist">Ouvrir la liste de lecture</string>
     <string name="all_songs_cannot_be_deleted">La liste de lecture de toutes les chansons ne peut pas être supprimée</string>

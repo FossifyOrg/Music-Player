@@ -7,7 +7,7 @@
     <string name="rename_song_empty">Por favor, preencha todos os campos</string>
     <string name="repeat_off">Não repetir</string>
     <string name="repeat_song">Repetir música atual</string>
-    <string name="repeat_playlist">Repetir playlist</string>
+    <string name="repeat_playlist">Repetir lista de reprodução</string>
     <string name="stop_playback_after_current_song">Parar a reprodução após a música atual</string>
     <string name="enable_shuffle">Ativar reprodução aleatória</string>
     <string name="disable_shuffle">Desativar reprodução aleatória</string>

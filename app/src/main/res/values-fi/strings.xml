@@ -77,4 +77,7 @@
     <string name="exclude_folder_description">Kansion poistaminen estää kaikkien kansiossa olevien äänitiedostojen näyttämisen. Tämä ei vaikuta soittolistoihin manuaalisesti lisättyihin tiedostoihin.</string>
     <string name="faq_1_title">Kuinka voin kelata kappaleita eteenpäin\?</string>
     <string name="faq_1_text">Voit napsauttaa nykyistä tai enimmäiskestoa lähellä hakupalkkia olevaa tekstiä, jolloin kappale siirtyy joko taaksepäin tai eteenpäin.</string>
+    <string name="rescan_media">Skannaa media uudelleen</string>
+    <string name="genres">Tyylilajit</string>
+    <string name="play_next">Soita seuraavaksi</string>
 </resources>

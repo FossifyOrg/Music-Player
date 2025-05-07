@@ -86,4 +86,5 @@
         <item quantity="many">%d Albaim</item>
         <item quantity="other">%d Albaim</item>
     </plurals>
+    <string name="track_on_disk">%1$d.%2$s</string>
 </resources>

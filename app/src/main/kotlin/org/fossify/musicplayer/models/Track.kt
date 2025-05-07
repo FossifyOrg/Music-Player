@@ -31,6 +31,7 @@ data class Track(
     @ColumnInfo(name = "cover_art") val coverArt: String,
     @ColumnInfo(name = "playlist_id") var playListId: Int,
     @ColumnInfo(name = "track_id") val trackId: Int,  // order id within the tracks' album
+    @ColumnInfo(name = "disc_number") var discNumber: Int?,
     @ColumnInfo(name = "folder_name") var folderName: String,
     @ColumnInfo(name = "album_id") var albumId: Long,
     @ColumnInfo(name = "artist_id") var artistId: Long,
@@ -62,7 +63,14 @@ data class Track(
                     }
                 }
 
-                sorting and PLAYER_SORT_BY_TRACK_ID != 0 -> first.trackId.compareTo(second.trackId)
+                sorting and PLAYER_SORT_BY_TRACK_ID != 0 -> {
+                    val discComparison = (first.discNumber ?: Int.MAX_VALUE).compareTo(second.discNumber ?: Int.MAX_VALUE)
+                    if (discComparison == 0) {
+                        first.trackId.compareTo(second.trackId)
+                    } else {
+                        discComparison
+                    }
+                }
                 sorting and PLAYER_SORT_BY_DATE_ADDED != 0 -> first.dateAdded.compareTo(second.dateAdded)
                 sorting and PLAYER_SORT_BY_CUSTOM != 0 -> first.orderInPlaylist.compareTo(second.orderInPlaylist)
                 else -> first.duration.compareTo(second.duration)

@@ -12,6 +12,7 @@ import org.fossify.musicplayer.helpers.EXTRA_ARTIST
 import org.fossify.musicplayer.helpers.EXTRA_ARTIST_ID
 import org.fossify.musicplayer.helpers.EXTRA_COVER_ART
 import org.fossify.musicplayer.helpers.EXTRA_DATE_ADDED
+import org.fossify.musicplayer.helpers.EXTRA_DISC_NUMBER
 import org.fossify.musicplayer.helpers.EXTRA_DURATION
 import org.fossify.musicplayer.helpers.EXTRA_FLAGS
 import org.fossify.musicplayer.helpers.EXTRA_FOLDER_NAME
@@ -37,6 +38,7 @@ fun buildMediaItem(
     mediaType: @MediaMetadata.MediaType Int,
     trackCnt: Int? = null,
     trackNumber: Int? = null,
+    discNumber: Int? = null,
     year: Int? = null,
     sourceUri: Uri? = null,
     artworkUri: Uri? = null,
@@ -51,6 +53,7 @@ fun buildMediaItem(
         .setIsPlayable(mediaType == MediaMetadata.MEDIA_TYPE_MUSIC)
         .setTotalTrackCount(trackCnt)
         .setTrackNumber(trackNumber)
+        .setDiscNumber(discNumber)
         .setReleaseYear(year)
         .setMediaType(MediaMetadata.MEDIA_TYPE_MUSIC)
         .setArtworkUri(artworkUri)
@@ -77,6 +80,7 @@ fun Track.toMediaItem(): MediaItem {
         genre = genre,
         mediaType = MediaMetadata.MEDIA_TYPE_MUSIC,
         trackNumber = trackId,
+        discNumber = discNumber,
         sourceUri = getUri(),
         artworkUri = coverArt.toUri(),
         track = this
@@ -155,6 +159,7 @@ private fun createBundleFromTrack(track: Track) = bundleOf(
     EXTRA_COVER_ART to track.coverArt,
     EXTRA_PLAYLIST_ID to track.playListId,
     EXTRA_TRACK_ID to track.trackId,
+    EXTRA_DISC_NUMBER to (track.discNumber ?: Int.MIN_VALUE),
     EXTRA_FOLDER_NAME to track.folderName,
     EXTRA_ALBUM_ID to track.albumId,
     EXTRA_ARTIST_ID to track.artistId,
@@ -166,6 +171,11 @@ private fun createBundleFromTrack(track: Track) = bundleOf(
 )
 
 private fun createTrackFromBundle(bundle: Bundle): Track {
+    var discNumber: Int? = bundle.getInt(EXTRA_DISC_NUMBER)
+    if (discNumber == Int.MIN_VALUE) {
+        discNumber = null
+    }
+
     return Track(
         id = bundle.getLong(EXTRA_ID),
         mediaStoreId = bundle.getLong(EXTRA_MEDIA_STORE_ID),
@@ -178,6 +188,7 @@ private fun createTrackFromBundle(bundle: Bundle): Track {
         coverArt = bundle.getString(EXTRA_COVER_ART) ?: "",
         playListId = bundle.getInt(EXTRA_PLAYLIST_ID),
         trackId = bundle.getInt(EXTRA_TRACK_ID),
+        discNumber = discNumber,
         folderName = bundle.getString(EXTRA_FOLDER_NAME) ?: "",
         albumId = bundle.getLong(EXTRA_ALBUM_ID),
         artistId = bundle.getLong(EXTRA_ARTIST_ID),

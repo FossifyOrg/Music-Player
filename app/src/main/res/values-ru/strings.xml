@@ -84,4 +84,5 @@
     <string name="rescan_media">Пересканировать медиа</string>
     <string name="faq_1_title">Как я могу перемотать композицию\?</string>
     <string name="faq_1_text">Вы можете нажать на текст текущей или общей длительности воспроизведения рядом с ползунком — это переместит воспроизведение либо назад, либо вперёд.</string>
+    <string name="track_on_disk">%1$d.%2$s</string>
 </resources>

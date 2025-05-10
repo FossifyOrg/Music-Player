@@ -82,4 +82,5 @@
     <string name="play_next">Přehrát další</string>
     <string name="rescan_media">Znovu vyhledat média</string>
     <string name="genres">Žánry</string>
+    <string name="track_on_disk">%1$d.%2$s</string>
 </resources>

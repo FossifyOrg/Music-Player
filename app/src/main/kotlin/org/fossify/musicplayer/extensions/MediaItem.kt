@@ -158,7 +158,7 @@ private fun createBundleFromTrack(track: Track) = bundleOf(
     EXTRA_GENRE to track.genre,
     EXTRA_COVER_ART to track.coverArt,
     EXTRA_PLAYLIST_ID to track.playListId,
-    EXTRA_TRACK_ID to track.trackId,
+    EXTRA_TRACK_ID to (track.trackId ?: Int.MIN_VALUE),
     EXTRA_DISC_NUMBER to (track.discNumber ?: Int.MIN_VALUE),
     EXTRA_FOLDER_NAME to track.folderName,
     EXTRA_ALBUM_ID to track.albumId,
@@ -176,6 +176,11 @@ private fun createTrackFromBundle(bundle: Bundle): Track {
         discNumber = null
     }
 
+    var trackId: Int? = bundle.getInt(EXTRA_TRACK_ID)
+    if (trackId == Int.MIN_VALUE) {
+        trackId = null
+    }
+
     return Track(
         id = bundle.getLong(EXTRA_ID),
         mediaStoreId = bundle.getLong(EXTRA_MEDIA_STORE_ID),
@@ -187,7 +192,7 @@ private fun createTrackFromBundle(bundle: Bundle): Track {
         genre = bundle.getString(EXTRA_GENRE) ?: "",
         coverArt = bundle.getString(EXTRA_COVER_ART) ?: "",
         playListId = bundle.getInt(EXTRA_PLAYLIST_ID),
-        trackId = bundle.getInt(EXTRA_TRACK_ID),
+        trackId = trackId,
         discNumber = discNumber,
         folderName = bundle.getString(EXTRA_FOLDER_NAME) ?: "",
         albumId = bundle.getLong(EXTRA_ALBUM_ID),

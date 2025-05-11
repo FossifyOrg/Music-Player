@@ -232,7 +232,10 @@ class SimpleMediaScanner(private val context: Application) {
             val id = cursor.getLongValue(Audio.Media._ID)
             val title = cursor.getStringValue(Audio.Media.TITLE)
             val duration = cursor.getIntValue(Audio.Media.DURATION) / 1000
-            val trackId = cursor.getIntValue(Audio.Media.TRACK) % 1000
+            var trackId = cursor.getIntValueOrNull(Audio.Media.TRACK)
+            if (trackId != null) {
+                trackId %= 1000
+            }
             val path = cursor.getStringValue(Audio.Media.DATA).orEmpty()
             val artist = cursor.getStringValue(Audio.Media.ARTIST) ?: MediaStore.UNKNOWN_STRING
             val folderName = if (isQPlus()) {
@@ -445,8 +448,8 @@ class SimpleMediaScanner(private val context: Application) {
             val folderName = path.getParentPath().getFilenameFromPath()
             val album = retriever.extractMetadata(METADATA_KEY_ALBUM) ?: folderName
             val trackNumber = retriever.extractMetadata(METADATA_KEY_CD_TRACK_NUMBER)
-            val trackId = trackNumber?.split("/")?.first()?.toIntOrNull() ?: 0
-            val discNumber = retriever.extractMetadata(METADATA_KEY_DISC_NUMBER)?.toIntOrNull() ?: 0
+            val trackId = trackNumber?.split("/")?.first()?.toIntOrNull()
+            val discNumber = retriever.extractMetadata(METADATA_KEY_DISC_NUMBER)?.toIntOrNull()
             val year = retriever.extractMetadata(METADATA_KEY_YEAR)?.toIntOrNull() ?: 0
             val dateAdded = try {
                 (File(path).lastModified() / 1000L).toInt()

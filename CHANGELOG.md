@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Replaced checkboxes with switches
 
+### Removed
+
+- Dropped support for Android 7 and older versions
+
 ## [1.0.0] - 2024-02-11
 
 ### Added

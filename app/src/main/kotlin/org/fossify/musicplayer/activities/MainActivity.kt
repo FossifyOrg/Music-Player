@@ -123,7 +123,7 @@ class MainActivity : SimpleMusicActivity() {
             val isPlaylistFragment = getCurrentFragment() is PlaylistsFragment
             findItem(R.id.create_new_playlist).isVisible = isPlaylistFragment
             findItem(R.id.create_playlist_from_folder).isVisible = isPlaylistFragment
-            findItem(R.id.import_playlist).isVisible = isPlaylistFragment && isOreoPlus()
+            findItem(R.id.import_playlist).isVisible = isPlaylistFragment
             findItem(R.id.more_apps_from_us).isVisible = !resources.getBoolean(org.fossify.commons.R.bool.hide_google_relations)
         }
     }

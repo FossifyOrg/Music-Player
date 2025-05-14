@@ -82,4 +82,5 @@
     <string name="rescan_media">Volver a escanear los medios</string>
     <string name="faq_1_title">¿Cómo puedo avanzar en las canciones\?</string>
     <string name="faq_1_text">Puedes hacer clic en los textos de duración actual o máxima, cerca de la barra de búsqueda, para avanzar o retroceder la canción.</string>
+    <string name="track_on_disk">%1$d.%2$s</string>
 </resources>

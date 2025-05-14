@@ -8,10 +8,8 @@ import android.app.PendingIntent
 import android.app.PendingIntent.FLAG_IMMUTABLE
 import android.content.Context
 import android.content.Intent
-import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
 import org.fossify.commons.extensions.notificationManager
-import org.fossify.commons.helpers.isOreoPlus
 import org.fossify.musicplayer.R
 import org.fossify.musicplayer.activities.MainActivity
 
@@ -65,7 +63,6 @@ class NotificationHelper(private val context: Context) {
         const val NOTIFICATION_CHANNEL = "music_player_channel"
         const val NOTIFICATION_ID = 42
 
-        @RequiresApi(26)
         private fun createNotificationChannel(context: Context, notificationManager: NotificationManager) {
             var notificationChannel: NotificationChannel? = notificationManager
                 .getNotificationChannel(NOTIFICATION_CHANNEL)
@@ -84,9 +81,7 @@ class NotificationHelper(private val context: Context) {
         }
 
         fun createInstance(context: Context): NotificationHelper {
-            if (isOreoPlus()) {
-                createNotificationChannel(context, context.notificationManager)
-            }
+            createNotificationChannel(context, context.notificationManager)
             return NotificationHelper(context)
         }
     }

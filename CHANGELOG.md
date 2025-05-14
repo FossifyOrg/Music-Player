@@ -7,9 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Replaced checkboxes with switches
+
 ## [1.0.0] - 2024-02-11
 
 ### Added
+
 - Initial release
 
 [Unreleased]: https://github.com/FossifyOrg/Music-Player/compare/1.0.0...HEAD

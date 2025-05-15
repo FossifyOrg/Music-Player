@@ -14,6 +14,8 @@ import android.util.Size
 import android.view.GestureDetector
 import android.view.MotionEvent
 import android.view.View
+import android.widget.ImageView
+import android.widget.RelativeLayout
 import android.widget.SeekBar
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.os.postDelayed
@@ -220,7 +222,8 @@ class TrackActivity : SimpleControllerActivity(), PlaybackSpeedListener {
             // change cover image manually only once loaded successfully to avoid blinking at fails and placeholders
             loadGlideResource(
                 model = coverArt,
-                options = RequestOptions().centerCrop(),
+                //show full "audiobook" covers
+                options = RequestOptions().fitCenter(),
                 size = Size(wantedWidth, wantedHeight),
                 onLoadFailed = {
                     val drawable = resources.getDrawable(R.drawable.ic_headset)
@@ -239,6 +242,8 @@ class TrackActivity : SimpleControllerActivity(), PlaybackSpeedListener {
 
                     runOnUiThread {
                         binding.activityTrackImage.setImageDrawable(it)
+                        //TODO:  possibly add a toggle to see cover fullscreen vs scaled and centered
+                       // binding.activityTrackImage.setOnClickListener(CoverExpander())
                     }
                 }
             )
@@ -432,5 +437,21 @@ class TrackActivity : SimpleControllerActivity(), PlaybackSpeedListener {
 
     private fun updatePlayPause(isPlaying: Boolean) {
         binding.activityTrackPlayPause.updatePlayPauseIcon(isPlaying, getProperTextColor())
+    }
+
+    private class CoverExpander : View.OnClickListener {
+        override fun onClick(view: View) {
+            val img: ImageView = view as ImageView
+            if (img.scaleType == ImageView.ScaleType.CENTER_CROP) {
+                img.setScaleType(ImageView.ScaleType.FIT_CENTER)
+                img.layoutParams.height = R.dimen.top_art_height
+                //Log.w("click image", "click go small")
+            } else {
+                img.setScaleType(ImageView.ScaleType.CENTER_CROP)
+                img.layoutParams.height = RelativeLayout.LayoutParams.WRAP_CONTENT
+
+                 //Log.w("click image", "click go big")
+            }
+        }
     }
 }

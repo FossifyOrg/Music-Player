@@ -133,9 +133,10 @@ class TracksHeaderAdapter(activity: SimpleActivity, items: ArrayList<ListItem>, 
 
             trackDuration.text = track.duration.getFormattedDuration()
             if (track.discNumber != null) {
-                trackId.text = context.getString(R.string.track_on_disk, track.discNumber, track.trackId.toString().padStart(2, '0'))
+                val trackNumber = if (track.trackId != null) track.trackId.toString().padStart(2, '0') else ""
+                trackId.text = context.getString(R.string.track_on_disk, track.discNumber, trackNumber)
             } else {
-                trackId.text = track.trackId.toString()
+                trackId.text = if (track.trackId != null) track.trackId.toString() else ""
             }
             trackImage.beGone()
             trackId.beVisible()

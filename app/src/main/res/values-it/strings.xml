@@ -82,4 +82,5 @@
     <string name="faq_1_title">Come posso avanzare rapidamente nei brani\?</string>
     <string name="faq_1_text">Si può premere rapidamente sui testi accanto alla barra di avanzamento, questi faranno spostare il brano in avanti o all\'indietro.</string>
     <string name="volume">Volume</string>
+    <string name="track_on_disk">%1$d.%2$s</string>
 </resources>

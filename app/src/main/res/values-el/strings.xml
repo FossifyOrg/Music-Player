@@ -79,4 +79,5 @@
     <string name="rescan_media">Επανασάρωση πολυμέσων</string>
     <string name="faq_1_title">Πώς μπορώ να προωθήσω γρήγορα τα τραγούδια;</string>
     <string name="faq_1_text">Μπορείτε να κάνετε κλικ στο τρέχον ή μέγιστης διάρκειας κείμενο κοντά στη γραμμή προόδου, το οποίο θα μετακινήσει το τραγούδι πίσω ή εμπρός.</string>
+    <string name="app_launcher_name">Αναπαραγωγέας μουσικής</string>
 </resources>

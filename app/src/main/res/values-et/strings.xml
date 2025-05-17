@@ -80,4 +80,5 @@
     <string name="rescan_media">Tee meediakogu uus täisanalüüs</string>
     <string name="faq_1_title">Kuidas ma saan palasid kiiresti edasi kerida\?</string>
     <string name="faq_1_text">Klõpsi esitusribal kas esituse aega või pala pikkust ning sellega hüppad loos tagasi või edasi.</string>
+    <string name="track_on_disk">%1$d.%2$s</string>
 </resources>

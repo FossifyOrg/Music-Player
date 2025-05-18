@@ -6,12 +6,20 @@ plugins {
     alias(libs.plugins.android)
     alias(libs.plugins.kotlinAndroid)
     alias(libs.plugins.ksp)
+    alias(libs.plugins.detekt)
 }
 
 val keystorePropertiesFile: File = rootProject.file("keystore.properties")
 val keystoreProperties = Properties()
 if (keystorePropertiesFile.exists()) {
     keystoreProperties.load(FileInputStream(keystorePropertiesFile))
+}
+
+fun hasSigningVars(): Boolean {
+    return providers.environmentVariable("SIGNING_KEY_ALIAS").orNull != null
+            && providers.environmentVariable("SIGNING_KEY_PASSWORD").orNull != null
+            && providers.environmentVariable("SIGNING_STORE_FILE").orNull != null
+            && providers.environmentVariable("SIGNING_STORE_PASSWORD").orNull != null
 }
 
 android {
@@ -33,11 +41,20 @@ android {
     signingConfigs {
         if (keystorePropertiesFile.exists()) {
             register("release") {
-                keyAlias = keystoreProperties["keyAlias"] as String
-                keyPassword = keystoreProperties["keyPassword"] as String
-                storeFile = file(keystoreProperties["storeFile"] as String)
-                storePassword = keystoreProperties["storePassword"] as String
+                keyAlias = keystoreProperties.getProperty("keyAlias")
+                keyPassword = keystoreProperties.getProperty("keyPassword")
+                storeFile = file(keystoreProperties.getProperty("storeFile"))
+                storePassword = keystoreProperties.getProperty("storePassword")
             }
+        } else if (hasSigningVars()) {
+            register("release") {
+                keyAlias = providers.environmentVariable("SIGNING_KEY_ALIAS").get()
+                keyPassword = providers.environmentVariable("SIGNING_KEY_PASSWORD").get()
+                storeFile = file(providers.environmentVariable("SIGNING_STORE_FILE").get())
+                storePassword = providers.environmentVariable("SIGNING_STORE_PASSWORD").get()
+            }
+        } else {
+            logger.warn("Warning: No signing config found. Build will be unsigned.")
         }
     }
 
@@ -56,7 +73,7 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro",
             )
-            if (keystorePropertiesFile.exists()) {
+            if (keystorePropertiesFile.exists() || hasSigningVars()) {
                 signingConfig = signingConfigs.getByName("release")
             }
         }
@@ -66,7 +83,7 @@ android {
     productFlavors {
         register("core")
         register("foss")
-        register("prepaid")
+        register("gplay")
     }
 
     sourceSets {
@@ -92,8 +109,20 @@ android {
 
     lint {
         checkReleaseBuilds = false
-        abortOnError = false
+        abortOnError = true
+        warningsAsErrors = true
+        baseline = file("lint-baseline.xml")
     }
+
+    bundle {
+        language {
+            enableSplit = false
+        }
+    }
+}
+
+detekt {
+    baseline = file("detekt-baseline.xml")
 }
 
 dependencies {

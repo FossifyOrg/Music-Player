@@ -10,7 +10,7 @@ import org.fossify.musicplayer.interfaces.*
 import org.fossify.musicplayer.models.*
 import org.fossify.musicplayer.objects.MyExecutor
 
-@Database(entities = [Track::class, Playlist::class, QueueItem::class, Artist::class, Album::class, Genre::class], version = 13)
+@Database(entities = [Track::class, Playlist::class, QueueItem::class, Artist::class, Album::class, Genre::class], version = 15)
 abstract class SongsDatabase : RoomDatabase() {
 
     abstract fun SongsDao(): SongsDao
@@ -46,6 +46,8 @@ abstract class SongsDatabase : RoomDatabase() {
                             .addMigrations(MIGRATION_10_11)
                             .addMigrations(MIGRATION_11_12)
                             .addMigrations(MIGRATION_12_13)
+                            .addMigrations(MIGRATION_13_14)
+                            .addMigrations(MIGRATION_14_15)
                             .build()
                     }
                 }
@@ -198,6 +200,35 @@ abstract class SongsDatabase : RoomDatabase() {
 
                     execSQL("CREATE TABLE `genres` (`id` INTEGER NOT NULL PRIMARY KEY, `title` TEXT NOT NULL, `track_cnt` INTEGER NOT NULL, `album_art` TEXT NOT NULL)")
                     execSQL("CREATE UNIQUE INDEX IF NOT EXISTS `index_genres_id` ON `genres` (`id`)")
+                }
+            }
+        }
+
+        private val MIGRATION_13_14 = object : Migration(13, 14) {
+            override fun migrate(database: SupportSQLiteDatabase) {
+                database.apply {
+                    execSQL("ALTER TABLE tracks ADD COLUMN disc_number INTEGER DEFAULT NULL")
+                }
+            }
+        }
+
+        private val MIGRATION_14_15 = object : Migration(14, 15) {
+            override fun migrate(database: SupportSQLiteDatabase) {
+                database.apply {
+                    execSQL(
+                        "CREATE TABLE tracks_new (`id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, `media_store_id` INTEGER NOT NULL, `title` TEXT NOT NULL, `artist` TEXT NOT NULL, `path` TEXT NOT NULL, `duration` INTEGER NOT NULL, " +
+                            "`album` TEXT NOT NULL, genre TEXT NOT NULL DEFAULT '', `cover_art` TEXT default '' NOT NULL, `playlist_id` INTEGER NOT NULL, `track_id` INTEGER DEFAULT NULL, disc_number INTEGER DEFAULT NULL, " +
+                            "folder_name TEXT default '' NOT NULL, album_id INTEGER NOT NULL DEFAULT 0, artist_id INTEGER NOT NULL DEFAULT 0, genre_id INTEGER NOT NULL DEFAULT 0, year INTEGER NOT NULL DEFAULT 0, date_added INTEGER NOT NULL DEFAULT 0, " +
+                            "order_in_playlist INTEGER NOT NULL DEFAULT 0, flags INTEGER NOT NULL DEFAULT 0)"
+                    )
+                    execSQL(
+                        "INSERT INTO tracks_new(id,media_store_id,title,artist,path,duration,album,genre,cover_art,playlist_id,track_id,disc_number,folder_name,album_id,artist_id,genre_id,year,date_added,order_in_playlist,flags) " +
+                            "SELECT id,media_store_id,title,artist,path,duration,album,genre,cover_art,playlist_id,track_id,disc_number,folder_name,album_id,artist_id,genre_id,year,date_added,order_in_playlist,flags " +
+                            "FROM tracks"
+                    )
+                    execSQL("DROP TABLE tracks")
+                    execSQL("ALTER TABLE tracks_new RENAME to tracks")
+                    execSQL("CREATE UNIQUE INDEX IF NOT EXISTS `index_tracks_id` ON `tracks` (`media_store_id`, `playlist_id`)")
                 }
             }
         }

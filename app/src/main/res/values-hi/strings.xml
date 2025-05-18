@@ -59,7 +59,7 @@
     <string name="disable_shuffle">फेरबदल अक्षम करें</string>
     <string name="shuffle_enabled">फेरबदल सक्षम</string>
     <string name="shuffle_disabled">फेरबदल अक्षम</string>
-    <string name="playback_speed">प्लेबैक गति</string>
+    <string name="playback_speed">प्लेबैक की गति</string>
     <string name="loading_files">फाइलें लोड हो रही हैं…</string>
     <string name="add_file_to_playlist">प्लेलिस्ट में फाइल जोड़ें</string>
     <string name="add_folder_to_playlist">प्लेलिस्ट में फोल्डर जोड़ें</string>

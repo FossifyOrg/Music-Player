@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_launcher_name">Player de Música Fossify</string>
+    <string name="app_launcher_name">Músicas</string>
     <string name="playlist_empty">Sua lista de reprodução está vazia</string>
     <string name="rename_song">Renomear música</string>
     <string name="rename_song_error">Ocorreu um erro ao renomear</string>
     <string name="rename_song_empty">Por favor, preencha todos os campos</string>
     <string name="repeat_off">Não repetir</string>
     <string name="repeat_song">Repetir música atual</string>
-    <string name="repeat_playlist">Repetir playlist</string>
+    <string name="repeat_playlist">Repetir lista de reprodução</string>
     <string name="stop_playback_after_current_song">Parar a reprodução após a música atual</string>
     <string name="enable_shuffle">Ativar reprodução aleatória</string>
     <string name="disable_shuffle">Desativar reprodução aleatória</string>
@@ -81,4 +81,5 @@
     <string name="next_track">Seguinte:</string>
     <string name="playlists">Listas de reprodução</string>
     <string name="volume">Volume</string>
+    <string name="artist_name">Nome do(a) artista</string>
 </resources>

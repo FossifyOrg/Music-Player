@@ -18,7 +18,6 @@ import org.fossify.commons.dialogs.PermissionRequiredDialog
 import org.fossify.commons.extensions.*
 import org.fossify.commons.helpers.NavigationIcon
 import org.fossify.commons.helpers.ensureBackgroundThread
-import org.fossify.commons.helpers.isOreoPlus
 import org.fossify.commons.helpers.isQPlus
 import org.fossify.musicplayer.R
 import org.fossify.musicplayer.adapters.TracksAdapter
@@ -101,7 +100,7 @@ class TracksActivity : SimpleMusicActivity() {
             findItem(R.id.sort).isVisible = sourceType != TYPE_ALBUM
             findItem(R.id.add_file_to_playlist).isVisible = sourceType == TYPE_PLAYLIST
             findItem(R.id.add_folder_to_playlist).isVisible = sourceType == TYPE_PLAYLIST
-            findItem(R.id.export_playlist).isVisible = sourceType == TYPE_PLAYLIST && isOreoPlus()
+            findItem(R.id.export_playlist).isVisible = sourceType == TYPE_PLAYLIST
         }
     }
 

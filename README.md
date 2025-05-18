@@ -12,7 +12,7 @@ We understand the value of your time and the sanctity of your music experience. 
 pure musical bliss. Whether you're at home, on the go, or exploring the great outdoors, enjoy your music without interruptions.
 
 **📶 OFFLINE ACCESS:**  
-Take your music with you wherever you go, even to mars. Fossify Music Player operates offline, ensuring you can enjoy your favorite tracks anytime, anywhere,
+Take your music with you wherever you go, even to Mars. Fossify Music Player operates offline, ensuring you can enjoy your favorite tracks anytime, anywhere,
 without needing an internet connection.
 
 **🚀 LIGHTNING-FAST AND EFFICIENT:**  
@@ -33,7 +33,7 @@ repeat, skip, and forward your tracks with ease.
 
 **🔒 PRIVACY ASSURED:**  
 Your privacy is our top priority. Fossify Music Player does not collect or share any user information with third parties. Enjoy peace of mind knowing that your
-musical journey remains private and secure.
+the musical journey remains private and secure.
 
 **🌈 MODERN DESIGN & USER-FRIENDLY INTERFACE:**  
 Enjoy a clean, modern design with a user-friendly interface. The app features a material design and a dark theme option, providing a visually appealing and
@@ -44,7 +44,7 @@ Personalize your music experience with customizable widgets and interface colors
 buttons, all tailored to your preferences.
 
 **🌐 OPEN-SOURCE TRANSPARENCY:**  
-Your privacy is a top priority. Fossify Music Player operates completely offline, completely free of ads and does not request unnecessary permissions. Moreover,
+Your privacy is a top priority. Fossify Music Player operates completely offline, completely free of ads, and does not request unnecessary permissions. Moreover,
 it is fully open-source, providing you with peace of mind, as you have access to the source code for security and privacy audits.
 
 Experience music the way it's meant to be – uninterrupted, personalized, and immersive. Download Fossify Music Player now and embark on a musical journey like

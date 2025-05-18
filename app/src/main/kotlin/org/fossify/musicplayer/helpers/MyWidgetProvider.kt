@@ -60,7 +60,7 @@ class MyWidgetProvider : AppWidgetProvider() {
             } else {
                 when (action) {
                     NEXT -> player.seekToNextMediaItem()
-                    PREVIOUS -> player.seekToPreviousMediaItem()
+                    PREVIOUS -> if (player.contentPosition > 5000) player.seekTo(0) else player.seekToPreviousMediaItem()
                     PLAYPAUSE -> player.togglePlayback()
                 }
             }

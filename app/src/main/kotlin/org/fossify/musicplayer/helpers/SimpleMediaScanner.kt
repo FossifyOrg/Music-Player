@@ -225,13 +225,17 @@ class SimpleMediaScanner(private val context: Application) {
         if (isRPlus()) {
             projection.add(Audio.Media.GENRE)
             projection.add(Audio.Media.GENRE_ID)
+            projection.add(Audio.Media.DISC_NUMBER)
         }
 
         context.queryCursor(uri, projection.toTypedArray(), showErrors = true) { cursor ->
             val id = cursor.getLongValue(Audio.Media._ID)
             val title = cursor.getStringValue(Audio.Media.TITLE)
             val duration = cursor.getIntValue(Audio.Media.DURATION) / 1000
-            val trackId = cursor.getIntValue(Audio.Media.TRACK) % 1000
+            var trackId = cursor.getIntValueOrNull(Audio.Media.TRACK)
+            if (trackId != null) {
+                trackId %= 1000
+            }
             val path = cursor.getStringValue(Audio.Media.DATA).orEmpty()
             val artist = cursor.getStringValue(Audio.Media.ARTIST) ?: MediaStore.UNKNOWN_STRING
             val folderName = if (isQPlus()) {
@@ -250,19 +254,22 @@ class SimpleMediaScanner(private val context: Application) {
 
             val genre: String
             val genreId: Long
+            val discNumber: Int?
             if (isRPlus()) {
                 genre = cursor.getStringValue(Audio.Media.GENRE).orEmpty()
                 genreId = cursor.getLongValue(Audio.Media.GENRE_ID)
+                discNumber = cursor.getStringValue(Audio.Media.DISC_NUMBER)?.toIntOrNull()
             } else {
                 genre = ""
                 genreId = 0
+                discNumber = null
             }
 
             if (!title.isNullOrEmpty()) {
                 val track = Track(
                     id = 0, mediaStoreId = id, title = title, artist = artist, path = path, duration = duration, album = album, genre = genre,
-                    coverArt = coverArt, playListId = 0, trackId = trackId, folderName = folderName, albumId = albumId, artistId = artistId, genreId = genreId,
-                    year = year, dateAdded = dateAdded, orderInPlaylist = 0
+                    coverArt = coverArt, playListId = 0, trackId = trackId, discNumber = discNumber, folderName = folderName, albumId = albumId, artistId = artistId,
+                    genreId = genreId, year = year, dateAdded = dateAdded, orderInPlaylist = 0
                 )
                 tracks.add(track)
             }
@@ -441,7 +448,8 @@ class SimpleMediaScanner(private val context: Application) {
             val folderName = path.getParentPath().getFilenameFromPath()
             val album = retriever.extractMetadata(METADATA_KEY_ALBUM) ?: folderName
             val trackNumber = retriever.extractMetadata(METADATA_KEY_CD_TRACK_NUMBER)
-            val trackId = trackNumber?.split("/")?.first()?.toIntOrNull() ?: 0
+            val trackId = trackNumber?.split("/")?.first()?.toIntOrNull()
+            val discNumber = retriever.extractMetadata(METADATA_KEY_DISC_NUMBER)?.toIntOrNull()
             val year = retriever.extractMetadata(METADATA_KEY_YEAR)?.toIntOrNull() ?: 0
             val dateAdded = try {
                 (File(path).lastModified() / 1000L).toInt()
@@ -454,8 +462,8 @@ class SimpleMediaScanner(private val context: Application) {
             if (title.isNotEmpty()) {
                 val track = Track(
                     id = 0, mediaStoreId = 0, title = title, artist = artist, path = path, duration = duration, album = album, genre = genre,
-                    coverArt = "", playListId = 0, trackId = trackId, folderName = folderName, albumId = 0, artistId = 0, genreId = 0,
-                    year = year, dateAdded = dateAdded, orderInPlaylist = 0, flags = FLAG_MANUAL_CACHE
+                    coverArt = "", playListId = 0, trackId = trackId, discNumber = discNumber, folderName = folderName, albumId = 0, artistId = 0,
+                    genreId = 0, year = year, dateAdded = dateAdded, orderInPlaylist = 0, flags = FLAG_MANUAL_CACHE
                 )
                 // use hashCode() as id for tracking purposes, there's a very slim chance of collision
                 track.mediaStoreId = track.hashCode().toLong()

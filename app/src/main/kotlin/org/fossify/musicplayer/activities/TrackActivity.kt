@@ -2,9 +2,7 @@ package org.fossify.musicplayer.activities
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import android.graphics.Bitmap
 import android.graphics.drawable.BitmapDrawable
-import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.os.Handler
@@ -14,10 +12,10 @@ import android.util.Size
 import android.view.GestureDetector
 import android.view.MotionEvent
 import android.view.View
-import android.widget.ImageView
-import android.widget.RelativeLayout
 import android.widget.SeekBar
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.graphics.drawable.toDrawable
+import androidx.core.graphics.scale
 import androidx.core.os.postDelayed
 import androidx.core.view.GestureDetectorCompat
 import androidx.media3.common.MediaItem
@@ -81,7 +79,7 @@ class TrackActivity : SimpleControllerActivity(), PlaybackSpeedListener {
             activityTrackPlayPause.updatePlayPauseIcon(PlaybackService.isPlaying, getProperTextColor())
             updatePlayerState()
 
-            nextTrackHolder.background = ColorDrawable(getProperBackgroundColor())
+            nextTrackHolder.background = getProperBackgroundColor().toDrawable()
             nextTrackHolder.setOnClickListener {
                 startActivity(Intent(applicationContext, QueueActivity::class.java))
             }
@@ -222,7 +220,7 @@ class TrackActivity : SimpleControllerActivity(), PlaybackSpeedListener {
             // change cover image manually only once loaded successfully to avoid blinking at fails and placeholders
             loadGlideResource(
                 model = coverArt,
-                //show full "audiobook" covers
+                // show full "audiobook" covers
                 options = RequestOptions().fitCenter(),
                 size = Size(wantedWidth, wantedHeight),
                 onLoadFailed = {
@@ -242,8 +240,6 @@ class TrackActivity : SimpleControllerActivity(), PlaybackSpeedListener {
 
                     runOnUiThread {
                         binding.activityTrackImage.setImageDrawable(it)
-                        //TODO:  possibly add a toggle to see cover fullscreen vs scaled and centered
-                       // binding.activityTrackImage.setOnClickListener(CoverExpander())
                     }
                 }
             )
@@ -371,8 +367,8 @@ class TrackActivity : SimpleControllerActivity(), PlaybackSpeedListener {
 
     private fun getResizedDrawable(drawable: Drawable, wantedHeight: Int): Drawable {
         val bitmap = (drawable as BitmapDrawable).bitmap
-        val bitmapResized = Bitmap.createScaledBitmap(bitmap, wantedHeight, wantedHeight, false)
-        return BitmapDrawable(resources, bitmapResized)
+        val bitmapResized = bitmap.scale(wantedHeight, wantedHeight, false)
+        return bitmapResized.toDrawable(resources)
     }
 
     override fun onPlaybackStateChanged(playbackState: Int) = updatePlayerState()
@@ -437,21 +433,5 @@ class TrackActivity : SimpleControllerActivity(), PlaybackSpeedListener {
 
     private fun updatePlayPause(isPlaying: Boolean) {
         binding.activityTrackPlayPause.updatePlayPauseIcon(isPlaying, getProperTextColor())
-    }
-
-    private class CoverExpander : View.OnClickListener {
-        override fun onClick(view: View) {
-            val img: ImageView = view as ImageView
-            if (img.scaleType == ImageView.ScaleType.CENTER_CROP) {
-                img.setScaleType(ImageView.ScaleType.FIT_CENTER)
-                img.layoutParams.height = R.dimen.top_art_height
-                //Log.w("click image", "click go small")
-            } else {
-                img.setScaleType(ImageView.ScaleType.CENTER_CROP)
-                img.layoutParams.height = RelativeLayout.LayoutParams.WRAP_CONTENT
-
-                 //Log.w("click image", "click go big")
-            }
-        }
     }
 }

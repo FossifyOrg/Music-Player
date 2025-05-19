@@ -2,6 +2,7 @@ package org.fossify.musicplayer.activities
 
 import org.fossify.commons.activities.BaseSimpleActivity
 import org.fossify.musicplayer.R
+import org.fossify.musicplayer.helpers.REPOSITORY_NAME
 
 open class SimpleActivity : BaseSimpleActivity() {
     override fun getAppIconIDs() = arrayListOf(
@@ -27,4 +28,6 @@ open class SimpleActivity : BaseSimpleActivity() {
     )
 
     override fun getAppLauncherName() = getString(R.string.app_launcher_name)
+
+    override fun getRepositoryName() = REPOSITORY_NAME
 }

@@ -1,6 +1,6 @@
 package org.fossify.musicplayer.helpers
 
-import android.net.Uri
+import androidx.core.net.toUri
 import org.fossify.commons.helpers.PERMISSION_READ_MEDIA_AUDIO
 import org.fossify.commons.helpers.PERMISSION_WRITE_STORAGE
 import org.fossify.commons.helpers.isQPlus
@@ -17,7 +17,7 @@ const val FOLDER = "folder"
 const val GENRE = "genre"
 
 const val PATH = "org.fossify.musicplayer.action."
-val artworkUri = Uri.parse("content://media/external/audio/albumart")
+val artworkUri = "content://media/external/audio/albumart".toUri()
 
 const val PREVIOUS = PATH + "PREVIOUS"
 const val PLAYPAUSE = PATH + "PLAYPAUSE"
@@ -133,5 +133,7 @@ const val MIME_TYPE_M3U = "audio/x-mpegurl"
 const val M3U_HEADER = "#EXTM3U"
 const val M3U_ENTRY = "#EXTINF:"
 const val M3U_DURATION_SEPARATOR = ","
+
+const val REPOSITORY_NAME = "Music-Player"
 
 fun getPermissionToRequest() = if (isTiramisuPlus()) PERMISSION_READ_MEDIA_AUDIO else PERMISSION_WRITE_STORAGE

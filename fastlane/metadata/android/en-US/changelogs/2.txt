@@ -1,0 +1,17 @@
+Added:
+
+• Support for displaying disc number in albums
+
+Changed:
+
+• Turned off shuffle by default
+• Replaced checkboxes with switches
+• Previous button now supports replay
+
+Removed:
+
+• Dropped support for Android 7 and older versions
+
+Fixed:
+
+• Fixed track numbers displaying as 0

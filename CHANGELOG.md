@@ -7,13 +7,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] - 2025-05-20
+
+### Added
+
+- Support for displaying disc number in albums ([#18])
+
 ### Changed
 
+- Turned off shuffle by default
 - Replaced checkboxes with switches
+- Previous button now supports replay ([#45])
 
 ### Removed
 
 - Dropped support for Android 7 and older versions
+
+### Fixed
+
+- Fixed track numbers displaying as 0 ([#47])
 
 ## [1.0.0] - 2024-02-11
 
@@ -21,5 +33,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial release
 
-[Unreleased]: https://github.com/FossifyOrg/Music-Player/compare/1.0.0...HEAD
+[Unreleased]: https://github.com/FossifyOrg/Music-Player/compare/1.1.0...HEAD
+[1.1.0]: https://github.com/FossifyOrg/Music-Player/compare/1.0.0...1.1.0
 [1.0.0]: https://github.com/FossifyOrg/Music-Player/releases/tag/1.0.0
+
+[#18]: https://github.com/FossifyOrg/Music-Player/issues/18
+[#45]: https://github.com/FossifyOrg/Music-Player/issues/45
+[#47]: https://github.com/FossifyOrg/Music-Player/issues/47

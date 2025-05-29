@@ -11,7 +11,7 @@ ksp = "2.1.21-2.0.1"
 #Detekt
 detekt = "1.23.8"
 #AndroidX
-androidx-constraintlayout = "2.1.4"
+androidx-constraintlayout = "2.2.1"
 androidx-swiperefreshlayout = "1.1.0"
 androidx-lifecycleprocess = "2.7.0"
 #Eventbus

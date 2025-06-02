@@ -10,13 +10,13 @@
     <string name="repeat_playlist">חזרה על הכל</string>
     <string name="stop_playback_after_current_song">עצור את ההשמעה לאחר השיר הנוכחי</string>
     <string name="enable_shuffle">אפשר ערבוב</string>
-    <string name="disable_shuffle">הפעלה אקראית</string>
+    <string name="disable_shuffle">השבת ערבוב</string>
     <string name="shuffle_enabled">ערבוב מופעל</string>
     <string name="shuffle_disabled">ערבוב מושבת</string>
     <string name="volume">ווליום</string>
     <string name="playback_speed">מהירות השמעה</string>
     <string name="loading_files">טוען קבצים…</string>
-    <string name="add_file_to_playlist">הוסף קובץ לפלייליסט</string>
+    <string name="add_file_to_playlist">הוסף קובץ לרשימת ההשמעה</string>
     <string name="add_folder_to_playlist">הוסף תיקיה לרשימת ההשמעה</string>
     <string name="manage_playlists">נהל רשימות השמעה</string>
     <string name="playlists">רשימות השמעה</string>
@@ -24,7 +24,7 @@
     <string name="rename_playlist">שנה את שם רשימת ההשמעה</string>
     <string name="playlist_name_exists">רשימת השמעה בשם זה כבר קיימת</string>
     <string name="remove_playlist">הסר רשימת השמעה</string>
-    <string name="remove_playlist_description">פעולה זו תסיר רק את הפלייליסטים שנבחרו. הקבצים בפועל לא יימחקו.</string>
+    <string name="remove_playlist_description">פעולה זו תסיר רק את רשימות ההשמעה שנבחרו. הקבצים בפועל לא יימחקו.</string>
     <string name="remove_playlist_description_placeholder">פעולה זו תסיר רק את רשימת ההשמעה \"%s\". הקבצים בפועל לא יימחקו.</string>
     <string name="remove_from_playlist">הסר מרשימת ההשמעה</string>
     <string name="remove_from_playlist_description">פעולה זו תסיר את הפריטים רק מרשימת ההשמעה \"%s\". הקבצים בפועל לא יימחקו.</string>
@@ -34,7 +34,7 @@
     <string name="empty_playlist">רשימת ההשמעה הנוכחית ריקה</string>
     <string name="fetching_songs">מאחזר שירים…</string>
     <string name="all_songs">כל השירים</string>
-    <string name="create_playlist_from_folder">צור רשימת השמעה חדשה מהתיקייה</string>
+    <string name="create_playlist_from_folder">צור רשימת השמעה חדשה מתיקייה</string>
     <string name="folder_contains_no_audio">התיקיה שנבחרה אינה מכילה קבצי שמע</string>
     <string name="delete_current_song">מחק את השיר הנוכחי</string>
     <string name="remove_current_song">הסר את השיר הנוכחי מרשימת ההשמעה</string>
@@ -47,8 +47,8 @@
     <string name="export_playlist">ייצוא רשימת השמעה</string>
     <string name="import_playlist">ייבוא רשימת השמעה</string>
     <string name="filename_without_m3u">שם קובץ (ללא .m3u)</string>
-    <string name="track_count">ספירת מסלול</string>
-    <string name="album_count">ספירת רצועות</string>
+    <string name="track_count">מספר רצועות</string>
+    <string name="album_count">מספר אלבומים</string>
     <string name="artist_name">שם אמן</string>
     <string name="year">שנה</string>
     <string name="artists">אמנים</string>

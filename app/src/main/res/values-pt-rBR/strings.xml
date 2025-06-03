@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_launcher_name">Músicas</string>
+    <string name="app_launcher_name">Fossify - Reprodutor de Música</string>
     <string name="playlist_empty">Sua lista de reprodução está vazia</string>
     <string name="rename_song">Renomear música</string>
     <string name="rename_song_error">Ocorreu um erro ao renomear</string>

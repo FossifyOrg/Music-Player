@@ -1,15 +1,15 @@
 [versions]
 #jetbrains
 autofittextview = "0.2.1"
-desugar_jdk_libs = "2.0.4"
+desugar_jdk_libs = "2.1.5"
 jaudiotagger = "3.0.1"
 kotlin = "2.1.21"
 #KSP
 ksp = "2.1.21-2.0.1"
 #Detekt
-detekt = "1.23.3"
+detekt = "1.23.8"
 #AndroidX
-androidx-constraintlayout = "2.1.4"
+androidx-constraintlayout = "2.2.1"
 androidx-swiperefreshlayout = "1.1.0"
 androidx-lifecycleprocess = "2.7.0"
 #Eventbus
@@ -19,7 +19,7 @@ lottie = "6.6.6"
 m3uParser = "1.4.0"
 media = "1.7.0"
 media3 = "1.2.1"
-room = "2.6.1"
+room = "2.7.1"
 #Fossify
 commons = "2.0.1"
 #Gradle

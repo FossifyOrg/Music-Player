@@ -14,7 +14,7 @@
     <string name="shuffle_enabled">ערבוב מופעל</string>
     <string name="shuffle_disabled">ערבוב מושבת</string>
     <string name="volume">ווליום</string>
-    <string name="playback_speed">מהירות השמעה</string>
+    <string name="playback_speed">מהירות ניגון</string>
     <string name="loading_files">טוען קבצים…</string>
     <string name="add_file_to_playlist">הוסף קובץ לרשימת ההשמעה</string>
     <string name="add_folder_to_playlist">הוסף תיקיה לרשימת ההשמעה</string>
@@ -79,7 +79,7 @@
     <string name="use_for_this_playlist">השתמש עבור רשימת השמעה זו בלבד</string>
     <string name="use_for_this_album">השתמש עבור אלבום זה בלבד</string>
     <string name="genres">ז\'אנרים</string>
-    <string name="exclude_folder_description">החרגת תיקיה תמנע את הצגת כל קבצי האודיו שבתוכה. קבצים שנוספו ידנית לרשימות השמעה לא יושפעו.</string>
+    <string name="exclude_folder_description">החרגת תיקיה תמנע את הצגת כל קבצי השמע שבתוכה. קבצים שנוספו ידנית לרשימות השמעה לא יושפעו.</string>
     <string name="play_next">הפעל הבא</string>
     <string name="rescan_media">סרוק מחדש את המדיה</string>
     <string name="track_on_disk">%1$d.%2$s</string>

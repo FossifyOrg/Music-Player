@@ -82,4 +82,5 @@
     <string name="faq_1_title">Posso avançar/recuar rapidamente uma faixa\?</string>
     <string name="faq_1_text">Toque nos textos de duração máxima/atual junto à barra de progresso para avançar ou recuar na posição da faixa.</string>
     <string name="volume">Volume</string>
+    <string name="track_on_disk">%1$d.%2$s</string>
 </resources>

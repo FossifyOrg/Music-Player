@@ -21,7 +21,7 @@ media = "1.7.0"
 media3 = "1.2.1"
 room = "2.7.1"
 #Fossify
-commons = "2.0.1"
+commons = "3.0.3"
 #Gradle
 gradlePlugins-agp = "8.9.2"
 #build

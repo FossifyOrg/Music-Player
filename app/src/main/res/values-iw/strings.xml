@@ -47,8 +47,8 @@
     <string name="export_playlist">ייצוא רשימת השמעה</string>
     <string name="import_playlist">ייבוא רשימת השמעה</string>
     <string name="filename_without_m3u">שם קובץ (ללא .m3u)</string>
-    <string name="track_count">מספר רצועות</string>
-    <string name="album_count">מספר אלבומים</string>
+    <string name="track_count">כמות רצועות</string>
+    <string name="album_count">כמות אלבומים</string>
     <string name="artist_name">שם אמן</string>
     <string name="year">שנה</string>
     <string name="artists">אמנים</string>

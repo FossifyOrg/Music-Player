@@ -80,4 +80,5 @@
     <string name="rescan_media">Skannaa media uudelleen</string>
     <string name="genres">Tyylilajit</string>
     <string name="play_next">Soita seuraavaksi</string>
+    <string name="track_on_disk">%1$d.%2$s</string>
 </resources>

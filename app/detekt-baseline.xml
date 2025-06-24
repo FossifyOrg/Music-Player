@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <SmellBaseline>
-  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <ManuallySuppressedIssues/>
   <CurrentIssues>
     <ID>ComplexCondition:EditDialog.kt$EditDialog$newTitle.isEmpty() || newArtist.isEmpty() || newFilename.isEmpty() || newFileExtension.isEmpty()</ID>
     <ID>ComplexCondition:MainActivity.kt$MainActivity$requestCode == PICK_IMPORT_SOURCE_INTENT &amp;&amp; resultCode == Activity.RESULT_OK &amp;&amp; resultData != null &amp;&amp; resultData.data != null</ID>
@@ -21,7 +21,7 @@
     <ID>LongMethod:SimpleMediaScanner.kt$SimpleMediaScanner$private fun findTracksManually(pathsToIgnore: List&lt;String&gt;): ArrayList&lt;Track&gt;</ID>
     <ID>LongMethod:SimpleMediaScanner.kt$SimpleMediaScanner$private fun getTracksSync(): ArrayList&lt;Track&gt;</ID>
     <ID>LongMethod:TracksActivity.kt$TracksActivity$private fun refreshTracks()</ID>
-    <ID>LongParameterList:MediaItem.kt$( mediaId: String, title: String, album: String? = null, artist: String? = null, genre: String? = null, mediaType: @MediaMetadata.MediaType Int, trackCnt: Int? = null, trackNumber: Int? = null, year: Int? = null, sourceUri: Uri? = null, artworkUri: Uri? = null, track: Track? = null )</ID>
+    <ID>LongParameterList:MediaItem.kt$( mediaId: String, title: String, album: String? = null, artist: String? = null, genre: String? = null, mediaType: @MediaMetadata.MediaType Int, trackCnt: Int? = null, trackNumber: Int? = null, discNumber: Int? = null, year: Int? = null, sourceUri: Uri? = null, artworkUri: Uri? = null, track: Track? = null )</ID>
     <ID>LongParameterList:TracksAdapter.kt$TracksAdapter$( activity: BaseSimpleActivity, recyclerView: MyRecyclerView, val sourceType: Int, val folder: String? = null, val playlist: Playlist? = null, items: ArrayList&lt;Track&gt;, itemClick: (Any) -&gt; Unit )</ID>
     <ID>MagicNumber:ChangeSortingDialog.kt$ChangeSortingDialog$3</ID>
     <ID>MagicNumber:ChangeSortingDialog.kt$ChangeSortingDialog$4</ID>
@@ -41,7 +41,6 @@
     <ID>MagicNumber:MediaItemProvider.kt$MediaItemProvider$1000L</ID>
     <ID>MagicNumber:MediaSessionCallback.kt$&lt;no name provided&gt;$4</ID>
     <ID>MagicNumber:MyWidgetProvider.kt$MyWidgetProvider$5000</ID>
-    <ID>MagicNumber:NotificationHelper.kt$NotificationHelper.Companion$26</ID>
     <ID>MagicNumber:PlaybackSpeedFragment.kt$PlaybackSpeedFragment$0.05f</ID>
     <ID>MagicNumber:PlaybackSpeedFragment.kt$PlaybackSpeedFragment$0.25f</ID>
     <ID>MagicNumber:PlaybackSpeedFragment.kt$PlaybackSpeedFragment$100</ID>
@@ -62,6 +61,8 @@
     <ID>MagicNumber:SongsDatabase.kt$SongsDatabase.Companion.&lt;no name provided&gt;$11</ID>
     <ID>MagicNumber:SongsDatabase.kt$SongsDatabase.Companion.&lt;no name provided&gt;$12</ID>
     <ID>MagicNumber:SongsDatabase.kt$SongsDatabase.Companion.&lt;no name provided&gt;$13</ID>
+    <ID>MagicNumber:SongsDatabase.kt$SongsDatabase.Companion.&lt;no name provided&gt;$14</ID>
+    <ID>MagicNumber:SongsDatabase.kt$SongsDatabase.Companion.&lt;no name provided&gt;$15</ID>
     <ID>MagicNumber:SongsDatabase.kt$SongsDatabase.Companion.&lt;no name provided&gt;$3</ID>
     <ID>MagicNumber:SongsDatabase.kt$SongsDatabase.Companion.&lt;no name provided&gt;$4</ID>
     <ID>MagicNumber:SongsDatabase.kt$SongsDatabase.Companion.&lt;no name provided&gt;$5</ID>
@@ -176,15 +177,19 @@
     <ID>MaxLineLength:SimpleMediaScanner.kt$SimpleMediaScanner$val invalidTracks = context.audioHelper.getAllTracks().filter { it.mediaStoreId !in newTrackIds || it.path !in newTrackPaths }</ID>
     <ID>MaxLineLength:SimpleMusicActivity.kt$SimpleMusicActivity$PermissionRequiredDialog(this, org.fossify.commons.R.string.allow_notifications_music_player, { openNotificationSettings() })</ID>
     <ID>MaxLineLength:SleepTimerCustomDialog.kt$SleepTimerCustomDialog$binding.minutesHint.hint = activity.getString(org.fossify.commons.R.string.minutes_raw).replaceFirstChar { it.uppercaseChar() }</ID>
-    <ID>MaxLineLength:SongsDatabase.kt$SongsDatabase$@Database(entities = [Track::class, Playlist::class, QueueItem::class, Artist::class, Album::class, Genre::class], version = 13)</ID>
+    <ID>MaxLineLength:SongsDatabase.kt$SongsDatabase$@Database(entities = [Track::class, Playlist::class, QueueItem::class, Artist::class, Album::class, Genre::class], version = 15)</ID>
     <ID>MaxLineLength:SongsDatabase.kt$SongsDatabase.Companion.&lt;no name provided&gt;$"CREATE TABLE songs_new (media_store_id INTEGER NOT NULL, title TEXT NOT NULL, artist TEXT NOT NULL, path TEXT NOT NULL, duration INTEGER NOT NULL, "</ID>
     <ID>MaxLineLength:SongsDatabase.kt$SongsDatabase.Companion.&lt;no name provided&gt;$"CREATE TABLE tracks_new (`id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, `media_store_id` INTEGER NOT NULL, `title` TEXT NOT NULL, `artist` TEXT NOT NULL, `path` TEXT NOT NULL, `duration` INTEGER NOT NULL, "</ID>
+    <ID>MaxLineLength:SongsDatabase.kt$SongsDatabase.Companion.&lt;no name provided&gt;$"INSERT INTO tracks_new(id,media_store_id,title,artist,path,duration,album,genre,cover_art,playlist_id,track_id,disc_number,folder_name,album_id,artist_id,genre_id,year,date_added,order_in_playlist,flags) "</ID>
     <ID>MaxLineLength:SongsDatabase.kt$SongsDatabase.Companion.&lt;no name provided&gt;$"INSERT OR IGNORE INTO songs_new (media_store_id, title, artist, path, duration, album, cover_art, playlist_id, track_id) "</ID>
     <ID>MaxLineLength:SongsDatabase.kt$SongsDatabase.Companion.&lt;no name provided&gt;$"INSERT OR IGNORE INTO tracks_new (media_store_id, title, artist, path, duration, album, cover_art, playlist_id, track_id) "</ID>
+    <ID>MaxLineLength:SongsDatabase.kt$SongsDatabase.Companion.&lt;no name provided&gt;$"SELECT id,media_store_id,title,artist,path,duration,album,genre,cover_art,playlist_id,track_id,disc_number,folder_name,album_id,artist_id,genre_id,year,date_added,order_in_playlist,flags "</ID>
     <ID>MaxLineLength:SongsDatabase.kt$SongsDatabase.Companion.&lt;no name provided&gt;$"SELECT media_store_id, title, artist, path, duration, album, cover_art, playlist_id, track_id FROM songs"</ID>
     <ID>MaxLineLength:SongsDatabase.kt$SongsDatabase.Companion.&lt;no name provided&gt;$"SELECT media_store_id, title, artist, path, duration, album, cover_art, playlist_id, track_id FROM tracks"</ID>
     <ID>MaxLineLength:SongsDatabase.kt$SongsDatabase.Companion.&lt;no name provided&gt;$"`album` TEXT NOT NULL, `cover_art` TEXT default '' NOT NULL, `playlist_id` INTEGER NOT NULL, `track_id` INTEGER NOT NULL DEFAULT 0)"</ID>
+    <ID>MaxLineLength:SongsDatabase.kt$SongsDatabase.Companion.&lt;no name provided&gt;$"`album` TEXT NOT NULL, genre TEXT NOT NULL DEFAULT '', `cover_art` TEXT default '' NOT NULL, `playlist_id` INTEGER NOT NULL, `track_id` INTEGER DEFAULT NULL, disc_number INTEGER DEFAULT NULL, "</ID>
     <ID>MaxLineLength:SongsDatabase.kt$SongsDatabase.Companion.&lt;no name provided&gt;$"album TEXT NOT NULL, cover_art TEXT default '' NOT NULL, playlist_id INTEGER NOT NULL, track_id INTEGER NOT NULL DEFAULT 0, PRIMARY KEY(media_store_id, playlist_id))"</ID>
+    <ID>MaxLineLength:SongsDatabase.kt$SongsDatabase.Companion.&lt;no name provided&gt;$"folder_name TEXT default '' NOT NULL, album_id INTEGER NOT NULL DEFAULT 0, artist_id INTEGER NOT NULL DEFAULT 0, genre_id INTEGER NOT NULL DEFAULT 0, year INTEGER NOT NULL DEFAULT 0, date_added INTEGER NOT NULL DEFAULT 0, "</ID>
     <ID>MaxLineLength:SongsDatabase.kt$SongsDatabase.Companion.&lt;no name provided&gt;$database.execSQL("CREATE TABLE `queue_items` (`track_id` INTEGER NOT NULL PRIMARY KEY, `track_order` INTEGER NOT NULL, `is_current` INTEGER NOT NULL, `last_position` INTEGER NOT NULL)")</ID>
     <ID>MaxLineLength:SongsDatabase.kt$SongsDatabase.Companion.&lt;no name provided&gt;$execSQL("CREATE TABLE `albums` (`id` INTEGER NOT NULL PRIMARY KEY, `artist` TEXT NOT NULL, `title` TEXT NOT NULL, `cover_art` TEXT NOT NULL, `year` INTEGER NOT NULL)")</ID>
     <ID>MaxLineLength:SongsDatabase.kt$SongsDatabase.Companion.&lt;no name provided&gt;$execSQL("CREATE TABLE `artists_new` (`id` INTEGER NOT NULL PRIMARY KEY, `title` TEXT NOT NULL, `album_cnt` INTEGER NOT NULL, `track_cnt` INTEGER NOT NULL, `album_art` TEXT NOT NULL)")</ID>
@@ -194,6 +199,7 @@
     <ID>MaxLineLength:SongsDatabase.kt$SongsDatabase.Companion.&lt;no name provided&gt;$execSQL("INSERT OR IGNORE INTO artists_new (id, title, album_cnt, track_cnt) SELECT id, title, album_cnt, track_cnt FROM artists")</ID>
     <ID>MaxLineLength:TagHelper.kt$TagHelper.Companion$private val SUPPORTED_EXTENSIONS = SupportedFileFormat.values().map { it.filesuffix }.filter { it !in EXCLUDED_EXTENSIONS }</ID>
     <ID>MaxLineLength:Track.kt$Track$SHOW_FILENAME_IF_UNAVAILABLE -&gt; if (title == MediaStore.UNKNOWN_STRING) path.getFilenameFromPath() else title</ID>
+    <ID>MaxLineLength:Track.kt$Track.Companion$val discComparison = (first.discNumber ?: Int.MAX_VALUE).compareTo(second.discNumber ?: Int.MAX_VALUE)</ID>
     <ID>MaxLineLength:TrackActivity.kt$TrackActivity$arrayOf(activityTrackToggleShuffle, activityTrackPrevious, activityTrackNext, activityTrackPlaybackSetting)</ID>
     <ID>MaxLineLength:TrackActivity.kt$TrackActivity$val drawableId = if (isSlow) R.drawable.ic_playback_speed_slow_vector else R.drawable.ic_playback_speed_vector</ID>
     <ID>MaxLineLength:TracksActivity.kt$TracksActivity$// this activity is used for displaying Playlist and Folder tracks, also Album tracks with a possible album header at the top</ID>
@@ -206,7 +212,6 @@
     <ID>MaxLineLength:TracksAdapter.kt$TracksAdapter$val removedTrackIds = selectedTracks.filter { it.playListId == ALL_TRACKS_PLAYLIST_ID }.map { it.mediaStoreId.toString() }</ID>
     <ID>MaxLineLength:TracksFragment.kt$TracksFragment$TracksAdapter</ID>
     <ID>MaxLineLength:TracksHeaderAdapter.kt$TracksHeaderAdapter$class</ID>
-    <ID>MaxLineLength:WidgetConfigureActivity.kt$WidgetConfigureActivity$if</ID>
     <ID>MemberNameEqualsClassName:MyExecutor.kt$MyExecutor$val myExecutor = Executors.newSingleThreadExecutor()</ID>
     <ID>NestedBlockDepth:ChangeSortingDialog.kt$ChangeSortingDialog$private fun dialogConfirmed()</ID>
     <ID>NestedBlockDepth:M3uImporter.kt$M3uImporter$fun importPlaylist(path: String, playListId: Int)</ID>
@@ -324,6 +329,5 @@
     <ID>WildcardImport:TracksFragment.kt$import org.fossify.commons.extensions.*</ID>
     <ID>WildcardImport:ViewPagerAdapter.kt$import org.fossify.musicplayer.databinding.*</ID>
     <ID>WildcardImport:ViewPagerAdapter.kt$import org.fossify.musicplayer.helpers.*</ID>
-    <ID>WildcardImport:WidgetConfigureActivity.kt$import org.fossify.commons.extensions.*</ID>
   </CurrentIssues>
 </SmellBaseline>

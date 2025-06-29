@@ -46,4 +46,15 @@
     <string name="app_launcher_name">Lector àudio</string>
     <string name="playback_speed">Velocitat de lectura</string>
     <string name="add_folder_to_playlist">Apondre un dossièr a la lista de lectura</string>
+    <string name="rename_song_error">Una error s\'es produsida pendent lo cambiament de nom</string>
+    <string name="rename_song_empty">Mercés d\'emplenar totes los camps</string>
+    <string name="shuffle_enabled">Lectura aleatòria activada</string>
+    <string name="shuffle_disabled">Lectura aleatòria desactivada</string>
+    <string name="rename_playlist">Renomenar la lista de lectura</string>
+    <string name="playlist_name_exists">Una lista de lectura amb aqueste nom existís ja</string>
+    <string name="remove_playlist">Levar la lista de lectura</string>
+    <string name="remove_playlist_description">Aquò suprimirà las listas de lectura seleccionadas. Los quites fichièrs seràn pas suprimits.</string>
+    <string name="remove_from_playlist">Tirar de la lista de lectura</string>
+    <string name="delete_the_files_too">Suprimir los fichièrs tanben</string>
+    <string name="empty_playlist">La lista de lectura es actualament voida</string>
 </resources>

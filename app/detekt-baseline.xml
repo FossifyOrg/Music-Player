@@ -17,28 +17,19 @@
     <ID>EmptyFunctionBlock:TrackActivity.kt$TrackActivity.&lt;no name provided&gt;${}</ID>
     <ID>EmptyFunctionBlock:TracksAdapter.kt$TracksAdapter${}</ID>
     <ID>ImplicitDefaultLocale:PlaybackSpeedFragment.kt$PlaybackSpeedFragment$String.format("%.2f", value)</ID>
-    <ID>LongMethod:RoomHelper.kt$RoomHelper$private fun getTracksFromPaths(paths: List&lt;String&gt;, playlistId: Int): ArrayList&lt;Track&gt;</ID>
-    <ID>LongMethod:SimpleMediaScanner.kt$SimpleMediaScanner$private fun findTracksManually(pathsToIgnore: List&lt;String&gt;): ArrayList&lt;Track&gt;</ID>
-    <ID>LongMethod:SimpleMediaScanner.kt$SimpleMediaScanner$private fun getTracksSync(): ArrayList&lt;Track&gt;</ID>
-    <ID>LongMethod:TracksActivity.kt$TracksActivity$private fun refreshTracks()</ID>
-    <ID>LongParameterList:MediaItem.kt$( mediaId: String, title: String, album: String? = null, artist: String? = null, genre: String? = null, mediaType: @MediaMetadata.MediaType Int, trackCnt: Int? = null, trackNumber: Int? = null, discNumber: Int? = null, year: Int? = null, sourceUri: Uri? = null, artworkUri: Uri? = null, track: Track? = null )</ID>
-    <ID>LongParameterList:TracksAdapter.kt$TracksAdapter$( activity: BaseSimpleActivity, recyclerView: MyRecyclerView, val sourceType: Int, val folder: String? = null, val playlist: Playlist? = null, items: ArrayList&lt;Track&gt;, itemClick: (Any) -&gt; Unit )</ID>
     <ID>MagicNumber:ChangeSortingDialog.kt$ChangeSortingDialog$3</ID>
     <ID>MagicNumber:ChangeSortingDialog.kt$ChangeSortingDialog$4</ID>
     <ID>MagicNumber:Config.kt$Config$30</ID>
     <ID>MagicNumber:Config.kt$Config$60</ID>
     <ID>MagicNumber:EqualizerActivity.kt$EqualizerActivity$100</ID>
-    <ID>MagicNumber:EqualizerActivity.kt$EqualizerActivity$1000.0</ID>
     <ID>MagicNumber:EqualizerActivity.kt$EqualizerActivity.&lt;no name provided&gt;$100</ID>
     <ID>MagicNumber:EqualizerActivity.kt$EqualizerActivity.&lt;no name provided&gt;$100.0</ID>
     <ID>MagicNumber:LottieAnimationView.kt$2.5f</ID>
     <ID>MagicNumber:MainActivity.kt$MainActivity$10</ID>
-    <ID>MagicNumber:MainActivity.kt$MainActivity$1000</ID>
     <ID>MagicNumber:MainActivity.kt$MainActivity$20</ID>
     <ID>MagicNumber:MainActivity.kt$MainActivity$30</ID>
     <ID>MagicNumber:MainActivity.kt$MainActivity$5</ID>
     <ID>MagicNumber:MainActivity.kt$MainActivity$60</ID>
-    <ID>MagicNumber:MediaItemProvider.kt$MediaItemProvider$1000L</ID>
     <ID>MagicNumber:MediaSessionCallback.kt$&lt;no name provided&gt;$4</ID>
     <ID>MagicNumber:MyWidgetProvider.kt$MyWidgetProvider$5000</ID>
     <ID>MagicNumber:PlaybackSpeedFragment.kt$PlaybackSpeedFragment$0.05f</ID>
@@ -47,15 +38,9 @@
     <ID>MagicNumber:PlaybackSpeedFragment.kt$PlaybackSpeedFragment$3f</ID>
     <ID>MagicNumber:RecyclerView.kt$100</ID>
     <ID>MagicNumber:RecyclerView.kt$25</ID>
-    <ID>MagicNumber:RoomHelper.kt$RoomHelper$1000</ID>
-    <ID>MagicNumber:RoomHelper.kt$RoomHelper$1000L</ID>
     <ID>MagicNumber:RoomHelper.kt$RoomHelper$50</ID>
-    <ID>MagicNumber:SimpleMediaScanner.kt$SimpleMediaScanner$1000</ID>
-    <ID>MagicNumber:SimpleMediaScanner.kt$SimpleMediaScanner$1000L</ID>
     <ID>MagicNumber:SimpleMediaScanner.kt$SimpleMediaScanner$100L</ID>
     <ID>MagicNumber:SimpleMusicPlayer.kt$SimpleMusicPlayer$5000</ID>
-    <ID>MagicNumber:SleepTimer.kt$1000L</ID>
-    <ID>MagicNumber:SleepTimer.kt$&lt;no name provided&gt;$1000</ID>
     <ID>MagicNumber:SleepTimerCustomDialog.kt$SleepTimerCustomDialog$60</ID>
     <ID>MagicNumber:SongsDatabase.kt$SongsDatabase.Companion.&lt;no name provided&gt;$10</ID>
     <ID>MagicNumber:SongsDatabase.kt$SongsDatabase.Companion.&lt;no name provided&gt;$11</ID>
@@ -72,7 +57,6 @@
     <ID>MagicNumber:SongsDatabase.kt$SongsDatabase.Companion.&lt;no name provided&gt;$9</ID>
     <ID>MagicNumber:TrackActivity.kt$TrackActivity$100</ID>
     <ID>MagicNumber:TrackActivity.kt$TrackActivity$500L</ID>
-    <ID>MagicNumber:TrackActivity.kt$TrackActivity.&lt;no name provided&gt;$1000L</ID>
     <ID>MagicNumber:WidgetConfigureActivity.kt$WidgetConfigureActivity$100</ID>
     <ID>MaxLineLength:AlbumHeader.kt$AlbumHeader : ListItem</ID>
     <ID>MaxLineLength:AlbumsActivity.kt$AlbumsActivity$updateMaterialActivityViews(binding.albumsCoordinator, binding.albumsHolder, useTransparentNavigation = true, useTopSearchMenu = false)</ID>

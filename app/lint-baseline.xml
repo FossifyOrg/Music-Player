@@ -40,8 +40,8 @@
         errorLine1="app-build-targetSDK = &quot;34&quot;"
         errorLine2="                      ~~~~">
         <location
-            file="$HOME/work/Music-Player/Music-Player/gradle/libs.versions.toml"
-            line="29"
+            file="$HOME/Projects/Fossify/FossifyOrg/Music-Player/gradle/libs.versions.toml"
+            line="30"
             column="23"/>
     </issue>
 
@@ -84,7 +84,7 @@
         errorLine1="distributionUrl=https\://services.gradle.org/distributions/gradle-8.11.1-bin.zip"
         errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
-            file="$HOME/work/Music-Player/Music-Player/gradle/wrapper/gradle-wrapper.properties"
+            file="$HOME/Projects/Fossify/FossifyOrg/Music-Player/gradle/wrapper/gradle-wrapper.properties"
             line="3"
             column="17"/>
     </issue>
@@ -95,8 +95,8 @@
         errorLine1="gradlePlugins-agp = &quot;8.10.1&quot;"
         errorLine2="                    ~~~~~~~~">
         <location
-            file="$HOME/work/Music-Player/Music-Player/gradle/libs.versions.toml"
-            line="26"
+            file="$HOME/Projects/Fossify/FossifyOrg/Music-Player/gradle/libs.versions.toml"
+            line="27"
             column="21"/>
     </issue>
 
@@ -106,8 +106,8 @@
         errorLine1="androidx-lifecycleprocess = &quot;2.7.0&quot;"
         errorLine2="                            ~~~~~~~">
         <location
-            file="$HOME/work/Music-Player/Music-Player/gradle/libs.versions.toml"
-            line="14"
+            file="$HOME/Projects/Fossify/FossifyOrg/Music-Player/gradle/libs.versions.toml"
+            line="15"
             column="29"/>
     </issue>
 
@@ -117,8 +117,8 @@
         errorLine1="media3 = &quot;1.2.1&quot;"
         errorLine2="         ~~~~~~~">
         <location
-            file="$HOME/work/Music-Player/Music-Player/gradle/libs.versions.toml"
-            line="21"
+            file="$HOME/Projects/Fossify/FossifyOrg/Music-Player/gradle/libs.versions.toml"
+            line="22"
             column="10"/>
     </issue>
 
@@ -128,8 +128,8 @@
         errorLine1="media3 = &quot;1.2.1&quot;"
         errorLine2="         ~~~~~~~">
         <location
-            file="$HOME/work/Music-Player/Music-Player/gradle/libs.versions.toml"
-            line="21"
+            file="$HOME/Projects/Fossify/FossifyOrg/Music-Player/gradle/libs.versions.toml"
+            line="22"
             column="10"/>
     </issue>
 
@@ -139,8 +139,8 @@
         errorLine1="app-build-compileSDKVersion = &quot;34&quot;"
         errorLine2="                              ~~~~">
         <location
-            file="$HOME/work/Music-Player/Music-Player/gradle/libs.versions.toml"
-            line="28"
+            file="$HOME/Projects/Fossify/FossifyOrg/Music-Player/gradle/libs.versions.toml"
+            line="29"
             column="31"/>
     </issue>
 

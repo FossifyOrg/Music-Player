@@ -82,4 +82,5 @@
     <string name="genres">Žanri</string>
     <string name="play_next">Sviraj sljedeću</string>
     <string name="rescan_media">Ponovo pregledaj medije</string>
+    <string name="track_on_disk">%1$d.%2$s</string>
 </resources>

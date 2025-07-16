@@ -22,3 +22,8 @@
     @org.greenrobot.eventbus.Subscribe <methods>;
 }
 -keep enum org.greenrobot.eventbus.ThreadMode { *; }
+
+# Jaudiotagger
+-keep public class org.jaudiotagger.** { public protected *; }
+-keepnames class org.jaudiotagger.**
+-dontwarn org.jaudiotagger.**

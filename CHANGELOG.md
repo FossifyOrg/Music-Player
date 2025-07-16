@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+- Fixed unknown error when updating ID3 tags ([#206])
+
 ## [1.2.0] - 2025-07-15
 ### Changed
 - Updated translations
@@ -32,6 +35,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#18]: https://github.com/FossifyOrg/Music-Player/issues/18
 [#45]: https://github.com/FossifyOrg/Music-Player/issues/45
 [#47]: https://github.com/FossifyOrg/Music-Player/issues/47
+[#206]: https://github.com/FossifyOrg/Music-Player/issues/206
 
 [Unreleased]: https://github.com/FossifyOrg/Music-Player/compare/1.2.0...HEAD
 [1.2.0]: https://github.com/FossifyOrg/Music-Player/compare/1.1.0...1.2.0

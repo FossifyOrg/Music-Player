@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_launcher_name">נגן מוזיקה</string>
+    <string name="app_launcher_name">נגן המוזיקה</string>
     <string name="playlist_empty">רשימת ההשמעה שלך ריקה</string>
-    <string name="rename_song">שנה את שם השיר</string>
+    <string name="rename_song">שינוי שם השיר</string>
     <string name="rename_song_error">אירעה שגיאה במהלך שינוי השם</string>
     <string name="rename_song_empty">בבקשה מלא את כל השדות</string>
     <string name="repeat_off">חזרה כבויה</string>

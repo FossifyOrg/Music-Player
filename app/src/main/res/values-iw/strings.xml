@@ -13,7 +13,7 @@
     <string name="disable_shuffle">השבת ערבוב</string>
     <string name="shuffle_enabled">ערבוב מופעל</string>
     <string name="shuffle_disabled">ערבוב מושבת</string>
-    <string name="volume">ווליום</string>
+    <string name="volume">עוצמה</string>
     <string name="playback_speed">מהירות ניגון</string>
     <string name="loading_files">טוען קבצים…</string>
     <string name="add_file_to_playlist">הוסף קובץ לרשימת ההשמעה</string>

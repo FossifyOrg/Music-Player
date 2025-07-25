@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_launcher_name">נגן מוזיקה</string>
+    <string name="app_launcher_name">נגן המוזיקה</string>
     <string name="playlist_empty">רשימת ההשמעה שלך ריקה</string>
-    <string name="rename_song">שנה את שם השיר</string>
+    <string name="rename_song">שינוי שם השיר</string>
     <string name="rename_song_error">אירעה שגיאה במהלך שינוי השם</string>
     <string name="rename_song_empty">בבקשה מלא את כל השדות</string>
     <string name="repeat_off">חזרה כבויה</string>
@@ -13,7 +13,7 @@
     <string name="disable_shuffle">השבת ערבוב</string>
     <string name="shuffle_enabled">ערבוב מופעל</string>
     <string name="shuffle_disabled">ערבוב מושבת</string>
-    <string name="volume">ווליום</string>
+    <string name="volume">עוצמה</string>
     <string name="playback_speed">מהירות ניגון</string>
     <string name="loading_files">טוען קבצים…</string>
     <string name="add_file_to_playlist">הוסף קובץ לרשימת ההשמעה</string>

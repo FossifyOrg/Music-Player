@@ -68,4 +68,17 @@
     <string name="faq_1_title">Hvordan kan jeg spole frem i sange\?</string>
     <string name="faq_1_text">Du kan klikke på de to tidsangivelser (aktuel spilletid og total varighed af nummeret) nær søgefeltet, der bevæger sangen enten bagud eller fremad.</string>
     <string name="volume">Lydstyrke</string>
+    <string name="delete_song_warning">ADVARSEL: Dette vil slette de valgte filer fra enheden, inklusive alle afspilningslister.</string>
+    <string name="export_playlist">Eksportér afspilningsliste</string>
+    <string name="import_playlist">Importér afspilningsliste</string>
+    <string name="filename_without_m3u">Filnavn (uden .m3u)</string>
+    <string name="track_number">Spornummer</string>
+    <string name="use_for_this_playlist">Brug kun til denne playliste</string>
+    <string name="use_for_this_album">Brug kun til dette album</string>
+    <string name="genres">Genrer</string>
+    <string name="track_on_disk">%1$d.%2$s</string>
+    <string name="play_next">Afspil næste</string>
+    <string name="equalizer">Equalizer</string>
+    <string name="exclude_folder_description">Hvis du udelukker en mappe, vises ikke alle lydfiler i den. Filer, der manuelt tilføjes til afspilningslister, påvirkes ikke.</string>
+    <string name="rescan_media">Scan medier igen</string>
 </resources>

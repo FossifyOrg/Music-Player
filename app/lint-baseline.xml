@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<issues format="6" by="lint 8.10.1" type="baseline" client="gradle" dependencies="false" name="AGP (8.10.1)" variant="all" version="8.10.1">
+<issues format="6" by="lint 8.11.1" type="baseline" client="gradle" dependencies="false" name="AGP (8.11.1)" variant="all" version="8.11.1">
 
     <issue
         id="ScopedStorage"
@@ -40,7 +40,7 @@
         errorLine1="app-build-targetSDK = &quot;34&quot;"
         errorLine2="                      ~~~~">
         <location
-            file="$HOME/Projects/Fossify/FossifyOrg/Music-Player/gradle/libs.versions.toml"
+            file="$HOME/work/Music-Player/Music-Player/gradle/libs.versions.toml"
             line="30"
             column="23"/>
     </issue>
@@ -80,66 +80,66 @@
 
     <issue
         id="AndroidGradlePluginVersion"
-        message="A newer version of Gradle than 8.11.1 is available: 8.14.2"
-        errorLine1="distributionUrl=https\://services.gradle.org/distributions/gradle-8.11.1-bin.zip"
-        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        message="A newer version of Gradle than 8.13 is available: 8.14.3"
+        errorLine1="distributionUrl=https\://services.gradle.org/distributions/gradle-8.13-bin.zip"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
-            file="$HOME/Projects/Fossify/FossifyOrg/Music-Player/gradle/wrapper/gradle-wrapper.properties"
+            file="$HOME/work/Music-Player/Music-Player/gradle/wrapper/gradle-wrapper.properties"
             line="3"
             column="17"/>
     </issue>
 
     <issue
         id="AndroidGradlePluginVersion"
-        message="A newer version of com.android.application than 8.10.1 is available: 8.11.0"
-        errorLine1="gradlePlugins-agp = &quot;8.10.1&quot;"
+        message="A newer version of com.android.application than 8.11.1 is available: 8.12.0"
+        errorLine1="gradlePlugins-agp = &quot;8.11.1&quot;"
         errorLine2="                    ~~~~~~~~">
         <location
-            file="$HOME/Projects/Fossify/FossifyOrg/Music-Player/gradle/libs.versions.toml"
+            file="$HOME/work/Music-Player/Music-Player/gradle/libs.versions.toml"
             line="27"
             column="21"/>
     </issue>
 
     <issue
         id="GradleDependency"
-        message="A newer version of androidx.lifecycle:lifecycle-process than 2.7.0 is available: 2.9.1"
+        message="A newer version of androidx.lifecycle:lifecycle-process than 2.7.0 is available: 2.9.2"
         errorLine1="androidx-lifecycleprocess = &quot;2.7.0&quot;"
         errorLine2="                            ~~~~~~~">
         <location
-            file="$HOME/Projects/Fossify/FossifyOrg/Music-Player/gradle/libs.versions.toml"
+            file="$HOME/work/Music-Player/Music-Player/gradle/libs.versions.toml"
             line="15"
             column="29"/>
     </issue>
 
     <issue
         id="GradleDependency"
-        message="A newer version of androidx.media3:media3-exoplayer than 1.2.1 is available: 1.7.1"
+        message="A newer version of androidx.media3:media3-exoplayer than 1.2.1 is available: 1.8.0"
         errorLine1="media3 = &quot;1.2.1&quot;"
         errorLine2="         ~~~~~~~">
         <location
-            file="$HOME/Projects/Fossify/FossifyOrg/Music-Player/gradle/libs.versions.toml"
+            file="$HOME/work/Music-Player/Music-Player/gradle/libs.versions.toml"
             line="22"
             column="10"/>
     </issue>
 
     <issue
         id="GradleDependency"
-        message="A newer version of androidx.media3:media3-session than 1.2.1 is available: 1.7.1"
+        message="A newer version of androidx.media3:media3-session than 1.2.1 is available: 1.8.0"
         errorLine1="media3 = &quot;1.2.1&quot;"
         errorLine2="         ~~~~~~~">
         <location
-            file="$HOME/Projects/Fossify/FossifyOrg/Music-Player/gradle/libs.versions.toml"
+            file="$HOME/work/Music-Player/Music-Player/gradle/libs.versions.toml"
             line="22"
             column="10"/>
     </issue>
 
     <issue
         id="GradleDependency"
-        message="A newer version of `compileSdkVersion` than 34 is available: 35"
+        message="A newer version of `compileSdkVersion` than 34 is available: 36"
         errorLine1="app-build-compileSDKVersion = &quot;34&quot;"
         errorLine2="                              ~~~~">
         <location
-            file="$HOME/Projects/Fossify/FossifyOrg/Music-Player/gradle/libs.versions.toml"
+            file="$HOME/work/Music-Player/Music-Player/gradle/libs.versions.toml"
             line="29"
             column="31"/>
     </issue>
@@ -179,7 +179,7 @@
 
     <issue
         id="DiscouragedApi"
-        message="Should not restrict activity to fixed orientation. This may not be suitable for different form factors, causing the app to be letterboxed."
+        message="Fixed screen orientations will be ignored in most cases, starting from Android 16. Android is moving toward a model where apps are expected to adapt to various orientations, display sizes, and aspect ratios."
         errorLine1="            android:screenOrientation=&quot;portrait&quot;"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -300,7 +300,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;app_launcher_name&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lv&quot; (Latvian), &quot;mk&quot; (Macedonian), &quot;en&quot; (English), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;so&quot; (Somali), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;cr&quot; (Cree), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;ckb&quot;"
+        message="&quot;app_launcher_name&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lv&quot; (Latvian), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;so&quot; (Somali), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;cr&quot; (Cree), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;app_launcher_name&quot;>Music Player_debug&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -311,7 +311,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;app_launcher_name&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lv&quot; (Latvian), &quot;mk&quot; (Macedonian), &quot;en&quot; (English), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;so&quot; (Somali), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;cr&quot; (Cree), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;ckb&quot;"
+        message="&quot;app_launcher_name&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lv&quot; (Latvian), &quot;my&quot; (Burmese), &quot;ne&quot; (Nepali), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;so&quot; (Somali), &quot;ltg&quot;, &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;cr&quot; (Cree), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;ckb&quot;"
         errorLine1="    &lt;string name=&quot;app_launcher_name&quot;>Music Player&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -993,7 +993,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;track_on_disk&quot; is not translated in &quot;hi&quot; (Hindi), &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;hr&quot; (Croatian), &quot;lv&quot; (Latvian), &quot;hu&quot; (Hungarian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;in&quot; (Indonesian), &quot;ms&quot; (Malay), &quot;el&quot; (Greek), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;eu&quot; (Basque), &quot;ar&quot; (Arabic), &quot;vi&quot; (Vietnamese), &quot;nb&quot; (Norwegian Bokmål), &quot;ja&quot; (Japanese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;ro&quot; (Romanian), &quot;nn&quot; (Norwegian Nynorsk), &quot;be&quot; (Belarusian), &quot;fi&quot; (Finnish), &quot;bg&quot; (Bulgarian), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;sk&quot; (Slovak), &quot;sl&quot; (Slovenian), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;so&quot; (Somali), &quot;ltg&quot;, &quot;sr&quot; (Serbian), &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;ko&quot; (Korean), &quot;gl&quot; (Galician), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;ckb&quot;, &quot;da&quot; (Danish), &quot;tr&quot; (Turkish)"
+        message="&quot;track_on_disk&quot; is not translated in &quot;fil&quot; (Filipino; Pilipino), &quot;lt&quot; (Lithuanian), &quot;lv&quot; (Latvian), &quot;hu&quot; (Hungarian), &quot;ia&quot; (Interlingua), &quot;mk&quot; (Macedonian), &quot;ml&quot; (Malayalam), &quot;in&quot; (Indonesian), &quot;ms&quot; (Malay), &quot;el&quot; (Greek), &quot;en&quot; (English), &quot;is&quot; (Icelandic), &quot;my&quot; (Burmese), &quot;eu&quot; (Basque), &quot;ar&quot; (Arabic), &quot;vi&quot; (Vietnamese), &quot;nb&quot; (Norwegian Bokmål), &quot;ja&quot; (Japanese), &quot;ne&quot; (Nepali), &quot;az&quot; (Azerbaijani), &quot;fa&quot; (Persian), &quot;ro&quot; (Romanian), &quot;nn&quot; (Norwegian Nynorsk), &quot;be&quot; (Belarusian), &quot;bg&quot; (Bulgarian), &quot;bn&quot; (Bangla), &quot;br&quot; (Breton), &quot;bs&quot; (Bosnian), &quot;si&quot; (Sinhala), &quot;sk&quot; (Slovak), &quot;sl&quot; (Slovenian), &quot;zgh&quot; (Standard Moroccan Tamazight), &quot;so&quot; (Somali), &quot;ltg&quot;, &quot;sr&quot; (Serbian), &quot;kn&quot; (Kannada), &quot;or&quot; (Odia), &quot;ko&quot; (Korean), &quot;gl&quot; (Galician), &quot;kr&quot; (Kanuri), &quot;sat&quot; (Santali), &quot;ta&quot; (Tamil), &quot;cr&quot; (Cree), &quot;pa&quot; (Punjabi), &quot;te&quot; (Telugu), &quot;th&quot; (Thai), &quot;cy&quot; (Welsh), &quot;ckb&quot;, &quot;da&quot; (Danish)"
         errorLine1="    &lt;string name=&quot;track_on_disk&quot;>%1$d.%2$s&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
         <location

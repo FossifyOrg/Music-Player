@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_launcher_name">Lettore Musicale</string>
+    <string name="app_launcher_name">Lettore musicale</string>
     <string name="playlist_empty">La scaletta è vuota</string>
     <string name="rename_song">Rinomina brano</string>
     <string name="rename_song_error">Si è verificato un errore durante la ridenominazione</string>
@@ -29,7 +29,7 @@
     <string name="remove_from_playlist_description">Questo rimuoverà solamente gli elementi dalla scaletta \"%s\", non i file.</string>
     <string name="delete_the_files_too">Rimuovi anche i file</string>
     <string name="open_playlist">Apri scaletta</string>
-    <string name="all_songs_cannot_be_deleted">La scaletta \'Tutti i brani\' non può essere rimossa</string>
+    <string name="all_songs_cannot_be_deleted">La scaletta Tutti i brani non può essere rimossa</string>
     <string name="empty_playlist">La scaletta attuale è vuota</string>
     <string name="fetching_songs">Recupero dei brani in corso…</string>
     <string name="all_songs">Tutti i brani</string>

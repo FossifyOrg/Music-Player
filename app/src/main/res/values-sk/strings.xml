@@ -82,4 +82,5 @@
     <string name="rescan_media">Preskenovať médiá</string>
     <string name="faq_1_title">Ako viem posunúť skladbu vpred\?</string>
     <string name="faq_1_text">Môžete kliknúť na texty súčasnej, alebo maximálnej dĺžky skladby, ktoré sú vedľa indikátora súčasného progresu. To posunie skladbu buď vpred, alebo vzad.</string>
+    <string name="track_on_disk">%1$d.%2$s</string>
 </resources>

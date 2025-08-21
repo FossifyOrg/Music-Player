@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Fixed
+- Disc numbers now display correctly in multi-disc albums ([#228])
 
 ## [1.2.1] - 2025-07-16
 ### Changed
@@ -40,6 +42,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#45]: https://github.com/FossifyOrg/Music-Player/issues/45
 [#47]: https://github.com/FossifyOrg/Music-Player/issues/47
 [#206]: https://github.com/FossifyOrg/Music-Player/issues/206
+[#228]: https://github.com/FossifyOrg/Music-Player/issues/228
 
 [Unreleased]: https://github.com/FossifyOrg/Music-Player/compare/1.2.1...HEAD
 [1.2.1]: https://github.com/FossifyOrg/Music-Player/compare/1.2.0...1.2.1

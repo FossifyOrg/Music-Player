@@ -1,0 +1,8 @@
+Changed:
+
+• Updated translations
+
+Fixed:
+
+• Disc numbers now display correctly in multi-disc albums 
+

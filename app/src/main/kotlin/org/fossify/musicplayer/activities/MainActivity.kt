@@ -118,9 +118,10 @@ class MainActivity : SimpleMusicActivity() {
         }
     }
 
-    private fun refreshMenuItems() {
+    private fun refreshMenuItems(position: Int = binding.viewPager.currentItem) {
         binding.mainMenu.getToolbar().menu.apply {
-            val isPlaylistFragment = getCurrentFragment() is PlaylistsFragment
+            val tab = getVisibleTabs()[position]
+            val isPlaylistFragment = tab == TAB_PLAYLISTS
             findItem(R.id.create_new_playlist).isVisible = isPlaylistFragment
             findItem(R.id.create_playlist_from_folder).isVisible = isPlaylistFragment
             findItem(R.id.import_playlist).isVisible = isPlaylistFragment
@@ -224,7 +225,7 @@ class MainActivity : SimpleMusicActivity() {
                 getAllFragments().forEach {
                     it.finishActMode()
                 }
-                refreshMenuItems()
+                refreshMenuItems(position)
             }
         })
         binding.viewPager.currentItem = config.lastUsedViewPagerPage

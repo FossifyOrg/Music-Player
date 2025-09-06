@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Fixed
+- Playlist menu options now show up correctly on the playlists tab ([#65])
 
 ## [1.2.2] - 2025-08-21
 ### Changed
@@ -46,6 +48,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#18]: https://github.com/FossifyOrg/Music-Player/issues/18
 [#45]: https://github.com/FossifyOrg/Music-Player/issues/45
 [#47]: https://github.com/FossifyOrg/Music-Player/issues/47
+[#65]: https://github.com/FossifyOrg/Music-Player/issues/65
 [#206]: https://github.com/FossifyOrg/Music-Player/issues/206
 [#228]: https://github.com/FossifyOrg/Music-Player/issues/228
 

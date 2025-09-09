@@ -1,0 +1,8 @@
+Changed:
+
+• Updated translations
+
+Fixed:
+
+• Playlist menu options now show up correctly on the playlists tab 
+

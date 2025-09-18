@@ -13,7 +13,7 @@
     <string name="disable_shuffle">Онемогући насумично</string>
     <string name="shuffle_enabled">Случајна репродукција омогућена</string>
     <string name="shuffle_disabled">Случајна репродукција онемогућена</string>
-    <string name="volume">Волуме</string>
+    <string name="volume">Гласноћа</string>
     <string name="playback_speed">Брзина репродукције</string>
     <string name="loading_files">Учитавање датотека…</string>
     <string name="add_file_to_playlist">Додајте датотеку на листу за репродукцију</string>

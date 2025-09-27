@@ -23,6 +23,7 @@ import org.fossify.musicplayer.extensions.viewBinding
 import org.fossify.musicplayer.helpers.GENRE
 import org.fossify.musicplayer.helpers.TAB_GENRES
 import org.fossify.musicplayer.models.Genre
+import org.fossify.musicplayer.models.Playlist
 import org.fossify.musicplayer.models.sortSafely
 
 class GenresFragment(context: Context, attributeSet: AttributeSet) : MyViewPagerFragment(context, attributeSet) {
@@ -79,7 +80,10 @@ class GenresFragment(context: Context, attributeSet: AttributeSet) : MyViewPager
     }
 
     override fun onSearchQueryChanged(text: String) {
-        val filtered = genres.filter { it.title.normalizeText().contains(text, true) }.toMutableList() as ArrayList<Genre>
+        val searchTextNormalized = text.normalizeText()
+        val filtered = genres.filter { playlist ->
+            playlist.title.normalizeText().contains(searchTextNormalized, true)
+        }.toMutableList() as ArrayList<Genre>
         getAdapter()?.updateItems(filtered, text)
         binding.genresPlaceholder.beVisibleIf(filtered.isEmpty())
     }

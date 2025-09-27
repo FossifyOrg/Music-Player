@@ -23,6 +23,7 @@ import org.fossify.musicplayer.extensions.viewBinding
 import org.fossify.musicplayer.helpers.ARTIST
 import org.fossify.musicplayer.helpers.TAB_ARTISTS
 import org.fossify.musicplayer.models.Artist
+import org.fossify.musicplayer.models.Playlist
 import org.fossify.musicplayer.models.sortSafely
 
 // Artists -> Albums -> Tracks
@@ -79,7 +80,10 @@ class ArtistsFragment(context: Context, attributeSet: AttributeSet) : MyViewPage
     }
 
     override fun onSearchQueryChanged(text: String) {
-        val filtered = artists.filter { it.title.normalizeText().contains(text, true) }.toMutableList() as ArrayList<Artist>
+        val searchTextNormalized = text.normalizeText()
+        val filtered = artists.filter { playlist ->
+            playlist.title.normalizeText().contains(searchTextNormalized, true)
+        }.toMutableList() as ArrayList<Artist>
         getAdapter()?.updateItems(filtered, text)
         binding.artistsPlaceholder.beVisibleIf(filtered.isEmpty())
     }

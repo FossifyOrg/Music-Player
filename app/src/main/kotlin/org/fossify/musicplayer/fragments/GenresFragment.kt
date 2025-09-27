@@ -79,7 +79,7 @@ class GenresFragment(context: Context, attributeSet: AttributeSet) : MyViewPager
     }
 
     override fun onSearchQueryChanged(text: String) {
-        val filtered = genres.filter { it.title.contains(text, true) }.toMutableList() as ArrayList<Genre>
+        val filtered = genres.filter { it.title.normalizeText().contains(text, true) }.toMutableList() as ArrayList<Genre>
         getAdapter()?.updateItems(filtered, text)
         binding.genresPlaceholder.beVisibleIf(filtered.isEmpty())
     }

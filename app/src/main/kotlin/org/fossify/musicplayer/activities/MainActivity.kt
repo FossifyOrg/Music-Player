@@ -5,6 +5,7 @@ import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.Drawable
+import android.icu.text.Normalizer2
 import android.media.AudioManager
 import android.net.Uri
 import android.os.Bundle
@@ -36,6 +37,7 @@ import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
 import java.io.FileOutputStream
+import java.util.Locale
 
 class MainActivity : SimpleMusicActivity() {
     private val PICK_IMPORT_SOURCE_INTENT = 1
@@ -141,7 +143,8 @@ class MainActivity : SimpleMusicActivity() {
         }
 
         binding.mainMenu.onSearchTextChangedListener = { text ->
-            getCurrentFragment()?.onSearchQueryChanged(text)
+            val normalizedText = text.normalizeText()
+            getCurrentFragment()?.onSearchQueryChanged(normalizedText)
         }
 
         binding.mainMenu.getToolbar().setOnMenuItemClickListener { menuItem ->

@@ -9,6 +9,7 @@ import org.fossify.commons.extensions.areSystemAnimationsEnabled
 import org.fossify.commons.extensions.beGoneIf
 import org.fossify.commons.extensions.beVisibleIf
 import org.fossify.commons.extensions.hideKeyboard
+import org.fossify.commons.extensions.normalizeString
 import org.fossify.commons.helpers.ensureBackgroundThread
 import org.fossify.musicplayer.R
 import org.fossify.musicplayer.activities.AlbumsActivity
@@ -80,9 +81,9 @@ class ArtistsFragment(context: Context, attributeSet: AttributeSet) : MyViewPage
     }
 
     override fun onSearchQueryChanged(text: String) {
-        val searchTextNormalized = text.normalizeText()
+        val searchTextNormalized = text.normalizeString()
         val filtered = artists.filter { playlist ->
-            playlist.title.normalizeText().contains(searchTextNormalized, true)
+            playlist.title.normalizeString().contains(searchTextNormalized, true)
         }.toMutableList() as ArrayList<Artist>
         getAdapter()?.updateItems(filtered, text)
         binding.artistsPlaceholder.beVisibleIf(filtered.isEmpty())

@@ -33,7 +33,6 @@ import org.fossify.musicplayer.extensions.audioHelper
 import org.fossify.musicplayer.extensions.config
 import org.fossify.musicplayer.extensions.getFolderTracks
 import org.fossify.musicplayer.extensions.getMediaStoreIdFromPath
-import org.fossify.musicplayer.extensions.normalizeText
 import org.fossify.musicplayer.helpers.*
 import org.fossify.musicplayer.helpers.M3uExporter.ExportResult
 import org.fossify.musicplayer.models.*
@@ -349,7 +348,7 @@ class TracksActivity : SimpleMusicActivity() {
 
     private fun onSearchQueryChanged(text: String) {
         val filtered = tracksIgnoringSearch.filter {
-            it.title.normalizeText().contains(text, true) || ("${it.artist} - ${it.album}").normalizeText().contains(text, true)
+            it.title.normalizeString().contains(text, true) || ("${it.artist} - ${it.album}").normalizeString().contains(text, true)
         }.toMutableList() as ArrayList<Track>
         getTracksAdapter()?.updateItems(filtered, text)
         binding.tracksPlaceholder.beGoneIf(filtered.isNotEmpty())

@@ -2,7 +2,6 @@ package org.fossify.musicplayer.extensions
 
 import android.app.Activity
 import android.content.ContentUris
-import android.icu.text.Normalizer2
 import android.provider.MediaStore
 import org.fossify.commons.dialogs.PropertiesDialog
 import org.fossify.commons.extensions.rescanPaths
@@ -13,7 +12,6 @@ import org.fossify.musicplayer.dialogs.SelectPlaylistDialog
 import org.fossify.musicplayer.helpers.FLAG_MANUAL_CACHE
 import org.fossify.musicplayer.helpers.RoomHelper
 import org.fossify.musicplayer.models.Track
-import java.util.Locale
 
 fun Activity.addTracksToPlaylist(tracks: List<Track>, callback: () -> Unit) {
     SelectPlaylistDialog(this) { playlistId ->
@@ -64,13 +62,6 @@ fun Activity.showTrackProperties(selectedTracks: List<Track>) {
     } else {
         PropertiesDialog(this, selectedPaths, false)
     }
-}
-
-fun String.normalizeText(): String {
-    val normalizer = Normalizer2.getNFDInstance()
-    return normalizer.normalize(this)
-        .replace("\\p{M}".toRegex(), "")
-        .lowercase(Locale.getDefault())
 }
 
 fun Activity.ensureActivityNotDestroyed(callback: () -> Unit) {

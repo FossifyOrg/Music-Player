@@ -117,7 +117,8 @@ class QueueActivity : SimpleControllerActivity() {
 
     private fun onSearchQueryChanged(text: String) {
         val normalizedText = text.normalizeString()
-        val filtered = tracksIgnoringSearch.filter { it.title.contains(normalizedText, true) }.toMutableList() as ArrayList<Track>
+        val filtered = tracksIgnoringSearch.filter {
+            it.title.normalizeString().contains(normalizedText, true) }.toMutableList() as ArrayList<Track>
         getAdapter()?.updateItems(filtered, text)
         binding.queuePlaceholder.beGoneIf(filtered.isNotEmpty())
     }

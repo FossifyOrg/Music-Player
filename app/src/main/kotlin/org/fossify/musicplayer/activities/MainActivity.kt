@@ -140,8 +140,7 @@ class MainActivity : SimpleMusicActivity() {
         }
 
         binding.mainMenu.onSearchTextChangedListener = { text ->
-            val normalizedText = text.normalizeString()
-            getCurrentFragment()?.onSearchQueryChanged(normalizedText)
+            getCurrentFragment()?.onSearchQueryChanged(text)
         }
 
         binding.mainMenu.getToolbar().setOnMenuItemClickListener { menuItem ->

@@ -11,6 +11,7 @@ import androidx.media3.common.MediaItem
 import org.fossify.commons.extensions.areSystemAnimationsEnabled
 import org.fossify.commons.extensions.beGoneIf
 import org.fossify.commons.extensions.getProperPrimaryColor
+import org.fossify.commons.extensions.normalizeString
 import org.fossify.commons.extensions.viewBinding
 import org.fossify.commons.helpers.NavigationIcon
 import org.fossify.commons.helpers.ensureBackgroundThread
@@ -115,7 +116,8 @@ class QueueActivity : SimpleControllerActivity() {
     }
 
     private fun onSearchQueryChanged(text: String) {
-        val filtered = tracksIgnoringSearch.filter { it.title.contains(text, true) }.toMutableList() as ArrayList<Track>
+        val normalizedText = text.normalizeString()
+        val filtered = tracksIgnoringSearch.filter { it.title.contains(normalizedText, true) }.toMutableList() as ArrayList<Track>
         getAdapter()?.updateItems(filtered, text)
         binding.queuePlaceholder.beGoneIf(filtered.isNotEmpty())
     }

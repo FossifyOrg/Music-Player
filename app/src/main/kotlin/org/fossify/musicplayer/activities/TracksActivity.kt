@@ -348,7 +348,8 @@ class TracksActivity : SimpleMusicActivity() {
 
     private fun onSearchQueryChanged(text: String) {
         val filtered = tracksIgnoringSearch.filter {
-            it.title.normalizeString().contains(text, true) || ("${it.artist} - ${it.album}").normalizeString().contains(text, true)
+            it.title.normalizeString().contains(text, true)
+                || ("${it.artist} - ${it.album}").normalizeString().contains(text, true)
         }.toMutableList() as ArrayList<Track>
         getTracksAdapter()?.updateItems(filtered, text)
         binding.tracksPlaceholder.beGoneIf(filtered.isNotEmpty())

@@ -20,7 +20,6 @@ import org.fossify.musicplayer.extensions.viewBinding
 import org.fossify.musicplayer.helpers.FOLDER
 import org.fossify.musicplayer.helpers.TAB_FOLDERS
 import org.fossify.musicplayer.models.Folder
-import org.fossify.musicplayer.models.Playlist
 import org.fossify.musicplayer.models.sortSafely
 
 class FoldersFragment(context: Context, attributeSet: AttributeSet) : MyViewPagerFragment(context, attributeSet) {
@@ -76,9 +75,9 @@ class FoldersFragment(context: Context, attributeSet: AttributeSet) : MyViewPage
     }
 
     override fun onSearchQueryChanged(text: String) {
-        val searchTextNormalized = text.normalizeString()
+        val normalizedText = text.normalizeString()
         val filtered = folders.filter { playlist ->
-            playlist.title.normalizeString().contains(searchTextNormalized, true)
+            playlist.title.normalizeString().contains(normalizedText, true)
         }.toMutableList() as ArrayList<Folder>
         getAdapter()?.updateItems(filtered, text)
         binding.foldersPlaceholder.beVisibleIf(filtered.isEmpty())

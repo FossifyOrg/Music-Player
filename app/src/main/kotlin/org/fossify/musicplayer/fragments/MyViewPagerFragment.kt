@@ -24,5 +24,4 @@ abstract class MyViewPagerFragment(context: Context, attributeSet: AttributeSet)
     fun prepareAndPlay(tracks: List<Track>, startIndex: Int = 0, startPositionMs: Long = 0, startActivity: Boolean = true) {
         (context as SimpleControllerActivity).prepareAndPlay(tracks, startIndex, startPositionMs, startActivity)
     }
-
 }

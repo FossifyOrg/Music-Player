@@ -82,7 +82,8 @@ class AlbumsFragment(context: Context, attributeSet: AttributeSet) : MyViewPager
 
     override fun onSearchQueryChanged(text: String) {
         val normalizedText = text.normalizeString()
-        val filtered = albums.filter { it.title.normalizeString().contains(normalizedText, true)
+        val filtered = albums.filter {
+            it.title.normalizeString().contains(normalizedText, true)
         }.toMutableList() as ArrayList<Album>
         getAdapter()?.updateItems(filtered, text)
         binding.albumsPlaceholder.beVisibleIf(filtered.isEmpty())

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_launcher_name">Musikafspiller</string>
-    <string name="playlist_empty">Din afspilningsliste er tom</string>
+    <string name="playlist_empty">Din playliste er tom</string>
     <string name="rename_song">Omdøb sang</string>
     <string name="rename_song_error">En fejl opstod under omdøbningen</string>
     <string name="rename_song_empty">Udfyld alle felter</string>
     <string name="repeat_off">Gentag fra</string>
-    <string name="repeat_song">Gentag den valgte sang</string>
-    <string name="repeat_playlist">Repeat playlist</string>
-    <string name="stop_playback_after_current_song">Stop afspilningen efter den aktuelle sang</string>
-    <string name="enable_shuffle">Aktiver tilfældig rækkefølge</string>
-    <string name="disable_shuffle">Deaktiver tilfældig rækkefølge</string>
-    <string name="shuffle_enabled">Tilfældig rækkefølge aktiveret</string>
-    <string name="shuffle_disabled">Tilfældig rækkefølge deaktiveret</string>
+    <string name="repeat_song">Gentag nuværende sang</string>
+    <string name="repeat_playlist">Gentag alle</string>
+    <string name="stop_playback_after_current_song">Stop afspilning efter nuværende sang</string>
+    <string name="enable_shuffle">Aktivér bland</string>
+    <string name="disable_shuffle">Deaktiver bland</string>
+    <string name="shuffle_enabled">Bland aktiveret</string>
+    <string name="shuffle_disabled">Bland deaktiveret</string>
     <string name="playback_speed">Afspilningshastighed</string>
     <string name="loading_files">Indlæser filer…</string>
     <string name="add_file_to_playlist">Tilføj fil til afspilningsliste</string>

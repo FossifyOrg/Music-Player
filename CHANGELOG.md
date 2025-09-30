@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Changed
+- Search now ignores accents and diacritics ([#209])
 
 ## [1.2.3] - 2025-09-09
 ### Changed
@@ -56,6 +58,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#65]: https://github.com/FossifyOrg/Music-Player/issues/65
 [#206]: https://github.com/FossifyOrg/Music-Player/issues/206
 [#228]: https://github.com/FossifyOrg/Music-Player/issues/228
+[#209]: https://github.com/FossifyOrg/Music-Player/issues/209
 
 [Unreleased]: https://github.com/FossifyOrg/Music-Player/compare/1.2.3...HEAD
 [1.2.3]: https://github.com/FossifyOrg/Music-Player/compare/1.2.2...1.2.3

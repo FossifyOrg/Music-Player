@@ -27,7 +27,6 @@ import org.fossify.musicplayer.dialogs.NewPlaylistDialog
 import org.fossify.musicplayer.dialogs.SelectPlaylistDialog
 import org.fossify.musicplayer.dialogs.SleepTimerCustomDialog
 import org.fossify.musicplayer.extensions.*
-import org.fossify.musicplayer.fragments.PlaylistsFragment
 import org.fossify.musicplayer.helpers.*
 import org.fossify.musicplayer.helpers.M3uImporter.ImportResult
 import org.fossify.musicplayer.models.Events

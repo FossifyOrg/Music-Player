@@ -1,5 +1,6 @@
 package org.fossify.musicplayer.adapters
 
+import android.util.SparseArray
 import android.view.View
 import android.view.ViewGroup
 import androidx.viewpager.widget.PagerAdapter
@@ -15,11 +16,13 @@ import org.fossify.musicplayer.helpers.*
 
 class ViewPagerAdapter(val activity: SimpleActivity) : PagerAdapter() {
     private val fragments = arrayListOf<MyViewPagerFragment>()
+    private val items = SparseArray<MyViewPagerFragment>()
     private var primaryItem: MyViewPagerFragment? = null
 
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
         return getFragment(position, container).apply {
             fragments.add(this)
+            items.put(position, this)
             container.addView(this)
             setupFragment(activity)
             setupColors(activity.getProperTextColor(), activity.getProperPrimaryColor())
@@ -28,6 +31,7 @@ class ViewPagerAdapter(val activity: SimpleActivity) : PagerAdapter() {
 
     override fun destroyItem(container: ViewGroup, position: Int, item: Any) {
         fragments.remove(item)
+        items.remove(position)
         container.removeView(item as View)
     }
 
@@ -56,6 +60,8 @@ class ViewPagerAdapter(val activity: SimpleActivity) : PagerAdapter() {
     fun getAllFragments() = fragments
 
     fun getCurrentFragment() = primaryItem
+
+    fun getCurrentFragmentAt(position: Int): MyViewPagerFragment? = items.get(position)
 
     fun getPlaylistsFragment() = fragments.find { it is PlaylistsFragment }
 

@@ -91,7 +91,7 @@
 
     <issue
         id="AndroidGradlePluginVersion"
-        message="A newer version of com.android.application than 8.11.1 is available: 8.12.2"
+        message="A newer version of com.android.application than 8.11.1 is available: 8.13.0. (There is also a newer version of 8.11.𝑥 available, if upgrading to 8.13.0 is difficult: 8.11.2)"
         errorLine1="gradlePlugins-agp = &quot;8.11.1&quot;"
         errorLine2="                    ~~~~~~~~">
         <location
@@ -102,7 +102,7 @@
 
     <issue
         id="GradleDependency"
-        message="A newer version of androidx.lifecycle:lifecycle-process than 2.7.0 is available: 2.9.3"
+        message="A newer version of androidx.lifecycle:lifecycle-process than 2.7.0 is available: 2.9.4"
         errorLine1="androidx-lifecycleprocess = &quot;2.7.0&quot;"
         errorLine2="                            ~~~~~~~">
         <location
@@ -153,6 +153,17 @@
             file="src/main/AndroidManifest.xml"
             line="61"
             column="13"/>
+    </issue>
+
+    <issue
+        id="NewerVersionAvailable"
+        message="A newer version of com.airbnb.android:lottie than 6.6.7 is available: 6.6.9"
+        errorLine1="lottie = &quot;6.6.7&quot;"
+        errorLine2="         ~~~~~~~">
+        <location
+            file="$HOME/work/Music-Player/Music-Player/gradle/libs.versions.toml"
+            line="19"
+            column="10"/>
     </issue>
 
     <issue
@@ -1781,7 +1792,7 @@
         errorLine2="                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/musicplayer/activities/MainActivity.kt"
-            line="88"
+            line="87"
             column="47"/>
     </issue>
 
@@ -1792,7 +1803,7 @@
         errorLine2="                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/kotlin/org/fossify/musicplayer/activities/MainActivity.kt"
-            line="88"
+            line="87"
             column="47"/>
     </issue>
 

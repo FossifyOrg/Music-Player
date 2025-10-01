@@ -1,6 +1,5 @@
 package org.fossify.musicplayer.activities
 
-import android.app.Activity
 import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.graphics.drawable.ColorDrawable
@@ -247,9 +246,13 @@ class MainActivity : SimpleMusicActivity() {
                 updateBottomTabItemColors(it.customView, false)
             },
             tabSelectedAction = {
-                binding.mainMenu.closeSearch()
                 binding.viewPager.currentItem = it.position
                 updateBottomTabItemColors(it.customView, true)
+                binding.viewPager.post {
+                    getAdapter()?.getFragmentAt(it.position)?.onSearchQueryChanged(
+                        text = binding.mainMenu.getCurrentQuery()
+                    )
+                }
             }
         )
 
@@ -335,7 +338,7 @@ class MainActivity : SimpleMusicActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, resultData: Intent?) {
         super.onActivityResult(requestCode, resultCode, resultData)
-        if (requestCode == PICK_IMPORT_SOURCE_INTENT && resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
+        if (requestCode == PICK_IMPORT_SOURCE_INTENT && resultCode == RESULT_OK && resultData?.data != null) {
             tryImportPlaylistFromFile(resultData.data!!)
         }
     }

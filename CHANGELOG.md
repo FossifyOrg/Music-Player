@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Changed
+- Search query is now preserved when switching tabs ([#261])
 - Search now ignores accents and diacritics ([#209])
 
 ## [1.2.3] - 2025-09-09
@@ -59,6 +60,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#206]: https://github.com/FossifyOrg/Music-Player/issues/206
 [#228]: https://github.com/FossifyOrg/Music-Player/issues/228
 [#209]: https://github.com/FossifyOrg/Music-Player/issues/209
+[#261]: https://github.com/FossifyOrg/Music-Player/issues/261
 
 [Unreleased]: https://github.com/FossifyOrg/Music-Player/compare/1.2.3...HEAD
 [1.2.3]: https://github.com/FossifyOrg/Music-Player/compare/1.2.2...1.2.3

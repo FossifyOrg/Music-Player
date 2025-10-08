@@ -61,12 +61,12 @@
     </plurals>
     <string name="next_track">Næste:</string>
     <string name="track_queue">Afspilningskø</string>
-    <string name="add_to_queue">Tilføj til afspilningskø</string>
-    <string name="remove_from_queue">Fjern fra afspilningskø</string>
-    <string name="create_playlist_from_queue">Opret afspilningsliste fra afspilningskø</string>
+    <string name="add_to_queue">Føj til kø</string>
+    <string name="remove_from_queue">Fjern fra kø</string>
+    <string name="create_playlist_from_queue">Opret playliste fra kø</string>
     <string name="swap_prev_next">Ombyt forrige/næste hovedtelefonknapper</string>
     <string name="faq_1_title">Hvordan kan jeg spole frem i sange\?</string>
-    <string name="faq_1_text">Du kan klikke på de to tidsangivelser (aktuel spilletid og total varighed af nummeret) nær søgefeltet, der bevæger sangen enten bagud eller fremad.</string>
+    <string name="faq_1_text">Du kan trykke på den aktuelle eller maksimale tid ved søgelinjen for at spole sangen tilbage eller frem.</string>
     <string name="volume">Lydstyrke</string>
     <string name="delete_song_warning">ADVARSEL: Dette sletter de valgte filer fra enheden, inklusive alle playlister.</string>
     <string name="export_playlist">Eksportér playliste</string>
@@ -79,6 +79,6 @@
     <string name="track_on_disk">%1$d.%2$s</string>
     <string name="play_next">Afspil næste</string>
     <string name="equalizer">Equalizer</string>
-    <string name="exclude_folder_description">Hvis du udelukker en mappe, vises ikke alle lydfiler i den. Filer, der manuelt tilføjes til afspilningslister, påvirkes ikke.</string>
+    <string name="exclude_folder_description">Ekskludering af en mappe forhindrer visning af alle lydfiler i den. Filer, der manuelt er føjet til playlister, påvirkes ikke.</string>
     <string name="rescan_media">Scan medier igen</string>
 </resources>

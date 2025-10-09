@@ -232,7 +232,8 @@ class SimpleMediaScanner(private val context: Application) {
             val id = cursor.getLongValue(Audio.Media._ID)
             val title = cursor.getStringValue(Audio.Media.TITLE)
             val duration = cursor.getIntValue(Audio.Media.DURATION) / 1000
-            var trackId = cursor.getIntValueOrNull(Audio.Media.TRACK)
+            var trackId = cursor.getStringValue(Audio.Media.TRACK)?.firstNumber()
+                ?: cursor.getIntValueOrNull(Audio.Media.TRACK)
             val path = cursor.getStringValue(Audio.Media.DATA).orEmpty()
             val artist = cursor.getStringValue(Audio.Media.ARTIST) ?: MediaStore.UNKNOWN_STRING
             val folderName = if (isQPlus()) {

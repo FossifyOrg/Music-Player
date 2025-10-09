@@ -1,0 +1,10 @@
+Changed:
+
+• Search query is now preserved when switching tabs 
+• Search now ignores accents and diacritics 
+• Updated translations
+
+Fixed:
+
+• Fixed issue with track numbers displaying as zero in some cases 
+

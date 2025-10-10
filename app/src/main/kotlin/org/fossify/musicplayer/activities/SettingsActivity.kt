@@ -6,7 +6,6 @@ import org.fossify.commons.dialogs.RadioGroupDialog
 import org.fossify.commons.extensions.*
 import org.fossify.commons.helpers.IS_CUSTOMIZING_COLORS
 import org.fossify.commons.helpers.NavigationIcon
-import org.fossify.commons.helpers.isQPlus
 import org.fossify.commons.helpers.isTiramisuPlus
 import org.fossify.commons.models.RadioItem
 import org.fossify.musicplayer.R
@@ -134,7 +133,6 @@ class SettingsActivity : SimpleControllerActivity() {
     }
 
     private fun setupManageExcludedFolders() {
-        binding.settingsManageExcludedFoldersHolder.beVisibleIf(isQPlus())
         binding.settingsManageExcludedFoldersHolder.setOnClickListener {
             startActivity(Intent(this, ExcludedFoldersActivity::class.java))
         }

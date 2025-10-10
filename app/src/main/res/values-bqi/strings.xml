@@ -5,4 +5,7 @@
     <string name="rename_song">آلشت نوم آرنگ</string>
     <string name="rename_song_error">مجال آلشت نوم ختایی پؽش ٱووڌ</string>
     <string name="rename_song_empty">پوی مووردا ن پور کۊنین</string>
+    <string name="repeat_song">تکرار آرنگ هیم سکویی</string>
+    <string name="repeat_playlist">تکرار پوی</string>
+    <string name="enable_shuffle">فعال کردن پشک تساڌۊفی</string>
 </resources>

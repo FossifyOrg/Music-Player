@@ -1,11 +1,9 @@
 package org.fossify.musicplayer.dialogs
 
 import org.fossify.commons.activities.BaseSimpleActivity
-import org.fossify.commons.extensions.beGone
 import org.fossify.commons.extensions.getAlertDialogBuilder
 import org.fossify.commons.extensions.setupDialogStuff
 import org.fossify.commons.extensions.viewBinding
-import org.fossify.commons.helpers.isQPlus
 import org.fossify.commons.views.MyAppCompatCheckbox
 import org.fossify.musicplayer.databinding.DialogManageVisibleTabsBinding
 import org.fossify.musicplayer.extensions.config
@@ -23,11 +21,6 @@ class ManageVisibleTabsDialog(val activity: BaseSimpleActivity, val callback: (r
             put(TAB_ALBUMS, binding.manageVisibleTabsAlbums)
             put(TAB_TRACKS, binding.manageVisibleTabsTracks)
             put(TAB_GENRES, binding.manageVisibleTabsGenres)
-        }
-
-        if (!isQPlus()) {
-            tabs.remove(TAB_FOLDERS)
-            binding.manageVisibleTabsFolders.beGone()
         }
 
         val showTabs = activity.config.showTabs
@@ -52,7 +45,7 @@ class ManageVisibleTabsDialog(val activity: BaseSimpleActivity, val callback: (r
         }
 
         if (result == 0) {
-            result = allTabsMask
+            result = ALL_TABS_MASK
         }
 
         callback(result)

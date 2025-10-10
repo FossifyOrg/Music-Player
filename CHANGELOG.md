@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- Support for folders on Android 9 and below versions ([#258])
 
 ## [1.3.0] - 2025-10-09
 ### Changed
@@ -66,6 +68,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#206]: https://github.com/FossifyOrg/Music-Player/issues/206
 [#209]: https://github.com/FossifyOrg/Music-Player/issues/209
 [#228]: https://github.com/FossifyOrg/Music-Player/issues/228
+[#258]: https://github.com/FossifyOrg/Music-Player/issues/258
 [#261]: https://github.com/FossifyOrg/Music-Player/issues/261
 [#269]: https://github.com/FossifyOrg/Music-Player/issues/269
 

@@ -19,6 +19,7 @@ import org.fossify.musicplayer.models.*
 import java.io.File
 import java.io.FileInputStream
 import androidx.core.net.toUri
+import org.fossify.musicplayer.extensions.getFriendlyFolder
 
 /**
  * This singleton class manages the process of querying [MediaStore] for new audio files, manually scanning storage for missing audio files, and removing outdated
@@ -239,7 +240,7 @@ class SimpleMediaScanner(private val context: Application) {
             val folderName = if (isQPlus()) {
                 cursor.getStringValue(Audio.Media.BUCKET_DISPLAY_NAME) ?: MediaStore.UNKNOWN_STRING
             } else {
-                ""
+                context.getFriendlyFolder(path).ifEmpty { MediaStore.UNKNOWN_STRING }
             }
 
             val album = cursor.getStringValue(Audio.Media.ALBUM) ?: folderName

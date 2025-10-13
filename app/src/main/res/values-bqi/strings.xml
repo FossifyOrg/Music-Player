@@ -8,4 +8,14 @@
     <string name="repeat_song">تکرار آرنگ هیم سکویی</string>
     <string name="repeat_playlist">تکرار پوی</string>
     <string name="enable_shuffle">فعال کردن پشک تساڌۊفی</string>
+    <string name="repeat_off">تکرار کۊر</string>
+    <string name="disable_shuffle">قیر فعال کردن پشک تساڌۊفی</string>
+    <string name="shuffle_enabled">پشک تساڌۊفی فعال وابی</string>
+    <string name="shuffle_disabled">پشک تساڌۊفی قیر فعال وابی</string>
+    <string name="volume">هندا دونگ</string>
+    <string name="playback_speed">ترات پشک</string>
+    <string name="loading_files">هونی فایلا ن بار ونی اکونه…</string>
+    <string name="add_file_to_playlist">ٱووردن فایل و نومگه موورد علاقه یل</string>
+    <string name="add_folder_to_playlist">ٱووردن دوبلگه و نومگه موورد علاقه یل</string>
+    <string name="manage_playlists">دؽوۉداری نومگه پشک</string>
 </resources>

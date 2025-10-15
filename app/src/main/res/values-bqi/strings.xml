@@ -18,4 +18,5 @@
     <string name="add_file_to_playlist">ٱووردن فایل و نومگه موورد علاقه یل</string>
     <string name="add_folder_to_playlist">ٱووردن دوبلگه و نومگه موورد علاقه یل</string>
     <string name="manage_playlists">دؽوۉداری نومگه پشک</string>
+    <string name="stop_playback_after_current_song">واڌاشتن پشک بئڌ آرنگ هیم سکویی</string>
 </resources>

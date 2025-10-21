@@ -50,16 +50,14 @@ class TrackActivity : SimpleControllerActivity(), PlaybackSpeedListener {
     private val binding by viewBinding(ActivityTrackBinding::inflate)
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        showTransparentTop = true
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        setupEdgeToEdge(padBottomSystem = listOf(binding.nextTrackHolder))
         nextTrackPlaceholder = resources.getColoredDrawableWithColor(R.drawable.ic_headset, getProperTextColor())
         setupButtons()
         setupFlingListener()
 
         binding.apply {
-            (activityTrackAppbar.layoutParams as ConstraintLayout.LayoutParams).topMargin = statusBarHeight
-            activityTrackHolder.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
             activityTrackToolbar.setNavigationOnClickListener {
                 finish()
             }

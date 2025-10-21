@@ -2,6 +2,7 @@ package org.fossify.musicplayer.helpers
 
 import android.app.Application
 import android.content.ContentUris
+import android.content.Context
 import android.media.MediaMetadataRetriever
 import android.media.MediaMetadataRetriever.*
 import android.os.Handler
@@ -249,7 +250,7 @@ class SimpleMediaScanner(private val context: Application) {
             val year = cursor.getIntValue(Audio.Media.YEAR)
             val dateAdded = cursor.getIntValue(Audio.Media.DATE_ADDED)
             val coverUri = ContentUris.withAppendedId(artworkUri, albumId)
-            val coverArt = coverUri.toString()
+            val coverArt = coverUri.toString().takeIf { context.contentUriExists(it) }.orEmpty()
 
             val genre: String
             val genreId: Long

@@ -32,17 +32,14 @@ class EqualizerActivity : SimpleActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        updateEdgeToEdge(
-            topAppBar = binding.equalizerToolbar,
-            scrollingView = binding.equalizerNestedScrollview,
-        )
-        setupMaterialScrollListener(binding.equalizerNestedScrollview, binding.equalizerToolbar)
+        setupEdgeToEdge(padBottomSystem = listOf(binding.equalizerNestedScrollview))
+        setupMaterialScrollListener(binding.equalizerNestedScrollview, binding.equalizerAppbar)
         initMediaPlayer()
     }
 
     override fun onResume() {
         super.onResume()
-        setupTopAppBar(binding.equalizerToolbar, NavigationIcon.Arrow)
+        setupTopAppBar(binding.equalizerAppbar, NavigationIcon.Arrow)
     }
 
     @SuppressLint("SetTextI18n")

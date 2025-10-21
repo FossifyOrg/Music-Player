@@ -60,11 +60,8 @@ class TracksActivity : SimpleMusicActivity() {
         setupOptionsMenu()
         refreshMenuItems()
 
-        updateEdgeToEdge(
-            topAppBar = binding.tracksToolbar,
-            scrollingView = binding.tracksList,
-        )
-        setupMaterialScrollListener(binding.tracksList, binding.tracksToolbar)
+        setupEdgeToEdge(padBottomSystem = listOf(binding.tracksList, binding.currentTrackBar.root))
+        setupMaterialScrollListener(binding.tracksList, binding.tracksAppbar)
 
         val properPrimaryColor = getProperPrimaryColor()
         binding.tracksFastscroller.updateColors(properPrimaryColor)
@@ -80,7 +77,7 @@ class TracksActivity : SimpleMusicActivity() {
 
     override fun onResume() {
         super.onResume()
-        setupTopAppBar(binding.tracksToolbar, NavigationIcon.Arrow, searchMenuItem = searchMenuItem)
+        setupTopAppBar(binding.tracksAppbar, NavigationIcon.Arrow, searchMenuItem = searchMenuItem)
         refreshTracks()
     }
 

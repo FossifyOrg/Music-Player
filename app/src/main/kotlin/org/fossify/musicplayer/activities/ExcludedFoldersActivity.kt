@@ -18,17 +18,14 @@ class ExcludedFoldersActivity : SimpleActivity(), RefreshRecyclerViewListener {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        updateEdgeToEdge(
-            topAppBar = binding.excludedFoldersToolbar,
-            scrollingView = binding.excludedFoldersList,
-        )
-        setupMaterialScrollListener(binding.excludedFoldersList, binding.excludedFoldersToolbar)
+        setupEdgeToEdge(padBottomSystem = listOf(binding.excludedFoldersList))
+        setupMaterialScrollListener(binding.excludedFoldersList, binding.excludedFoldersAppbar)
         updateFolders()
     }
 
     override fun onResume() {
         super.onResume()
-        setupTopAppBar(binding.excludedFoldersToolbar, NavigationIcon.Arrow)
+        setupTopAppBar(binding.excludedFoldersAppbar, NavigationIcon.Arrow)
     }
 
     private fun updateFolders() {

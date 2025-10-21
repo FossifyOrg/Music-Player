@@ -80,7 +80,7 @@ class TracksActivity : SimpleMusicActivity() {
 
     override fun onResume() {
         super.onResume()
-        setupToolbar(binding.tracksToolbar, NavigationIcon.Arrow, searchMenuItem = searchMenuItem)
+        setupTopAppBar(binding.tracksToolbar, NavigationIcon.Arrow, searchMenuItem = searchMenuItem)
         refreshTracks()
     }
 

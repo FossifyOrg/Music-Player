@@ -42,7 +42,7 @@ class EqualizerActivity : SimpleActivity() {
 
     override fun onResume() {
         super.onResume()
-        setupToolbar(binding.equalizerToolbar, NavigationIcon.Arrow)
+        setupTopAppBar(binding.equalizerToolbar, NavigationIcon.Arrow)
     }
 
     @SuppressLint("SetTextI18n")

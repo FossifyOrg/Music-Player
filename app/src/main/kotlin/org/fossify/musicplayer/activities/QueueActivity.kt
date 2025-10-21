@@ -46,7 +46,7 @@ class QueueActivity : SimpleControllerActivity() {
 
     override fun onResume() {
         super.onResume()
-        setupToolbar(binding.queueToolbar, NavigationIcon.Arrow, searchMenuItem = searchMenuItem)
+        setupTopAppBar(binding.queueToolbar, NavigationIcon.Arrow, searchMenuItem = searchMenuItem)
     }
 
     override fun onBackPressed() {

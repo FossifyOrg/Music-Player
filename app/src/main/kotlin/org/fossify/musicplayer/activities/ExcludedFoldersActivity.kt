@@ -28,7 +28,7 @@ class ExcludedFoldersActivity : SimpleActivity(), RefreshRecyclerViewListener {
 
     override fun onResume() {
         super.onResume()
-        setupToolbar(binding.excludedFoldersToolbar, NavigationIcon.Arrow)
+        setupTopAppBar(binding.excludedFoldersToolbar, NavigationIcon.Arrow)
     }
 
     private fun updateFolders() {

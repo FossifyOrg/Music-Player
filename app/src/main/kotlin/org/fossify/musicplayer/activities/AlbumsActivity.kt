@@ -89,6 +89,6 @@ class AlbumsActivity : SimpleMusicActivity() {
 
     override fun onResume() {
         super.onResume()
-        setupToolbar(binding.albumsToolbar, NavigationIcon.Arrow)
+        setupTopAppBar(binding.albumsToolbar, NavigationIcon.Arrow)
     }
 }

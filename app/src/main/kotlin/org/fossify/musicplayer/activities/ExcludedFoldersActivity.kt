@@ -15,11 +15,13 @@ class ExcludedFoldersActivity : SimpleActivity(), RefreshRecyclerViewListener {
     private val binding by viewBinding(ActivityExcludedFoldersBinding::inflate)
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        isMaterialActivity = true
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        updateMaterialActivityViews(binding.excludedFoldersCoordinator, binding.excludedFoldersList, useTransparentNavigation = true, useTopSearchMenu = false)
+        updateEdgeToEdge(
+            topAppBar = binding.excludedFoldersToolbar,
+            scrollingView = binding.excludedFoldersList,
+        )
         setupMaterialScrollListener(binding.excludedFoldersList, binding.excludedFoldersToolbar)
         updateFolders()
     }

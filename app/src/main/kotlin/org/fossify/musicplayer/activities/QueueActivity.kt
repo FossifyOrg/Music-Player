@@ -34,11 +34,8 @@ class QueueActivity : SimpleControllerActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         setupOptionsMenu()
-        updateEdgeToEdge(
-            topAppBar = binding.queueToolbar,
-            scrollingView = binding.queueList,
-        )
-        setupMaterialScrollListener(binding.queueList, binding.queueToolbar)
+        setupEdgeToEdge(padBottomSystem = listOf(binding.queueList))
+        setupMaterialScrollListener(binding.queueList, binding.queueAppbar)
 
         setupAdapter()
         binding.queueFastscroller.updateColors(getProperPrimaryColor())
@@ -46,7 +43,7 @@ class QueueActivity : SimpleControllerActivity() {
 
     override fun onResume() {
         super.onResume()
-        setupTopAppBar(binding.queueToolbar, NavigationIcon.Arrow, searchMenuItem = searchMenuItem)
+        setupTopAppBar(binding.queueAppbar, NavigationIcon.Arrow, searchMenuItem = searchMenuItem)
     }
 
     override fun onBackPressed() {

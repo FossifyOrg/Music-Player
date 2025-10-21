@@ -25,11 +25,8 @@ class AlbumsActivity : SimpleMusicActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        updateEdgeToEdge(
-            topAppBar = binding.albumsToolbar,
-            scrollingView = binding.albumsList,
-        )
-        setupMaterialScrollListener(binding.albumsList, binding.albumsToolbar)
+        setupEdgeToEdge(padBottomSystem = listOf(binding.albumsList, binding.currentTrackBar.root))
+        setupMaterialScrollListener(binding.albumsList, binding.albumsAppbar)
 
         binding.albumsFastscroller.updateColors(getProperPrimaryColor())
 
@@ -89,6 +86,6 @@ class AlbumsActivity : SimpleMusicActivity() {
 
     override fun onResume() {
         super.onResume()
-        setupTopAppBar(binding.albumsToolbar, NavigationIcon.Arrow)
+        setupTopAppBar(binding.albumsAppbar, NavigationIcon.Arrow)
     }
 }

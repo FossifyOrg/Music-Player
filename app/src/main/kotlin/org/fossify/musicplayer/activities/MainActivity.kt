@@ -42,16 +42,20 @@ class MainActivity : SimpleMusicActivity() {
     private var storedShowTabs = 0
     private var storedExcludedFolders = 0
 
+    override var isSearchBarEnabled = true
+
     private val binding by viewBinding(ActivityMainBinding::inflate)
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        isMaterialActivity = true
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         appLaunched(BuildConfig.APPLICATION_ID)
         setupOptionsMenu()
         refreshMenuItems()
-        updateMaterialActivityViews(binding.mainCoordinator, binding.mainHolder, useTransparentNavigation = false, useTopSearchMenu = true)
+        updateEdgeToEdge(
+            topAppBar = binding.mainMenu.getToolbar(),
+            scrollingView = binding.mainNestedScrollview,
+        )
         storeStateVariables()
         setupTabs()
         setupCurrentTrackBar(binding.currentTrackBar.root)

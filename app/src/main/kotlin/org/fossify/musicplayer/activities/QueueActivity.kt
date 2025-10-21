@@ -31,11 +31,13 @@ class QueueActivity : SimpleControllerActivity() {
     private val binding by viewBinding(ActivityQueueBinding::inflate)
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        isMaterialActivity = true
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         setupOptionsMenu()
-        updateMaterialActivityViews(binding.queueCoordinator, binding.queueList, useTransparentNavigation = true, useTopSearchMenu = false)
+        updateEdgeToEdge(
+            topAppBar = binding.queueToolbar,
+            scrollingView = binding.queueList,
+        )
         setupMaterialScrollListener(binding.queueList, binding.queueToolbar)
 
         setupAdapter()

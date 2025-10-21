@@ -55,13 +55,15 @@ class TracksActivity : SimpleMusicActivity() {
     private val binding by viewBinding(ActivityTracksBinding::inflate)
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        isMaterialActivity = true
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         setupOptionsMenu()
         refreshMenuItems()
 
-        updateMaterialActivityViews(binding.tracksCoordinator, binding.tracksHolder, useTransparentNavigation = true, useTopSearchMenu = false)
+        updateEdgeToEdge(
+            topAppBar = binding.tracksToolbar,
+            scrollingView = binding.tracksList,
+        )
         setupMaterialScrollListener(binding.tracksList, binding.tracksToolbar)
 
         val properPrimaryColor = getProperPrimaryColor()

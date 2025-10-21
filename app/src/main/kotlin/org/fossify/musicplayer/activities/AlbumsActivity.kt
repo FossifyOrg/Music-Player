@@ -22,11 +22,13 @@ class AlbumsActivity : SimpleMusicActivity() {
     private val binding by viewBinding(ActivityAlbumsBinding::inflate)
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        isMaterialActivity = true
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        updateMaterialActivityViews(binding.albumsCoordinator, binding.albumsHolder, useTransparentNavigation = true, useTopSearchMenu = false)
+        updateEdgeToEdge(
+            topAppBar = binding.albumsToolbar,
+            scrollingView = binding.albumsList,
+        )
         setupMaterialScrollListener(binding.albumsList, binding.albumsToolbar)
 
         binding.albumsFastscroller.updateColors(getProperPrimaryColor())

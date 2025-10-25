@@ -46,11 +46,12 @@ class QueueActivity : SimpleControllerActivity() {
         setupTopAppBar(binding.queueAppbar, NavigationIcon.Arrow, searchMenuItem = searchMenuItem)
     }
 
-    override fun onBackPressed() {
-        if (isSearchOpen && searchMenuItem != null) {
+    override fun onBackPressedCompat(): Boolean {
+        return if (isSearchOpen && searchMenuItem != null) {
             searchMenuItem!!.collapseActionView()
+            true
         } else {
-            super.onBackPressed()
+            false
         }
     }
 

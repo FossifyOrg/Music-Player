@@ -31,12 +31,11 @@ class QueueActivity : SimpleControllerActivity() {
     private val binding by viewBinding(ActivityQueueBinding::inflate)
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        isMaterialActivity = true
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         setupOptionsMenu()
-        updateMaterialActivityViews(binding.queueCoordinator, binding.queueList, useTransparentNavigation = true, useTopSearchMenu = false)
-        setupMaterialScrollListener(binding.queueList, binding.queueToolbar)
+        setupEdgeToEdge(padBottomSystem = listOf(binding.queueList))
+        setupMaterialScrollListener(binding.queueList, binding.queueAppbar)
 
         setupAdapter()
         binding.queueFastscroller.updateColors(getProperPrimaryColor())
@@ -44,14 +43,15 @@ class QueueActivity : SimpleControllerActivity() {
 
     override fun onResume() {
         super.onResume()
-        setupToolbar(binding.queueToolbar, NavigationIcon.Arrow, searchMenuItem = searchMenuItem)
+        setupTopAppBar(binding.queueAppbar, NavigationIcon.Arrow, searchMenuItem = searchMenuItem)
     }
 
-    override fun onBackPressed() {
-        if (isSearchOpen && searchMenuItem != null) {
+    override fun onBackPressedCompat(): Boolean {
+        return if (isSearchOpen && searchMenuItem != null) {
             searchMenuItem!!.collapseActionView()
+            true
         } else {
-            super.onBackPressed()
+            false
         }
     }
 

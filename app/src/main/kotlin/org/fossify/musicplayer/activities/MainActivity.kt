@@ -33,6 +33,7 @@ import org.fossify.musicplayer.playback.CustomCommands
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
+import java.io.File
 import java.io.FileOutputStream
 
 class MainActivity : SimpleMusicActivity() {
@@ -42,16 +43,17 @@ class MainActivity : SimpleMusicActivity() {
     private var storedShowTabs = 0
     private var storedExcludedFolders = 0
 
+    override var isSearchBarEnabled = true
+
     private val binding by viewBinding(ActivityMainBinding::inflate)
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        isMaterialActivity = true
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         appLaunched(BuildConfig.APPLICATION_ID)
         setupOptionsMenu()
         refreshMenuItems()
-        updateMaterialActivityViews(binding.mainCoordinator, binding.mainHolder, useTransparentNavigation = false, useTopSearchMenu = true)
+        setupEdgeToEdge(padBottomImeAndSystem = listOf(binding.mainTabsHolder))
         storeStateVariables()
         setupTabs()
         setupCurrentTrackBar(binding.currentTrackBar.root)
@@ -108,16 +110,17 @@ class MainActivity : SimpleMusicActivity() {
         bus?.unregister(this)
     }
 
-    override fun onBackPressed() {
-        if (binding.mainMenu.isSearchOpen) {
+    override fun onBackPressedCompat(): Boolean {
+        return if (binding.mainMenu.isSearchOpen) {
             binding.mainMenu.closeSearch()
+            true
         } else {
-            super.onBackPressed()
+            false
         }
     }
 
     private fun refreshMenuItems(position: Int = binding.viewPager.currentItem) {
-        binding.mainMenu.getToolbar().menu.apply {
+        binding.mainMenu.requireToolbar().menu.apply {
             val tab = getVisibleTabs()[position]
             val isPlaylistFragment = tab == TAB_PLAYLISTS
             findItem(R.id.create_new_playlist).isVisible = isPlaylistFragment
@@ -128,7 +131,7 @@ class MainActivity : SimpleMusicActivity() {
     }
 
     private fun setupOptionsMenu() {
-        binding.mainMenu.getToolbar().inflateMenu(R.menu.menu_main)
+        binding.mainMenu.requireToolbar().inflateMenu(R.menu.menu_main)
         binding.mainMenu.toggleHideOnScroll(false)
         binding.mainMenu.setupMenu()
 
@@ -142,7 +145,7 @@ class MainActivity : SimpleMusicActivity() {
             getCurrentFragment()?.onSearchQueryChanged(text)
         }
 
-        binding.mainMenu.getToolbar().setOnMenuItemClickListener { menuItem ->
+        binding.mainMenu.requireToolbar().setOnMenuItemClickListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.sort -> showSortingDialog()
                 R.id.rescan_media -> refreshAllFragments(showProgress = true)
@@ -161,7 +164,6 @@ class MainActivity : SimpleMusicActivity() {
     }
 
     private fun updateMenuColors() {
-        updateStatusbarColor(getProperBackgroundColor())
         binding.mainMenu.updateColors()
     }
 
@@ -270,7 +272,6 @@ class MainActivity : SimpleMusicActivity() {
 
         val bottomBarColor = getBottomNavigationBackgroundColor()
         binding.mainTabsHolder.setBackgroundColor(bottomBarColor)
-        updateNavigationBarColor(bottomBarColor)
     }
 
     private fun getInactiveTabIndexes(activeIndex: Int) = (0 until tabsList.size).filter { it != activeIndex }

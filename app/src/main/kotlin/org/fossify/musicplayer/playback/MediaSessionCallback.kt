@@ -64,7 +64,7 @@ internal fun PlaybackService.getMediaSessionCallback() = object : MediaLibrarySe
         args: Bundle
     ): ListenableFuture<SessionResult> {
         val command = CustomCommands.fromSessionCommand(customCommand)
-            ?: return Futures.immediateFuture(SessionResult(SessionResult.RESULT_ERROR_BAD_VALUE))
+            ?: return Futures.immediateFuture(SessionResult(SessionError.ERROR_BAD_VALUE))
 
         when (command) {
             CustomCommands.CLOSE_PLAYER -> stopService()
@@ -86,7 +86,7 @@ internal fun PlaybackService.getMediaSessionCallback() = object : MediaLibrarySe
             // The service currently does not support recent playback. Tell System UI by returning
             // an error of type 'RESULT_ERROR_NOT_SUPPORTED' for a `params.isRecent` request. See
             // https://github.com/androidx/media/issues/355
-            return Futures.immediateFuture(LibraryResult.ofError(LibraryResult.RESULT_ERROR_NOT_SUPPORTED))
+            return Futures.immediateFuture(LibraryResult.ofError(SessionError.ERROR_NOT_SUPPORTED))
         }
 
         return Futures.immediateFuture(
@@ -107,7 +107,7 @@ internal fun PlaybackService.getMediaSessionCallback() = object : MediaLibrarySe
     ) = callWhenSourceReady {
         currentRoot = parentId
         val children = mediaItemProvider.getChildren(parentId)
-            ?: return@callWhenSourceReady LibraryResult.ofError(LibraryResult.RESULT_ERROR_BAD_VALUE)
+            ?: return@callWhenSourceReady LibraryResult.ofError(SessionError.ERROR_BAD_VALUE)
 
         LibraryResult.ofItemList(children, params)
     }
@@ -118,7 +118,7 @@ internal fun PlaybackService.getMediaSessionCallback() = object : MediaLibrarySe
         mediaId: String
     ) = callWhenSourceReady {
         val item = mediaItemProvider[mediaId]
-            ?: return@callWhenSourceReady LibraryResult.ofError(LibraryResult.RESULT_ERROR_BAD_VALUE)
+            ?: return@callWhenSourceReady LibraryResult.ofError(SessionError.ERROR_BAD_VALUE)
 
         LibraryResult.ofItem(item, null)
     }
@@ -130,7 +130,7 @@ internal fun PlaybackService.getMediaSessionCallback() = object : MediaLibrarySe
         params: MediaLibraryService.LibraryParams?
     ) = callWhenSourceReady {
         val children = mediaItemProvider.getChildren(parentId)
-            ?: return@callWhenSourceReady LibraryResult.ofError(LibraryResult.RESULT_ERROR_BAD_VALUE)
+            ?: return@callWhenSourceReady LibraryResult.ofError(SessionError.ERROR_BAD_VALUE)
 
         browsers[browser] = parentId
         session.notifyChildrenChanged(browser, parentId, children.size, params)

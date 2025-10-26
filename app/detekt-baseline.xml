@@ -3,7 +3,6 @@
   <ManuallySuppressedIssues/>
   <CurrentIssues>
     <ID>ComplexCondition:EditDialog.kt$EditDialog$newTitle.isEmpty() || newArtist.isEmpty() || newFilename.isEmpty() || newFileExtension.isEmpty()</ID>
-    <ID>ComplexCondition:MainActivity.kt$MainActivity$requestCode == PICK_IMPORT_SOURCE_INTENT &amp;&amp; resultCode == Activity.RESULT_OK &amp;&amp; resultData != null &amp;&amp; resultData.data != null</ID>
     <ID>ComplexCondition:TracksActivity.kt$TracksActivity$requestCode == PICK_EXPORT_FILE_INTENT &amp;&amp; resultCode == Activity.RESULT_OK &amp;&amp; resultData != null &amp;&amp; resultData.data != null</ID>
     <ID>CyclomaticComplexMethod:Album.kt$Album.Companion$fun getComparator(sorting: Int)</ID>
     <ID>CyclomaticComplexMethod:ChangeSortingDialog.kt$ChangeSortingDialog$private fun dialogConfirmed()</ID>
@@ -59,7 +58,6 @@
     <ID>MagicNumber:TrackActivity.kt$TrackActivity$500L</ID>
     <ID>MagicNumber:WidgetConfigureActivity.kt$WidgetConfigureActivity$100</ID>
     <ID>MaxLineLength:AlbumHeader.kt$AlbumHeader : ListItem</ID>
-    <ID>MaxLineLength:AlbumsActivity.kt$AlbumsActivity$updateMaterialActivityViews(binding.albumsCoordinator, binding.albumsHolder, useTransparentNavigation = true, useTopSearchMenu = false)</ID>
     <ID>MaxLineLength:AlbumsActivity.kt$AlbumsActivity$var tracksSectionLabel = resources.getQuantityString(R.plurals.tracks_plural, albumTracks.size, albumTracks.size)</ID>
     <ID>MaxLineLength:AlbumsAdapter.kt$AlbumsAdapter$albumTitle.text = if (textToHighlight.isEmpty()) album.title else album.title.highlightTextPart(textToHighlight, properPrimaryColor)</ID>
     <ID>MaxLineLength:AlbumsAdapter.kt$AlbumsAdapter$class</ID>
@@ -88,8 +86,6 @@
     <ID>MaxLineLength:CustomCommands.kt$CustomCommands$* Enum class representing custom commands that are used within the app and by media controller clients (e.g. system media controls).</ID>
     <ID>MaxLineLength:EditDialog.kt$EditDialog$if</ID>
     <ID>MaxLineLength:EditDialog.kt$EditDialog$private</ID>
-    <ID>MaxLineLength:EqualizerActivity.kt$EqualizerActivity$updateMaterialActivityViews(binding.equalizerCoordinator, binding.equalizerHolder, useTransparentNavigation = true, useTopSearchMenu = false)</ID>
-    <ID>MaxLineLength:ExcludedFoldersActivity.kt$ExcludedFoldersActivity$updateMaterialActivityViews(binding.excludedFoldersCoordinator, binding.excludedFoldersList, useTransparentNavigation = true, useTopSearchMenu = false)</ID>
     <ID>MaxLineLength:Folder.kt$Folder.Companion$sorting and PLAYER_SORT_BY_TITLE != 0 -&gt; AlphanumericComparator().compare(first.title.lowercase(), second.title.lowercase())</ID>
     <ID>MaxLineLength:FoldersAdapter.kt$FoldersAdapter$folderTitle.text = if (textToHighlight.isEmpty()) folder.title else folder.title.highlightTextPart(textToHighlight, properPrimaryColor)</ID>
     <ID>MaxLineLength:FoldersFragment.kt$FoldersFragment$binding.foldersPlaceholder2.beVisibleIf(folders.isEmpty() &amp;&amp; context.config.excludedFolders.isNotEmpty() &amp;&amp; !scanning)</ID>
@@ -100,8 +96,6 @@
     <ID>MaxLineLength:MainActivity.kt$MainActivity$faqItems.add(FAQItem(org.fossify.commons.R.string.faq_2_title_commons, org.fossify.commons.R.string.faq_2_text_commons))</ID>
     <ID>MaxLineLength:MainActivity.kt$MainActivity$faqItems.add(FAQItem(org.fossify.commons.R.string.faq_6_title_commons, org.fossify.commons.R.string.faq_6_text_commons))</ID>
     <ID>MaxLineLength:MainActivity.kt$MainActivity$findItem(R.id.more_apps_from_us).isVisible = !resources.getBoolean(org.fossify.commons.R.bool.hide_google_relations)</ID>
-    <ID>MaxLineLength:MainActivity.kt$MainActivity$if</ID>
-    <ID>MaxLineLength:MainActivity.kt$MainActivity$updateMaterialActivityViews(binding.mainCoordinator, binding.mainHolder, useTransparentNavigation = false, useTopSearchMenu = true)</ID>
     <ID>MaxLineLength:MainActivity.kt$MainActivity$val text = resources.getQuantityString(org.fossify.commons.R.plurals.minutes, lastSleepTimerMinutes, lastSleepTimerMinutes)</ID>
     <ID>MaxLineLength:MarqueeTextView.kt$MarqueeTextView$class</ID>
     <ID>MaxLineLength:MarqueeTextView.kt$MarqueeTextView$override</ID>
@@ -132,7 +126,6 @@
     <ID>MaxLineLength:Playlist.kt$Playlist.Companion$sorting and PLAYER_SORT_BY_TITLE != 0 -&gt; AlphanumericComparator().compare(first.title.lowercase(), second.title.lowercase())</ID>
     <ID>MaxLineLength:PlaylistsAdapter.kt$PlaylistsAdapter$override fun onChange(position: Int)</ID>
     <ID>MaxLineLength:PlaylistsAdapter.kt$PlaylistsAdapter$playlistTitle.text = if (textToHighlight.isEmpty()) playlist.title else playlist.title.highlightTextPart(textToHighlight, properPrimaryColor)</ID>
-    <ID>MaxLineLength:QueueActivity.kt$QueueActivity$updateMaterialActivityViews(binding.queueCoordinator, binding.queueList, useTransparentNavigation = true, useTopSearchMenu = false)</ID>
     <ID>MaxLineLength:QueueAdapter.kt$QueueAdapter$*</ID>
     <ID>MaxLineLength:QueueAdapter.kt$QueueAdapter$BaseMusicAdapter&lt;Track&gt;(items, activity, recyclerView, itemClick), ItemTouchHelperContract, RecyclerViewFastScroller.OnPopupTextUpdate</ID>
     <ID>MaxLineLength:QueueAdapter.kt$QueueAdapter$ConfirmationDialog</ID>
@@ -146,7 +139,6 @@
     <ID>MaxLineLength:RoomHelper.kt$RoomHelper$genre = ""</ID>
     <ID>MaxLineLength:RoomHelper.kt$RoomHelper$id = 0</ID>
     <ID>MaxLineLength:SettingsActivity.kt$SettingsActivity$settingsUseEnglishHolder.beVisibleIf((config.wasUseEnglishToggled || Locale.getDefault().language != "en") &amp;&amp; !isTiramisuPlus())</ID>
-    <ID>MaxLineLength:SettingsActivity.kt$SettingsActivity$updateMaterialActivityViews(binding.settingsCoordinator, binding.settingsHolder, useTransparentNavigation = true, useTopSearchMenu = false)</ID>
     <ID>MaxLineLength:SimpleControllerActivity.kt$SimpleControllerActivity$fun</ID>
     <ID>MaxLineLength:SimpleControllerActivity.kt$SimpleControllerActivity$prepareUsingTracks</ID>
     <ID>MaxLineLength:SimpleControllerActivity.kt$SimpleControllerActivity$prepareUsingTracks(tracks = queuedTracks, startIndex = currentMediaItemIndex, startPositionMs = currentPosition, play = isReallyPlaying)</ID>
@@ -189,7 +181,6 @@
     <ID>MaxLineLength:TracksActivity.kt$TracksActivity$// this activity is used for displaying Playlist and Folder tracks, also Album tracks with a possible album header at the top</ID>
     <ID>MaxLineLength:TracksActivity.kt$TracksActivity$PermissionRequiredDialog(this, org.fossify.commons.R.string.allow_notifications_music_player, { openNotificationSettings() })</ID>
     <ID>MaxLineLength:TracksActivity.kt$TracksActivity$if</ID>
-    <ID>MaxLineLength:TracksActivity.kt$TracksActivity$updateMaterialActivityViews(binding.tracksCoordinator, binding.tracksHolder, useTransparentNavigation = true, useTopSearchMenu = false)</ID>
     <ID>MaxLineLength:TracksActivity.kt$TracksActivity$val header = AlbumHeader(album.id, album.title, album.coverArt, album.year, tracks.size, tracks.sumOf { it.duration }, album.artist)</ID>
     <ID>MaxLineLength:TracksAdapter.kt$TracksAdapter$)</ID>
     <ID>MaxLineLength:TracksAdapter.kt$TracksAdapter$trackTitle.text = if (textToHighlight.isEmpty()) track.title else track.title.highlightTextPart(textToHighlight, properPrimaryColor)</ID>
@@ -200,10 +191,6 @@
     <ID>NestedBlockDepth:ChangeSortingDialog.kt$ChangeSortingDialog$private fun dialogConfirmed()</ID>
     <ID>NestedBlockDepth:M3uImporter.kt$M3uImporter$fun importPlaylist(path: String, playListId: Int)</ID>
     <ID>NestedBlockDepth:SimpleEqualizer.kt$SimpleEqualizer$fun setupEqualizer(context: Context, player: SimpleMusicPlayer)</ID>
-    <ID>ReturnCount:BaseMusicAdapter.kt$BaseMusicAdapter$fun shouldShowPlayNext(): Boolean</ID>
-    <ID>ReturnCount:BaseMusicAdapter.kt$BaseMusicAdapter$fun shouldShowRename(): Boolean</ID>
-    <ID>ReturnCount:Context.kt$fun Context.loadTrackCoverArt(track: Track?): Bitmap?</ID>
-    <ID>ReturnCount:MediaItemProvider.kt$MediaItemProvider$operator fun get(mediaId: String): MediaItem?</ID>
     <ID>SwallowedException:EditDialog.kt$EditDialog$e: Exception</ID>
     <ID>SwallowedException:Future.kt$e: CancellationException</ID>
     <ID>SwallowedException:Future.kt$e: ExecutionException</ID>

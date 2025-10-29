@@ -60,7 +60,10 @@ class TracksActivity : SimpleMusicActivity() {
         setupOptionsMenu()
         refreshMenuItems()
 
-        setupEdgeToEdge(padBottomSystem = listOf(binding.tracksList, binding.currentTrackBar.root))
+        setupEdgeToEdge(
+            padBottomImeAndSystem = listOf(binding.tracksList),
+            padBottomSystem = listOf(binding.currentTrackBar.root)
+        )
         setupMaterialScrollListener(binding.tracksList, binding.tracksAppbar)
 
         val properPrimaryColor = getProperPrimaryColor()

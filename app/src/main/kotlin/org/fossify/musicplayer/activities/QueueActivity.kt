@@ -34,7 +34,7 @@ class QueueActivity : SimpleControllerActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         setupOptionsMenu()
-        setupEdgeToEdge(padBottomSystem = listOf(binding.queueList))
+        setupEdgeToEdge(padBottomImeAndSystem = listOf(binding.queueList))
         setupMaterialScrollListener(binding.queueList, binding.queueAppbar)
 
         setupAdapter()

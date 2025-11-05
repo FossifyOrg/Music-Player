@@ -3,7 +3,6 @@ package org.fossify.musicplayer.views
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
-import android.graphics.drawable.ColorDrawable
 import android.provider.MediaStore
 import android.util.AttributeSet
 import android.widget.RelativeLayout
@@ -16,6 +15,7 @@ import org.fossify.commons.extensions.*
 import org.fossify.musicplayer.R
 import org.fossify.musicplayer.databinding.ViewCurrentTrackBarBinding
 import org.fossify.musicplayer.extensions.*
+import androidx.core.graphics.drawable.toDrawable
 
 class CurrentTrackBar(context: Context, attributeSet: AttributeSet) : RelativeLayout(context, attributeSet) {
     private val binding by viewBinding(ViewCurrentTrackBarBinding::bind)
@@ -27,7 +27,7 @@ class CurrentTrackBar(context: Context, attributeSet: AttributeSet) : RelativeLa
     }
 
     fun updateColors() {
-        background = ColorDrawable(context.getProperBackgroundColor())
+        background = context.getProperBackgroundColor().toDrawable()
         binding.currentTrackLabel.setTextColor(context.getProperTextColor())
     }
 

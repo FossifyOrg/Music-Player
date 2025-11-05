@@ -52,7 +52,14 @@ class MainActivity : SimpleMusicActivity() {
         appLaunched(BuildConfig.APPLICATION_ID)
         setupOptionsMenu()
         refreshMenuItems()
-        setupEdgeToEdge(padBottomImeAndSystem = listOf(binding.mainTabsHolder))
+        setupEdgeToEdge(
+            padBottomImeAndSystem = buildList {
+                add(binding.mainTabsHolder)
+                if (getVisibleTabs().size == 1) {
+                    add(binding.currentTrackBar.root)
+                }
+            }
+        )
         storeStateVariables()
         setupTabs()
         setupCurrentTrackBar(binding.currentTrackBar.root)

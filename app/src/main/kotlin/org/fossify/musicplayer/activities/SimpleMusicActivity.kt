@@ -32,7 +32,11 @@ abstract class SimpleMusicActivity : SimpleControllerActivity(), Player.Listener
                         startActivity(this)
                     }
                 } else {
-                    PermissionRequiredDialog(this, org.fossify.commons.R.string.allow_notifications_music_player, { openNotificationSettings() })
+                    PermissionRequiredDialog(
+                        activity = this,
+                        textId = org.fossify.commons.R.string.allow_notifications_music_player,
+                        positiveActionCallback = { openNotificationSettings() }
+                    )
                 }
             }
         }

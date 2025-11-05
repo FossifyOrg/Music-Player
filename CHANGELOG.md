@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Fixed
 - Fixed player crash when clearing app from recents ([#298])
+- Fixed overlap between current track and system bars
 
 ## [1.5.0] - 2025-10-29
 ### Changed

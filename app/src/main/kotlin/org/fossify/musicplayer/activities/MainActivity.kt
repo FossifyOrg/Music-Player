@@ -33,7 +33,6 @@ import org.fossify.musicplayer.playback.CustomCommands
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
-import java.io.File
 import java.io.FileOutputStream
 
 class MainActivity : SimpleMusicActivity() {

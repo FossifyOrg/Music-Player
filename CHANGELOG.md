@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Fixed
+- Fixed player crash when clearing app from recents ([#298])
 
 ## [1.5.0] - 2025-10-29
 ### Changed
@@ -81,6 +83,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#258]: https://github.com/FossifyOrg/Music-Player/issues/258
 [#261]: https://github.com/FossifyOrg/Music-Player/issues/261
 [#269]: https://github.com/FossifyOrg/Music-Player/issues/269
+[#298]: https://github.com/FossifyOrg/Music-Player/issues/298
 
 [Unreleased]: https://github.com/FossifyOrg/Music-Player/compare/1.5.0...HEAD
 [1.5.0]: https://github.com/FossifyOrg/Music-Player/compare/1.4.0...1.5.0

@@ -1,5 +1,6 @@
 package org.fossify.musicplayer.playback
 
+import android.content.Intent
 import android.os.Handler
 import android.os.HandlerThread
 import android.os.Looper
@@ -75,7 +76,9 @@ class PlaybackService : MediaLibraryService(), MediaSessionService.Listener {
         }
     }
 
-    internal fun withPlayer(callback: SimpleMusicPlayer.() -> Unit) = playerHandler.post { callback(player) }
+    internal fun withPlayer(callback: SimpleMusicPlayer.() -> Unit) {
+        playerHandler.post { callback(player) }
+    }
 
     private fun showNoPermissionNotification() {
         Handler(Looper.getMainLooper()).postDelayed(delayInMillis = 100L) {
@@ -97,6 +100,12 @@ class PlaybackService : MediaLibraryService(), MediaSessionService.Listener {
     override fun onForegroundServiceStartNotAllowedException() {
         showErrorToast(getString(org.fossify.commons.R.string.unknown_error_occurred))
         // todo: show a notification instead.
+    }
+
+    override fun onTaskRemoved(rootIntent: Intent?) {
+        playerHandler.post {
+            super.onTaskRemoved(rootIntent)
+        }
     }
 
     companion object {

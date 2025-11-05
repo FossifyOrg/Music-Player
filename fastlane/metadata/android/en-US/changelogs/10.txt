@@ -1,9 +1,4 @@
-Changed:
-
-• Updated translations
-
 Fixed:
 
 • Fixed player crash when clearing app from recents 
 • Fixed overlap between current track and system bars
-

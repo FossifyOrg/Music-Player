@@ -11,9 +11,7 @@ import android.provider.MediaStore
 import android.util.Size
 import android.view.GestureDetector
 import android.view.MotionEvent
-import android.view.View
 import android.widget.SeekBar
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.graphics.drawable.toDrawable
 import androidx.core.graphics.scale
 import androidx.core.os.postDelayed
@@ -22,11 +20,37 @@ import androidx.media3.common.MediaItem
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.request.RequestOptions
-import org.fossify.commons.extensions.*
+import org.fossify.commons.extensions.applyColorFilter
+import org.fossify.commons.extensions.beGone
+import org.fossify.commons.extensions.beInvisibleIf
+import org.fossify.commons.extensions.beVisible
+import org.fossify.commons.extensions.copyToClipboard
+import org.fossify.commons.extensions.getColoredDrawableWithColor
+import org.fossify.commons.extensions.getFormattedDuration
+import org.fossify.commons.extensions.getProperBackgroundColor
+import org.fossify.commons.extensions.getProperPrimaryColor
+import org.fossify.commons.extensions.getProperTextColor
+import org.fossify.commons.extensions.realScreenSize
+import org.fossify.commons.extensions.toast
+import org.fossify.commons.extensions.updateTextColors
+import org.fossify.commons.extensions.value
+import org.fossify.commons.extensions.viewBinding
 import org.fossify.commons.helpers.MEDIUM_ALPHA
+import org.fossify.commons.helpers.mydebug
 import org.fossify.musicplayer.R
 import org.fossify.musicplayer.databinding.ActivityTrackBinding
-import org.fossify.musicplayer.extensions.*
+import org.fossify.musicplayer.extensions.config
+import org.fossify.musicplayer.extensions.getCoverArtHeight
+import org.fossify.musicplayer.extensions.getPlaybackSetting
+import org.fossify.musicplayer.extensions.getTrackCoverArt
+import org.fossify.musicplayer.extensions.getTrackFromUri
+import org.fossify.musicplayer.extensions.isReallyPlaying
+import org.fossify.musicplayer.extensions.loadGlideResource
+import org.fossify.musicplayer.extensions.nextMediaItem
+import org.fossify.musicplayer.extensions.sendCommand
+import org.fossify.musicplayer.extensions.setRepeatMode
+import org.fossify.musicplayer.extensions.toTrack
+import org.fossify.musicplayer.extensions.updatePlayPauseIcon
 import org.fossify.musicplayer.fragments.PlaybackSpeedFragment
 import org.fossify.musicplayer.helpers.PlaybackSetting
 import org.fossify.musicplayer.helpers.SEEK_INTERVAL_S
@@ -153,9 +177,9 @@ class TrackActivity : SimpleControllerActivity(), PlaybackSpeedListener {
 
     private fun setupButtons() = binding.apply {
         activityTrackToggleShuffle.setOnClickListener { withPlayer { toggleShuffle() } }
-        activityTrackPrevious.setOnClickListener { withPlayer { forceSeekToPrevious() } }
+        activityTrackPrevious.setOnClickListener { withPlayer { seekToPrevious() } }
         activityTrackPlayPause.setOnClickListener { togglePlayback() }
-        activityTrackNext.setOnClickListener { withPlayer { forceSeekToNext() } }
+        activityTrackNext.setOnClickListener { withPlayer { seekToNext() } }
         activityTrackProgressCurrent.setOnClickListener { seekBack() }
         activityTrackProgressMax.setOnClickListener { seekForward() }
         activityTrackPlaybackSetting.setOnClickListener { togglePlaybackSetting() }

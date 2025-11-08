@@ -6,8 +6,17 @@ import androidx.media3.common.Player
 import androidx.media3.common.util.UnstableApi
 import androidx.media3.exoplayer.ExoPlayer
 import androidx.media3.exoplayer.source.ShuffleOrder.DefaultShuffleOrder
-import kotlinx.coroutines.*
-import org.fossify.musicplayer.extensions.*
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import org.fossify.musicplayer.extensions.currentMediaItems
+import org.fossify.musicplayer.extensions.maybeForceNext
+import org.fossify.musicplayer.extensions.maybeForcePrevious
+import org.fossify.musicplayer.extensions.move
+import org.fossify.musicplayer.extensions.runOnPlayerThread
+import org.fossify.musicplayer.extensions.shuffledMediaItemsIndices
 import org.fossify.musicplayer.inlines.indexOfFirstOrNull
 
 private const val DEFAULT_SHUFFLE_ORDER_SEED = 42L
@@ -30,10 +39,10 @@ class SimpleMusicPlayer(private val exoPlayer: ExoPlayer) : ForwardingPlayer(exo
         return super.getAvailableCommands()
             .buildUpon()
             .addAll(
-                Player.COMMAND_SEEK_TO_PREVIOUS_MEDIA_ITEM,
-                Player.COMMAND_SEEK_TO_PREVIOUS,
-                Player.COMMAND_SEEK_TO_NEXT,
-                Player.COMMAND_SEEK_TO_NEXT_MEDIA_ITEM,
+                COMMAND_SEEK_TO_PREVIOUS_MEDIA_ITEM,
+                COMMAND_SEEK_TO_PREVIOUS,
+                COMMAND_SEEK_TO_NEXT,
+                COMMAND_SEEK_TO_NEXT_MEDIA_ITEM,
             )
             .build()
     }
@@ -106,7 +115,7 @@ class SimpleMusicPlayer(private val exoPlayer: ExoPlayer) : ForwardingPlayer(exo
     @Deprecated("Should be rewritten when https://github.com/androidx/media/issues/325 is implemented.")
     fun setShuffleIndices(indices: IntArray) {
         val shuffleOrder = DefaultShuffleOrder(indices, DEFAULT_SHUFFLE_ORDER_SEED)
-        exoPlayer.setShuffleOrder(shuffleOrder)
+        exoPlayer.shuffleOrder = shuffleOrder
     }
 
     @Deprecated("Should be rewritten when https://github.com/androidx/media/issues/325 is implemented.")
@@ -132,7 +141,10 @@ class SimpleMusicPlayer(private val exoPlayer: ExoPlayer) : ForwardingPlayer(exo
             val shuffledCurrentIndex = shuffledIndices.indexOf(itemIndex)
             val shuffledNewIndex = shuffledIndices.indexOf(nextMediaItemIndex)
             shuffledIndices.move(currentIndex = shuffledCurrentIndex, newIndex = shuffledNewIndex)
-            exoPlayer.setShuffleOrder(DefaultShuffleOrder(shuffledIndices.toIntArray(), DEFAULT_SHUFFLE_ORDER_SEED))
+            exoPlayer.shuffleOrder = DefaultShuffleOrder(
+                shuffledIndices.toIntArray(),
+                DEFAULT_SHUFFLE_ORDER_SEED
+            )
         }
     }
 

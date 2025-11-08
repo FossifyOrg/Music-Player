@@ -99,18 +99,6 @@ fun Player.setRepeatMode(playbackSetting: PlaybackSetting) {
     }
 }
 
-fun Player.forceSeekToNext() {
-    if (!maybeForceNext()) {
-        seekToNext()
-    }
-}
-
-fun Player.forceSeekToPrevious() {
-    if (!maybeForcePrevious()) {
-        seekToPrevious()
-    }
-}
-
 /**
  * Force seek to the next media item regardless of the current [Player.RepeatMode]. Returns true on success.
  */

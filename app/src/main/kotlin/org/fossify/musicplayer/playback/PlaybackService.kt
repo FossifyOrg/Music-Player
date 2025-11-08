@@ -1,8 +1,6 @@
 package org.fossify.musicplayer.playback
 
-import android.content.Intent
 import android.os.Handler
-import android.os.HandlerThread
 import android.os.Looper
 import androidx.annotation.OptIn
 import androidx.core.os.postDelayed
@@ -16,6 +14,7 @@ import org.fossify.commons.extensions.hasPermission
 import org.fossify.commons.extensions.showErrorToast
 import org.fossify.musicplayer.extensions.isReallyPlaying
 import org.fossify.musicplayer.extensions.nextMediaItem
+import org.fossify.musicplayer.extensions.runOnPlayerThread
 import org.fossify.musicplayer.helpers.NotificationHelper
 import org.fossify.musicplayer.helpers.getPermissionToRequest
 import org.fossify.musicplayer.playback.library.MediaItemProvider
@@ -25,9 +24,7 @@ import org.fossify.musicplayer.playback.player.initializeSessionAndPlayer
 @OptIn(UnstableApi::class)
 class PlaybackService : MediaLibraryService(), MediaSessionService.Listener {
     internal lateinit var player: SimpleMusicPlayer
-    internal lateinit var playerThread: HandlerThread
     internal lateinit var playerListener: Player.Listener
-    internal lateinit var playerHandler: Handler
     internal lateinit var mediaSession: MediaLibrarySession
     internal lateinit var mediaItemProvider: MediaItemProvider
 
@@ -77,7 +74,7 @@ class PlaybackService : MediaLibraryService(), MediaSessionService.Listener {
     }
 
     internal fun withPlayer(callback: SimpleMusicPlayer.() -> Unit) {
-        playerHandler.post { callback(player) }
+        player.runOnPlayerThread { callback(this) }
     }
 
     private fun showNoPermissionNotification() {
@@ -100,12 +97,6 @@ class PlaybackService : MediaLibraryService(), MediaSessionService.Listener {
     override fun onForegroundServiceStartNotAllowedException() {
         showErrorToast(getString(org.fossify.commons.R.string.unknown_error_occurred))
         // todo: show a notification instead.
-    }
-
-    override fun onTaskRemoved(rootIntent: Intent?) {
-        playerHandler.post {
-            super.onTaskRemoved(rootIntent)
-        }
     }
 
     companion object {

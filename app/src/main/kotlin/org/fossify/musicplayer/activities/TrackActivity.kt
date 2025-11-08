@@ -66,7 +66,7 @@ class TrackActivity : SimpleControllerActivity(), PlaybackSpeedListener {
     companion object {
         private const val SWIPE_DOWN_THRESHOLD = 100
         private const val DEBOUNCE_INTERVAL_MS = 150L
-        private const val UPDATE_INTERVAL_MS = 500L
+        private const val UPDATE_INTERVAL_MS = 150L
     }
 
     private var isThirdPartyIntent = false

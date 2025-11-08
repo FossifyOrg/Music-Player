@@ -31,12 +31,12 @@ import org.fossify.commons.extensions.getProperBackgroundColor
 import org.fossify.commons.extensions.getProperPrimaryColor
 import org.fossify.commons.extensions.getProperTextColor
 import org.fossify.commons.extensions.realScreenSize
+import org.fossify.commons.extensions.setDebouncedClickListener
 import org.fossify.commons.extensions.toast
 import org.fossify.commons.extensions.updateTextColors
 import org.fossify.commons.extensions.value
 import org.fossify.commons.extensions.viewBinding
 import org.fossify.commons.helpers.MEDIUM_ALPHA
-import org.fossify.commons.helpers.mydebug
 import org.fossify.musicplayer.R
 import org.fossify.musicplayer.databinding.ActivityTrackBinding
 import org.fossify.musicplayer.extensions.config
@@ -63,13 +63,16 @@ import kotlin.math.min
 import kotlin.time.Duration.Companion.milliseconds
 
 class TrackActivity : SimpleControllerActivity(), PlaybackSpeedListener {
-    private val SWIPE_DOWN_THRESHOLD = 100
+    companion object {
+        private const val SWIPE_DOWN_THRESHOLD = 100
+        private const val DEBOUNCE_INTERVAL_MS = 150L
+        private const val UPDATE_INTERVAL_MS = 500L
+    }
 
     private var isThirdPartyIntent = false
     private lateinit var nextTrackPlaceholder: Drawable
 
     private val handler = Handler(Looper.getMainLooper())
-    private val updateIntervalMillis = 500L
 
     private val binding by viewBinding(ActivityTrackBinding::inflate)
 
@@ -177,9 +180,13 @@ class TrackActivity : SimpleControllerActivity(), PlaybackSpeedListener {
 
     private fun setupButtons() = binding.apply {
         activityTrackToggleShuffle.setOnClickListener { withPlayer { toggleShuffle() } }
-        activityTrackPrevious.setOnClickListener { withPlayer { seekToPrevious() } }
+        activityTrackPrevious.setDebouncedClickListener(DEBOUNCE_INTERVAL_MS) {
+            withPlayer { seekToPrevious() }
+        }
         activityTrackPlayPause.setOnClickListener { togglePlayback() }
-        activityTrackNext.setOnClickListener { withPlayer { seekToNext() } }
+        activityTrackNext.setDebouncedClickListener(DEBOUNCE_INTERVAL_MS) {
+            withPlayer { seekToNext() }
+        }
         activityTrackProgressCurrent.setOnClickListener { seekBack() }
         activityTrackProgressMax.setOnClickListener { seekForward() }
         activityTrackPlaybackSetting.setOnClickListener { togglePlaybackSetting() }
@@ -437,7 +444,7 @@ class TrackActivity : SimpleControllerActivity(), PlaybackSpeedListener {
     private fun scheduleProgressUpdate() {
         cancelProgressUpdate()
         withPlayer {
-            val delayInMillis = (updateIntervalMillis / config.playbackSpeed).toLong()
+            val delayInMillis = (UPDATE_INTERVAL_MS / config.playbackSpeed).toLong()
             handler.postDelayed(delayInMillis = delayInMillis) {
                 updateProgress(currentPosition)
                 scheduleProgressUpdate()

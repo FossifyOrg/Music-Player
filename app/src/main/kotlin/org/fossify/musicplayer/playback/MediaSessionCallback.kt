@@ -4,8 +4,13 @@ import android.os.Bundle
 import android.os.ConditionVariable
 import androidx.media3.common.MediaItem
 import androidx.media3.common.util.UnstableApi
-import androidx.media3.session.*
+import androidx.media3.session.LibraryResult
+import androidx.media3.session.MediaLibraryService
 import androidx.media3.session.MediaLibraryService.MediaLibrarySession
+import androidx.media3.session.MediaSession
+import androidx.media3.session.SessionCommand
+import androidx.media3.session.SessionError
+import androidx.media3.session.SessionResult
 import com.google.common.util.concurrent.Futures
 import com.google.common.util.concurrent.ListenableFuture
 import com.google.common.util.concurrent.MoreExecutors
@@ -189,15 +194,16 @@ internal fun PlaybackService.getMediaSessionCallback() = object : MediaLibrarySe
         controller: MediaSession.ControllerInfo,
         mediaItems: List<MediaItem>
     ): ListenableFuture<List<MediaItem>> {
-        val items = mediaItems.map { mediaItem ->
-            if (mediaItem.requestMetadata.searchQuery != null) {
-                getMediaItemFromSearchQuery(mediaItem.requestMetadata.searchQuery!!)
-            } else {
-                mediaItemProvider[mediaItem.mediaId] ?: mediaItem
+        return callWhenSourceReady {
+            val items = mediaItems.map { mediaItem ->
+                if (mediaItem.requestMetadata.searchQuery != null) {
+                    getMediaItemFromSearchQuery(mediaItem.requestMetadata.searchQuery!!)
+                } else {
+                    mediaItemProvider[mediaItem.mediaId] ?: mediaItem
+                }
             }
+            items
         }
-
-        return Futures.immediateFuture(items)
     }
 
     private fun getMediaItemFromSearchQuery(query: String): MediaItem {

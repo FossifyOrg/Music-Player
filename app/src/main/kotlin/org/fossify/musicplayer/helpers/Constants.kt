@@ -66,6 +66,7 @@ const val SORT_PLAYLIST_PREFIX = "sort_playlist_"
 
 const val SEEK_INTERVAL_MS = 10000L
 const val SEEK_INTERVAL_S = 10
+const val RESTART_ON_PREVIOUS_THRESHOLD = 5000L
 
 const val SHOW_FILENAME_NEVER = 1
 const val SHOW_FILENAME_IF_UNAVAILABLE = 2

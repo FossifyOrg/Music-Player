@@ -9,6 +9,7 @@ import androidx.media3.exoplayer.source.ShuffleOrder.DefaultShuffleOrder
 import org.fossify.musicplayer.extensions.currentMediaItems
 import org.fossify.musicplayer.extensions.maybeForceNext
 import org.fossify.musicplayer.extensions.maybeForcePrevious
+import org.fossify.musicplayer.extensions.maybeRestartOnPrevious
 import org.fossify.musicplayer.extensions.move
 import org.fossify.musicplayer.extensions.shuffledMediaItemsIndices
 import org.fossify.musicplayer.inlines.indexOfFirstOrNull
@@ -37,18 +38,15 @@ class SimpleMusicPlayer(private val exoPlayer: ExoPlayer) : ForwardingPlayer(exo
 
     override fun seekToNext() {
         play()
-        if (!maybeForceNext()) {
-            super.seekToNext()
-        }
+        if (maybeForceNext()) return
+        super.seekToNext()
     }
 
     override fun seekToPrevious() {
         play()
-        if (currentPosition > 5000) {
-            seekTo(0)
-        } else if (!maybeForcePrevious()) {
-            super.seekToPrevious()
-        }
+        if (maybeRestartOnPrevious()) return
+        if (maybeForcePrevious()) return
+        super.seekToPrevious()
     }
 
     override fun seekToNextMediaItem() = seekToNext()

@@ -50,6 +50,7 @@ import org.fossify.musicplayer.extensions.getTrackCoverArt
 import org.fossify.musicplayer.extensions.getTrackFromUri
 import org.fossify.musicplayer.extensions.isReallyPlaying
 import org.fossify.musicplayer.extensions.loadGlideResource
+import org.fossify.musicplayer.extensions.maybeRestartOnPrevious
 import org.fossify.musicplayer.extensions.nextMediaItem
 import org.fossify.musicplayer.extensions.sendCommand
 import org.fossify.musicplayer.extensions.setRepeatMode
@@ -198,9 +199,9 @@ class TrackActivity : SimpleControllerActivity(), PlaybackSpeedListener {
 
     private fun setupButtons() = binding.apply {
         activityTrackToggleShuffle.setOnClickListener { withPlayer { toggleShuffle() } }
-        activityTrackPrevious.setOnClickListener { seekWithDelay(previous = true) }
+        activityTrackPrevious.setOnClickListener { seekToPrevious() }
         activityTrackPlayPause.setOnClickListener { togglePlayback() }
-        activityTrackNext.setOnClickListener { seekWithDelay() }
+        activityTrackNext.setOnClickListener { seekToNext() }
         activityTrackProgressCurrent.setOnClickListener { seekBack() }
         activityTrackProgressMax.setOnClickListener { seekForward() }
         activityTrackPlaybackSetting.setOnClickListener { togglePlaybackSetting() }
@@ -494,12 +495,24 @@ class TrackActivity : SimpleControllerActivity(), PlaybackSpeedListener {
         binding.activityTrackPlayPause.updatePlayPauseIcon(isPlaying, getProperTextColor())
     }
 
+    private fun seekToNext() {
+        seekCount += 1
+        seekWithDelay()
+    }
+
+    private fun seekToPrevious() {
+        withPlayer {
+            if (maybeRestartOnPrevious()) return@withPlayer
+            seekCount -= 1
+            seekWithDelay()
+        }
+    }
+
     /**
      * This is here so the player can quickly seek next/previous without doing too much work.
      * It probably won't be needed once https://github.com/androidx/media/issues/81 is resolved.
      */
-    private fun seekWithDelay(previous: Boolean = false) {
-        if (previous) seekCount -= 1 else seekCount += 1
+    private fun seekWithDelay() {
         seekJob?.cancel()
         seekJob = scope.launch {
             delay(timeMillis = SEEK_COALESCE_INTERVAL_MS)

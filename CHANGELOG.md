@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Changed
-- Player now respects play/pause state when seeking
+- Player now respects play/pause state when seeking ([#97])
 
 ### Fixed
 - Fixed startup crash with large number of items
@@ -87,6 +87,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#45]: https://github.com/FossifyOrg/Music-Player/issues/45
 [#47]: https://github.com/FossifyOrg/Music-Player/issues/47
 [#65]: https://github.com/FossifyOrg/Music-Player/issues/65
+[#97]: https://github.com/FossifyOrg/Music-Player/issues/97
 [#206]: https://github.com/FossifyOrg/Music-Player/issues/206
 [#209]: https://github.com/FossifyOrg/Music-Player/issues/209
 [#228]: https://github.com/FossifyOrg/Music-Player/issues/228

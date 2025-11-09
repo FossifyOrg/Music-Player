@@ -1,7 +1,6 @@
 Changed:
 
 • Player now respects play/pause state when seeking 
-• Updated translations
 
 Fixed:
 

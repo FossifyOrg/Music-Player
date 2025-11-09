@@ -194,7 +194,7 @@ internal fun PlaybackService.getMediaSessionCallback() = object : MediaLibrarySe
         controller: MediaSession.ControllerInfo,
         mediaItems: List<MediaItem>
     ): ListenableFuture<List<MediaItem>> {
-        return callWhenSourceReady {
+        return executorService.submit<List<MediaItem>> {
             val items = mediaItems.map { mediaItem ->
                 if (mediaItem.requestMetadata.searchQuery != null) {
                     getMediaItemFromSearchQuery(mediaItem.requestMetadata.searchQuery!!)

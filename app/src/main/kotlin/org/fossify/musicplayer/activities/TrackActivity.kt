@@ -70,7 +70,7 @@ import kotlin.time.Duration.Companion.milliseconds
 class TrackActivity : SimpleControllerActivity(), PlaybackSpeedListener {
     companion object {
         private const val SWIPE_DOWN_THRESHOLD = 100
-        private const val SEEK_COALESCE_INTERVAL_MS = 200L
+        private const val SEEK_COALESCE_INTERVAL_MS = 150L
         private const val UPDATE_INTERVAL_MS = 150L
     }
 

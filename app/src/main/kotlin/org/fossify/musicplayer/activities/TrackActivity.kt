@@ -525,6 +525,7 @@ class TrackActivity : SimpleControllerActivity(), PlaybackSpeedListener {
                 rotateIndex(mediaItemCount, currentIndex + count)
             }
 
+            play()
             seekTo(seekIndex, 0)
             seekCount = 0
         }

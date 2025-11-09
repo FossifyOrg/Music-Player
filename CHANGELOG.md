@@ -5,9 +5,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Changed
+- Player now respects play/pause state when seeking ([#97])
+
 ### Fixed
+- Fixed startup crash with large number of items
 - Fixed another crash when clearing app from recents ([#298])
-- Fixed flicker when seeking on the player screen
+- Fixed flicker when skipping to the next/previous track on the player screen
 
 ## [1.5.1] - 2025-11-05
 ### Fixed
@@ -83,6 +87,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#45]: https://github.com/FossifyOrg/Music-Player/issues/45
 [#47]: https://github.com/FossifyOrg/Music-Player/issues/47
 [#65]: https://github.com/FossifyOrg/Music-Player/issues/65
+[#97]: https://github.com/FossifyOrg/Music-Player/issues/97
 [#206]: https://github.com/FossifyOrg/Music-Player/issues/206
 [#209]: https://github.com/FossifyOrg/Music-Player/issues/209
 [#228]: https://github.com/FossifyOrg/Music-Player/issues/228

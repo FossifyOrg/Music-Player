@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Fixed
 - Fixed another crash when clearing app from recents ([#298])
+- Fixed flicker when seeking on the player screen
 
 ## [1.5.1] - 2025-11-05
 ### Fixed

@@ -20,6 +20,11 @@ import androidx.media3.common.MediaItem
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.request.RequestOptions
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import org.fossify.commons.extensions.applyColorFilter
 import org.fossify.commons.extensions.beGone
 import org.fossify.commons.extensions.beInvisibleIf
@@ -36,7 +41,6 @@ import org.fossify.commons.extensions.updateTextColors
 import org.fossify.commons.extensions.value
 import org.fossify.commons.extensions.viewBinding
 import org.fossify.commons.helpers.MEDIUM_ALPHA
-import org.fossify.commons.helpers.mydebug
 import org.fossify.musicplayer.R
 import org.fossify.musicplayer.databinding.ActivityTrackBinding
 import org.fossify.musicplayer.extensions.config
@@ -49,6 +53,7 @@ import org.fossify.musicplayer.extensions.loadGlideResource
 import org.fossify.musicplayer.extensions.nextMediaItem
 import org.fossify.musicplayer.extensions.sendCommand
 import org.fossify.musicplayer.extensions.setRepeatMode
+import org.fossify.musicplayer.extensions.shuffledMediaItemsIndices
 import org.fossify.musicplayer.extensions.toTrack
 import org.fossify.musicplayer.extensions.updatePlayPauseIcon
 import org.fossify.musicplayer.fragments.PlaybackSpeedFragment
@@ -63,13 +68,20 @@ import kotlin.math.min
 import kotlin.time.Duration.Companion.milliseconds
 
 class TrackActivity : SimpleControllerActivity(), PlaybackSpeedListener {
-    private val SWIPE_DOWN_THRESHOLD = 100
+    companion object {
+        private const val SWIPE_DOWN_THRESHOLD = 100
+        private const val SEEK_COALESCE_INTERVAL_MS = 200L
+        private const val UPDATE_INTERVAL_MS = 150L
+    }
 
     private var isThirdPartyIntent = false
     private lateinit var nextTrackPlaceholder: Drawable
 
     private val handler = Handler(Looper.getMainLooper())
-    private val updateIntervalMillis = 500L
+
+    private val scope = CoroutineScope(Dispatchers.Default)
+    private var seekJob: Job? = null
+    private var seekCount = 0
 
     private val binding by viewBinding(ActivityTrackBinding::inflate)
 
@@ -77,7 +89,8 @@ class TrackActivity : SimpleControllerActivity(), PlaybackSpeedListener {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         setupEdgeToEdge(padBottomSystem = listOf(binding.nextTrackHolder))
-        nextTrackPlaceholder = resources.getColoredDrawableWithColor(R.drawable.ic_headset, getProperTextColor())
+        nextTrackPlaceholder =
+            resources.getColoredDrawableWithColor(R.drawable.ic_headset, getProperTextColor())
         setupButtons()
         setupFlingListener()
 
@@ -87,7 +100,12 @@ class TrackActivity : SimpleControllerActivity(), PlaybackSpeedListener {
             }
 
             isThirdPartyIntent = intent.action == Intent.ACTION_VIEW
-            arrayOf(activityTrackToggleShuffle, activityTrackPrevious, activityTrackNext, activityTrackPlaybackSetting).forEach {
+            arrayOf(
+                activityTrackToggleShuffle,
+                activityTrackPrevious,
+                activityTrackNext,
+                activityTrackPlaybackSetting
+            ).forEach {
                 it.beInvisibleIf(isThirdPartyIntent)
             }
 
@@ -98,7 +116,10 @@ class TrackActivity : SimpleControllerActivity(), PlaybackSpeedListener {
 
             setupTrackInfo(PlaybackService.currentMediaItem)
             setupNextTrackInfo(PlaybackService.nextMediaItem)
-            activityTrackPlayPause.updatePlayPauseIcon(PlaybackService.isPlaying, getProperTextColor())
+            activityTrackPlayPause.updatePlayPauseIcon(
+                isPlaying = PlaybackService.isPlaying,
+                color = getProperTextColor()
+            )
             updatePlayerState()
 
             nextTrackHolder.background = getProperBackgroundColor().toDrawable()
@@ -177,9 +198,9 @@ class TrackActivity : SimpleControllerActivity(), PlaybackSpeedListener {
 
     private fun setupButtons() = binding.apply {
         activityTrackToggleShuffle.setOnClickListener { withPlayer { toggleShuffle() } }
-        activityTrackPrevious.setOnClickListener { withPlayer { seekToPrevious() } }
+        activityTrackPrevious.setOnClickListener { seekWithDelay(previous = true) }
         activityTrackPlayPause.setOnClickListener { togglePlayback() }
-        activityTrackNext.setOnClickListener { withPlayer { seekToNext() } }
+        activityTrackNext.setOnClickListener { seekWithDelay() }
         activityTrackProgressCurrent.setOnClickListener { seekBack() }
         activityTrackProgressMax.setOnClickListener { seekForward() }
         activityTrackPlaybackSetting.setOnClickListener { togglePlaybackSetting() }
@@ -201,17 +222,20 @@ class TrackActivity : SimpleControllerActivity(), PlaybackSpeedListener {
         }
 
         binding.nextTrackHolder.beVisible()
-        val artist = if (track.artist.trim().isNotEmpty() && track.artist != MediaStore.UNKNOWN_STRING) {
-            " • ${track.artist}"
-        } else {
-            ""
-        }
+        val artist =
+            if (track.artist.trim().isNotEmpty() && track.artist != MediaStore.UNKNOWN_STRING) {
+                " • ${track.artist}"
+            } else {
+                ""
+            }
 
         @SuppressLint("SetTextI18n")
         binding.nextTrackLabel.text = "${getString(R.string.next_track)} ${track.title}$artist"
 
         getTrackCoverArt(track) { coverArt ->
-            val cornerRadius = resources.getDimension(org.fossify.commons.R.dimen.rounded_corner_radius_small).toInt()
+            val cornerRadius =
+                resources.getDimension(org.fossify.commons.R.dimen.rounded_corner_radius_small)
+                    .toInt()
             val wantedSize = resources.getDimension(R.dimen.song_image_size).toInt()
 
             // change cover image manually only once loaded successfully to avoid blinking at fails and placeholders
@@ -271,7 +295,12 @@ class TrackActivity : SimpleControllerActivity(), PlaybackSpeedListener {
     @SuppressLint("ClickableViewAccessibility")
     private fun setupFlingListener() {
         val flingListener = object : GestureDetector.SimpleOnGestureListener() {
-            override fun onFling(e1: MotionEvent?, e2: MotionEvent, velocityX: Float, velocityY: Float): Boolean {
+            override fun onFling(
+                e1: MotionEvent?,
+                e2: MotionEvent,
+                velocityX: Float,
+                velocityY: Float
+            ): Boolean {
                 if (e1 != null) {
                     if (velocityY > 0 && velocityY > velocityX && e2.y - e1.y > SWIPE_DOWN_THRESHOLD) {
                         finish()
@@ -305,7 +334,8 @@ class TrackActivity : SimpleControllerActivity(), PlaybackSpeedListener {
         binding.activityTrackToggleShuffle.apply {
             applyColorFilter(if (isShuffleEnabled) getProperPrimaryColor() else getProperTextColor())
             alpha = if (isShuffleEnabled) 1f else MEDIUM_ALPHA
-            contentDescription = getString(if (isShuffleEnabled) R.string.disable_shuffle else R.string.enable_shuffle)
+            contentDescription =
+                getString(if (isShuffleEnabled) R.string.disable_shuffle else R.string.enable_shuffle)
         }
     }
 
@@ -351,18 +381,19 @@ class TrackActivity : SimpleControllerActivity(), PlaybackSpeedListener {
         binding.activityTrackSpeedIcon.applyColorFilter(getProperTextColor())
         updatePlaybackSpeed(config.playbackSpeed)
 
-        binding.activityTrackProgressbar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
-            override fun onProgressChanged(seekBar: SeekBar, progress: Int, fromUser: Boolean) {
-                val formattedProgress = progress.getFormattedDuration()
-                binding.activityTrackProgressCurrent.text = formattedProgress
-            }
+        binding.activityTrackProgressbar.setOnSeekBarChangeListener(
+            object : SeekBar.OnSeekBarChangeListener {
+                override fun onProgressChanged(seekBar: SeekBar, progress: Int, fromUser: Boolean) {
+                    val formattedProgress = progress.getFormattedDuration()
+                    binding.activityTrackProgressCurrent.text = formattedProgress
+                }
 
-            override fun onStartTrackingTouch(seekBar: SeekBar) {}
+                override fun onStartTrackingTouch(seekBar: SeekBar) {}
 
-            override fun onStopTrackingTouch(seekBar: SeekBar) = withPlayer {
-                seekTo(seekBar.progress * 1000L)
-            }
-        })
+                override fun onStopTrackingTouch(seekBar: SeekBar) = withPlayer {
+                    seekTo(seekBar.progress * 1000L)
+                }
+            })
     }
 
     private fun showPlaybackSpeedPicker() {
@@ -376,7 +407,8 @@ class TrackActivity : SimpleControllerActivity(), PlaybackSpeedListener {
         if (isSlow != binding.activityTrackSpeed.tag as? Boolean) {
             binding.activityTrackSpeed.tag = isSlow
 
-            val drawableId = if (isSlow) R.drawable.ic_playback_speed_slow_vector else R.drawable.ic_playback_speed_vector
+            val drawableId =
+                if (isSlow) R.drawable.ic_playback_speed_slow_vector else R.drawable.ic_playback_speed_vector
             binding.activityTrackSpeedIcon.setImageDrawable(resources.getDrawable(drawableId))
         }
 
@@ -397,9 +429,13 @@ class TrackActivity : SimpleControllerActivity(), PlaybackSpeedListener {
 
     override fun onIsPlayingChanged(isPlaying: Boolean) = updatePlayerState()
 
-    override fun onRepeatModeChanged(repeatMode: Int) = maybeUpdatePlaybackSettingButton(getPlaybackSetting(repeatMode))
+    override fun onRepeatModeChanged(repeatMode: Int) {
+        maybeUpdatePlaybackSettingButton(getPlaybackSetting(repeatMode))
+    }
 
-    override fun onShuffleModeEnabledChanged(shuffleModeEnabled: Boolean) = setupShuffleButton(shuffleModeEnabled)
+    override fun onShuffleModeEnabledChanged(shuffleModeEnabled: Boolean) {
+        setupShuffleButton(shuffleModeEnabled)
+    }
 
     override fun onMediaItemTransition(mediaItem: MediaItem?, reason: Int) {
         super.onMediaItemTransition(mediaItem, reason)
@@ -437,7 +473,7 @@ class TrackActivity : SimpleControllerActivity(), PlaybackSpeedListener {
     private fun scheduleProgressUpdate() {
         cancelProgressUpdate()
         withPlayer {
-            val delayInMillis = (updateIntervalMillis / config.playbackSpeed).toLong()
+            val delayInMillis = (UPDATE_INTERVAL_MS / config.playbackSpeed).toLong()
             handler.postDelayed(delayInMillis = delayInMillis) {
                 updateProgress(currentPosition)
                 scheduleProgressUpdate()
@@ -450,10 +486,51 @@ class TrackActivity : SimpleControllerActivity(), PlaybackSpeedListener {
     }
 
     private fun updateProgress(currentPosition: Long) {
-        binding.activityTrackProgressbar.progress = currentPosition.milliseconds.inWholeSeconds.toInt()
+        binding.activityTrackProgressbar.progress =
+            currentPosition.milliseconds.inWholeSeconds.toInt()
     }
 
     private fun updatePlayPause(isPlaying: Boolean) {
         binding.activityTrackPlayPause.updatePlayPauseIcon(isPlaying, getProperTextColor())
+    }
+
+    /**
+     * This is here so the player can quickly seek next/previous without doing too much work.
+     * It probably won't be needed once https://github.com/androidx/media/issues/81 is resolved.
+     */
+    private fun seekWithDelay(previous: Boolean = false) {
+        if (previous) seekCount -= 1 else seekCount += 1
+        seekJob?.cancel()
+        seekJob = scope.launch {
+            delay(timeMillis = SEEK_COALESCE_INTERVAL_MS)
+            if (seekCount != 0) {
+                seekByCount(seekCount)
+            }
+        }
+    }
+
+    private fun seekByCount(count: Int) {
+        withPlayer {
+            if (currentMediaItem == null) {
+                return@withPlayer
+            }
+
+            val currentIndex = currentMediaItemIndex
+            val mediaItemCount = mediaItemCount
+            val seekIndex = if (shuffleModeEnabled) {
+                val shuffledIndex = shuffledMediaItemsIndices.indexOf(currentIndex)
+                val seekIndex = rotateIndex(mediaItemCount, shuffledIndex + count)
+                shuffledMediaItemsIndices.getOrNull(seekIndex) ?: return@withPlayer
+            } else {
+                rotateIndex(mediaItemCount, currentIndex + count)
+            }
+
+            seekTo(seekIndex, 0)
+            seekCount = 0
+        }
+    }
+
+    private fun rotateIndex(total: Int, index: Int): Int {
+        return (index % total + total) % total
     }
 }

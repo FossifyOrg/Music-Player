@@ -9,7 +9,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.6.0] - 2025-11-09
 ### Changed
 - Player now respects play/pause state when seeking ([#97])
-- Updated translations
 
 ### Fixed
 - Fixed startup crash with large number of items

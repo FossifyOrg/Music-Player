@@ -35,25 +35,6 @@ class SimpleMusicPlayer(private val exoPlayer: ExoPlayer) : ForwardingPlayer(exo
             .build()
     }
 
-    override fun play() {
-        playWhenReady = true
-    }
-
-    override fun seekTo(positionMs: Long) {
-        play()
-        super.seekTo(positionMs)
-    }
-
-    override fun seekBack() {
-        play()
-        super.seekBack()
-    }
-
-    override fun seekForward() {
-        play()
-        super.seekForward()
-    }
-
     override fun seekToNext() {
         play()
         if (!maybeForceNext()) {

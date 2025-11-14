@@ -7,4 +7,13 @@
     <string name="all_songs">Akk tizlatin</string>
     <string name="rename_song_empty">Ttxil-k, ččar akk urtiyen</string>
     <string name="repeat_off">Ales</string>
+    <string name="stop_playback_after_current_song">Ḥbes urar deffir tezlit-a tamirant</string>
+    <string name="enable_shuffle">Rmed taɣuri tagacurant</string>
+    <string name="disable_shuffle">Sens taɣuri tagacurant</string>
+    <string name="shuffle_enabled">taɣuri tagacurant tettwarmed</string>
+    <string name="volume">Ableɣ</string>
+    <string name="playback_speed">Arured n wurar</string>
+    <string name="add_folder_to_playlist">Rnu akaram ɣer wumuɣ n wurar</string>
+    <string name="manage_playlists">Sefrek umuɣen n wurar</string>
+    <string name="add_file_to_playlist">Rnu afaylu ɣer wumuɣ n wurar</string>
 </resources>

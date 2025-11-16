@@ -16,4 +16,7 @@
     <string name="add_folder_to_playlist">Rnu akaram ɣer wumuɣ n wurar</string>
     <string name="manage_playlists">Sefrek umuɣen n wurar</string>
     <string name="add_file_to_playlist">Rnu afaylu ɣer wumuɣ n wurar</string>
+    <string name="rename_playlist">Ales isem n wumuɣ n wurar</string>
+    <string name="playlist_name_exists">Yella yakan wumuɣ n wurar s yisem-a</string>
+    <string name="remove_playlist_description">Aya ad yekkes kan umuɣen n wurar yettwafernen. Ifuyla n tura ur ttwakksen ara.</string>
 </resources>

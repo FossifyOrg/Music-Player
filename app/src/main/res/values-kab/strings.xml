@@ -19,4 +19,9 @@
     <string name="rename_playlist">Ales isem n wumuɣ n wurar</string>
     <string name="playlist_name_exists">Yella yakan wumuɣ n wurar s yisem-a</string>
     <string name="remove_playlist_description">Aya ad yekkes kan umuɣen n wurar yettwafernen. Ifuyla n tura ur ttwakksen ara.</string>
+    <string name="remove_playlist_description_placeholder">Aya ad yekkes kan umuɣ n wurar \"%s\". Ifuyla n tura ur ttwakksen ara.</string>
+    <string name="remove_from_playlist">Kkes seg wumuɣ n wurar</string>
+    <string name="all_songs_cannot_be_deleted">Umuɣ n wurar n \"akk tizlatin\" ur yezmir ara ad tettwakkes</string>
+    <string name="empty_playlist">Umuɣ n wurar amiran d ilem</string>
+    <string name="fetching_songs">Asuffeɣ n tezlatin…</string>
 </resources>

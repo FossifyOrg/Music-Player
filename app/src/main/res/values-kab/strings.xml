@@ -24,4 +24,12 @@
     <string name="all_songs_cannot_be_deleted">Umuɣ n wurar n \"akk tizlatin\" ur yezmir ara ad tettwakkes</string>
     <string name="empty_playlist">Umuɣ n wurar amiran d ilem</string>
     <string name="fetching_songs">Asuffeɣ n tezlatin…</string>
+    <string name="delete_current_song">Kkes tizlit tamirant</string>
+    <string name="delete_song_warning">Ɣur-k-im : aya ad yekkes ifuyla yettwafernen seg yibenk, ddan-d akk wumuɣen n wurar.</string>
+    <string name="remove_current_song">Kkes tizlit tamirant seg wumuɣ n wurar</string>
+    <string name="show_filename">Sken isem n ufaylu d azwel n tezlit</string>
+    <string name="title_is_not_available">Ma ur yelli ara uzwel</string>
+    <string name="import_playlist">Kter umuɣ n wurar</string>
+    <string name="filename_without_m3u">Isem n ufaylu (war .m3u)</string>
+    <string name="track_count">Amḍan n tezribt</string>
 </resources>

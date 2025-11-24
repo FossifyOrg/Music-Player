@@ -69,10 +69,17 @@ private fun PlaybackService.initializePlayer(
 }
 
 private fun Context.getSessionActivityIntent(): PendingIntent {
+    //add openplayer
+    val intent = Intent(this, MainActivity::class.java).apply {
+        putExtra("OPEN_PLAYER", true)
+        // Questi flag aiutano a gestire il comportamento se l'app è già aperta
+        flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
+    }
+
     return PendingIntent.getActivity(
         this,
         0,
-        Intent(this, MainActivity::class.java),
+        intent,
         PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT
     )
 }

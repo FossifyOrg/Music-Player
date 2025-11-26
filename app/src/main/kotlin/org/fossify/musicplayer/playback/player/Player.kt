@@ -71,9 +71,7 @@ private fun PlaybackService.initializePlayer(
 
 private fun Context.getSessionActivityIntent(): PendingIntent {
     val intent = Intent(this, MainActivity::class.java).apply {
-
         putExtra(EXTRA_OPEN_PLAYER, true)
-
         flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
     }
 

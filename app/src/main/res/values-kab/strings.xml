@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="year">Aseggas</string>
+    <string name="artists">Inaẓuren</string>
+    <string name="folders">Ikaramen</string>
+    <string name="track_on_disk">%1$d.%2$s</string>
+    <string name="all_songs">Akk tizlatin</string>
+    <string name="rename_song_empty">Ttxil-k, ččar akk urtiyen</string>
+    <string name="repeat_off">Ales</string>
+    <string name="stop_playback_after_current_song">Ḥbes urar deffir tezlit-a tamirant</string>
+    <string name="enable_shuffle">Rmed taɣuri tagacurant</string>
+    <string name="disable_shuffle">Sens taɣuri tagacurant</string>
+    <string name="shuffle_enabled">taɣuri tagacurant tettwarmed</string>
+    <string name="volume">Ableɣ</string>
+    <string name="playback_speed">Arured n wurar</string>
+    <string name="add_folder_to_playlist">Rnu akaram ɣer wumuɣ n wurar</string>
+    <string name="manage_playlists">Sefrek umuɣen n wurar</string>
+    <string name="add_file_to_playlist">Rnu afaylu ɣer wumuɣ n wurar</string>
+    <string name="rename_playlist">Ales isem n wumuɣ n wurar</string>
+    <string name="playlist_name_exists">Yella yakan wumuɣ n wurar s yisem-a</string>
+    <string name="remove_playlist_description">Aya ad yekkes kan umuɣen n wurar yettwafernen. Ifuyla n tura ur ttwakksen ara.</string>
+    <string name="remove_playlist_description_placeholder">Aya ad yekkes kan umuɣ n wurar \"%s\". Ifuyla n tura ur ttwakksen ara.</string>
+    <string name="remove_from_playlist">Kkes seg wumuɣ n wurar</string>
+    <string name="all_songs_cannot_be_deleted">Umuɣ n wurar n \"akk tizlatin\" ur yezmir ara ad tettwakkes</string>
+    <string name="empty_playlist">Umuɣ n wurar amiran d ilem</string>
+    <string name="fetching_songs">Asuffeɣ n tezlatin…</string>
+    <string name="delete_current_song">Kkes tizlit tamirant</string>
+    <string name="delete_song_warning">Ɣur-k-im : aya ad yekkes ifuyla yettwafernen seg yibenk, ddan-d akk wumuɣen n wurar.</string>
+    <string name="remove_current_song">Kkes tizlit tamirant seg wumuɣ n wurar</string>
+    <string name="show_filename">Sken isem n ufaylu d azwel n tezlit</string>
+    <string name="title_is_not_available">Ma ur yelli ara uzwel</string>
+    <string name="import_playlist">Kter umuɣ n wurar</string>
+    <string name="filename_without_m3u">Isem n ufaylu (war .m3u)</string>
+    <string name="track_count">Amḍan n tezribt</string>
+    <string name="album_count">Amiḍan n walbum</string>
+</resources>

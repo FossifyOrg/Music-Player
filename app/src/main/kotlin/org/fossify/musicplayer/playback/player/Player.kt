@@ -15,6 +15,7 @@ import org.fossify.musicplayer.extensions.broadcastUpdateWidgetState
 import org.fossify.musicplayer.extensions.config
 import org.fossify.musicplayer.extensions.currentMediaItems
 import org.fossify.musicplayer.extensions.setRepeatMode
+import org.fossify.musicplayer.helpers.EXTRA_OPEN_PLAYER
 import org.fossify.musicplayer.helpers.SEEK_INTERVAL_MS
 import org.fossify.musicplayer.playback.PlaybackService
 import org.fossify.musicplayer.playback.PlaybackService.Companion.updatePlaybackInfo
@@ -69,10 +70,10 @@ private fun PlaybackService.initializePlayer(
 }
 
 private fun Context.getSessionActivityIntent(): PendingIntent {
-    //add openplayer
     val intent = Intent(this, MainActivity::class.java).apply {
-        putExtra("OPEN_PLAYER", true)
-        // Questi flag aiutano a gestire il comportamento se l'app è già aperta
+
+        putExtra(EXTRA_OPEN_PLAYER, true)
+
         flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
     }
 

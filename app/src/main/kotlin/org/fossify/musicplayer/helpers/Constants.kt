@@ -16,6 +16,8 @@ const val FOLDER = "folder"
 const val GENRE = "genre"
 
 const val PATH = "org.fossify.musicplayer.action."
+
+const val EXTRA_OPEN_PLAYER = "org.fossify.musicplayer.OPEN_PLAYER"
 val artworkUri = "content://media/external/audio/albumart".toUri()
 
 const val PREVIOUS = PATH + "PREVIOUS"

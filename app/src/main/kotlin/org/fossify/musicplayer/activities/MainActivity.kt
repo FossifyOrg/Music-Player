@@ -10,7 +10,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.viewpager.widget.ViewPager
 import me.grantland.widget.AutofitHelper
-import me.grantland.widget.BuildConfig
+import org.fossify.musicplayer.BuildConfig
 import org.fossify.commons.databinding.BottomTablayoutItemBinding
 import org.fossify.commons.dialogs.FilePickerDialog
 import org.fossify.commons.dialogs.RadioGroupDialog
@@ -87,7 +87,6 @@ class MainActivity : SimpleMusicActivity() {
             return
         }
 
-
         updateMenuColors()
         updateTextColors(binding.mainHolder)
         setupTabColors()
@@ -112,7 +111,6 @@ class MainActivity : SimpleMusicActivity() {
         setIntent(intent)
         handleNotificationIntent(intent)
     }
-
 
     override fun onPause() {
         super.onPause()
@@ -560,10 +558,10 @@ class MainActivity : SimpleMusicActivity() {
     }
 
     private fun handleNotificationIntent(intent: Intent) {
-        val shouldOpenPlayer = intent.getBooleanExtra("OPEN_PLAYER", false)
+        val shouldOpenPlayer = intent.getBooleanExtra(EXTRA_OPEN_PLAYER, false)
 
         if (shouldOpenPlayer) {
-            intent.removeExtra("OPEN_PLAYER")
+            intent.removeExtra(EXTRA_OPEN_PLAYER)
             Intent(this, TrackActivity::class.java).apply {
                 startActivity(this)
             }

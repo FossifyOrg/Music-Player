@@ -10,6 +10,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.viewpager.widget.ViewPager
 import me.grantland.widget.AutofitHelper
+import org.fossify.musicplayer.BuildConfig
 import org.fossify.commons.databinding.BottomTablayoutItemBinding
 import org.fossify.commons.dialogs.FilePickerDialog
 import org.fossify.commons.dialogs.RadioGroupDialog
@@ -18,7 +19,6 @@ import org.fossify.commons.helpers.*
 import org.fossify.commons.models.FAQItem
 import org.fossify.commons.models.RadioItem
 import org.fossify.commons.models.Release
-import org.fossify.musicplayer.BuildConfig
 import org.fossify.musicplayer.R
 import org.fossify.musicplayer.adapters.ViewPagerAdapter
 import org.fossify.musicplayer.databinding.ActivityMainBinding
@@ -80,6 +80,7 @@ class MainActivity : SimpleMusicActivity() {
 
     override fun onResume() {
         super.onResume()
+        handleNotificationIntent(intent)
         if (storedShowTabs != config.showTabs) {
             config.lastUsedViewPagerPage = 0
             System.exit(0)
@@ -103,6 +104,12 @@ class MainActivity : SimpleMusicActivity() {
         if (storedExcludedFolders != config.excludedFolders.hashCode()) {
             refreshAllFragments()
         }
+    }
+
+    override fun onNewIntent(intent: Intent) {
+        super.onNewIntent(intent)
+        setIntent(intent)
+        handleNotificationIntent(intent)
     }
 
     override fun onPause() {
@@ -547,6 +554,17 @@ class MainActivity : SimpleMusicActivity() {
     private fun checkWhatsNewDialog() {
         arrayListOf<Release>().apply {
             checkWhatsNew(this, BuildConfig.VERSION_CODE)
+        }
+    }
+
+    private fun handleNotificationIntent(intent: Intent) {
+        val shouldOpenPlayer = intent.getBooleanExtra(EXTRA_OPEN_PLAYER, false)
+
+        if (shouldOpenPlayer) {
+            intent.removeExtra(EXTRA_OPEN_PLAYER)
+            Intent(this, TrackActivity::class.java).apply {
+                startActivity(this)
+            }
         }
     }
 }

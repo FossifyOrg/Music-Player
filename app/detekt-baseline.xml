@@ -30,7 +30,6 @@
     <ID>MagicNumber:MainActivity.kt$MainActivity$5</ID>
     <ID>MagicNumber:MainActivity.kt$MainActivity$60</ID>
     <ID>MagicNumber:MediaSessionCallback.kt$&lt;no name provided&gt;$4</ID>
-    <ID>MagicNumber:MyWidgetProvider.kt$MyWidgetProvider$5000</ID>
     <ID>MagicNumber:PlaybackSpeedFragment.kt$PlaybackSpeedFragment$0.05f</ID>
     <ID>MagicNumber:PlaybackSpeedFragment.kt$PlaybackSpeedFragment$0.25f</ID>
     <ID>MagicNumber:PlaybackSpeedFragment.kt$PlaybackSpeedFragment$100</ID>
@@ -39,7 +38,6 @@
     <ID>MagicNumber:RecyclerView.kt$25</ID>
     <ID>MagicNumber:RoomHelper.kt$RoomHelper$50</ID>
     <ID>MagicNumber:SimpleMediaScanner.kt$SimpleMediaScanner$100L</ID>
-    <ID>MagicNumber:SimpleMusicPlayer.kt$SimpleMusicPlayer$5000</ID>
     <ID>MagicNumber:SleepTimerCustomDialog.kt$SleepTimerCustomDialog$60</ID>
     <ID>MagicNumber:SongsDatabase.kt$SongsDatabase.Companion.&lt;no name provided&gt;$10</ID>
     <ID>MagicNumber:SongsDatabase.kt$SongsDatabase.Companion.&lt;no name provided&gt;$11</ID>
@@ -54,8 +52,6 @@
     <ID>MagicNumber:SongsDatabase.kt$SongsDatabase.Companion.&lt;no name provided&gt;$7</ID>
     <ID>MagicNumber:SongsDatabase.kt$SongsDatabase.Companion.&lt;no name provided&gt;$8</ID>
     <ID>MagicNumber:SongsDatabase.kt$SongsDatabase.Companion.&lt;no name provided&gt;$9</ID>
-    <ID>MagicNumber:TrackActivity.kt$TrackActivity$100</ID>
-    <ID>MagicNumber:TrackActivity.kt$TrackActivity$500L</ID>
     <ID>MagicNumber:WidgetConfigureActivity.kt$WidgetConfigureActivity$100</ID>
     <ID>MaxLineLength:AlbumHeader.kt$AlbumHeader : ListItem</ID>
     <ID>MaxLineLength:AlbumsActivity.kt$AlbumsActivity$var tracksSectionLabel = resources.getQuantityString(R.plurals.tracks_plural, albumTracks.size, albumTracks.size)</ID>
@@ -112,7 +108,6 @@
     <ID>MaxLineLength:MediaSessionCallback.kt$&lt;no name provided&gt;$override</ID>
     <ID>MaxLineLength:MyViewPagerFragment.kt$MyViewPagerFragment$abstract</ID>
     <ID>MaxLineLength:MyViewPagerFragment.kt$MyViewPagerFragment$fun</ID>
-    <ID>MaxLineLength:MyWidgetProvider.kt$MyWidgetProvider$PREVIOUS -&gt; if (player.contentPosition &gt; 5000) player.seekTo(0) else player.seekToPreviousMediaItem()</ID>
     <ID>MaxLineLength:MyWidgetProvider.kt$MyWidgetProvider$override fun onAppWidgetOptionsChanged(context: Context, appWidgetManager: AppWidgetManager, widgetId: Int, newOptions: Bundle)</ID>
     <ID>MaxLineLength:MyWidgetProvider.kt$MyWidgetProvider$setImageViewBitmap(R.id.next_btn, context.resources.getColoredBitmap(org.fossify.commons.R.drawable.ic_next_vector, widgetTextColor))</ID>
     <ID>MaxLineLength:MyWidgetProvider.kt$MyWidgetProvider$val drawableId = if (isPlaying) org.fossify.commons.R.drawable.ic_pause_vector else org.fossify.commons.R.drawable.ic_play_vector</ID>
@@ -121,7 +116,6 @@
     <ID>MaxLineLength:PlaybackService.kt$PlaybackService.Companion$// Initializing a media controller might take a noticeable amount of time thus we expose current playback info here to keep things as quick as possible.</ID>
     <ID>MaxLineLength:PlaybackSpeedFragment.kt$PlaybackSpeedFragment$val background = ResourcesCompat.getDrawable(resources, org.fossify.commons.R.drawable.bottom_sheet_bg, requireContext().theme)</ID>
     <ID>MaxLineLength:Player.kt$*</ID>
-    <ID>MaxLineLength:Player.kt$private</ID>
     <ID>MaxLineLength:PlayerListener.kt$&lt;no name provided&gt;$override fun onPlayerError(error: PlaybackException)</ID>
     <ID>MaxLineLength:Playlist.kt$Playlist.Companion$sorting and PLAYER_SORT_BY_TITLE != 0 -&gt; AlphanumericComparator().compare(first.title.lowercase(), second.title.lowercase())</ID>
     <ID>MaxLineLength:PlaylistsAdapter.kt$PlaylistsAdapter$override fun onChange(position: Int)</ID>
@@ -151,7 +145,6 @@
     <ID>MaxLineLength:SimpleMediaScanner.kt$SimpleMediaScanner$id = id</ID>
     <ID>MaxLineLength:SimpleMediaScanner.kt$SimpleMediaScanner$val artist = retriever.extractMetadata(METADATA_KEY_ARTIST) ?: retriever.extractMetadata(METADATA_KEY_ALBUMARTIST) ?: MediaStore.UNKNOWN_STRING</ID>
     <ID>MaxLineLength:SimpleMediaScanner.kt$SimpleMediaScanner$val invalidTracks = context.audioHelper.getAllTracks().filter { it.mediaStoreId !in newTrackIds || it.path !in newTrackPaths }</ID>
-    <ID>MaxLineLength:SimpleMusicActivity.kt$SimpleMusicActivity$PermissionRequiredDialog(this, org.fossify.commons.R.string.allow_notifications_music_player, { openNotificationSettings() })</ID>
     <ID>MaxLineLength:SleepTimerCustomDialog.kt$SleepTimerCustomDialog$binding.minutesHint.hint = activity.getString(org.fossify.commons.R.string.minutes_raw).replaceFirstChar { it.uppercaseChar() }</ID>
     <ID>MaxLineLength:SongsDatabase.kt$SongsDatabase$@Database(entities = [Track::class, Playlist::class, QueueItem::class, Artist::class, Album::class, Genre::class], version = 15)</ID>
     <ID>MaxLineLength:SongsDatabase.kt$SongsDatabase.Companion.&lt;no name provided&gt;$"CREATE TABLE songs_new (media_store_id INTEGER NOT NULL, title TEXT NOT NULL, artist TEXT NOT NULL, path TEXT NOT NULL, duration INTEGER NOT NULL, "</ID>
@@ -176,8 +169,6 @@
     <ID>MaxLineLength:TagHelper.kt$TagHelper.Companion$private val SUPPORTED_EXTENSIONS = SupportedFileFormat.values().map { it.filesuffix }.filter { it !in EXCLUDED_EXTENSIONS }</ID>
     <ID>MaxLineLength:Track.kt$Track$SHOW_FILENAME_IF_UNAVAILABLE -&gt; if (title == MediaStore.UNKNOWN_STRING) path.getFilenameFromPath() else title</ID>
     <ID>MaxLineLength:Track.kt$Track.Companion$val discComparison = (first.discNumber ?: Int.MAX_VALUE).compareTo(second.discNumber ?: Int.MAX_VALUE)</ID>
-    <ID>MaxLineLength:TrackActivity.kt$TrackActivity$arrayOf(activityTrackToggleShuffle, activityTrackPrevious, activityTrackNext, activityTrackPlaybackSetting)</ID>
-    <ID>MaxLineLength:TrackActivity.kt$TrackActivity$val drawableId = if (isSlow) R.drawable.ic_playback_speed_slow_vector else R.drawable.ic_playback_speed_vector</ID>
     <ID>MaxLineLength:TracksActivity.kt$TracksActivity$// this activity is used for displaying Playlist and Folder tracks, also Album tracks with a possible album header at the top</ID>
     <ID>MaxLineLength:TracksActivity.kt$TracksActivity$PermissionRequiredDialog(this, org.fossify.commons.R.string.allow_notifications_music_player, { openNotificationSettings() })</ID>
     <ID>MaxLineLength:TracksActivity.kt$TracksActivity$if</ID>
@@ -224,7 +215,6 @@
     <ID>TooManyFunctions:SettingsActivity.kt$SettingsActivity : SimpleControllerActivity</ID>
     <ID>TooManyFunctions:SimpleControllerActivity.kt$SimpleControllerActivity : SimpleActivityListener</ID>
     <ID>TooManyFunctions:SimpleMediaScanner.kt$SimpleMediaScanner</ID>
-    <ID>TooManyFunctions:SimpleMusicPlayer.kt$SimpleMusicPlayer : ForwardingPlayer</ID>
     <ID>TooManyFunctions:SongsDao.kt$SongsDao</ID>
     <ID>TooManyFunctions:TrackActivity.kt$TrackActivity : SimpleControllerActivityPlaybackSpeedListener</ID>
     <ID>TooManyFunctions:TracksActivity.kt$TracksActivity : SimpleMusicActivity</ID>
@@ -243,7 +233,6 @@
     <ID>VariableNaming:PlaybackSpeedFragment.kt$PlaybackSpeedFragment$private val MIN_PLAYBACK_SPEED = 0.25f</ID>
     <ID>VariableNaming:PlaybackSpeedFragment.kt$PlaybackSpeedFragment$private val STEP = 0.05f</ID>
     <ID>VariableNaming:RoomHelper.kt$RoomHelper$val ITEMS_PER_GROUP = 50</ID>
-    <ID>VariableNaming:TrackActivity.kt$TrackActivity$private val SWIPE_DOWN_THRESHOLD = 100</ID>
     <ID>VariableNaming:TracksActivity.kt$TracksActivity$private val PICK_EXPORT_FILE_INTENT = 2</ID>
     <ID>VariableNaming:TracksHeaderAdapter.kt$TracksHeaderAdapter$private val ITEM_HEADER = 0</ID>
     <ID>VariableNaming:TracksHeaderAdapter.kt$TracksHeaderAdapter$private val ITEM_TRACK = 1</ID>
@@ -270,7 +259,6 @@
     <ID>WildcardImport:ManageVisibleTabsDialog.kt$import org.fossify.musicplayer.helpers.*</ID>
     <ID>WildcardImport:MediaItem.kt$import org.fossify.musicplayer.models.*</ID>
     <ID>WildcardImport:MediaItemProvider.kt$import org.fossify.musicplayer.extensions.*</ID>
-    <ID>WildcardImport:MediaSessionCallback.kt$import androidx.media3.session.*</ID>
     <ID>WildcardImport:NewPlaylistDialog.kt$import org.fossify.commons.extensions.*</ID>
     <ID>WildcardImport:PlaybackSpeedFragment.kt$import org.fossify.commons.extensions.*</ID>
     <ID>WildcardImport:Playlist.kt$import androidx.room.*</ID>
@@ -285,14 +273,10 @@
     <ID>WildcardImport:SimpleMediaScanner.kt$import android.media.MediaMetadataRetriever.*</ID>
     <ID>WildcardImport:SimpleMediaScanner.kt$import org.fossify.commons.extensions.*</ID>
     <ID>WildcardImport:SimpleMediaScanner.kt$import org.fossify.musicplayer.models.*</ID>
-    <ID>WildcardImport:SimpleMusicPlayer.kt$import kotlinx.coroutines.*</ID>
-    <ID>WildcardImport:SimpleMusicPlayer.kt$import org.fossify.musicplayer.extensions.*</ID>
     <ID>WildcardImport:SleepTimerCustomDialog.kt$import org.fossify.commons.extensions.*</ID>
     <ID>WildcardImport:SongsDatabase.kt$import org.fossify.musicplayer.interfaces.*</ID>
     <ID>WildcardImport:SongsDatabase.kt$import org.fossify.musicplayer.models.*</ID>
     <ID>WildcardImport:Track.kt$import org.fossify.musicplayer.helpers.*</ID>
-    <ID>WildcardImport:TrackActivity.kt$import org.fossify.commons.extensions.*</ID>
-    <ID>WildcardImport:TrackActivity.kt$import org.fossify.musicplayer.extensions.*</ID>
     <ID>WildcardImport:TracksActivity.kt$import org.fossify.commons.extensions.*</ID>
     <ID>WildcardImport:TracksActivity.kt$import org.fossify.musicplayer.helpers.*</ID>
     <ID>WildcardImport:TracksActivity.kt$import org.fossify.musicplayer.models.*</ID>

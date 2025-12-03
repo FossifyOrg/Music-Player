@@ -1,0 +1,5 @@
+Changed:
+
+• Tapping notification now launches the "Now playing" screen 
+• Updated translations
+

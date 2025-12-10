@@ -101,6 +101,17 @@
     </issue>
 
     <issue
+        id="NewerVersionAvailable"
+        message="A newer version of io.nlopez.compose.rules:detekt than 0.4.28 is available: 0.5.1"
+        errorLine1="detektCompose = &quot;0.4.28&quot;"
+        errorLine2="                ~~~~~~~~">
+        <location
+            file="$HOME/work/Music-Player/Music-Player/gradle/libs.versions.toml"
+            line="11"
+            column="17"/>
+    </issue>
+
+    <issue
         id="UnsafeOptInUsageError"
         message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`"
         errorLine1="        val equalizer = SimpleEqualizer.instance"

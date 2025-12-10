@@ -1,7 +1,6 @@
 package org.fossify.musicplayer.adapters
 
 import android.annotation.SuppressLint
-import android.util.Log
 import android.view.Menu
 import android.view.MotionEvent
 import android.view.View

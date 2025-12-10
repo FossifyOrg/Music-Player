@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+- Remove Track only from selected Playlist ([#69])
+
 ## [1.2.3] - 2025-09-09
 ### Changed
 - Updated translations
@@ -54,6 +57,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#45]: https://github.com/FossifyOrg/Music-Player/issues/45
 [#47]: https://github.com/FossifyOrg/Music-Player/issues/47
 [#65]: https://github.com/FossifyOrg/Music-Player/issues/65
+[#69]: https://github.com/FossifyOrg/Music-Player/issues/69
 [#206]: https://github.com/FossifyOrg/Music-Player/issues/206
 [#228]: https://github.com/FossifyOrg/Music-Player/issues/228
 

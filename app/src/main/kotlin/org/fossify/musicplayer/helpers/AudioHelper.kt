@@ -71,6 +71,13 @@ class AudioHelper(private val context: Context) {
         }
     }
 
+    fun removeTracksFromPlaylist(playlistId: Int, mediaStoreIds: List<Long>) {
+        if (mediaStoreIds.isEmpty()) return
+        mediaStoreIds.forEach { mediaId ->
+            context.tracksDAO.removeTrackFromPlaylist(playlistId, mediaId)
+        }
+    }
+
     fun insertArtists(artists: List<Artist>) {
         context.artistDAO.insertAll(artists)
     }

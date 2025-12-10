@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_launcher_name">پشک کوننده آرنگ</string>
+    <string name="playlist_empty">نومگه پشک ایسا پتی هڌ</string>
+    <string name="rename_song">آلشت نوم آرنگ</string>
+    <string name="rename_song_error">مجال آلشت نوم ختایی پؽش ٱووڌ</string>
+    <string name="rename_song_empty">پوی مووردا ن پور کۊنین</string>
+    <string name="repeat_song">تکرار آرنگ هیم سکویی</string>
+    <string name="repeat_playlist">تکرار پوی</string>
+    <string name="enable_shuffle">فعال کردن پشک تساڌۊفی</string>
+    <string name="repeat_off">تکرار کۊر</string>
+    <string name="disable_shuffle">قیر فعال کردن پشک تساڌۊفی</string>
+    <string name="shuffle_enabled">پشک تساڌۊفی فعال وابی</string>
+    <string name="shuffle_disabled">پشک تساڌۊفی قیر فعال وابی</string>
+    <string name="volume">هندا دونگ</string>
+    <string name="playback_speed">ترات پشک</string>
+    <string name="loading_files">هونی فایلا ن بار ونی اکونه…</string>
+    <string name="add_file_to_playlist">ٱووردن فایل و نومگه موورد علاقه یل</string>
+    <string name="add_folder_to_playlist">ٱووردن دوبلگه و نومگه موورد علاقه یل</string>
+    <string name="manage_playlists">دؽوۉداری نومگه پشک</string>
+    <string name="stop_playback_after_current_song">واڌاشتن پشک بئڌ آرنگ هیم سکویی</string>
+    <string name="playlists">نومگه پشک</string>
+    <string name="create_new_playlist">وورکل نومگه پشک نۊ</string>
+    <string name="rename_playlist">آلشت نوم نومگه پشک</string>
+    <string name="playlist_name_exists">ی نومگه پشک وا ای نوم ز زیتر بیڌه</string>
+    <string name="remove_playlist">پاک کردن نومگه پشک</string>
+    <string name="remove_playlist_description">وا ای کار تینا نومگه یل پشک پسند وابیڌه پاک ابۊن، ن فایلایی ک داری.</string>
+    <string name="remove_playlist_description_placeholder">یو تینا نومگه پشک «%s» ن پاک اکونه، فایلایی ک داری پاک نؽبۊن.</string>
+    <string name="remove_from_playlist">پاک کردن ز نومگه پشک</string>
+    <string name="remove_from_playlist_description">وا ای کار تینا مووردا ز نومگه پشک «%s» پاک ابۊن، فایلایی ک داری پاک نؽبۊن.</string>
+    <string name="delete_the_files_too">فایلا ن هم پاک کۊنین</string>
+    <string name="open_playlist">گۊشیڌن نومگه پشک</string>
+    <string name="all_songs_cannot_be_deleted">نومگه پشک «پوی آرنگا» پاک نؽبۊ</string>
+    <string name="all_songs">پوی آرنگا</string>
+    <string name="create_playlist_from_folder">وورکل نومگه پشک نۊ ز دوبلگه</string>
+    <string name="folder_contains_no_audio">دوبلگه پسند وابیڌه هیچ فایل آرنگی منس نؽ</string>
+    <string name="delete_current_song">پاک کردن آرنگ هیم سکویی</string>
+    <string name="remove_current_song">پاک کردن آرنگ هیم سکویی ز نومگه پشک</string>
+    <string name="show_filename">نشووݩ داڌن نوم فایل و عونوان عونوان آرنگ</string>
+    <string name="title_is_not_available">ٱر عونوان من دسرس نؽ</string>
+    <string name="show_album_cover">جلت آلبوم ن ری بلگه ٱسلی نشووݩ بڌین</string>
+    <string name="all_tracks">پوی آرنگا</string>
+    <string name="add_to_playlist">ٱووردن و نومگه پشک</string>
+    <string name="empty_playlist">نومگه پشک هیم سکویی پتی هڌ</string>
+</resources>

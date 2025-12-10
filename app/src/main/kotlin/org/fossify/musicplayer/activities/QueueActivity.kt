@@ -11,6 +11,7 @@ import androidx.media3.common.MediaItem
 import org.fossify.commons.extensions.areSystemAnimationsEnabled
 import org.fossify.commons.extensions.beGoneIf
 import org.fossify.commons.extensions.getProperPrimaryColor
+import org.fossify.commons.extensions.normalizeString
 import org.fossify.commons.extensions.viewBinding
 import org.fossify.commons.helpers.NavigationIcon
 import org.fossify.commons.helpers.ensureBackgroundThread
@@ -30,12 +31,11 @@ class QueueActivity : SimpleControllerActivity() {
     private val binding by viewBinding(ActivityQueueBinding::inflate)
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        isMaterialActivity = true
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         setupOptionsMenu()
-        updateMaterialActivityViews(binding.queueCoordinator, binding.queueList, useTransparentNavigation = true, useTopSearchMenu = false)
-        setupMaterialScrollListener(binding.queueList, binding.queueToolbar)
+        setupEdgeToEdge(padBottomImeAndSystem = listOf(binding.queueList))
+        setupMaterialScrollListener(binding.queueList, binding.queueAppbar)
 
         setupAdapter()
         binding.queueFastscroller.updateColors(getProperPrimaryColor())
@@ -43,14 +43,15 @@ class QueueActivity : SimpleControllerActivity() {
 
     override fun onResume() {
         super.onResume()
-        setupToolbar(binding.queueToolbar, NavigationIcon.Arrow, searchMenuItem = searchMenuItem)
+        setupTopAppBar(binding.queueAppbar, NavigationIcon.Arrow, searchMenuItem = searchMenuItem)
     }
 
-    override fun onBackPressed() {
-        if (isSearchOpen && searchMenuItem != null) {
+    override fun onBackPressedCompat(): Boolean {
+        return if (isSearchOpen && searchMenuItem != null) {
             searchMenuItem!!.collapseActionView()
+            true
         } else {
-            super.onBackPressed()
+            false
         }
     }
 
@@ -115,7 +116,10 @@ class QueueActivity : SimpleControllerActivity() {
     }
 
     private fun onSearchQueryChanged(text: String) {
-        val filtered = tracksIgnoringSearch.filter { it.title.contains(text, true) }.toMutableList() as ArrayList<Track>
+        val normalizedText = text.normalizeString()
+        val filtered = tracksIgnoringSearch.filter {
+            it.title.normalizeString().contains(normalizedText, true)
+        }.toMutableList() as ArrayList<Track>
         getAdapter()?.updateItems(filtered, text)
         binding.queuePlaceholder.beGoneIf(filtered.isNotEmpty())
     }

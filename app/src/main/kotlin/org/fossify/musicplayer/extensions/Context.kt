@@ -297,3 +297,11 @@ fun Context.getPlaybackSetting(repeatMode: @Player.RepeatMode Int): PlaybackSett
         else -> config.playbackSetting
     }
 }
+
+fun Context.getFriendlyFolder(path: String): String {
+    return when (val parentPath = path.getParentPath()) {
+        internalStoragePath -> getString(org.fossify.commons.R.string.internal)
+        sdCardPath -> getString(org.fossify.commons.R.string.sd_card)
+        else -> parentPath.getFilenameFromPath()
+    }
+}

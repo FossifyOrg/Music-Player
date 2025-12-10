@@ -1,6 +1,5 @@
 package org.fossify.musicplayer.activities
 
-import android.app.Activity
 import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.graphics.drawable.ColorDrawable
@@ -11,6 +10,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.viewpager.widget.ViewPager
 import me.grantland.widget.AutofitHelper
+import org.fossify.musicplayer.BuildConfig
 import org.fossify.commons.databinding.BottomTablayoutItemBinding
 import org.fossify.commons.dialogs.FilePickerDialog
 import org.fossify.commons.dialogs.RadioGroupDialog
@@ -19,7 +19,6 @@ import org.fossify.commons.helpers.*
 import org.fossify.commons.models.FAQItem
 import org.fossify.commons.models.RadioItem
 import org.fossify.commons.models.Release
-import org.fossify.musicplayer.BuildConfig
 import org.fossify.musicplayer.R
 import org.fossify.musicplayer.adapters.ViewPagerAdapter
 import org.fossify.musicplayer.databinding.ActivityMainBinding
@@ -27,7 +26,6 @@ import org.fossify.musicplayer.dialogs.NewPlaylistDialog
 import org.fossify.musicplayer.dialogs.SelectPlaylistDialog
 import org.fossify.musicplayer.dialogs.SleepTimerCustomDialog
 import org.fossify.musicplayer.extensions.*
-import org.fossify.musicplayer.fragments.PlaylistsFragment
 import org.fossify.musicplayer.helpers.*
 import org.fossify.musicplayer.helpers.M3uImporter.ImportResult
 import org.fossify.musicplayer.models.Events
@@ -44,16 +42,24 @@ class MainActivity : SimpleMusicActivity() {
     private var storedShowTabs = 0
     private var storedExcludedFolders = 0
 
+    override var isSearchBarEnabled = true
+
     private val binding by viewBinding(ActivityMainBinding::inflate)
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        isMaterialActivity = true
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         appLaunched(BuildConfig.APPLICATION_ID)
         setupOptionsMenu()
         refreshMenuItems()
-        updateMaterialActivityViews(binding.mainCoordinator, binding.mainHolder, useTransparentNavigation = false, useTopSearchMenu = true)
+        setupEdgeToEdge(
+            padBottomImeAndSystem = buildList {
+                add(binding.mainTabsHolder)
+                if (getVisibleTabs().size == 1) {
+                    add(binding.currentTrackBar.root)
+                }
+            }
+        )
         storeStateVariables()
         setupTabs()
         setupCurrentTrackBar(binding.currentTrackBar.root)
@@ -74,6 +80,7 @@ class MainActivity : SimpleMusicActivity() {
 
     override fun onResume() {
         super.onResume()
+        handleNotificationIntent(intent)
         if (storedShowTabs != config.showTabs) {
             config.lastUsedViewPagerPage = 0
             System.exit(0)
@@ -99,6 +106,12 @@ class MainActivity : SimpleMusicActivity() {
         }
     }
 
+    override fun onNewIntent(intent: Intent) {
+        super.onNewIntent(intent)
+        setIntent(intent)
+        handleNotificationIntent(intent)
+    }
+
     override fun onPause() {
         super.onPause()
         storeStateVariables()
@@ -110,16 +123,17 @@ class MainActivity : SimpleMusicActivity() {
         bus?.unregister(this)
     }
 
-    override fun onBackPressed() {
-        if (binding.mainMenu.isSearchOpen) {
+    override fun onBackPressedCompat(): Boolean {
+        return if (binding.mainMenu.isSearchOpen) {
             binding.mainMenu.closeSearch()
+            true
         } else {
-            super.onBackPressed()
+            false
         }
     }
 
     private fun refreshMenuItems(position: Int = binding.viewPager.currentItem) {
-        binding.mainMenu.getToolbar().menu.apply {
+        binding.mainMenu.requireToolbar().menu.apply {
             val tab = getVisibleTabs()[position]
             val isPlaylistFragment = tab == TAB_PLAYLISTS
             findItem(R.id.create_new_playlist).isVisible = isPlaylistFragment
@@ -130,7 +144,7 @@ class MainActivity : SimpleMusicActivity() {
     }
 
     private fun setupOptionsMenu() {
-        binding.mainMenu.getToolbar().inflateMenu(R.menu.menu_main)
+        binding.mainMenu.requireToolbar().inflateMenu(R.menu.menu_main)
         binding.mainMenu.toggleHideOnScroll(false)
         binding.mainMenu.setupMenu()
 
@@ -144,7 +158,7 @@ class MainActivity : SimpleMusicActivity() {
             getCurrentFragment()?.onSearchQueryChanged(text)
         }
 
-        binding.mainMenu.getToolbar().setOnMenuItemClickListener { menuItem ->
+        binding.mainMenu.requireToolbar().setOnMenuItemClickListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.sort -> showSortingDialog()
                 R.id.rescan_media -> refreshAllFragments(showProgress = true)
@@ -163,7 +177,6 @@ class MainActivity : SimpleMusicActivity() {
     }
 
     private fun updateMenuColors() {
-        updateStatusbarColor(getProperBackgroundColor())
         binding.mainMenu.updateColors()
     }
 
@@ -248,9 +261,13 @@ class MainActivity : SimpleMusicActivity() {
                 updateBottomTabItemColors(it.customView, false)
             },
             tabSelectedAction = {
-                binding.mainMenu.closeSearch()
                 binding.viewPager.currentItem = it.position
                 updateBottomTabItemColors(it.customView, true)
+                binding.viewPager.post {
+                    getAdapter()?.getFragmentAt(it.position)?.onSearchQueryChanged(
+                        text = binding.mainMenu.getCurrentQuery()
+                    )
+                }
             }
         )
 
@@ -268,7 +285,6 @@ class MainActivity : SimpleMusicActivity() {
 
         val bottomBarColor = getBottomNavigationBackgroundColor()
         binding.mainTabsHolder.setBackgroundColor(bottomBarColor)
-        updateNavigationBarColor(bottomBarColor)
     }
 
     private fun getInactiveTabIndexes(activeIndex: Int) = (0 until tabsList.size).filter { it != activeIndex }
@@ -336,7 +352,7 @@ class MainActivity : SimpleMusicActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, resultData: Intent?) {
         super.onActivityResult(requestCode, resultCode, resultData)
-        if (requestCode == PICK_IMPORT_SOURCE_INTENT && resultCode == Activity.RESULT_OK && resultData != null && resultData.data != null) {
+        if (requestCode == PICK_IMPORT_SOURCE_INTENT && resultCode == RESULT_OK && resultData?.data != null) {
             tryImportPlaylistFromFile(resultData.data!!)
         }
     }
@@ -538,6 +554,17 @@ class MainActivity : SimpleMusicActivity() {
     private fun checkWhatsNewDialog() {
         arrayListOf<Release>().apply {
             checkWhatsNew(this, BuildConfig.VERSION_CODE)
+        }
+    }
+
+    private fun handleNotificationIntent(intent: Intent) {
+        val shouldOpenPlayer = intent.getBooleanExtra(EXTRA_OPEN_PLAYER, false)
+
+        if (shouldOpenPlayer) {
+            intent.removeExtra(EXTRA_OPEN_PLAYER)
+            Intent(this, TrackActivity::class.java).apply {
+                startActivity(this)
+            }
         }
     }
 }

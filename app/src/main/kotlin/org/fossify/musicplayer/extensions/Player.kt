@@ -6,6 +6,7 @@ import androidx.media3.common.MediaItem
 import androidx.media3.common.Player
 import org.fossify.commons.helpers.ensureBackgroundThread
 import org.fossify.musicplayer.helpers.PlaybackSetting
+import org.fossify.musicplayer.helpers.RESTART_ON_PREVIOUS_THRESHOLD
 import org.fossify.musicplayer.models.Track
 import org.fossify.musicplayer.models.toMediaItemsFast
 
@@ -99,16 +100,13 @@ fun Player.setRepeatMode(playbackSetting: PlaybackSetting) {
     }
 }
 
-fun Player.forceSeekToNext() {
-    if (!maybeForceNext()) {
-        seekToNext()
-    }
-}
-
-fun Player.forceSeekToPrevious() {
-    if (!maybeForcePrevious()) {
-        seekToPrevious()
-    }
+fun Player.maybeRestartOnPrevious(): Boolean {
+     if (currentPosition > RESTART_ON_PREVIOUS_THRESHOLD) {
+         seekTo(0)
+         return true
+     } else {
+         return false
+     }
 }
 
 /**

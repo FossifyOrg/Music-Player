@@ -144,7 +144,7 @@ class TrackActivity : SimpleControllerActivity(), PlaybackSpeedListener {
         getTrackFromUri(intent.data) { track ->
             runOnUiThread {
                 if (track != null) {
-                    prepareAndPlay(listOf(track), startActivity = false)
+                    prepareAndPlay(listOf(track), startActivity = false, thirdPartyIntent = isThirdPartyIntent)
                 } else {
                     toast(org.fossify.commons.R.string.unknown_error_occurred)
                     finish()

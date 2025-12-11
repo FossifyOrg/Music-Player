@@ -29,18 +29,17 @@ class EqualizerActivity : SimpleActivity() {
     private val binding by viewBinding(ActivityEqualizerBinding::inflate)
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        isMaterialActivity = true
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        updateMaterialActivityViews(binding.equalizerCoordinator, binding.equalizerHolder, useTransparentNavigation = true, useTopSearchMenu = false)
-        setupMaterialScrollListener(binding.equalizerNestedScrollview, binding.equalizerToolbar)
+        setupEdgeToEdge(padBottomSystem = listOf(binding.equalizerNestedScrollview))
+        setupMaterialScrollListener(binding.equalizerNestedScrollview, binding.equalizerAppbar)
         initMediaPlayer()
     }
 
     override fun onResume() {
         super.onResume()
-        setupToolbar(binding.equalizerToolbar, NavigationIcon.Arrow)
+        setupTopAppBar(binding.equalizerAppbar, NavigationIcon.Arrow)
     }
 
     @SuppressLint("SetTextI18n")

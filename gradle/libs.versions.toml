@@ -3,31 +3,31 @@
 autofittextview = "0.2.1"
 desugar_jdk_libs = "2.1.5"
 jaudiotagger = "3.0.1"
-kotlin = "2.2.20"
+kotlin = "2.2.21"
 #KSP
-ksp = "2.2.20-2.0.3"
+ksp = "2.3.3"
 #Detekt
 detekt = "1.23.8"
-detektCompose = "0.4.27"
+detektCompose = "0.4.28"
 #AndroidX
 androidx-constraintlayout = "2.2.1"
-androidx-swiperefreshlayout = "1.1.0"
-androidx-lifecycleprocess = "2.7.0"
+androidx-swiperefreshlayout = "1.2.0"
+androidx-lifecycleprocess = "2.10.0"
 #Eventbus
 eventbus = "3.3.1"
 #Room
-lottie = "6.6.7"
+lottie = "6.7.1"
 m3uParser = "1.4.0"
 media = "1.7.1"
-media3 = "1.2.1"
-room = "2.8.0"
+media3 = "1.8.0"
+room = "2.8.4"
 #Fossify
-commons = "5.0.2"
+commons = "5.11.0"
 #Gradle
 gradlePlugins-agp = "8.11.1"
 #build
-app-build-compileSDKVersion = "34"
-app-build-targetSDK = "34"
+app-build-compileSDKVersion = "36"
+app-build-targetSDK = "36"
 app-build-minimumSDK = "26"
 app-build-javaVersion = "VERSION_17"
 app-build-kotlinJVMTarget = "17"

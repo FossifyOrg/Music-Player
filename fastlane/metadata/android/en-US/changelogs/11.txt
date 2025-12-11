@@ -1,0 +1,10 @@
+Changed:
+
+• Player now respects play/pause state when seeking 
+
+Fixed:
+
+• Fixed startup crash with large number of items
+• Fixed another crash when clearing app from recents 
+• Fixed flicker when skipping to the next/previous track on the player screen
+

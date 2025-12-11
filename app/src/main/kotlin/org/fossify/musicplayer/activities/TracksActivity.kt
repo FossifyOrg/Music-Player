@@ -55,14 +55,16 @@ class TracksActivity : SimpleMusicActivity() {
     private val binding by viewBinding(ActivityTracksBinding::inflate)
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        isMaterialActivity = true
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         setupOptionsMenu()
         refreshMenuItems()
 
-        updateMaterialActivityViews(binding.tracksCoordinator, binding.tracksHolder, useTransparentNavigation = true, useTopSearchMenu = false)
-        setupMaterialScrollListener(binding.tracksList, binding.tracksToolbar)
+        setupEdgeToEdge(
+            padBottomImeAndSystem = listOf(binding.tracksList),
+            padBottomSystem = listOf(binding.currentTrackBar.root)
+        )
+        setupMaterialScrollListener(binding.tracksList, binding.tracksAppbar)
 
         val properPrimaryColor = getProperPrimaryColor()
         binding.tracksFastscroller.updateColors(properPrimaryColor)
@@ -78,7 +80,7 @@ class TracksActivity : SimpleMusicActivity() {
 
     override fun onResume() {
         super.onResume()
-        setupToolbar(binding.tracksToolbar, NavigationIcon.Arrow, searchMenuItem = searchMenuItem)
+        setupTopAppBar(binding.tracksAppbar, NavigationIcon.Arrow, searchMenuItem = searchMenuItem)
         refreshTracks()
     }
 
@@ -347,8 +349,10 @@ class TracksActivity : SimpleMusicActivity() {
     }
 
     private fun onSearchQueryChanged(text: String) {
+        val normalizedText = text.normalizeString()
         val filtered = tracksIgnoringSearch.filter {
-            it.title.contains(text, true) || ("${it.artist} - ${it.album}").contains(text, true)
+            it.title.normalizeString().contains(normalizedText, true)
+                || ("${it.artist} - ${it.album}").normalizeString().contains(text, true)
         }.toMutableList() as ArrayList<Track>
         getTracksAdapter()?.updateItems(filtered, text)
         binding.tracksPlaceholder.beGoneIf(filtered.isNotEmpty())

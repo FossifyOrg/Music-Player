@@ -59,8 +59,8 @@ class MyWidgetProvider : AppWidgetProvider() {
                 context.startActivity(intent)
             } else {
                 when (action) {
-                    NEXT -> player.seekToNextMediaItem()
-                    PREVIOUS -> if (player.contentPosition > 5000) player.seekTo(0) else player.seekToPreviousMediaItem()
+                    NEXT -> player.seekToNext()
+                    PREVIOUS -> player.seekToPrevious()
                     PLAYPAUSE -> player.togglePlayback()
                 }
             }

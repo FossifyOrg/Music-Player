@@ -9,6 +9,7 @@ import org.fossify.commons.extensions.areSystemAnimationsEnabled
 import org.fossify.commons.extensions.beGoneIf
 import org.fossify.commons.extensions.beVisibleIf
 import org.fossify.commons.extensions.hideKeyboard
+import org.fossify.commons.extensions.normalizeString
 import org.fossify.commons.helpers.ensureBackgroundThread
 import org.fossify.musicplayer.R
 import org.fossify.musicplayer.activities.SimpleActivity
@@ -79,7 +80,10 @@ class GenresFragment(context: Context, attributeSet: AttributeSet) : MyViewPager
     }
 
     override fun onSearchQueryChanged(text: String) {
-        val filtered = genres.filter { it.title.contains(text, true) }.toMutableList() as ArrayList<Genre>
+        val normalizedText = text.normalizeString()
+        val filtered = genres.filter {
+            it.title.normalizeString().contains(normalizedText, true)
+        }.toMutableList() as ArrayList<Genre>
         getAdapter()?.updateItems(filtered, text)
         binding.genresPlaceholder.beVisibleIf(filtered.isEmpty())
     }

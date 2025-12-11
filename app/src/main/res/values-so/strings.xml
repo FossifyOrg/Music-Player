@@ -43,4 +43,42 @@
     <string name="remove_playlist_description_placeholder">Falkan wuxuu tirtiri taxda \"%s\". Codadka laftooda lama tirtiri doono.</string>
     <string name="empty_playlist">Taxdu way maran tahay</string>
     <string name="delete_song_warning">DIGNIIN: Falkan wuxuu codadka la doortay ka tirtiri qalabkaaga, maca taxaha la socda.</string>
+    <plurals name="albums_plural">
+        <item quantity="one">%d Albam</item>
+        <item quantity="other">%d Albam</item>
+    </plurals>
+    <string name="app_launcher_name">Cod Wade</string>
+    <string name="create_playlist_label">Waxaad sameyn kartaa tax cusub adigoo dooranaya codeeyaha, albamka ama codadka aad rabtid adeegsanayana Liis -&gt; Taxda ku dar.</string>
+    <string name="export_playlist">Dhoofi taxda</string>
+    <string name="import_playlist">Dhoofso taxda</string>
+    <string name="filename_without_m3u">Magaca (ka-maran .m3u)</string>
+    <string name="track_count">Tirsiga Codka</string>
+    <string name="album_count">Tirsiga Albamka</string>
+    <string name="artist_name">Magaca Codeeyaha</string>
+    <string name="year">Sanadka</string>
+    <string name="track_number">Tirsiga codka</string>
+    <string name="use_for_this_playlist">U adeegso taxdan keliya</string>
+    <string name="use_for_this_album">U adeegso albamkan keliya</string>
+    <string name="artists">Codeeyeyaal</string>
+    <string name="folders">Galal</string>
+    <string name="genres">Noocyo</string>
+    <string name="albums">Albam</string>
+    <string name="tracks">Codad</string>
+    <plurals name="tracks_plural">
+        <item quantity="one">%d Cod</item>
+        <item quantity="other">%d Cod</item>
+    </plurals>
+    <string name="track_on_disk">%1$d.%2$s</string>
+    <string name="next_track">Xiga:</string>
+    <string name="track_queue">Safka codadka</string>
+    <string name="add_to_queue">Safka ku dar</string>
+    <string name="play_next">Kan xiga shid</string>
+    <string name="remove_from_queue">Ka saar safka</string>
+    <string name="create_playlist_from_queue">Safka tax ka samee</string>
+    <string name="equalizer">Dheelli-Tire</string>
+    <string name="swap_prev_next">Kala beddel badhanka hore/xiga ee samaacadda</string>
+    <string name="exclude_folder_description">Ka reebidda gal waxay reebi in la muujiyo codadka ku jira oo idil. Codadka lagu daray taxaha ma saamoobayaan.</string>
+    <string name="rescan_media">Eegidda codadka ku celi</string>
+    <string name="faq_1_title">Sideen u boobsiin codadka?</string>
+    <string name="faq_1_text">Waxaad gujin kartaa qoraallada xilligan ama xilliga ugu badan ee udhow raadka socodsiinta, taasoo codka geyn doonta gadaal, ama horay.</string>
 </resources>

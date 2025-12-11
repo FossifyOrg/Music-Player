@@ -3,7 +3,6 @@ package org.fossify.musicplayer.helpers
 import androidx.core.net.toUri
 import org.fossify.commons.helpers.PERMISSION_READ_MEDIA_AUDIO
 import org.fossify.commons.helpers.PERMISSION_WRITE_STORAGE
-import org.fossify.commons.helpers.isQPlus
 import org.fossify.commons.helpers.isTiramisuPlus
 
 const val ALL_TRACKS_PLAYLIST_ID = 1
@@ -17,6 +16,8 @@ const val FOLDER = "folder"
 const val GENRE = "genre"
 
 const val PATH = "org.fossify.musicplayer.action."
+
+const val EXTRA_OPEN_PLAYER = "org.fossify.musicplayer.OPEN_PLAYER"
 val artworkUri = "content://media/external/audio/albumart".toUri()
 
 const val PREVIOUS = PATH + "PREVIOUS"
@@ -67,6 +68,7 @@ const val SORT_PLAYLIST_PREFIX = "sort_playlist_"
 
 const val SEEK_INTERVAL_MS = 10000L
 const val SEEK_INTERVAL_S = 10
+const val RESTART_ON_PREVIOUS_THRESHOLD = 5000L
 
 const val SHOW_FILENAME_NEVER = 1
 const val SHOW_FILENAME_IF_UNAVAILABLE = 2
@@ -83,32 +85,17 @@ const val ACTIVITY_PLAYLIST_FOLDER = 64
 const val FLAG_MANUAL_CACHE = 1
 const val FLAG_IS_CURRENT = 2
 
-// show Folders tab only on Android Q+, BUCKET_DISPLAY_NAME hasn't been available before that
-val allTabsMask = if (isQPlus()) {
-    TAB_PLAYLISTS or TAB_FOLDERS or TAB_ARTISTS or TAB_ALBUMS or TAB_TRACKS
-} else {
-    TAB_PLAYLISTS or TAB_ARTISTS or TAB_ALBUMS or TAB_TRACKS
-}
+const val ALL_TABS_MASK = TAB_PLAYLISTS or TAB_FOLDERS or TAB_ARTISTS or TAB_ALBUMS or TAB_TRACKS
 
 val tabsList: ArrayList<Int>
-    get() = if (isQPlus()) {
-        arrayListOf(
-            TAB_PLAYLISTS,
-            TAB_FOLDERS,
-            TAB_ARTISTS,
-            TAB_ALBUMS,
-            TAB_TRACKS,
-            TAB_GENRES
-        )
-    } else {
-        arrayListOf(
-            TAB_PLAYLISTS,
-            TAB_ARTISTS,
-            TAB_ALBUMS,
-            TAB_TRACKS,
-            TAB_GENRES
-        )
-    }
+    get() = arrayListOf(
+        TAB_PLAYLISTS,
+        TAB_FOLDERS,
+        TAB_ARTISTS,
+        TAB_ALBUMS,
+        TAB_TRACKS,
+        TAB_GENRES
+    )
 
 // use custom sorting constants, there are too many app specific ones
 const val PLAYER_SORT_BY_TITLE = 1

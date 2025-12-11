@@ -48,13 +48,13 @@
     <plurals name="albums_plural">
         <item quantity="one">%d álbum</item>
         <item quantity="many">%d álbuns</item>
-        <item quantity="other"></item>
+        <item quantity="other">%d álbuns</item>
     </plurals>
     <string name="tracks">Faixas</string>
     <plurals name="tracks_plural">
         <item quantity="one">%d faixa</item>
         <item quantity="many">%d faixas</item>
-        <item quantity="other"></item>
+        <item quantity="other">%d faixas</item>
     </plurals>
     <string name="next_track">Seguinte:</string>
     <string name="track_queue">Fila de reprodução</string>
@@ -82,4 +82,5 @@
     <string name="artists">Artistas</string>
     <string name="folders">Pastas</string>
     <string name="genres">Géneros</string>
+    <string name="track_on_disk">%1$d.%2$s</string>
 </resources>

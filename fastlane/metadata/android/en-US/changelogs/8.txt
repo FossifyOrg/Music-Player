@@ -1,0 +1,8 @@
+Added:
+
+• Support for folders on Android 9 and below versions 
+
+Changed:
+
+• Updated translations
+

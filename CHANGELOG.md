@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Tapping notification now launches the "Now playing" screen ([#179])
 
+### Fixed
+- Fixed playing files from directory with ".nomedia" ([#114])
+
 ## [1.6.0] - 2025-11-09
 ### Changed
 - Player now respects play/pause state when seeking ([#97])
@@ -92,6 +95,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#47]: https://github.com/FossifyOrg/Music-Player/issues/47
 [#65]: https://github.com/FossifyOrg/Music-Player/issues/65
 [#97]: https://github.com/FossifyOrg/Music-Player/issues/97
+[#114]: https://github.com/FossifyOrg/Music-Player/issues/114
 [#179]: https://github.com/FossifyOrg/Music-Player/issues/179
 [#206]: https://github.com/FossifyOrg/Music-Player/issues/206
 [#209]: https://github.com/FossifyOrg/Music-Player/issues/209

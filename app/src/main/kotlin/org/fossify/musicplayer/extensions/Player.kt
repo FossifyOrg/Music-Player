@@ -8,6 +8,7 @@ import org.fossify.commons.helpers.ensureBackgroundThread
 import org.fossify.musicplayer.helpers.PlaybackSetting
 import org.fossify.musicplayer.helpers.RESTART_ON_PREVIOUS_THRESHOLD
 import org.fossify.musicplayer.models.Track
+import org.fossify.musicplayer.models.toMediaItems
 import org.fossify.musicplayer.models.toMediaItemsFast
 
 val Player.isReallyPlaying: Boolean
@@ -138,6 +139,7 @@ fun Player.prepareUsingTracks(
     startIndex: Int = 0,
     startPositionMs: Long = 0,
     play: Boolean = false,
+    thirdPartyIntent: Boolean = false,
     callback: ((success: Boolean) -> Unit)? = null
 ) {
     if (tracks.isEmpty()) {
@@ -147,7 +149,11 @@ fun Player.prepareUsingTracks(
         return
     }
 
-    val mediaItems = tracks.toMediaItemsFast()
+    val mediaItems = if(thirdPartyIntent) {
+        tracks.toMediaItems()
+    } else {
+        tracks.toMediaItemsFast()
+    }
     runOnPlayerThread {
         setMediaItems(mediaItems, startIndex, startPositionMs)
         playWhenReady = play

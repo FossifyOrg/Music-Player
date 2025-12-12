@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Tapping notification now launches the "Now playing" screen ([#179])
 
 ### Fixed
-- Remove Track only from selected Playlist ([#69])
+- Fixed an issue where removing a track from a playlist removed it from all playlists ([#69])
 
 ## [1.6.0] - 2025-11-09
 ### Changed

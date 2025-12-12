@@ -78,4 +78,5 @@
     <string name="genres">ジャンル</string>
     <string name="rescan_media">メディアを再スキャン</string>
     <string name="play_next">次を再生</string>
+    <string name="track_on_disk">%2$s トラック %1$d ディスク</string>
 </resources>

@@ -87,7 +87,7 @@ class TracksAdapter(
             R.id.cab_add_to_queue -> addToQueue()
             R.id.cab_properties -> showProperties()
             R.id.cab_rename -> displayEditDialog()
-            R.id.cab_remove_from_playlist -> removeFromPlaylist()
+            R.id.cab_remove_from_playlist -> removeFromPlaylist(playlist)
             R.id.cab_delete -> askConfirmDelete()
             R.id.cab_share -> shareFiles()
             R.id.cab_select_all -> selectAll()
@@ -107,7 +107,9 @@ class TracksAdapter(
         }
     }
 
-    private fun removeFromPlaylist() {
+    private fun removeFromPlaylist(playlist: Playlist?) {
+        if (playlist == null) return
+
         ensureBackgroundThread {
             val positions = ArrayList<Int>()
             val selectedTracks = getSelectedTracks()
@@ -118,7 +120,8 @@ class TracksAdapter(
                 }
             }
 
-            context.audioHelper.deleteTracks(selectedTracks)
+            val mediaIds = selectedTracks.map { it.mediaStoreId }
+            context.audioHelper.removeTracksFromPlaylist(playlist.id, mediaIds)
             // this is to make sure these tracks aren't automatically re-added to the 'All tracks' playlist on rescan
             val removedTrackIds = selectedTracks.filter { it.playListId == ALL_TRACKS_PLAYLIST_ID }.map { it.mediaStoreId.toString() }
             if (removedTrackIds.isNotEmpty()) {

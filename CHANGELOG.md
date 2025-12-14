@@ -12,7 +12,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed an issue where removing a track from a playlist removed it from all playlists ([#69])
 - Fixed playing files from directory with ".nomedia" ([#114])
 
-
 ## [1.6.0] - 2025-11-09
 ### Changed
 - Player now respects play/pause state when seeking ([#97])
@@ -96,7 +95,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#45]: https://github.com/FossifyOrg/Music-Player/issues/45
 [#47]: https://github.com/FossifyOrg/Music-Player/issues/47
 [#65]: https://github.com/FossifyOrg/Music-Player/issues/65
+[#69]: https://github.com/FossifyOrg/Music-Player/issues/69
 [#97]: https://github.com/FossifyOrg/Music-Player/issues/97
+[#114]: https://github.com/FossifyOrg/Music-Player/issues/114
 [#179]: https://github.com/FossifyOrg/Music-Player/issues/179
 [#206]: https://github.com/FossifyOrg/Music-Player/issues/206
 [#209]: https://github.com/FossifyOrg/Music-Player/issues/209

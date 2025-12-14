@@ -5,6 +5,7 @@ import androidx.media3.common.C
 import androidx.media3.common.MediaItem
 import androidx.media3.common.Player
 import org.fossify.commons.helpers.ensureBackgroundThread
+import org.fossify.musicplayer.helpers.FLAG_MANUAL_CACHE
 import org.fossify.musicplayer.helpers.PlaybackSetting
 import org.fossify.musicplayer.helpers.RESTART_ON_PREVIOUS_THRESHOLD
 import org.fossify.musicplayer.models.Track
@@ -150,7 +151,12 @@ fun Player.prepareUsingTracks(
     }
 
     val mediaItems = if(thirdPartyIntent) {
-        tracks.toMediaItems()
+        tracks.map { track ->
+            if (track.mediaStoreId == 0L) {
+                track.flags = track.flags or FLAG_MANUAL_CACHE
+            }
+            track.toMediaItem()
+        }
     } else {
         tracks.toMediaItemsFast()
     }

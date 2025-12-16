@@ -5,8 +5,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [1.7.0] - 2025-12-16
 ### Changed
 - Tapping notification now launches the "Now playing" screen ([#179])
+- Updated translations
 
 ### Fixed
 - Fixed an issue where removing a track from a playlist removed it from all playlists ([#69])
@@ -105,7 +108,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#269]: https://github.com/FossifyOrg/Music-Player/issues/269
 [#298]: https://github.com/FossifyOrg/Music-Player/issues/298
 
-[Unreleased]: https://github.com/FossifyOrg/Music-Player/compare/1.6.0...HEAD
+[Unreleased]: https://github.com/FossifyOrg/Music-Player/compare/1.7.0...HEAD
+[1.7.0]: https://github.com/FossifyOrg/Music-Player/compare/1.6.0...1.7.0
 [1.6.0]: https://github.com/FossifyOrg/Music-Player/compare/1.5.1...1.6.0
 [1.5.1]: https://github.com/FossifyOrg/Music-Player/compare/1.5.0...1.5.1
 [1.5.0]: https://github.com/FossifyOrg/Music-Player/compare/1.4.0...1.5.0

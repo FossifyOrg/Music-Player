@@ -1,0 +1,9 @@
+Changed:
+
+• Tapping notification now launches the "Now playing" screen 
+• Updated translations
+
+Fixed:
+
+• Fixed an issue where removing a track from a playlist removed it from all playlists 
+

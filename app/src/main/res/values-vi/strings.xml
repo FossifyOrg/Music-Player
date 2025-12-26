@@ -14,8 +14,8 @@
     <string name="shuffle_enabled">Đã bật tính năng trộn bài</string>
     <string name="volume">Âm lượng</string>
     <string name="playback_speed">Tốc độ phát lại</string>
-    <string name="loading_files">Đang tải tập tin…</string>
-    <string name="add_file_to_playlist">Thêm tập tin vào danh sách phát</string>
+    <string name="loading_files">Đang tải tệp…</string>
+    <string name="add_file_to_playlist">Thêm tệp vào danh sách phát</string>
     <string name="add_folder_to_playlist">Thêm thư mục vào danh sách phát</string>
     <string name="manage_playlists">Quản lý danh sách phát</string>
     <string name="playlists">Danh sách phát</string>
@@ -23,10 +23,10 @@
     <string name="rename_playlist">Đổi tên danh sách phát</string>
     <string name="playlist_name_exists">Danh sách phát có tên đó đã tồn tại</string>
     <string name="remove_playlist">Xóa danh sách phát</string>
-    <string name="remove_playlist_description">Thao tác này sẽ chỉ xóa danh sách phát đã chọn. Các tập tin thực tế sẽ không bị xóa.</string>
-    <string name="remove_playlist_description_placeholder">Thao tác này sẽ chỉ xóa danh sách phát \"%s\". Các tập tin thực tế sẽ không bị xóa.</string>
+    <string name="remove_playlist_description">Thao tác này sẽ chỉ xóa danh sách phát đã chọn. Các tệp thực tế sẽ không bị xóa.</string>
+    <string name="remove_playlist_description_placeholder">Thao tác này sẽ chỉ xóa danh sách phát \"%s\". Các tệp thực tế sẽ không bị xóa.</string>
     <string name="remove_from_playlist">Xóa khỏi danh sách phát</string>
-    <string name="remove_from_playlist_description">Thao tác này sẽ chỉ xóa các mục khỏi danh sách phát \"%s\". Các tập tin thực tế sẽ không bị xóa.</string>
+    <string name="remove_from_playlist_description">Thao tác này sẽ chỉ xóa các mục khỏi danh sách phát \"%s\". Các tệp thực tế sẽ không bị xóa.</string>
     <string name="delete_current_song">Xóa bài hát hiện tại</string>
     <string name="artist_name">Tên nghệ sĩ</string>
     <string name="year">Năm</string>
@@ -63,7 +63,7 @@
     <string name="all_songs">Tất cả bài hát</string>
     <string name="create_playlist_from_folder">Tạo danh sách phát mới từ thư mục</string>
     <string name="folder_contains_no_audio">Thư mục đã chọn không chứa tệp âm thanh</string>
-    <string name="delete_the_files_too">Xóa cả các tập tin</string>
+    <string name="delete_the_files_too">Xóa cả các tệp</string>
     <string name="open_playlist">Mở danh sách phát</string>
     <string name="export_playlist">Xuất danh sách phát</string>
     <string name="import_playlist">Nhập danh sách phát</string>

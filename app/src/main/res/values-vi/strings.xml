@@ -13,7 +13,7 @@
     <string name="disable_shuffle">Tắt trộn bài</string>
     <string name="shuffle_enabled">Đã bật tính năng trộn bài</string>
     <string name="volume">Âm lượng</string>
-    <string name="playback_speed">Tốc độ phát lại</string>
+    <string name="playback_speed">Tốc độ phát</string>
     <string name="loading_files">Đang tải tệp…</string>
     <string name="add_file_to_playlist">Thêm tệp vào danh sách phát</string>
     <string name="add_folder_to_playlist">Thêm thư mục vào danh sách phát</string>
@@ -51,7 +51,7 @@
     <string name="create_playlist_from_queue">Tạo danh sách phát từ hàng đợi</string>
     <string name="equalizer">Bộ chỉnh âm</string>
     <string name="swap_prev_next">Hoán đổi các nút trước/tiếp theo của tai nghe</string>
-    <string name="exclude_folder_description">Việc loại trừ một thư mục sẽ ngăn hiển thị tất cả các tệp âm thanh bên trong. Các tệp được thêm vào danh sách phát theo cách thủ công sẽ không bị ảnh hưởng.</string>
+    <string name="exclude_folder_description">Việc bỏ qua một thư mục sẽ ngăn hiển thị tất cả các tệp âm thanh bên trong. Các tệp được thêm vào danh sách phát theo cách thủ công sẽ không bị ảnh hưởng.</string>
     <string name="rescan_media">Quét lại phương tiện</string>
     <string name="faq_1_title">Làm cách nào tôi có thể tua nhanh bài hát?</string>
     <string name="shuffle_disabled">Đã tắt tính năng trộn bài</string>
@@ -68,7 +68,7 @@
     <string name="export_playlist">Xuất danh sách phát</string>
     <string name="import_playlist">Nhập danh sách phát</string>
     <string name="filename_without_m3u">Tên tệp (không có .m3u)</string>
-    <string name="create_playlist_label">Bạn có thể tạo danh sách phát mới bằng cách chọn nghệ sĩ, album hoặc bản nhạc mong muốn và sử dụng Menu -&gt; Thêm vào danh sách phát.</string>
+    <string name="create_playlist_label">Bạn có thể tạo danh sách phát mới bằng cách chọn nghệ sĩ, album hoặc bản nhạc mong muốn và sử dụng Menu → Thêm vào danh sách phát.</string>
     <string name="track_count">Số lượng bản nhạc</string>
     <string name="delete_song_warning">CẢNH BÁO: Thao tác này sẽ tự xóa các tệp đã chọn khỏi thiết bị, bao gồm tất cả danh sách phát.</string>
     <string name="remove_current_song">Xóa bài hát hiện tại khỏi danh sách phát</string>

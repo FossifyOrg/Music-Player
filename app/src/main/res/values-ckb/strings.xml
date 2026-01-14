@@ -1,2 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="app_launcher_name">لێدەری موزیک</string>
+    <string name="playlist_empty">پێڕستی لێدانەکەت خاڵییە</string>
+    <string name="rename_song">ناولێنانەوەی گۆرانی</string>
+    <string name="rename_song_empty">تکایە هەموو خانەکان پڕ بکەوە</string>
+</resources>

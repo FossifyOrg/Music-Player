@@ -6,15 +6,20 @@ import android.text.TextUtils
 import android.util.AttributeSet
 import android.view.View
 import androidx.appcompat.widget.AppCompatTextView
+import org.fossify.commons.extensions.applyFontToTextView
 
-class MarqueeTextView(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : AppCompatTextView(context!!, attrs, defStyleAttr),
-    View.OnLayoutChangeListener {
+class MarqueeTextView(
+    context: Context?,
+    attrs: AttributeSet?,
+    defStyleAttr: Int
+) : AppCompatTextView(context!!, attrs, defStyleAttr), View.OnLayoutChangeListener {
 
     constructor(context: Context?) : this(context, null)
 
     constructor(context: Context?, attrs: AttributeSet?) : this(context, attrs, 0)
 
     init {
+        if (!isInEditMode) context!!.applyFontToTextView(this)
         setSingleLine()
         ellipsize = TextUtils.TruncateAt.MARQUEE
         marqueeRepeatLimit = -1
@@ -25,14 +30,24 @@ class MarqueeTextView(context: Context?, attrs: AttributeSet?, defStyleAttr: Int
     override fun isFocused() = true
 
     override fun onWindowFocusChanged(hasWindowFocus: Boolean) {
-        if (hasWindowFocus) super.onWindowFocusChanged(hasWindowFocus)
+        if (hasWindowFocus) super.onWindowFocusChanged(true)
     }
 
     override fun onFocusChanged(focused: Boolean, direction: Int, previouslyFocusedRect: Rect?) {
-        if (focused) super.onFocusChanged(focused, direction, previouslyFocusedRect)
+        if (focused) super.onFocusChanged(true, direction, previouslyFocusedRect)
     }
 
-    override fun onLayoutChange(v: View?, left: Int, top: Int, right: Int, bottom: Int, oldLeft: Int, oldTop: Int, oldRight: Int, oldBottom: Int) {
+    override fun onLayoutChange(
+        v: View?,
+        left: Int,
+        top: Int,
+        right: Int,
+        bottom: Int,
+        oldLeft: Int,
+        oldTop: Int,
+        oldRight: Int,
+        oldBottom: Int
+    ) {
         val layoutParams = layoutParams
         layoutParams.height = bottom - top
         layoutParams.width = right - left

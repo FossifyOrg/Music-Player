@@ -19,7 +19,7 @@ eventbus = "3.3.1"
 lottie = "6.7.1"
 m3uParser = "1.4.0"
 media = "1.7.1"
-media3 = "1.9.0"
+media3 = "1.9.1"
 room = "2.8.4"
 #Fossify
 commons = "5.14.0"

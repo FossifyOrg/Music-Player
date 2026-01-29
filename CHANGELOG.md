@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Added support for custom fonts
 
+### Fixed
+- Fixed playback restarting on screen rotation when launched from external apps ([#361])
+
 ## [1.7.0] - 2025-12-16
 ### Changed
 - Tapping notification now launches the "Now playing" screen ([#179])
@@ -109,6 +112,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#261]: https://github.com/FossifyOrg/Music-Player/issues/261
 [#269]: https://github.com/FossifyOrg/Music-Player/issues/269
 [#298]: https://github.com/FossifyOrg/Music-Player/issues/298
+[#361]: https://github.com/FossifyOrg/Music-Player/issues/361
 
 [Unreleased]: https://github.com/FossifyOrg/Music-Player/compare/1.7.0...HEAD
 [1.7.0]: https://github.com/FossifyOrg/Music-Player/compare/1.6.0...1.7.0

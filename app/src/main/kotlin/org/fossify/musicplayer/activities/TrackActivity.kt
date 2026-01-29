@@ -27,7 +27,6 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import org.fossify.commons.extensions.applyColorFilter
 import org.fossify.commons.extensions.beGone
-import org.fossify.commons.extensions.beInvisibleIf
 import org.fossify.commons.extensions.beVisible
 import org.fossify.commons.extensions.copyToClipboard
 import org.fossify.commons.extensions.getColoredDrawableWithColor
@@ -55,6 +54,7 @@ import org.fossify.musicplayer.extensions.nextMediaItem
 import org.fossify.musicplayer.extensions.sendCommand
 import org.fossify.musicplayer.extensions.setRepeatMode
 import org.fossify.musicplayer.extensions.shuffledMediaItemsIndices
+import org.fossify.musicplayer.extensions.toMediaItem
 import org.fossify.musicplayer.extensions.toTrack
 import org.fossify.musicplayer.extensions.updatePlayPauseIcon
 import org.fossify.musicplayer.fragments.PlaybackSpeedFragment
@@ -96,21 +96,14 @@ class TrackActivity : SimpleControllerActivity(), PlaybackSpeedListener {
         setupFlingListener()
 
         binding.apply {
-            activityTrackToolbar.setNavigationOnClickListener {
-                finish()
+            activityTrackToolbar.setNavigationOnClickListener { finish() }
+            nextTrackHolder.background = getProperBackgroundColor().toDrawable()
+            nextTrackHolder.setOnClickListener {
+                startActivity(Intent(applicationContext, QueueActivity::class.java))
             }
 
             isThirdPartyIntent = intent.action == Intent.ACTION_VIEW
-            arrayOf(
-                activityTrackToggleShuffle,
-                activityTrackPrevious,
-                activityTrackNext,
-                activityTrackPlaybackSetting
-            ).forEach {
-                it.beInvisibleIf(isThirdPartyIntent)
-            }
-
-            if (isThirdPartyIntent) {
+            if (isThirdPartyIntent && (savedInstanceState == null || PlaybackService.currentMediaItem == null)) {
                 initThirdPartyIntent()
                 return
             }
@@ -122,11 +115,6 @@ class TrackActivity : SimpleControllerActivity(), PlaybackSpeedListener {
                 color = getProperTextColor()
             )
             updatePlayerState()
-
-            nextTrackHolder.background = getProperBackgroundColor().toDrawable()
-            nextTrackHolder.setOnClickListener {
-                startActivity(Intent(applicationContext, QueueActivity::class.java))
-            }
         }
     }
 
@@ -184,7 +172,6 @@ class TrackActivity : SimpleControllerActivity(), PlaybackSpeedListener {
     }
 
     private fun initThirdPartyIntent() {
-        binding.nextTrackHolder.beGone()
         getTrackFromUri(intent.data) { track ->
             runOnUiThread {
                 if (track != null) {

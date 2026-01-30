@@ -1,0 +1,12 @@
+Added:
+
+• Added support for custom fonts
+
+Changed:
+
+• Updated translations
+
+Fixed:
+
+• Fixed playback restarting on screen rotation when launched from external apps 
+

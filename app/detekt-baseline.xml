@@ -93,8 +93,6 @@
     <ID>MaxLineLength:MainActivity.kt$MainActivity$faqItems.add(FAQItem(org.fossify.commons.R.string.faq_6_title_commons, org.fossify.commons.R.string.faq_6_text_commons))</ID>
     <ID>MaxLineLength:MainActivity.kt$MainActivity$findItem(R.id.more_apps_from_us).isVisible = !resources.getBoolean(org.fossify.commons.R.bool.hide_google_relations)</ID>
     <ID>MaxLineLength:MainActivity.kt$MainActivity$val text = resources.getQuantityString(org.fossify.commons.R.plurals.minutes, lastSleepTimerMinutes, lastSleepTimerMinutes)</ID>
-    <ID>MaxLineLength:MarqueeTextView.kt$MarqueeTextView$class</ID>
-    <ID>MaxLineLength:MarqueeTextView.kt$MarqueeTextView$override</ID>
     <ID>MaxLineLength:MediaController.kt$fun MediaController.sendCommand(command: CustomCommands, extras: Bundle = Bundle.EMPTY)</ID>
     <ID>MaxLineLength:MediaItemProvider.kt$MediaItemProvider$addNodeAndChildren(SMP_ALBUMS_ROOT_ID, album.toMediaItem(), getAlbumTracks(album.id).map { it.toMediaItem() })</ID>
     <ID>MaxLineLength:MediaItemProvider.kt$MediaItemProvider$addNodeAndChildren(SMP_ARTISTS_ROOT_ID, artist.toMediaItem(), getArtistAlbums(artist.id).map { it.toMediaItem() })</ID>

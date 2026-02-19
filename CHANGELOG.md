@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Changed
-- Add cover art to folders
+- Added cover art to folders
 
 ## [1.8.1] - 2026-02-14
 ### Changed

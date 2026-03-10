@@ -6,4 +6,6 @@
     <plurals name="tracks_plural">
         <item quantity="other">%d Track</item>
     </plurals>
-    </resources>
+    <string name="volume">ระดับเสียง</string>
+    <string name="playback_speed">ความเร็วในการเล่น</string>
+</resources>

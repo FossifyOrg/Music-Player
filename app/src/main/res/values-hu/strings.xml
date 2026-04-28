@@ -2,7 +2,7 @@
 <resources>
     <string name="app_launcher_name">Zenelejátszó</string>
     <string name="playlist_empty">A lejátszási lista üres</string>
-    <string name="rename_song">Szám átnevezése</string>
+    <string name="rename_song">Dal átnevezése</string>
     <string name="rename_song_error">Hiba történt az átnevezés során</string>
     <string name="rename_song_empty">Töltse ki az összes mezőt</string>
     <string name="repeat_off">Ismétlés ki</string>

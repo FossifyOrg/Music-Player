@@ -6,7 +6,7 @@
     <string name="rename_song_error">Hiba történt az átnevezés során</string>
     <string name="rename_song_empty">Töltse ki az összes mezőt</string>
     <string name="repeat_off">Ismétlés ki</string>
-    <string name="repeat_song">Jelenlegi szám ismétlése</string>
+    <string name="repeat_song">Jelenlegi dal ismétlése</string>
     <string name="repeat_playlist">Lista ismétlése</string>
     <string name="stop_playback_after_current_song">Lejátszás leállítása a jelenlegi szám után</string>
     <string name="enable_shuffle">Véletlenszerű lejátszás engedélyezése</string>

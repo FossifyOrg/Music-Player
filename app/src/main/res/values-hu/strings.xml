@@ -7,8 +7,8 @@
     <string name="rename_song_empty">Töltse ki az összes mezőt</string>
     <string name="repeat_off">Ismétlés ki</string>
     <string name="repeat_song">Jelenlegi dal ismétlése</string>
-    <string name="repeat_playlist">Lista ismétlése</string>
-    <string name="stop_playback_after_current_song">Lejátszás leállítása a jelenlegi szám után</string>
+    <string name="repeat_playlist">Összes ismétlése</string>
+    <string name="stop_playback_after_current_song">Lejátszás leállítása a jelenlegi dal után</string>
     <string name="enable_shuffle">Véletlenszerű lejátszás engedélyezése</string>
     <string name="disable_shuffle">Véletlenszerű lejátszás letiltása</string>
     <string name="shuffle_enabled">Véletlenszerű lejátszás engedélyezve</string>

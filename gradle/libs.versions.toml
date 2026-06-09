@@ -5,7 +5,7 @@ desugar_jdk_libs = "2.1.5"
 jaudiotagger = "3.0.1"
 kotlin = "2.3.10"
 #KSP
-ksp = "2.3.5"
+ksp = "2.3.9"
 #Detekt
 detekt = "1.23.8"
 detektCompose = "0.4.28"
@@ -18,13 +18,13 @@ eventbus = "3.3.1"
 #Room
 lottie = "6.7.1"
 m3uParser = "1.4.0"
-media = "1.7.1"
-media3 = "1.9.2"
+media = "1.8.0"
+media3 = "1.10.1"
 room = "2.8.4"
 #Fossify
-commons = "6.1.5"
+commons = "6.1.6"
 #Gradle
-gradlePlugins-agp = "9.0.1"
+gradlePlugins-agp = "9.2.1"
 #build
 app-build-compileSDKVersion = "36"
 app-build-targetSDK = "36"

@@ -5,16 +5,7 @@ import org.fossify.musicplayer.extensions.config
 import org.fossify.musicplayer.models.Events
 import org.greenrobot.eventbus.EventBus
 
-private var isActive = false
 private var sleepTimer: CountDownTimer? = null
-
-internal fun PlaybackService.toggleSleepTimer() {
-    if (isActive) {
-        stopSleepTimer()
-    } else {
-        startSleepTimer()
-    }
-}
 
 internal fun PlaybackService.startSleepTimer() {
     val millisInFuture = config.sleepInTS - System.currentTimeMillis() + 1000L
@@ -34,12 +25,10 @@ internal fun PlaybackService.startSleepTimer() {
     }
 
     sleepTimer?.start()
-    isActive = true
 }
 
 internal fun PlaybackService.stopSleepTimer() {
     sleepTimer?.cancel()
     sleepTimer = null
-    isActive = false
     config.sleepInTS = 0
 }

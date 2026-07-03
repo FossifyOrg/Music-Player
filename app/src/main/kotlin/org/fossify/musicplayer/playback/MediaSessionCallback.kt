@@ -74,7 +74,8 @@ internal fun PlaybackService.getMediaSessionCallback() = object : MediaLibrarySe
         when (command) {
             CustomCommands.CLOSE_PLAYER -> stopService()
             CustomCommands.RELOAD_CONTENT -> reloadContent()
-            CustomCommands.TOGGLE_SLEEP_TIMER -> toggleSleepTimer()
+            CustomCommands.START_SLEEP_TIMER -> startSleepTimer()
+            CustomCommands.STOP_SLEEP_TIMER -> stopSleepTimer()
             CustomCommands.SET_SHUFFLE_ORDER -> setShuffleOrder(args)
             CustomCommands.SET_NEXT_ITEM -> setNextItem(args)
         }

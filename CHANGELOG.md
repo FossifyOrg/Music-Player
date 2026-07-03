@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Fixed
+- Fixed the sleep timer freezing and the app closing when the timer was set again and then canceled ([#345])
 
 ## [1.8.1] - 2026-02-14
 ### Changed
@@ -124,6 +126,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#261]: https://github.com/FossifyOrg/Music-Player/issues/261
 [#269]: https://github.com/FossifyOrg/Music-Player/issues/269
 [#298]: https://github.com/FossifyOrg/Music-Player/issues/298
+[#345]: https://github.com/FossifyOrg/Music-Player/issues/345
 [#361]: https://github.com/FossifyOrg/Music-Player/issues/361
 
 [Unreleased]: https://github.com/FossifyOrg/Music-Player/compare/1.8.1...HEAD

@@ -481,14 +481,14 @@ class MainActivity : SimpleMusicActivity() {
     private fun startSleepTimer() {
         binding.sleepTimerHolder.fadeIn()
         withPlayer {
-            sendCommand(CustomCommands.TOGGLE_SLEEP_TIMER)
+            sendCommand(CustomCommands.START_SLEEP_TIMER)
         }
     }
 
     private fun stopSleepTimer() {
         binding.sleepTimerHolder.fadeOut()
         withPlayer {
-            sendCommand(CustomCommands.TOGGLE_SLEEP_TIMER)
+            sendCommand(CustomCommands.STOP_SLEEP_TIMER)
         }
     }
 

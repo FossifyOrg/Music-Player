@@ -12,7 +12,8 @@ import org.fossify.musicplayer.helpers.PATH
 enum class CustomCommands(val customAction: String) {
     CLOSE_PLAYER(customAction = PATH + "CLOSE_PLAYER"),
     RELOAD_CONTENT(customAction = PATH + "RELOAD_CONTENT"),
-    TOGGLE_SLEEP_TIMER(customAction = PATH + "TOGGLE_SLEEP_TIMER"),
+    START_SLEEP_TIMER(customAction = PATH + "START_SLEEP_TIMER"),
+    STOP_SLEEP_TIMER(customAction = PATH + "STOP_SLEEP_TIMER"),
     SET_NEXT_ITEM(customAction = PATH + "SET_NEXT_ITEM"),
     SET_SHUFFLE_ORDER(customAction = PATH + "SET_SHUFFLE_ORDER");
 

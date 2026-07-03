@@ -23,6 +23,7 @@ import org.fossify.musicplayer.models.sortSafely
 // Artists -> Albums -> Tracks
 class TracksFragment(context: Context, attributeSet: AttributeSet) : MyViewPagerFragment(context, attributeSet) {
     private var tracks = ArrayList<Track>()
+    private var lastSearchQuery = ""
     private val binding by viewBinding(FragmentTracksBinding::bind)
 
     override fun setupFragment(activity: BaseSimpleActivity) {
@@ -70,6 +71,12 @@ class TracksFragment(context: Context, attributeSet: AttributeSet) : MyViewPager
                 } else {
                     (adapter as TracksAdapter).updateItems(tracks)
                 }
+
+                // re-apply the active search filter so it isn't lost after a refresh
+                // (e.g. when deleting a track while searching)
+                if (lastSearchQuery.isNotEmpty()) {
+                    onSearchQueryChanged(lastSearchQuery)
+                }
             }
         }
     }
@@ -79,6 +86,7 @@ class TracksFragment(context: Context, attributeSet: AttributeSet) : MyViewPager
     }
 
     override fun onSearchQueryChanged(text: String) {
+        lastSearchQuery = text
         val normalizedText = text.normalizeString()
         val filtered = ArrayList(
             tracks.filter { track ->
@@ -93,6 +101,7 @@ class TracksFragment(context: Context, attributeSet: AttributeSet) : MyViewPager
     }
 
     override fun onSearchClosed() {
+        lastSearchQuery = ""
         getAdapter()?.updateItems(tracks)
         binding.tracksPlaceholder.beGoneIf(tracks.isNotEmpty())
     }

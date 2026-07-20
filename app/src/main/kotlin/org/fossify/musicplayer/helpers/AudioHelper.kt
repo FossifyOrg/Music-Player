@@ -36,12 +36,14 @@ class AudioHelper(private val context: Context) {
         val folders = ArrayList<Folder>()
         val excludedFolders = config.excludedFolders
         for ((title, folderTracks) in foldersMap) {
-            val path = (folderTracks.firstOrNull()?.path?.getParentPath() ?: "").removeSuffix("/")
+            val firstTrack = folderTracks.firstOrNull()
+            val path = (firstTrack?.path?.getParentPath() ?: "").removeSuffix("/")
             if (excludedFolders.contains(path)) {
                 continue
             }
 
-            val folder = Folder(title, folderTracks.size, path)
+            val coverArt = firstTrack?.coverArt ?: ""
+            val folder = Folder(title, folderTracks.size, path, coverArt)
             folders.add(folder)
         }
 

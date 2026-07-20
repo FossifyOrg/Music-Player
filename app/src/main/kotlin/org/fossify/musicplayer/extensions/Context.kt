@@ -28,6 +28,7 @@ import org.fossify.musicplayer.helpers.*
 import org.fossify.musicplayer.interfaces.*
 import org.fossify.musicplayer.models.Album
 import org.fossify.musicplayer.models.Artist
+import org.fossify.musicplayer.models.Folder
 import org.fossify.musicplayer.models.Genre
 import org.fossify.musicplayer.models.Track
 import java.io.File
@@ -169,6 +170,19 @@ fun Context.getGenreCoverArt(genre: Genre, callback: (coverArt: Any?) -> Unit) {
         } else {
             Handler(Looper.getMainLooper()).post {
                 callback(genre.albumArt)
+            }
+        }
+    }
+}
+
+fun Context.getFolderCoverArt(folder: Folder, callback: (coverArt: Any?) -> Unit) {
+    ensureBackgroundThread {
+        if (folder.coverArt.isEmpty()) {
+            val track = audioHelper.getFolderTracks(folder.title).firstOrNull()
+            getTrackCoverArt(track, callback)
+        } else {
+            Handler(Looper.getMainLooper()).post {
+                callback(folder.coverArt)
             }
         }
     }

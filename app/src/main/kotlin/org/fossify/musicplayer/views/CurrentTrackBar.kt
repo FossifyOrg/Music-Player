@@ -16,6 +16,7 @@ import org.fossify.musicplayer.R
 import org.fossify.musicplayer.databinding.ViewCurrentTrackBarBinding
 import org.fossify.musicplayer.extensions.*
 import androidx.core.graphics.drawable.toDrawable
+import org.fossify.musicplayer.helpers.FLAG_MANUAL_CACHE
 
 class CurrentTrackBar(context: Context, attributeSet: AttributeSet) : RelativeLayout(context, attributeSet) {
     private val binding by viewBinding(ViewCurrentTrackBarBinding::bind)
@@ -33,7 +34,7 @@ class CurrentTrackBar(context: Context, attributeSet: AttributeSet) : RelativeLa
 
     fun updateCurrentTrack(mediaItem: MediaItem?) {
         val track = mediaItem?.toTrack()
-        if (track == null) {
+        if (track == null || track.flags == FLAG_MANUAL_CACHE) {
             fadeOut()
             return
         } else {

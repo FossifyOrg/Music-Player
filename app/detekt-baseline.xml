@@ -18,6 +18,7 @@
     <ID>ImplicitDefaultLocale:PlaybackSpeedFragment.kt$PlaybackSpeedFragment$String.format("%.2f", value)</ID>
     <ID>MagicNumber:ChangeSortingDialog.kt$ChangeSortingDialog$3</ID>
     <ID>MagicNumber:ChangeSortingDialog.kt$ChangeSortingDialog$4</ID>
+    <ID>MagicNumber:ChangeSortingDialog.kt$ChangeSortingDialog$5</ID>
     <ID>MagicNumber:Config.kt$Config$30</ID>
     <ID>MagicNumber:Config.kt$Config$60</ID>
     <ID>MagicNumber:EqualizerActivity.kt$EqualizerActivity$100</ID>
@@ -74,6 +75,7 @@
     <ID>MaxLineLength:ChangeSortingDialog.kt$ChangeSortingDialog$radioItems.add(RadioItem(2, activity.getString(org.fossify.commons.R.string.duration), PLAYER_SORT_BY_DURATION))</ID>
     <ID>MaxLineLength:ChangeSortingDialog.kt$ChangeSortingDialog$radioItems.add(RadioItem(4, activity.getString(org.fossify.commons.R.string.custom), PLAYER_SORT_BY_CUSTOM))</ID>
     <ID>MaxLineLength:ChangeSortingDialog.kt$ChangeSortingDialog$radioItems.add(RadioItem(4, activity.getString(org.fossify.commons.R.string.date_added), PLAYER_SORT_BY_DATE_ADDED))</ID>
+    <ID>MaxLineLength:ChangeSortingDialog.kt$ChangeSortingDialog$radioItems.add(RadioItem(5, activity.getString(org.fossify.commons.R.string.filename), PLAYER_SORT_BY_FILENAME))</ID>
     <ID>MaxLineLength:Config.kt$Config$set(excludedFolders) = prefs.edit().remove(EXCLUDED_FOLDERS).putStringSet(EXCLUDED_FOLDERS, excludedFolders).apply()</ID>
     <ID>MaxLineLength:Config.kt$Config$set(wasAllTracksPlaylistCreated) = prefs.edit().putBoolean(WAS_ALL_TRACKS_PLAYLIST_CREATED, wasAllTracksPlaylistCreated).apply()</ID>
     <ID>MaxLineLength:Context.kt$&lt;no name provided&gt;$override</ID>

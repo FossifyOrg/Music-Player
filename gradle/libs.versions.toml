@@ -20,7 +20,7 @@ lottie = "6.7.1"
 m3uParser = "1.4.0"
 media = "1.8.0"
 media3 = "1.11.0"
-room = "2.8.4"
+room = "2.8.5"
 #Fossify
 commons = "6.1.6"
 #Gradle

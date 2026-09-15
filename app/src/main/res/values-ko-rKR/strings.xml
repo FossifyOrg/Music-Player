@@ -59,7 +59,7 @@
     <string name="repeat_off">반복 재생 끄기</string>
     <string name="delete_song_warning">경고: 선택된 파일 자체가 기기와 모든 재생목록에서 삭제됩니다.</string>
     <string name="year">년도</string>
-    <string name="track_number">트랙 넘버</string>
+    <string name="track_number">트랙 번호</string>
     <string name="use_for_this_playlist">이 재생 목록에서만 사용</string>
     <string name="use_for_this_album">이 앨범에서만 사용</string>
     <string name="artists">가수</string>
@@ -78,4 +78,5 @@
     <string name="create_playlist_from_queue">대기열로 재생 목록 만들기</string>
     <string name="faq_1_text">탐색 바 근처의 현재 혹은 최대 재생 시간 텍스트를 누르면 노래가 뒤로, 또는 앞으로 이동합니다.</string>
     <string name="faq_1_title">노래 빨리 감기는 어떻게 하나요?</string>
+    <string name="track_on_disk">%1$d.%2$s</string>
 </resources>

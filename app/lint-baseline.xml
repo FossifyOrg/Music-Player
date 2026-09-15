@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<issues format="6" by="lint 9.2.1" type="baseline" client="gradle" dependencies="false" name="AGP (9.2.1)" variant="all" version="9.2.1">
+<issues format="6" by="lint 9.3.2" type="baseline" client="gradle" dependencies="false" name="AGP (9.3.2)" variant="all" version="9.3.2">
 
     <issue
         id="ScopedStorage"
@@ -113,13 +113,24 @@
 
     <issue
         id="NewerVersionAvailable"
-        message="A newer version of io.nlopez.compose.rules:detekt than 0.4.28 is available: 0.6.2"
+        message="A newer version of io.nlopez.compose.rules:detekt than 0.4.28 is available: 0.6.4"
         errorLine1="detektCompose = &quot;0.4.28&quot;"
         errorLine2="                ~~~~~~~~">
         <location
             file="$HOME/work/Music-Player/Music-Player/gradle/libs.versions.toml"
             line="11"
             column="17"/>
+    </issue>
+
+    <issue
+        id="NewerVersionAvailable"
+        message="A newer version of com.github.bjoernpetersen:m3u-parser than 1.4.0 is available: 2.0.0"
+        errorLine1="m3uParser = &quot;1.4.0&quot;"
+        errorLine2="            ~~~~~~~">
+        <location
+            file="$HOME/work/Music-Player/Music-Player/gradle/libs.versions.toml"
+            line="20"
+            column="13"/>
     </issue>
 
     <issue
@@ -1750,17 +1761,6 @@
             file="src/main/kotlin/org/fossify/musicplayer/activities/MainActivity.kt"
             line="95"
             column="47"/>
-    </issue>
-
-    <issue
-        id="UseKtx"
-        message="Use the KTX extension function `Bitmap.scale` instead?"
-        errorLine1="    val bitmapResized = Bitmap.createScaledBitmap(bitmap, size, size, false)"
-        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/kotlin/org/fossify/musicplayer/extensions/Resources.kt"
-            line="26"
-            column="25"/>
     </issue>
 
     <issue

@@ -63,6 +63,7 @@
 
         <ImageView
             android:id="@+id/activity_track_speed_icon"
+            android:contentDescription="@string/playback_speed"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:scaleType="fitEnd"

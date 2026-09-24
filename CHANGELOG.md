@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.8.2] - 2026-09-24
+### Changed
+- Updated translations
+
 ## [1.8.1] - 2026-02-14
 ### Changed
 - Updated translations
@@ -126,7 +130,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#298]: https://github.com/FossifyOrg/Music-Player/issues/298
 [#361]: https://github.com/FossifyOrg/Music-Player/issues/361
 
-[Unreleased]: https://github.com/FossifyOrg/Music-Player/compare/1.8.1...HEAD
+[Unreleased]: https://github.com/FossifyOrg/Music-Player/compare/1.8.2...HEAD
+[1.8.2]: https://github.com/FossifyOrg/Music-Player/compare/1.8.1...1.8.2
 [1.8.1]: https://github.com/FossifyOrg/Music-Player/compare/1.8.0...1.8.1
 [1.8.0]: https://github.com/FossifyOrg/Music-Player/compare/1.7.0...1.8.0
 [1.7.0]: https://github.com/FossifyOrg/Music-Player/compare/1.6.0...1.7.0

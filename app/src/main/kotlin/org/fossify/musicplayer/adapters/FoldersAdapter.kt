@@ -11,6 +11,7 @@ import org.fossify.musicplayer.R
 import org.fossify.musicplayer.databinding.ItemFolderBinding
 import org.fossify.musicplayer.extensions.audioHelper
 import org.fossify.musicplayer.extensions.config
+import org.fossify.musicplayer.extensions.getFolderCoverArt
 import org.fossify.musicplayer.models.Events
 import org.fossify.musicplayer.models.Folder
 import org.fossify.musicplayer.models.Track
@@ -70,6 +71,10 @@ class FoldersAdapter(
             val tracks = resources.getQuantityString(R.plurals.tracks_plural, folder.trackCount, folder.trackCount)
             folderTracks.text = tracks
             folderTracks.setTextColor(textColor)
+
+            context.getFolderCoverArt(folder) { coverArt ->
+                loadImage(folderImage, coverArt, placeholderBig)
+            }
         }
     }
 

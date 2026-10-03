@@ -5,7 +5,7 @@ import org.fossify.commons.helpers.SORT_DESCENDING
 import org.fossify.musicplayer.extensions.sortSafely
 import org.fossify.musicplayer.helpers.PLAYER_SORT_BY_TITLE
 
-data class Folder(val title: String, val trackCount: Int, val path: String) {
+data class Folder(val title: String, val trackCount: Int, val path: String, val coverArt: String) {
     companion object {
         fun getComparator(sorting: Int) = Comparator<Folder> { first, second ->
             var result = when {

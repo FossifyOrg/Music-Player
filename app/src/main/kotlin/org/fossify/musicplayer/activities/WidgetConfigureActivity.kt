@@ -7,13 +7,11 @@ import android.graphics.Color
 import android.os.Bundle
 import android.widget.RemoteViews
 import org.fossify.commons.dialogs.ColorPickerDialog
-import org.fossify.commons.dialogs.FeatureLockedDialog
 import org.fossify.commons.extensions.adjustAlpha
 import org.fossify.commons.extensions.applyColorFilter
 import org.fossify.commons.extensions.getContrastColor
 import org.fossify.commons.extensions.getProperPrimaryColor
 import org.fossify.commons.extensions.isDynamicTheme
-import org.fossify.commons.extensions.isOrWasThankYouInstalled
 import org.fossify.commons.extensions.onSeekBarChangeListener
 import org.fossify.commons.extensions.setFillWithStroke
 import org.fossify.commons.extensions.viewBinding
@@ -30,7 +28,6 @@ class WidgetConfigureActivity : SimpleActivity() {
     private var mBgColor = 0
     private var mTextColor = 0
     private var mBgColorWithoutTransparency = 0
-    private var mFeatureLockedDialog: FeatureLockedDialog? = null
 
     private val binding by viewBinding(WidgetConfigBinding::inflate)
 
@@ -65,21 +62,6 @@ class WidgetConfigureActivity : SimpleActivity() {
                 songInfoTitle.text = getString(org.fossify.commons.R.string.artist)
                 songInfoArtist.text = getString(org.fossify.commons.R.string.song_title)
             }
-        }
-
-        if (!isCustomizingColors && !isOrWasThankYouInstalled()) {
-            mFeatureLockedDialog = FeatureLockedDialog(this) {
-                if (!isOrWasThankYouInstalled()) {
-                    finish()
-                }
-            }
-        }
-    }
-
-    override fun onResume() {
-        super.onResume()
-        if (mFeatureLockedDialog != null && isOrWasThankYouInstalled()) {
-            mFeatureLockedDialog?.dismissDialog()
         }
     }
 

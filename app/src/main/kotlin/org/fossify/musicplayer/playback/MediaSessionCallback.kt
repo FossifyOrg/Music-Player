@@ -8,6 +8,7 @@ import androidx.media3.session.LibraryResult
 import androidx.media3.session.MediaLibraryService
 import androidx.media3.session.MediaLibraryService.MediaLibrarySession
 import androidx.media3.session.MediaSession
+import androidx.media3.session.MediaSession.ConnectionResult.DEFAULT_SESSION_AND_LIBRARY_COMMANDS
 import androidx.media3.session.SessionCommand
 import androidx.media3.session.SessionError
 import androidx.media3.session.SessionResult
@@ -48,7 +49,7 @@ internal fun PlaybackService.getMediaSessionCallback() = object : MediaLibrarySe
     ): ListenableFuture<MediaSession.ConnectionResult> {
         val resultBuilder = MediaSession.ConnectionResult.AcceptedResultBuilder(session, controller)
         if (controller.isTrusted) {
-            val availableSessionCommands = MediaSession.ConnectionResult.DEFAULT_SESSION_AND_LIBRARY_COMMANDS.buildUpon()
+            val availableSessionCommands = DEFAULT_SESSION_AND_LIBRARY_COMMANDS.buildUpon()
             for (command in customCommands) {
                 availableSessionCommands.add(command)
             }

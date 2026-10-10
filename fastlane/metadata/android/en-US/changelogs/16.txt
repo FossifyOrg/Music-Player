@@ -1,4 +1,4 @@
-Fixed:
+Changed:
 
-• Fixed startup crash on Android 11 and below
+• Updated translations
 

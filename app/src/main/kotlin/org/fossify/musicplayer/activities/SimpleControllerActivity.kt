@@ -52,7 +52,7 @@ abstract class SimpleControllerActivity : SimpleActivity(), Player.Listener {
 
     fun withPlayer(callback: MediaController.() -> Unit) = controller.withController(callback)
 
-    fun prepareAndPlay(tracks: List<Track>, startIndex: Int = 0, startPositionMs: Long = 0, startActivity: Boolean = true) {
+    fun prepareAndPlay(tracks: List<Track>, startIndex: Int = 0, startPositionMs: Long = 0, startActivity: Boolean = true, thirdPartyIntent: Boolean = false) {
         withPlayer {
             if (startActivity) {
                 startActivity(
@@ -60,7 +60,7 @@ abstract class SimpleControllerActivity : SimpleActivity(), Player.Listener {
                 )
             }
 
-            prepareUsingTracks(tracks = tracks, startIndex = startIndex, startPositionMs = startPositionMs, play = true) { success ->
+            prepareUsingTracks(tracks = tracks, startIndex = startIndex, startPositionMs = startPositionMs, play = true, thirdPartyIntent = thirdPartyIntent) { success ->
                 if (success) {
                     updatePlaybackInfo(this)
                 }

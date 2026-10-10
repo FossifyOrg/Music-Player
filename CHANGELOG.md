@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+- Fixed songs not playing after updating
+
 ## [1.8.3] - 2026-10-10
 ### Fixed
 - Fixed startup crash on Android 11 and below

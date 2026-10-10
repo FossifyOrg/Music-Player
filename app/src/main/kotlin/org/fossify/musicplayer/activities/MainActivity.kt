@@ -469,6 +469,8 @@ class MainActivity : SimpleMusicActivity() {
                 }
             } else if (it > 0) {
                 pickedSleepTimer(it)
+            } else if (config.lastSleepTimerSeconds > 0) {
+                sleepTimerChanged(Events.SleepTimerChanged(seconds = it))
             }
         }
     }
@@ -501,10 +503,10 @@ class MainActivity : SimpleMusicActivity() {
 
     @Subscribe(threadMode = ThreadMode.MAIN)
     fun sleepTimerChanged(event: Events.SleepTimerChanged) {
-        binding.sleepTimerValue.text = event.seconds.getFormattedDuration()
-        binding.sleepTimerHolder.beVisible()
-
-        if (event.seconds == 0) {
+        if (event.seconds > 0) {
+            binding.sleepTimerValue.text = event.seconds.getFormattedDuration()
+            binding.sleepTimerHolder.beVisible()
+        } else {
             finish()
         }
     }

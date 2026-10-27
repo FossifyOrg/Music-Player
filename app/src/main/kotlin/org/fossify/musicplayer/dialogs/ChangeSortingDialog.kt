@@ -88,6 +88,7 @@ class ChangeSortingDialog(val activity: Activity, val location: Int, val playlis
                 radioItems.add(RadioItem(2, activity.getString(org.fossify.commons.R.string.duration), PLAYER_SORT_BY_DURATION))
                 radioItems.add(RadioItem(3, activity.getString(R.string.track_number), PLAYER_SORT_BY_TRACK_ID))
                 radioItems.add(RadioItem(4, activity.getString(org.fossify.commons.R.string.date_added), PLAYER_SORT_BY_DATE_ADDED))
+                radioItems.add(RadioItem(5, activity.getString(org.fossify.commons.R.string.filename), PLAYER_SORT_BY_FILENAME))
             }
 
             TAB_GENRES -> {
@@ -101,6 +102,7 @@ class ChangeSortingDialog(val activity: Activity, val location: Int, val playlis
                 radioItems.add(RadioItem(2, activity.getString(org.fossify.commons.R.string.duration), PLAYER_SORT_BY_DURATION))
                 radioItems.add(RadioItem(3, activity.getString(R.string.track_number), PLAYER_SORT_BY_TRACK_ID))
                 radioItems.add(RadioItem(4, activity.getString(org.fossify.commons.R.string.date_added), PLAYER_SORT_BY_DATE_ADDED))
+                radioItems.add(RadioItem(5, activity.getString(org.fossify.commons.R.string.filename), PLAYER_SORT_BY_FILENAME))
 
                 if (playlist != null) {
                     radioItems.add(RadioItem(4, activity.getString(org.fossify.commons.R.string.custom), PLAYER_SORT_BY_CUSTOM))

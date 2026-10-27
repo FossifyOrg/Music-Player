@@ -4,7 +4,9 @@ import android.app.Application
 import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.graphics.drawable.Drawable
+import android.media.MediaMetadataRetriever
 import android.media.ThumbnailUtils
 import android.net.Uri
 import android.os.Handler
@@ -183,9 +185,8 @@ fun Context.getTrackCoverArt(track: Track?, callback: (coverArt: Any?) -> Unit) 
             return@ensureBackgroundThread
         }
 
-        val coverArt = track.coverArt.ifEmpty {
-            loadTrackCoverArt(track)
-        }
+        // Always try extracting art from the current audio first; if unavailable, fallback to stored art Uri.
+        val coverArt = loadTrackCoverArt(track) ?: track.coverArt.ifEmpty { null }
 
         Handler(Looper.getMainLooper()).post {
             callback(coverArt)
@@ -196,6 +197,24 @@ fun Context.getTrackCoverArt(track: Track?, callback: (coverArt: Any?) -> Unit) 
 fun Context.loadTrackCoverArt(track: Track?): Bitmap? {
     if (track == null) {
         return null
+    }
+
+    val path = track.path
+    if (path.isNotEmpty() && File(path).exists()) {
+        // Prefer embedded artwork from the actual audio file to avoid stale/wrong MediaStore album art.
+        try {
+            val retriever = MediaMetadataRetriever()
+            retriever.setDataSource(path)
+            val pictureData = retriever.embeddedPicture
+            retriever.release()
+            if (pictureData != null) {
+                val bitmap = BitmapFactory.decodeByteArray(pictureData, 0, pictureData.size)
+                if (bitmap != null) {
+                    return bitmap
+                }
+            }
+        } catch (ignored: Exception) {
+        }
     }
 
     val artworkUri = track.coverArt
@@ -216,7 +235,6 @@ fun Context.loadTrackCoverArt(track: Track?): Bitmap? {
             }
         }
 
-        val path = track.path
         if (path.isNotEmpty() && File(path).exists()) {
             try {
                 return ThumbnailUtils.createAudioThumbnail(File(track.path), size, null)

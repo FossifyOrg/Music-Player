@@ -1,0 +1,4 @@
+Fixed:
+
+• Fixed songs not playing after updating
+

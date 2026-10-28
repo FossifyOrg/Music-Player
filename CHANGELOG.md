@@ -8,6 +8,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Added cover art to folders
 
+## [1.8.5] - 2026-10-20
+### Changed
+- Updated translations
+
+## [1.8.4] - 2026-10-10
+### Fixed
+- Fixed songs not playing after updating
+
+## [1.8.3] - 2026-10-10
+### Fixed
+- Fixed startup crash on Android 11 and below
+
+## [1.8.2] - 2026-10-10
+### Changed
+- Updated translations
+
 ## [1.8.1] - 2026-02-14
 ### Changed
 - Updated translations
@@ -128,7 +144,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#298]: https://github.com/FossifyOrg/Music-Player/issues/298
 [#361]: https://github.com/FossifyOrg/Music-Player/issues/361
 
-[Unreleased]: https://github.com/FossifyOrg/Music-Player/compare/1.8.1...HEAD
+[Unreleased]: https://github.com/FossifyOrg/Music-Player/compare/1.8.5...HEAD
+[1.8.5]: https://github.com/FossifyOrg/Music-Player/compare/1.8.4...1.8.5
+[1.8.4]: https://github.com/FossifyOrg/Music-Player/compare/1.8.3...1.8.4
+[1.8.3]: https://github.com/FossifyOrg/Music-Player/compare/1.8.2...1.8.3
+[1.8.2]: https://github.com/FossifyOrg/Music-Player/compare/1.8.1...1.8.2
 [1.8.1]: https://github.com/FossifyOrg/Music-Player/compare/1.8.0...1.8.1
 [1.8.0]: https://github.com/FossifyOrg/Music-Player/compare/1.7.0...1.8.0
 [1.7.0]: https://github.com/FossifyOrg/Music-Player/compare/1.6.0...1.7.0

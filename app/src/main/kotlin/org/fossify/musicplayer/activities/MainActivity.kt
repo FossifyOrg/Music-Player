@@ -139,7 +139,8 @@ class MainActivity : SimpleMusicActivity() {
             findItem(R.id.create_new_playlist).isVisible = isPlaylistFragment
             findItem(R.id.create_playlist_from_folder).isVisible = isPlaylistFragment
             findItem(R.id.import_playlist).isVisible = isPlaylistFragment
-            findItem(R.id.more_apps_from_us).isVisible = !resources.getBoolean(org.fossify.commons.R.bool.hide_google_relations)
+            findItem(R.id.more_apps_from_us).isVisible =
+                resources.getBoolean(org.fossify.commons.R.bool.is_google_play_build)
         }
     }
 
@@ -543,7 +544,7 @@ class MainActivity : SimpleMusicActivity() {
             FAQItem(org.fossify.commons.R.string.faq_9_title_commons, org.fossify.commons.R.string.faq_9_text_commons)
         )
 
-        if (!resources.getBoolean(org.fossify.commons.R.bool.hide_google_relations)) {
+        if (resources.getBoolean(org.fossify.commons.R.bool.is_google_play_build)) {
             faqItems.add(FAQItem(org.fossify.commons.R.string.faq_2_title_commons, org.fossify.commons.R.string.faq_2_text_commons))
             faqItems.add(FAQItem(org.fossify.commons.R.string.faq_6_title_commons, org.fossify.commons.R.string.faq_6_text_commons))
         }

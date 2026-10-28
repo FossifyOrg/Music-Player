@@ -8,6 +8,7 @@ import androidx.media3.session.LibraryResult
 import androidx.media3.session.MediaLibraryService
 import androidx.media3.session.MediaLibraryService.MediaLibrarySession
 import androidx.media3.session.MediaSession
+import androidx.media3.session.MediaSession.ConnectionResult.DEFAULT_SESSION_AND_LIBRARY_COMMANDS
 import androidx.media3.session.SessionCommand
 import androidx.media3.session.SessionError
 import androidx.media3.session.SessionResult
@@ -42,17 +43,20 @@ internal fun PlaybackService.getMediaSessionCallback() = object : MediaLibrarySe
         }
     }
 
-    override fun onConnect(session: MediaSession, controller: MediaSession.ControllerInfo): MediaSession.ConnectionResult {
-        val connectionResult = super.onConnect(session, controller)
-        val availableSessionCommands = connectionResult.availableSessionCommands.buildUpon()
-        for (command in customCommands) {
-            availableSessionCommands.add(command)
+    override fun onConnectAsync(
+        session: MediaSession,
+        controller: MediaSession.ControllerInfo
+    ): ListenableFuture<MediaSession.ConnectionResult> {
+        val resultBuilder = MediaSession.ConnectionResult.AcceptedResultBuilder(session, controller)
+        if (controller.isTrusted) {
+            val availableSessionCommands = DEFAULT_SESSION_AND_LIBRARY_COMMANDS.buildUpon()
+            for (command in customCommands) {
+                availableSessionCommands.add(command)
+            }
+            resultBuilder.setAvailableSessionCommands(availableSessionCommands.build())
         }
 
-        return MediaSession.ConnectionResult.accept(
-            availableSessionCommands.build(),
-            connectionResult.availablePlayerCommands
-        )
+        return Futures.immediateFuture(resultBuilder.build())
     }
 
     override fun onPostConnect(session: MediaSession, controller: MediaSession.ControllerInfo) {

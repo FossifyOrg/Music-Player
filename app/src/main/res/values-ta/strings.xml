@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="folders">கோப்புறைகள்</string>
+    <string name="playback_speed">பிளேபேக் விரைவு</string>
 </resources>

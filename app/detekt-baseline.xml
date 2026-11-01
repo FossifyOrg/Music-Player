@@ -91,7 +91,6 @@
     <ID>MaxLineLength:M3uExporter.kt$M3uExporter$out.writeLn(M3U_ENTRY + track.duration + M3U_DURATION_SEPARATOR + track.artist + " - " + track.title)</ID>
     <ID>MaxLineLength:MainActivity.kt$MainActivity$faqItems.add(FAQItem(org.fossify.commons.R.string.faq_2_title_commons, org.fossify.commons.R.string.faq_2_text_commons))</ID>
     <ID>MaxLineLength:MainActivity.kt$MainActivity$faqItems.add(FAQItem(org.fossify.commons.R.string.faq_6_title_commons, org.fossify.commons.R.string.faq_6_text_commons))</ID>
-    <ID>MaxLineLength:MainActivity.kt$MainActivity$findItem(R.id.more_apps_from_us).isVisible = !resources.getBoolean(org.fossify.commons.R.bool.hide_google_relations)</ID>
     <ID>MaxLineLength:MainActivity.kt$MainActivity$val text = resources.getQuantityString(org.fossify.commons.R.plurals.minutes, lastSleepTimerMinutes, lastSleepTimerMinutes)</ID>
     <ID>MaxLineLength:MediaController.kt$fun MediaController.sendCommand(command: CustomCommands, extras: Bundle = Bundle.EMPTY)</ID>
     <ID>MaxLineLength:MediaItemProvider.kt$MediaItemProvider$addNodeAndChildren(SMP_ALBUMS_ROOT_ID, album.toMediaItem(), getAlbumTracks(album.id).map { it.toMediaItem() })</ID>
@@ -103,7 +102,6 @@
     <ID>MaxLineLength:MediaItemProvider.kt$RootCategories$FOLDERS : RootCategories</ID>
     <ID>MaxLineLength:MediaItemProvider.kt$RootCategories$PLAYLISTS : RootCategories</ID>
     <ID>MaxLineLength:MediaItemProvider.kt$RootCategories$private enum</ID>
-    <ID>MaxLineLength:MediaSessionCallback.kt$&lt;no name provided&gt;$override</ID>
     <ID>MaxLineLength:MyViewPagerFragment.kt$MyViewPagerFragment$abstract</ID>
     <ID>MaxLineLength:MyViewPagerFragment.kt$MyViewPagerFragment$fun</ID>
     <ID>MaxLineLength:MyWidgetProvider.kt$MyWidgetProvider$override fun onAppWidgetOptionsChanged(context: Context, appWidgetManager: AppWidgetManager, widgetId: Int, newOptions: Bundle)</ID>

@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+- Fixed off-by-one bug when using "play next" option on song that is already in the track queue, but behind the currently playing song
+
 ## [1.8.5] - 2026-10-20
 ### Changed
 - Updated translations

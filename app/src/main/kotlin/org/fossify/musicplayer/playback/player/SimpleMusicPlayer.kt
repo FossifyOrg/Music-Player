@@ -76,7 +76,15 @@ class SimpleMusicPlayer(private val exoPlayer: ExoPlayer) : ForwardingPlayer(exo
             if (shuffleModeEnabled) {
                 ensureItemPlaysNext(currentIndex)
             } else {
-                moveMediaItem(currentIndex, nextMediaItemIndex)
+                // If the selected track sits before the current track, the removal shifts the current
+                // track down by one, so the "next" slot is at currentMediaItemIndex rather than
+                // currentMediaItemIndex + 1
+                val targetIndex = if (currentIndex < currentMediaItemIndex) {
+                    currentMediaItemIndex
+                } else {
+                    currentMediaItemIndex + 1
+                }
+                moveMediaItem(currentIndex, targetIndex)
             }
         } else {
             val newIndex = currentMediaItemIndex + 1

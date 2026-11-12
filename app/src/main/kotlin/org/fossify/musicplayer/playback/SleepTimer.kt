@@ -9,11 +9,15 @@ private var isActive = false
 private var sleepTimer: CountDownTimer? = null
 
 internal fun PlaybackService.toggleSleepTimer() {
-    if (isActive) {
+    val sleepTimerCurrent = System.currentTimeMillis()
+    val millisInFuture = config.sleepInTS - sleepTimerCurrent
+    if (config.sleepInTS == 0L) {
         stopSleepTimer()
-    } else {
+    } else if (millisInFuture <= 0) {
         startSleepTimer()
     }
+    sleepTimer?.cancel()
+    startSleepTimer()
 }
 
 internal fun PlaybackService.startSleepTimer() {

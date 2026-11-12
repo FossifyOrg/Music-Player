@@ -72,6 +72,11 @@ data class Track(
                     }
                 }
                 sorting and PLAYER_SORT_BY_DATE_ADDED != 0 -> first.dateAdded.compareTo(second.dateAdded)
+                sorting and PLAYER_SORT_BY_FILENAME != 0 -> {
+                    AlphanumericComparator().compare(
+                        first.path.getFilenameFromPath().lowercase(), second.path.getFilenameFromPath().lowercase()
+                    )
+                }
                 sorting and PLAYER_SORT_BY_CUSTOM != 0 -> first.orderInPlaylist.compareTo(second.orderInPlaylist)
                 else -> first.duration.compareTo(second.duration)
             }
@@ -87,6 +92,7 @@ data class Track(
     fun getBubbleText(sorting: Int) = when {
         sorting and PLAYER_SORT_BY_TITLE != 0 -> title
         sorting and PLAYER_SORT_BY_ARTIST_TITLE != 0 -> artist
+        sorting and PLAYER_SORT_BY_FILENAME != 0 -> path.getFilenameFromPath()
         else -> duration.getFormattedDuration()
     }
 

@@ -13,7 +13,7 @@
     <string name="shuffle_enabled">Τυχαία σειρά Ενεργή</string>
     <string name="shuffle_disabled">Τυχαία σειρά Ανενεργή</string>
     <string name="volume">Ένταση</string>
-    <string name="playback_speed">Ταχύτητα Αναπ/γής</string>
+    <string name="playback_speed">Ταχύτητα αναπαραγωγής</string>
     <string name="loading_files">Φόρτωση αρχείων…</string>
     <string name="add_file_to_playlist">Προσθήκη αρχείου στη λίστα</string>
     <string name="add_folder_to_playlist">Προσθήκη φακέλου στη λίστα</string>
@@ -80,4 +80,5 @@
     <string name="faq_1_title">Πώς μπορώ να προωθήσω γρήγορα τα τραγούδια;</string>
     <string name="faq_1_text">Μπορείτε να κάνετε κλικ στο τρέχον ή μέγιστης διάρκειας κείμενο κοντά στη γραμμή προόδου, το οποίο θα μετακινήσει το τραγούδι πίσω ή εμπρός.</string>
     <string name="app_launcher_name">Αναπαραγωγέας μουσικής</string>
+    <string name="track_on_disk">%1$d.%2$s</string>
 </resources>
